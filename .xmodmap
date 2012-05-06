@@ -1,0 +1,6 @@
+! disable annoying thinkpad t400 back/forward keys
+keycode 166=
+keycode 167=
+! swap caps lock and escape; makes using vim more pleasurable
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape
