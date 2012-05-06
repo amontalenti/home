@@ -43,13 +43,18 @@ Some nice IDE-like plugins for me include:
 * Gundo_, for undo history
 * fugitive_, for git integration
 
-These aren't shown in my repo because they are installed using the handy
-pathogen plugin for vim. You can install them pretty easily into your
-``~/.vim/bundles`` directory just by cloning the appropriate git repo.
-
 .. _NERDTree: https://github.com/scrooloose/nerdtree
 .. _Gundo: https://github.com/sjl/gundo.vim
 .. _fugitive: https://github.com/tpope/vim-fugitive
+
+These are referenced via git's submodule facility, because this seemed 
+like the cleanest thing. Therefore, after cloning this repo, make sure
+you also clone the submodules as such::
+
+    git submodule init
+    git submodule update
+
+Then you will have all of the above.
 
 Scripts
 -------
