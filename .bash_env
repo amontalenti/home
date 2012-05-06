@@ -32,8 +32,16 @@ if [ -d ~/opt/bin ] ; then
     pathprepend ~/opt/bin
 fi
 
+# you will pry vim from my dead hands
 export EDITOR="vim"
-export PAGER="less -r"
-export TERM="xterm-256color"
 
+# less is more
+export PAGER="less -r"
+
+# assume xterm-256color, unless the shell invoker
+# has already set it to screen-256color, e.g.
+# screen or tmux
+[[ $TERM == "screen-256color" ]] || export TERM="xterm-256color"
+
+# add tab completion to Python
 export PYTHONSTARTUP=~/.pythonstartup.py
