@@ -32,7 +32,8 @@ if [ -d ~/opt/bin ] ; then
     pathprepend ~/opt/bin
 fi
 
-export EDITOR=vim
+export EDITOR="vim"
 export PAGER="less -r"
+export TERM="xterm-256color"
 
 export PYTHONSTARTUP=~/.pythonstartup.py
