@@ -1,0 +1,38 @@
+# Files you make look like rw-rw-r
+umask 002
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=100000
+HISTFILESIZE=500000
+
+# make it more difficult to ruin files with redirection
+set -o noclobber
+
+# the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+[ -x /usr/bin/dircolors ] && eval `dircolors -b`
+
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/opt/bin ] ; then
+    pathprepend ~/opt/bin
+fi
+
+export EDITOR=vim
+export PAGER="less -r"
+
+export PYTHONSTARTUP=~/.pythonstartup.py
