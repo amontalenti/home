@@ -40,12 +40,23 @@ these customizations are just to make editing typical files for me nicer.
 Some nice IDE-like plugins for me include:
 
 * NERDTree_, for file navigation
+* Taglist_, for code outline navigations with ctags
 * Gundo_, for undo history
 * fugitive_, for git integration
 
 .. _NERDTree: https://github.com/scrooloose/nerdtree
+.. _Taglist: https://github.com/vim-scripts/taglist.vim
 .. _Gundo: https://github.com/sjl/gundo.vim
 .. _fugitive: https://github.com/tpope/vim-fugitive
+
+I then have a couple of plugins that just expand the vim vocabulary a little.
+These include:
+
+* repeat_, just makes the ``.`` command more flexible and scriptable
+* surround_, adds a noun to vim for "surroundings", useful for quoting and parens
+
+.. _repeat: https://github.com/tpope/vim-repeat
+.. _surround: https://github.com/tpope/vim-surround
 
 These are referenced via git's submodule facility, because this seemed 
 like the cleanest thing. Therefore, after cloning this repo, make sure
