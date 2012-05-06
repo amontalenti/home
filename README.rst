@@ -57,3 +57,12 @@ Scripts
 I put some scripts in ``~/opt/bin`` that just make my life easier. Most 
 of these are bash scripts, some are little Python scripts as well. Some 
 of these are just meant to work around some UNIX annoyances.
+
+Terminal Management
+-------------------
+
+Originally, I used GNU screen for all my terminal management, so my
+``.screenrc`` is included here. However, I have now switched to
+tmux, since I came across a nice book about it and it convinced me.
+Funny enough, I was able to port over most of my customizations of 
+screen to tmux pretty straightforwardly. See ``.tmux.conf`` for that.
