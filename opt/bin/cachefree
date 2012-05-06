@@ -1,0 +1,35 @@
+#!/usr/bin/perl -w
+use strict;
+use Time::HiRes qw(time);
+
+
+sub swapfree {
+open(PROC, "/proc/meminfo") or die "open: /proc/meminfo: $!";
+my ($swapfree) = grep(/^SwapFree:/, <PROC>);
+close(PROC);
+$swapfree =~ s/\D+//gos;
+print STDERR "swapfree=$swapfree\n";
+return $swapfree;
+}
+
+
+my $last_swapfree = swapfree;
+my @blobs;
+
+
+my $count = 0;
+my $total = 0;
+
+
+my $start_time = time;
+
+
+while ($last_swapfree <= (my $new_swapfree = swapfree)) {
+++$count;
+push(@blobs, ('.' x (1048576 * $count)));
+$total += $count;
+print STDERR "${total}M allocated\n";
+$last_swapfree = $new_swapfree;
+}
+system("ps m $$");
+print STDERR time - $start_time, " seconds\n";

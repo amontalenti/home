@@ -1,0 +1,72 @@
+#!/bin/sh
+#
+# Change Primary Monitor for Gnome
+# ver 1.0
+# 
+# Copyright (c) 2010 michal@post.pl
+# 
+# This file is free software. You can redistribute it 
+# and/or modify it under the terms of the GNU
+# General Public License (GPL) as published by
+# the Free Software Foundation, in version 3.
+# It works for me. I hope it works for you as well.
+# NO WARRANTY of any kind. 
+#
+
+
+# get list of top-level gnome panels
+getTopPanels() {
+	gconftool-2 --all-dirs /apps/panel/toplevels
+}
+
+# get monitor number for this panel
+getMonitor() {
+	local PANEL=$1
+	gconftool-2 --get $PANEL/monitor
+}
+
+# set monitor to display on for given top-level panel
+setMonitor() {
+	local PANEL=$1
+	local NEW=$2
+	gconftool-2 --set --type int $PANEL/monitor $NEW
+}
+
+# return number of connected monitors
+getConnectedMonitors() {
+	xrandr --query | grep -c '^.* connected'
+}
+
+# compute next monitor
+nextMonitor() {
+	# number of monitors
+	local CURRENT=$1
+	local MONITORS=$2
+	awk 'BEGIN{ print ('$CURRENT' + 1) % '$MONITORS'; }'
+}
+
+# logging finction
+log() {
+	echo $@ 1>&2
+}
+
+# main logic below #############
+
+MONITORS=`getConnectedMonitors`
+log "Detected $MONITORS connected monitors"
+
+if [ -z "$1" ]; then
+    getTopPanels | while read PANEL
+    do
+        MONITOR=`getMonitor $PANEL`
+        NEW=`nextMonitor $MONITOR $MONITORS`
+        log "Panel $PANEL is displayed on $MONITOR. Switching to monitor $NEW."
+        setMonitor $PANEL $NEW
+    done
+else
+    getTopPanels | while read PANEL
+    do
+        setMonitor $PANEL $1
+    done
+fi
+

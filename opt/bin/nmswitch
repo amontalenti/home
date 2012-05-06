@@ -1,0 +1,18 @@
+#!/bin/bash
+if pidof NetworkManager; then
+    echo "Starting wicd..."
+    killall nm-applet
+    sudo service network-manager stop
+    sleep 1
+    sudo service wicd start
+    wicd-client &
+    echo "Done."
+else
+    echo "Starting network-manager..."
+    killall wicd-client
+    sudo service wicd stop
+    sleep 1
+    sudo service network-manager start
+    nm-applet &
+    echo "Done."
+fi

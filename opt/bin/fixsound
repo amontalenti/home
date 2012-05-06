@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo killall pulseaudio
+sudo killall mixer_applet2
+MODULES="snd-hda-intel snd-pcm-oss snd-mixer-oss"
+echo "Removing $MODULES..."
+for module in $MODULES; do sudo modprobe -r $module; done
+sleep 1;
+REV_MODULES="snd-pcm-oss snd-mixer-oss snd-hda-intel"
+echo "Installing $REV_MODULES..."
+for module in $REV_MODULES; do sudo modprobe $module; done

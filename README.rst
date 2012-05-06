@@ -27,11 +27,17 @@ of files, including:
 * Python
 * JavaScript
 * XML
+* reStructuredText
+* Markdown
 * bash
 * configuration files
 
 My vim configuration is a bit customized, as I use vim as a kind of UNIX
-IDE. Some handy plugins for me include:
+IDE. However, I don't go crazy remapping things; in general, I'm pretty 
+happy with vim's default mappings and have learned to love them. Most of 
+these customizations are just to make editing typical files for me nicer.
+
+Some nice IDE-like plugins for me include:
 
 * NERDTree_, for file navigation
 * Gundo_, for undo history
@@ -45,3 +51,9 @@ pathogen plugin for vim. You can install them pretty easily into your
 .. _Gundo: https://github.com/sjl/gundo.vim
 .. _fugitive: https://github.com/tpope/vim-fugitive
 
+Scripts
+-------
+
+I put some scripts in ``~/opt/bin`` that just make my life easier. Most 
+of these are bash scripts, some are little Python scripts as well. Some 
+of these are just meant to work around some UNIX annoyances.

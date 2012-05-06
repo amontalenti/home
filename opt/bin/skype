@@ -1,0 +1,4 @@
+#!/bin/bash
+killall pulseaudio
+/usr/bin/skype
+pulseaudio -D
