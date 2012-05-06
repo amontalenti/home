@@ -66,3 +66,10 @@ Originally, I used GNU screen for all my terminal management, so my
 tmux, since I came across a nice book about it and it convinced me.
 Funny enough, I was able to port over most of my customizations of 
 screen to tmux pretty straightforwardly. See ``.tmux.conf`` for that.
+
+Version Control
+---------------
+
+I used to use Mercurial, now I primarily use git. I don't customize 
+these too heavily, but my ``.hgrc`` and ``.gitconfig`` are included 
+here anyway.

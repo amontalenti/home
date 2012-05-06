@@ -1,0 +1,23 @@
+[user]
+	name = Andrew Montalenti
+	email = andrew@parsely.com
+
+[alias]
+    st = status
+    ci = commit -a
+    br = branch
+    co = checkout
+    df = diff
+    unstage = reset HEAD
+    dwc = diff -w -M --color-words
+    lg = log
+    ll = log -p
+    rb = rebase
+    fix = rebase -i origin/master
+    rbc = rebase --continue
+    re = remote
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    up = pull --rebase
+
+[fetch]
+    recurseSubmodules = true
