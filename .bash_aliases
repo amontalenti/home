@@ -18,3 +18,6 @@ alias egrep='egrep --color=auto'
 
 # safety
 alias rm='rm -I'
+
+# enable virtualenv commands
+alias ve='. /usr/local/bin/virtualenvwrapper.sh'
