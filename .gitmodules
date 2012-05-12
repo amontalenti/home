@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/taglist"]
 	path = .vim/bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule ".autoenv"]
+	path = .autoenv
+	url = git://github.com/kennethreitz/autoenv.git
