@@ -1,0 +1,4 @@
+if [ -z "$VIRTUALENVWRAPPER_VIRTUALENV" ]; then
+    source /usr/local/bin/virtualenvwrapper.sh;
+fi
+workon `cat .virtualenv`;
