@@ -3,24 +3,25 @@
 	email = andrew@parsely.com
 
 [alias]
-    st = status
+    st = status -sb
     ci = commit -a
     br = branch
     co = checkout
     df = diff
     unstage = reset HEAD
     dwc = diff -w -M --color-words
-    lg = log
+    lc = log ORIG_HEAD.. --stat --no-merges
+    lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+    lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
+    lg = !"git lg1"
     ll = log -p
     rb = rebase
     fix = rebase -i origin/master
     rbc = rebase --continue
     re = remote
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     up = pull --rebase
-    lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-    lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(bold green)(%cr)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %cn%C(reset)' --abbrev-commit
-    lg = !"git lg1"
 
 [fetch]
     recurseSubmodules = true
