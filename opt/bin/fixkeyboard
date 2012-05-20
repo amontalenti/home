@@ -1,7 +1,7 @@
 #!/bin/bash
 if setxkbmap; then
     notify-send -t 300 "Fixed keyboard"
-    cat ~/.xmodmap | xmodmap -
+    cat ~/.Xmodmap | xmodmap -
 else
     notify-send -t 300 "Couldn't fix keyboard"
 fi

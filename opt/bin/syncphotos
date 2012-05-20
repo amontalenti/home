@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "syncing canon"
+rsync --ignore-existing -Pav ~/Desktop/canon/DCIM/100CANON/ ~/Dropbox/Personal/Photos/canon/
+echo "syncing panasonic 1"
+rsync --ignore-existing -Pav ~/Desktop/panasonic/DCIM/101_PANA/ ~/Dropbox/Personal/Photos/panasonic/
+echo "syncing panasonic 2"
+rsync --ignore-existing -Pav ~/Desktop/panasonic/DCIM/102_PANA/ ~/Dropbox/Personal/Photos/panasonic/
