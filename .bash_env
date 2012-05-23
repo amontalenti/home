@@ -46,3 +46,8 @@ export PAGER="less -r"
 # add tab completion to Python
 export PYTHONSTARTUP=~/.pythonstartup.py
 export COGROOT=/home/pixelmonkey/repos
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$COGROOT
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
