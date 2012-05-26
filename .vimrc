@@ -149,6 +149,7 @@ abbr cur !nautilus %:p:h
 " show current virtualenv
 let g:virtualenv_stl_format='[Venv(%n)]'
 au FileType python setlocal statusline=%<%f\ %h%m%r%{VirtualEnvStatusline()}%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+let g:virtualenv_auto_activate=1
 
 " ignore line length error
 let g:flake8_ignore='E501'
@@ -156,14 +157,12 @@ let g:flake8_ignore='E501'
 " open gundo on right (no conflict with NERDTree)
 let g:gundo_right=1
 
-
 " check Python for style
 autocmd BufWritePost *.py call Flake8()
 
 " allow ropevim autocompletion
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
-au FileType python inoremap <expr> <S-Space> '<C-r>=RopeCodeAssistInsertMode()<CR><C-r>=pumvisible() ? "\<lt>C-p>\<lt>Down>" : ""<CR>'
 
 " vim IDE
 map <F2> :TlistToggle<CR>
