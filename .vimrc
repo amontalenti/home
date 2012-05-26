@@ -60,7 +60,7 @@ hi perlComment ctermfg=0 ctermbg=1
 map <F2> :w<CR>
 imap <F2> <ESC>:w<CR>
 
-" quick F3 execute commands
+" quick execute commands
 map <F3> :!%<CR>
 imap <F3> <ESC>:!%<CR>
 
@@ -166,3 +166,6 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+" check Python for style
+autocmd BufWritePost *.py call Flake8()
