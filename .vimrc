@@ -157,9 +157,6 @@ let g:flake8_ignore='E501'
 " open gundo on right (no conflict with NERDTree)
 let g:gundo_right=1
 
-" check Python for style
-autocmd BufWritePost *.py call Flake8()
-
 " allow ropevim autocompletion
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
@@ -168,3 +165,7 @@ let ropevim_extended_complete=1
 map <F2> :TlistToggle<CR>
 map <F3> :NERDTreeToggle<CR>
 map <F4> :GundoToggle<CR>
+
+" check Python for style
+autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
+
