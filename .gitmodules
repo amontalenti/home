@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/rope-vim"]
 	path = .vim/bundle/rope-vim
 	url = https://github.com/sontek/rope-vim.git
+[submodule ".vim/bundle/vim-virtualenv"]
+	path = .vim/bundle/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv.git

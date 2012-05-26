@@ -50,19 +50,10 @@ set wildmode=longest,full
 source $VIMRUNTIME/menu.vim
 set cpo-=<
 set wcm=<C-Z>
-map <F4> :emenu <C-Z>
 
 " some color overrides
 hi PmenuSel ctermfg=0 ctermbg=3
 hi perlComment ctermfg=0 ctermbg=1
-
-" for quick script dev cycle
-map <F2> :w<CR>
-imap <F2> <ESC>:w<CR>
-
-" quick execute commands
-map <F3> :!%<CR>
-imap <F3> <ESC>:!%<CR>
 
 " multiline commenting tools
 map ,# :s/^/# /<CR>:nohlsearch<CR>
@@ -154,18 +145,27 @@ cmap w!! w !sudo tee % >/dev/null
 " on Linux, opens nautilus to current directory
 abbr cur !nautilus %:p:h
 
-" for python, add virtualenv site-packages to vim path
 " Add the virtualenv's site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+" show current virtualenv
+let g:virtualenv_stl_format='[Venv(%n)]'
+au FileType python setlocal statusline=%<%f\ %h%m%r%{VirtualEnvStatusline()}%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" ignore line length error
+let g:flake8_ignore='E501'
+
+" open gundo on right (no conflict with NERDTree)
+let g:gundo_right=1
+
 
 " check Python for style
 autocmd BufWritePost *.py call Flake8()
+
+" allow ropevim autocompletion
+let ropevim_vim_completion=1
+let ropevim_extended_complete=1
+au FileType python inoremap <expr> <S-Space> '<C-r>=RopeCodeAssistInsertMode()<CR><C-r>=pumvisible() ? "\<lt>C-p>\<lt>Down>" : ""<CR>'
+
+" vim IDE
+map <F2> :TlistToggle<CR>
+map <F3> :NERDTreeToggle<CR>
+map <F4> :GundoToggle<CR>
