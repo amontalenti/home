@@ -22,3 +22,9 @@
 [submodule ".autoenv"]
 	path = .autoenv
 	url = git://github.com/kennethreitz/autoenv.git
+[submodule ".vim/bundle/vim-flake8"]
+	path = .vim/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8
+[submodule ".vim/bundle/rope-vim"]
+	path = .vim/bundle/rope-vim
+	url = https://github.com/sontek/rope-vim.git
