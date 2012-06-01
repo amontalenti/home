@@ -21,7 +21,7 @@
 	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule ".autoenv"]
 	path = .autoenv
-	url = git://github.com/kennethreitz/autoenv.git
+	url = git://github.com/nvie/autoenv.git
 [submodule ".vim/bundle/vim-flake8"]
 	path = .vim/bundle/vim-flake8
 	url = https://github.com/nvie/vim-flake8
