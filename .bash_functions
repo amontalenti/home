@@ -30,5 +30,5 @@ function pycd () {
 }
 
 function ccd () {
-    pushd $COGROOT/$1;
+    autoenv_cd $COGROOT/$1;
 }
