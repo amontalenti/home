@@ -52,3 +52,4 @@ export PROJECT_HOME=$COGROOT
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 source ~/.autoenv/activate.sh
+source ~/opt/share/hop/hop.bash

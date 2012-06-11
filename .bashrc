@@ -21,3 +21,4 @@ PS1='lapto\$ '
 
 [ -f /etc/bash_completion ] && . /etc/bash_completion
 
+
