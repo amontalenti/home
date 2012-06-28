@@ -34,6 +34,6 @@
 [submodule ".vim/bundle/vimclojure"]
 	path = .vim/bundle/vimclojure
 	url = https://github.com/gaverhae/vimclojure.git
-[submodule "/home/pixelmonkey/.vim/bundle/numbers"]
-	path = /home/pixelmonkey/.vim/bundle/numbers
+[submodule ".vim/bundle/numbers"]
+	path = .vim/bundle/numbers
 	url = https://github.com/myusuf3/numbers.vim.git
