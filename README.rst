@@ -40,14 +40,26 @@ these customizations are just to make editing typical files for me nicer.
 Some nice IDE-like plugins for me include:
 
 * NERDTree_, for file navigation
-* Taglist_, for code outline navigations with ctags
-* Gundo_, for undo history
+* numbers_, for better line number support
+* ctrlp_, for quick file opening
 * fugitive_, for git integration
+* Gundo_, for undo history
+* rope-vim_, for Python refactoring support
+* Taglist_, for code outline navigations with ctags
+* vim-flake8_, for Python syntax checking
+* vim-virtualenv_, for Python virtualenv support
+* vimclojure_, for Clojure support inside vim
 
 .. _NERDTree: https://github.com/scrooloose/nerdtree
-.. _Taglist: https://github.com/vim-scripts/taglist.vim
+.. _numbers: https://github.com/myusuf3/numbers.vim.git 
+.. _ctrlp: https://github.com/kien/ctrlp.vim.git 
+.. _fugitive: http://github.com/tpope/vim-fugitive.git
 .. _Gundo: https://github.com/sjl/gundo.vim
-.. _fugitive: https://github.com/tpope/vim-fugitive
+.. _rope-vim: https://github.com/sontek/rope-vim.git
+.. _Taglist: https://github.com/vim-scripts/taglist.vim
+.. _vim-flake8: https://github.com/nvie/vim-flake8
+.. _vim-virtualenv: https://github.com/jmcantrell/vim-virtualenv.git
+.. _vimclojure: https://github.com/gaverhae/vimclojure.git
 
 I then have a couple of plugins that just expand the vim vocabulary a little.
 These include:

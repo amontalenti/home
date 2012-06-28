@@ -18,3 +18,5 @@ alias egrep='egrep --color=auto'
 
 # safety
 alias rm='rm -I'
+
+alias notebook='ipython notebook --pylab=inline --ip=0.0.0.0'
