@@ -169,3 +169,6 @@ map <F4> :GundoToggle<CR>
 " check Python for style
 autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
 
+" make VimClojure work a little more nicely
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
