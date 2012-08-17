@@ -165,6 +165,7 @@ let ropevim_extended_complete=1
 map <F2> :TlistToggle<CR>
 map <F3> :NERDTreeToggle<CR>
 map <F4> :GundoToggle<CR>
+map <F5> :NumbersToggle<CR>
 
 " check Python for style
 autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
