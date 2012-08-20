@@ -20,3 +20,4 @@ alias egrep='egrep --color=auto'
 alias rm='rm -I'
 
 alias notebook='ipython notebook --pylab=inline --ip=0.0.0.0'
+alias himem5='mosh pixelmonkey@himem5.cogtree.com'
