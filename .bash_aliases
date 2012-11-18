@@ -1,15 +1,17 @@
 # shortened file listings
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --hide=*.pyc'
 alias ll='ls -l'
 alias la='ls -a'
-alias lh='ls --hide="*.pyc"'
 
 # some handy shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
 alias d='dirs -v'
 alias svim='sudo vim'
 alias ss='sudo -s'
 alias topme='top -U`whoami`'
 alias ptree="pstree -Gcpnulah"
+alias rmpyc="find . -name '*.pyc' -delete"
 
 # add some convenience options
 alias grep="grep --color=auto --exclude-dir='.svn' --exclude-dir='.git'"

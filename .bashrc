@@ -22,3 +22,5 @@ PS1='lapto\$ '
 [ -f /etc/bash_completion ] && . /etc/bash_completion
 
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

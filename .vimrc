@@ -101,7 +101,6 @@ set guifont="Monospace 10"
 set hidden
 
 set copyindent
-set number
 set shiftround
 set showmatch
 set ignorecase
