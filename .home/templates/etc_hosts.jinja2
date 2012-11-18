@@ -15,6 +15,7 @@ ff02::2 ip6-allrouters
 {{ line }}
     {%- else %}
 127.0.0.1   {{ line }}
+127.0.0.1   www.{{ line }}
     {%- endif %}
 {%- endfor %}
 # </site-block-list>
