@@ -27,8 +27,21 @@ def _overwrite_hosts_file(contents):
     scratch_dir = path.join(DOT_HOME, "scratch")
     local("mkdir -p {0}".format(scratch_dir))
     filename = path.join(scratch_dir, "hosts")
+    extra_filename = path.join(scratch_dir, "extra_hosts")
+    system_filename = path.join(scratch_dir, "system_hosts")
     scratch_hosts = open(filename, "w")
+    if path.exists(system_filename):
+        print blue("found system hosts; appending")
+        system_hosts = open(system_filename, "r")
+        scratch_hosts.write(system_hosts.read())
+        system_hosts.close()
+    print blue("appending dynamic hosts")
     scratch_hosts.write(contents)
+    if path.exists(extra_filename):
+        print blue("found extra hosts; appending")
+        extra_hosts = open(extra_filename, "r")
+        scratch_hosts.write(extra_hosts.read())
+        extra_hosts.close()
     scratch_hosts.close()
     local("sudo cp {0} /etc/hosts".format(filename))
     print blue("overwrote hosts file")
@@ -47,3 +60,5 @@ def mode_work():
 @task
 def mode_play():
     _alter_hosts(block=False)
+
+
