@@ -28,3 +28,5 @@
 
 [fetch]
     recurseSubmodules = true
+[push]
+	default = tracking

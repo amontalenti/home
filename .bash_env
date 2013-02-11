@@ -32,6 +32,8 @@ if [ -d ~/opt/bin ] ; then
     pathprepend ~/opt/bin
 fi
 
+pathprepend "/opt/vagrant/bin/"
+
 # you will pry vim from my dead hands
 export EDITOR="vim"
 

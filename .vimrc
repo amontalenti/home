@@ -156,6 +156,9 @@ let g:flake8_ignore='E501'
 " open gundo on right (no conflict with NERDTree)
 let g:gundo_right=1
 
+" disable jedi auto init
+let g:jedi#auto_initialization = 0
+
 " allow ropevim autocompletion
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
