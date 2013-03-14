@@ -21,6 +21,6 @@ alias egrep='egrep --color=auto'
 # safety
 alias rm='rm -I'
 
-alias notebook='ipython notebook --pylab=inline --ip=0.0.0.0'
+alias notebook='ipython notebook --pylab=inline --port=9999'
 alias himem5='mosh pixelmonkey@himem5.cogtree.com'
 alias screencast="avconv -v warning -f x11grab -s 1366x768 -r 30 -i :0.0 -s 1366x768 -vcodec libx264 -threads 0 screencast.mp4"
