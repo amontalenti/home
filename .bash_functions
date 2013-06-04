@@ -32,3 +32,7 @@ function pycd () {
 function ccd () {
     autoenv_cd $COGROOT/$1;
 }
+
+function gitgrep () {
+    git log --pretty=oneline -S"$1"
+}
