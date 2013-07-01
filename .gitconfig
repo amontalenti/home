@@ -30,3 +30,5 @@
     recurseSubmodules = true
 [push]
 	default = tracking
+[color]
+	ui = true
