@@ -174,3 +174,5 @@ autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
 " make VimClojure work a little more nicely
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
+
+au BufRead,BufNewFile *.j2 set filetype=htmljinja
