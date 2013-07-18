@@ -21,4 +21,4 @@ else
 fi
 PS_GIT="$YELLOW\$PS_GIT_BRANCH"
 PS_TIME="$RED[\t]"
-export PS1="\[\033[0G\]# ${PS_INFO} ${PS_GIT}${PS_TIME}\n${RESET}; "
+export PS1="\[\033[0G\]» ${PS_INFO} ${PS_GIT}${PS_TIME}\n${RESET}\$ "
