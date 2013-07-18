@@ -3,6 +3,7 @@
 # Michal Kottman, 2012
 
 RESET="\[\033[0m\]"
+GRAY="\[\033[1;30m\]"
 RED="\[\033[0;31m\]"
 GREEN="\[\033[01;32m\]"
 BLUE="\[\033[01;34m\]"
@@ -15,9 +16,9 @@ function parse_git_branch {
 }
 PROMPT_COMMAND=parse_git_branch
 if [ `whoami` = "pixelmonkey" -a `hostname` = "pixelmonkey-X220" ]; then
-    PS_INFO="$BLUE\w";
+    PS_INFO="$GRAY\w";
 else
-    PS_INFO="$GREEN\u@\h$RESET:$BLUE\w";
+    PS_INFO="$GREEN\u@\h:$GRAY\w";
 fi
 PS_GIT="$YELLOW\$PS_GIT_BRANCH"
 PS_TIME="$RED[\t]"
