@@ -10,8 +10,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# small prompt
-PS1='lapto\$ '
+[ -f ~/.bash_prompt ] && . ~/.bash_prompt
 
 [ -f ~/.bash_functions ] && . ~/.bash_functions
 
@@ -21,6 +20,3 @@ PS1='lapto\$ '
 
 [ -f /etc/bash_completion ] && . /etc/bash_completion
 
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
