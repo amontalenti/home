@@ -164,7 +164,7 @@ let ropevim_vim_completion=1
 let ropevim_extended_complete=1
 
 " vim IDE
-map <F2> :TlistToggle<CR>
+map <F2> :Tagbar<CR>
 map <F3> :NERDTreeToggle<CR>
 map <F4> :GundoToggle<CR>
 
