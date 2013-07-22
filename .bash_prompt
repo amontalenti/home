@@ -60,7 +60,7 @@ function set_prompt() {
        venv=''
     fi
 
-    export PS1="${myuser}${path}${venv}${branch}\n${end}"
+    export PS1="» ${myuser}${path}${venv}${branch}\n${end}"
 }
 
 export PROMPT_COMMAND=set_prompt
