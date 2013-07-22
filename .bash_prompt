@@ -1,25 +1,66 @@
-# A two-line colored Bash prompt (PS1) with Git branch and a line decoration
-# which adjusts automatically to the width of the terminal.
-# Michal Kottman, 2012
-
-RESET="\[\033[0m\]"
+# Everyone needs a little color in their lives
+RED='\[\033[31m\]'
+GREEN='\[\033[32m\]'
+YELLOW='\[\033[33m\]'
+BLUE='\[\033[34m\]'
+PURPLE='\[\033[35m\]'
+CYAN='\[\033[36m\]'
+WHITE='\[\033[37m\]'
 GRAY="\[\033[1;30m\]"
-RED="\[\033[0;31m\]"
-GREEN="\[\033[01;32m\]"
-BLUE="\[\033[01;34m\]"
-YELLOW="\[\033[0;33m\]"
+NIL='\[\033[00m\]'
 
-function parse_git_branch {
-  PS_GIT_BRANCH=''
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  PS_GIT_BRANCH="(${ref#refs/heads/}) "
+# Hostname styles
+FULL='\H'
+SHORT='\h'
+
+# System => color/hostname map:
+# UC: username color
+# LC: location/cwd color
+# HD: hostname display (\h vs \H)
+# Defaults:
+UC=$GREEN
+LC=$GRAY
+HD=$FULL
+
+# Prompt function because PROMPT_COMMAND is awesome
+function set_prompt() {
+    # show the host only and be done with it.
+    host="${UC}${HD}${NIL}"
+
+    # Special vim-tab-like shortpath (~/folder/directory/foo => ~/f/d/foo)
+    _pwd=`pwd | sed "s#$HOME#~#"`
+    if [[ $_pwd == "~" ]]; then
+       _dirname=$_pwd
+    else
+       _dirname=`dirname "$_pwd" `
+        if [[ $_dirname == "/" ]]; then
+              _dirname=""
+        fi
+       _dirname="$_dirname/`basename "$_pwd"`"
+    fi
+    path="${LC}${_dirname}${NIL}"
+    myuser="${UC}\u@${NIL}"
+    myuser=""
+
+    _branch=$(git symbolic-ref HEAD 2>/dev/null)
+    _branch=${_branch#refs/heads/} # apparently faster than sed
+    branch="" # need this to clear it when we leave a repo
+    if [[ -n $_branch ]]; then
+       branch=" ${NIL}[${YELLOW}${_branch}${NIL}]"
+    fi
+
+    # Dollar/pound sign
+    end="${LC}\$${NIL} "
+
+    # Virtual Env
+    if [[ $VIRTUAL_ENV != "" ]]
+       then
+           venv=" ${NIL}(${GREEN}${VIRTUAL_ENV##*/}${NIL})"
+    else
+       venv=''
+    fi
+
+    export PS1="${myuser}${path}${venv}${branch}\n${end}"
 }
-PROMPT_COMMAND=parse_git_branch
-if [ `whoami` = "pixelmonkey" -a `hostname` = "pixelmonkey-X220" ]; then
-    PS_INFO="$GRAY\w";
-else
-    PS_INFO="$GREEN\u@\h:$GRAY\w";
-fi
-PS_GIT="$YELLOW\$PS_GIT_BRANCH"
-PS_TIME="$RED[\t]"
-export PS1="\[\033[0G\]» ${PS_INFO} ${PS_GIT}${PS_TIME}\n${RESET}\$ "
+
+export PROMPT_COMMAND=set_prompt
