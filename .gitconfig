@@ -7,6 +7,7 @@
 
 [alias]
     st = status -sb
+    s = status -sb .
     ci = commit -a
     br = branch
     co = checkout
