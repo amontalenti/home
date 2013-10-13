@@ -178,4 +178,4 @@ let g:vimclojure#ParenRainbow = 1
 au BufRead,BufNewFile *.j2 set filetype=htmljinja
 
 set nonumber
-nnoremap <F5> :set nonumber!<CR>
+nnoremap <F6> :set nonumber!<CR>
