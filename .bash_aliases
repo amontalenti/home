@@ -22,8 +22,8 @@ alias egrep='egrep --color=auto'
 alias rm='rm -I'
 
 # share terminal via floobits
-alias shareterm='flootty --owner=amontalenti --workspace=hack --create AM'
+alias shareterm='flootty --owner="Parse.ly" --workspace=hack --create AM'
+alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/hack/" ~/src/hack'
 
 alias notebook='ipython notebook --pylab=inline --port=9999'
-alias himem5='mosh pixelmonkey@himem5.cogtree.com'
 alias screencast="avconv -v warning -f x11grab -s 1366x768 -r 30 -i :0.0 -s 1366x768 -vcodec libx264 -threads 0 screencast.mp4"

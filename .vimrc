@@ -179,3 +179,6 @@ au BufRead,BufNewFile *.j2 set filetype=htmljinja
 
 set nonumber
 nnoremap <F6> :set nonumber!<CR>
+
+set backupdir=~/.vim/backup/
+set directory=~/.vim/backup/
