@@ -18,5 +18,7 @@
 
 [ -f ~/.bash_env ] && . ~/.bash_env
 
+[ -f ~/.bash_completion ] && . ~/.bash_completion
+
 [ -f /etc/bash_completion ] && . /etc/bash_completion
 
