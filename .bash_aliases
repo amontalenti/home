@@ -23,6 +23,7 @@ alias rm='rm -I'
 
 # share terminal via floobits
 alias shareterm='flootty --owner="Parse.ly" --workspace=interviews --create AM'
+alias shareterm2='flootty --owner="Parse.ly" --workspace=api --create AM'
 alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/interviews/" ~/src/interviews'
 
 alias notebook='ipython notebook --pylab=inline --port=9999'

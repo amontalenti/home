@@ -1,0 +1,13 @@
+{
+    "windows": [
+        {
+            "panes": [
+                "sudo htop",
+                "sudo iotop" 
+            ],
+            "window_name": "tops",
+            "layout": "main-vertical"
+        }
+    ],
+    "session_name": "monitor"
+}
