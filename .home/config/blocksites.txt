@@ -9,6 +9,5 @@ readwrite.com
 venturebeat.com
 allthingsd.com
 quora.com
-youtube.com
 cnn.com
 newsblur.com
