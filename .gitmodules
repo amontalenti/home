@@ -31,9 +31,6 @@
 [submodule ".vim/bundle/vim-virtualenv"]
 	path = .vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
-[submodule ".vim/bundle/vimclojure"]
-	path = .vim/bundle/vimclojure
-	url = https://github.com/gaverhae/vimclojure.git
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
