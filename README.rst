@@ -52,7 +52,8 @@ Some nice IDE-like plugins for me include:
 * vim-less_, for editing LESS CSS files
 * vim-flake8_, for Python syntax checking
 * vim-virtualenv_, for Python virtualenv support
-* vim-fireplace_, for Clojure support inside vim
+* vim-fireplace_, for Clojure interaction with nREPL
+* vim-clojure-static_, for Clojure basic editing support
 
 .. _NERDTree: https://github.com/scrooloose/nerdtree
 .. _numbers: https://github.com/myusuf3/numbers.vim.git 
@@ -66,6 +67,7 @@ Some nice IDE-like plugins for me include:
 .. _vim-flake8: https://github.com/nvie/vim-flake8
 .. _vim-virtualenv: https://github.com/jmcantrell/vim-virtualenv.git
 .. _vim-fireplace: https://github.com/tpope/vim-fireplace
+.. _vim-clojure-static: https://github.com/guns/vim-clojure-static
 
 I then have a couple of plugins that just expand the vim vocabulary a
 little.  These include:
