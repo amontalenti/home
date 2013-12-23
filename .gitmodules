@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule "/home/pixelmonkey/.vim/bundle/vim-fireplace"]
+	path = /home/pixelmonkey/.vim/bundle/vim-fireplace
+	url = git@github.com:tpope/vim-fireplace.git
