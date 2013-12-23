@@ -26,7 +26,9 @@ of files, including:
 
 * Python
 * JavaScript
-* XML
+* CSS and LESS
+* Clojure code
+* JSON and XML
 * reStructuredText
 * Markdown
 * bash
@@ -45,10 +47,12 @@ Some nice IDE-like plugins for me include:
 * fugitive_, for git integration
 * Gundo_, for undo history
 * rope-vim_, for Python refactoring support
-* Taglist_, for code outline navigations with ctags
+* Taglist_, for old-style code outlines / navigations
+* tagbar_, for improved code outlines / navigations
+* vim-less_, for editing LESS CSS files
 * vim-flake8_, for Python syntax checking
 * vim-virtualenv_, for Python virtualenv support
-* vimclojure_, for Clojure support inside vim
+* vim-fireplace_, for Clojure support inside vim
 
 .. _NERDTree: https://github.com/scrooloose/nerdtree
 .. _numbers: https://github.com/myusuf3/numbers.vim.git 
@@ -57,12 +61,14 @@ Some nice IDE-like plugins for me include:
 .. _Gundo: https://github.com/sjl/gundo.vim
 .. _rope-vim: https://github.com/sontek/rope-vim.git
 .. _Taglist: https://github.com/vim-scripts/taglist.vim
+.. _tagbar: http://majutsushi.github.io/tagbar/
+.. _vim-less: https://github.com/groenewege/vim-less
 .. _vim-flake8: https://github.com/nvie/vim-flake8
 .. _vim-virtualenv: https://github.com/jmcantrell/vim-virtualenv.git
-.. _vimclojure: https://github.com/gaverhae/vimclojure.git
+.. _vim-fireplace: https://github.com/tpope/vim-fireplace
 
-I then have a couple of plugins that just expand the vim vocabulary a little.
-These include:
+I then have a couple of plugins that just expand the vim vocabulary a
+little.  These include:
 
 * repeat_, just makes the ``.`` command more flexible and scriptable
 * surround_, adds a noun to vim for "surroundings", useful for quoting and parens
@@ -144,6 +150,11 @@ Originally, I used GNU screen for all my terminal management, so my
 tmux, since I came across a nice book about it and it convinced me.
 Funny enough, I was able to port over most of my customizations of 
 screen to tmux pretty straightforwardly. See ``.tmux.conf`` for that.
+
+I also use a clever little tool called tmuxp_, which is a Python
+frontend on tmux which allows you to save / re-open tmux "sessions".
+
+.. _tmuxp: http://tmuxp.readthedocs.org/en/latest/
 
 Version Control
 ---------------
