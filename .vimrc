@@ -171,14 +171,21 @@ map <F4> :GundoToggle<CR>
 " check Python for style
 autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+ 
+" Use the special symbols for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+" enable line number toggling
+set nonumber
+nnoremap <F6> :set nonumber!<CR>
+
 " make VimClojure work a little more nicely
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
 
 au BufRead,BufNewFile *.j2 set filetype=htmljinja
-
-set nonumber
-nnoremap <F6> :set nonumber!<CR>
 
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
