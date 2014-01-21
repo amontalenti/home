@@ -168,6 +168,10 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :Tagbar<CR>
 map <F4> :GundoToggle<CR>
 
+" leader keys
+let mapleader = ","
+let maplocalleader = "\\"
+
 " check Python for style
 autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
 
