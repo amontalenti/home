@@ -21,7 +21,7 @@
     ll = log -p
     purge = clean -dxf
     rb = rebase
-    fix = rebase -i origin/master
+    fix = rebase -i HEAD^^
     rbc = rebase --continue
     re = remote
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
