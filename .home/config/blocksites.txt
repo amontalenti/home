@@ -11,3 +11,4 @@ allthingsd.com
 quora.com
 cnn.com
 newsblur.com
+lobste.rs
