@@ -49,6 +49,6 @@
 [submodule ".vim/bundle/rainbow_parentheses"]
 	path = .vim/bundle/rainbow_parentheses
 	url = git@github.com:kien/rainbow_parentheses.vim.git
-[submodule "/home/pixelmonkey/.vim/bundle/vim-jinja"]
-	path = /home/pixelmonkey/.vim/bundle/vim-jinja
-	url = https://github.com/mitsuhiko/vim-jinja
+[submodule ".vim/bundle/vim-jinja"]
+	path = .vim/bundle/vim-jinja
+	url = git@github.com:mitsuhiko/vim-jinja.git
