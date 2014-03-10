@@ -70,3 +70,12 @@ eval "$(rbenv init -)"
 
 # add vagrant support
 pathprepend "/opt/vagrant/bin/"
+
+# add Apache Pig support
+pathprepend "/opt/pig/bin/"
+
+# add Apache Storm support
+pathprepend "/opt/storm/bin/"
+
+# make Java scripts work
+export JAVA_HOME="/usr/lib/jvm/java-7-oracle"

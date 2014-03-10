@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-jinja"]
 	path = .vim/bundle/vim-jinja
 	url = git@github.com:mitsuhiko/vim-jinja.git
+[submodule "/home/pixelmonkey/.vim/bundle/pig"]
+	path = /home/pixelmonkey/.vim/bundle/pig
+	url = git@github.com:motus/pig.vim.git
