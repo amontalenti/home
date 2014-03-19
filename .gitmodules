@@ -55,3 +55,6 @@
 [submodule "/home/pixelmonkey/.vim/bundle/pig"]
 	path = /home/pixelmonkey/.vim/bundle/pig
 	url = git@github.com:motus/pig.vim.git
+[submodule "/home/pixelmonkey/.vim/bundle/vim-redl"]
+	path = /home/pixelmonkey/.vim/bundle/vim-redl
+	url = git://github.com/dgrnbrg/vim-redl.git

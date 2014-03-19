@@ -71,9 +71,6 @@ eval "$(rbenv init -)"
 # add vagrant support
 pathprepend "/opt/vagrant/bin/"
 
-# add Apache Pig support
-pathprepend "/opt/pig/bin/"
-
 # add Apache Storm support
 pathprepend "/opt/storm/bin/"
 
