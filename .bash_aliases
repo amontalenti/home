@@ -2,6 +2,8 @@
 alias ls='ls --color=auto --hide=*.pyc'
 alias ll='ls -l'
 alias la='ls -a'
+alias bpy='bpython-curtsies'
+alias ipy='ipython'
 
 # some handy shortcuts
 alias ..="cd .."
