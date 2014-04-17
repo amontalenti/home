@@ -12,3 +12,5 @@ quora.com
 cnn.com
 newsblur.com
 lobste.rs
+techmeme.com
+mediagazer.com
