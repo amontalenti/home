@@ -77,8 +77,7 @@ def tail_nginx(grep_pattern=None):
 
 @task
 @hosts(_web_app_servers)
-def check_load(grep_pattern=None):
-    """Quick top monitoring on web app servers"""
-    import time
-    cmd = "top -b | head -n 6"
+def check_top(grep_pattern=None):
+    """Quick top monitoring on web app servers."""
+    cmd = "top -b | head -n 12"
     run(cmd)
