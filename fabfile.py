@@ -55,10 +55,30 @@ def _alter_hosts(block=True):
 
 @task
 def mode_work():
+    """Turn off annoying sites so they don't distract."""
     _alter_hosts(block=True)
 
 @task
 def mode_play():
+    """Turn back on annoying sites."""
     _alter_hosts(block=False)
 
+_web_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
+                    for i in range(1, 6+1)]
+@task
+@parallel
+@hosts(_web_app_servers)
+def tail_nginx(grep_pattern=None):
+    """Quick `tail -f` on web app server logs."""
+    cmd = "tail -n100 -F /var/log/nginx/*.log"
+    if grep_pattern:
+        cmd += " | grep " + grep_pattern
+    sudo(cmd)
 
+@task
+@hosts(_web_app_servers)
+def check_load(grep_pattern=None):
+    """Quick top monitoring on web app servers"""
+    import time
+    cmd = "top -b | head -n 6"
+    run(cmd)
