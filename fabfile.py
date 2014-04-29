@@ -64,20 +64,48 @@ def mode_play():
     _alter_hosts(block=False)
 
 _web_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
-                    for i in range(1, 6+1)]
+                    for i in range(1, 4+1)]
+
+@task
+def web_tmux_htop_all():
+    """Run htop in different tmux windows for all web servers."""
+    for host in _web_app_servers:
+        run("tmux neww ssh cogtree@{} htop".format(host))
+
 @task
 @parallel
 @hosts(_web_app_servers)
-def tail_nginx(grep_pattern=None):
+def web_tail_nginx(grep_pattern=None):
     """Quick `tail -f` on web app server logs."""
     cmd = "tail -n100 -F /var/log/nginx/*.log"
     if grep_pattern:
         cmd += " | grep " + grep_pattern
     sudo(cmd)
 
+_beta_db_servers = ["betadb{num}.cogtree.com".format(num=i)
+                    for i in range(1, 3+1)]
+
 @task
-@hosts(_web_app_servers)
-def check_top(grep_pattern=None):
-    """Quick top monitoring on web app servers."""
+@hosts(_beta_db_servers)
+def betadb_check_top(grep_pattern=None):
+    """Quick top monitoring on betadb servers."""
     cmd = "top -b | head -n 12"
     run(cmd)
+
+_ptng = ["ptrack-nextgen{num}.cogtree.com".format(num=i)
+         for i in range(1, 4+1)]
+
+@task
+@parallel
+@hosts(_ptng)
+def visits_tuplelogger():
+    """Check how many tuplelogger logs there are on Storm servers."""
+    sudo("ls -l /var/log/cogtree/storm/visits/tuplelogger* | wc -l")
+
+@task
+@parallel
+@hosts(_ptng)
+def visits_log_usage():
+    """Check server log usage on Storm servers."""
+    sudo("du -hs /var/log/cogtree")
+
