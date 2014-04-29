@@ -31,17 +31,17 @@ alias screencast="avconv -v warning -f x11grab -s 1366x768 -r 30 -i :0.0 -s 1366
 # finds the pid(s) for any process
 alias findpid='pgrep -fln'
 
-# parse.ly-specific
-# ~~~~~~~~~~~~~~~~~
+# vagrant-specific
+# ~~~~~~~~~~~~~~~~
 
 # connect to Postgres REPL
-alias p-psql='psql -h vagrant.cogtree.com -U parsely'
+alias v-psql='psql -h vagrant.cogtree.com -U parsely'
 # connect to Cassandra REPL
-alias p-cql='cqlsh vagrant.cogtree.com 9160'
+alias v-cql='cqlsh vagrant.cogtree.com 9160'
 # connect to Mongo REPL
-alias p-mongo='mongo vagrant.cogtree.com'
+alias v-mongo='mongo vagrant.cogtree.com'
 # connect to Redis REPL
-alias p-redis-cli='redis-cli -h vagrant.cogtree.com'
+alias v-redis-cli='redis-cli -h vagrant.cogtree.com'
 
 # share terminal via floobits
 alias shareterm='flootty --owner="Parse.ly" --workspace=interviews --create AM'
