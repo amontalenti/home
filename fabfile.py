@@ -67,12 +67,6 @@ _web_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
                     for i in range(1, 4+1)]
 
 @task
-def web_tmux_htop_all():
-    """Run htop in different tmux windows for all web servers."""
-    for host in _web_app_servers:
-        run("tmux neww ssh cogtree@{} htop".format(host))
-
-@task
 @parallel
 @hosts(_web_app_servers)
 def web_tail_nginx(grep_pattern=None):
