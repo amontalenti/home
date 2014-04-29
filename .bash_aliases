@@ -35,13 +35,13 @@ alias findpid='pgrep -fln'
 # ~~~~~~~~~~~~~~~~~
 
 # connect to Postgres REPL
-alias _psql='psql -h vagrant.cogtree.com -U parsely'
+alias p-psql='psql -h vagrant.cogtree.com -U parsely'
 # connect to Cassandra REPL
-alias _cqlsh='cqlsh vagrant.cogtree.com 9160'
+alias p-cql='cqlsh vagrant.cogtree.com 9160'
 # connect to Mongo REPL
-alias _mongo='mongo vagrant.cogtree.com'
+alias p-mongo='mongo vagrant.cogtree.com'
 # connect to Redis REPL
-alias _redis-cli='redis-cli -h vagrant.cogtree.com'
+alias p-redis-cli='redis-cli -h vagrant.cogtree.com'
 
 # share terminal via floobits
 alias shareterm='flootty --owner="Parse.ly" --workspace=interviews --create AM'
