@@ -4,9 +4,10 @@ Vagrant.configure("2") do |config|
     config.ssh.forward_agent = true
     config.vm.synced_folder "/home/pixelmonkey/repos", "/home/vagrant/parsely"
     ports = [
-        8000, 8080, # storm UI
+        5432,       # postgresql
         27017,      # mongodb
         6379,       # redis
+        8000, 8080, # storm UI
         9042, 9160, # cassandra
         9200, 9300  # elasticsearch
     ]
