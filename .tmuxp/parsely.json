@@ -3,52 +3,52 @@
   "windows": [
     {
       "window_name": "dash",
-      "start_directory": "~/repos/", 
-      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}", 
+      "start_directory": "~/repos/",
+      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}",
       "options": {
         "automatic-rename": "off"
-      }, 
+      },
       "panes": [
-        "hop dash && vim .", 
+        "hop dash && vim .",
         "hop dash && ipython",
         "hop dash"
       ]
     },
     {
       "window_name": "mage",
-      "start_directory": "~/repos/", 
-      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}", 
+      "start_directory": "~/repos/",
+      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}",
       "options": {
         "automatic-rename": "off"
-      }, 
+      },
       "panes": [
-        "hop mage && vim .", 
+        "hop mage && vim .",
         "hop mage && ipython",
         "hop mage"
       ]
     },
     {
       "window_name": "ptrack",
-      "start_directory": "~/repos/", 
-      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}", 
+      "start_directory": "~/repos/",
+      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}",
       "options": {
         "automatic-rename": "off"
-      }, 
+      },
       "panes": [
-        "hop ptrack && vim .", 
+        "hop ptrack && vim .",
         "hop ptrack && ipython",
         "hop ptrack"
       ]
     },
     {
       "window_name": "vagrant",
-      "start_directory": "~/repos/", 
-      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}", 
+      "start_directory": "~/repos/",
+      "layout": "aee3,151x40,0,0{86x40,0,0,1,64x40,87,0[64x19,87,0,2,64x20,87,20,3]}",
       "options": {
         "automatic-rename": "off"
-      }, 
+      },
       "panes": [
-        "hop vagrant && vim Vagrantfile", 
+        "hop vagrant && vim Vagrantfile",
         "hop vagrant && cd .. && vim .",
         "hop vagrant"
       ]
