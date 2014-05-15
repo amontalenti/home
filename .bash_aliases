@@ -43,7 +43,24 @@ alias v-mongo='mongo vagrant.cogtree.com'
 # connect to Redis REPL
 alias v-redis-cli='redis-cli -h vagrant.cogtree.com'
 
+# Floobits
+# ~~~~~~~~
+
 # share terminal via floobits
 alias shareterm='flootty --owner="Parse.ly" --workspace=interviews --create AM'
 # share directory via floobits
 alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/interviews/" ~/src/interviews'
+
+# multiplex'ed tmux ssh sessions
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# connect to config servers
+alias ssh-config='ssh-multi ue1a-config1 ue1a-config2 ue1b-config1 ue1b-config2 ue1e-config1 ue1e-config2 uw2a-config1 uw2b-config1 uw2c-config1'
+# connect to pixel servers
+alias ssh-pixel='ssh-multi ue1a-pixel1 ue1a-pixel2 ue1b-pixel1 ue1b-pixel2 ue1e-pixel1 ue1e-pixel2'
+# connect to dash servers
+alias ssh-dash='ssh-multi ue1a-dash-web1 ue1a-dash-web2'
+# connect to api servers
+alias ssh-api='ssh-multi ue1a-api1 ue1a-api2 ue1a-api3'
+# connect to storm servers
+alias ssh-storm='ssh-multi ue1a-storm1 ue1a-storm2 ue1a-storm3'
