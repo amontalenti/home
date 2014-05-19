@@ -103,3 +103,10 @@ def visits_log_usage():
     """Check server log usage on Storm servers."""
     sudo("du -hs /var/log/cogtree")
 
+_mongo_servers = ["ue1a-parsely-mongo1{letter}.cogtree.com".format(letter=i)
+                    for i in "abc"]
+@task
+@parallel
+@hosts(_mongo_servers)
+def mongo_uptime():
+    sudo("uptime")

@@ -54,13 +54,39 @@ alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/in
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# connect to config servers
+# config servers
 alias ssh-config='ssh-multi ue1a-config1 ue1a-config2 ue1b-config1 ue1b-config2 ue1e-config1 ue1e-config2 uw2a-config1 uw2b-config1 uw2c-config1'
-# connect to pixel servers
+# pixel servers
 alias ssh-pixel='ssh-multi ue1a-pixel1 ue1a-pixel2 ue1b-pixel1 ue1b-pixel2 ue1e-pixel1 ue1e-pixel2'
-# connect to dash servers
-alias ssh-dash='ssh-multi ue1a-dash-web1 ue1a-dash-web2'
-# connect to api servers
+# dash servers
+alias ssh-dash-web='ssh-multi ue1a-dash-web1 ue1a-dash-web2 ue1a-dash-web3 ue1a-dash-web4 ue1a-dash-web5 ue1a-dash-web6'
+# ptrack Mongo servers
+alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1a ue1a-parsely-mongo1b ue1a-parsely-mongo1c ue1a-parsely-mongo1d'
+# crawl Mongo servers
+alias ssh-crawl-mongo='ssh-multi ue1a-crawl-mongo1a ue1a-crawl-mongo1b ue1a-crawl-mongo1c'
+# api servers
 alias ssh-api='ssh-multi ue1a-api1 ue1a-api2 ue1a-api3'
-# connect to storm servers
-alias ssh-storm='ssh-multi ue1a-storm1 ue1a-storm2 ue1a-storm3'
+# Solr servers
+alias ssh-solr='ssh-multi ue1a-solr1 ue1a-solr2 ue1a-solr3'
+# crawl servers
+alias ssh-crawl='ssh-multi ue1a-crawl1 ue1a-crawl2 ue1a-crawl3'
+# first storm cluster
+alias ssh-storm1='ssh-multi ue1a-storm1 ue1a-storm2 ue1a-storm3'
+# second storm cluster
+alias ssh-storm2='ssh-multi ue1a-storm4'
+# Kafka cluster
+alias ssh-kafka='ssh-multi ue1a-kafka1 ue1a-kafka2 ue1a-kafka3'
+# first zk cluster
+alias ssh-zk1='ssh-multi ue1a-zk1 ue1a-zk2 ue1a-zk3'
+# second zk cluster
+alias ssh-zk2='ssh-multi ue1a-zk4 ue1a-zk5 ue1a-zk6'
+# API zk cluster
+alias ssh-api-zk='ssh-multi ue1a-api-zk1 ue1a-api-zk2 ue1a-api-zk3'
+# betadb
+alias ssh-betadb='ssh-multi betadb1 betadb2 betadb3'
+# himem servers
+alias ssh-himem='ssh-multi himem1 himem2 himem3 himem4 himem5'
+# Cassandra cluster
+alias ssh-cass='ssh-multi ue1a-cass1a ue1a-cass1b ue1a-cass1c'
+# Elasticsearch cluster
+alias ssh-es='ssh-multi ue1a-es1a ue1a-es1b ue1a-es1c'

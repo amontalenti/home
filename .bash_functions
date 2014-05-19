@@ -36,3 +36,10 @@ function ccd () {
 function gitgrep () {
     git log --pretty=oneline -S"$1"
 }
+
+function sshtunnel() {
+    local LOCALPORT=$1
+    local REMOTEPORT=$2
+    local SERVER=$3
+    ssh -nNT -L $LOCALPORT:localhost:$REMOTEPORT $SERVER;
+}
