@@ -42,6 +42,8 @@ alias v-cql='cqlsh vagrant.cogtree.com 9160'
 alias v-mongo='mongo vagrant.cogtree.com'
 # connect to Redis REPL
 alias v-redis-cli='redis-cli -h vagrant.cogtree.com'
+# connect to Elasticsearch REPL (Python)
+alias v-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('vagrant.cogtree.com'); print('\nElasticSearch: use es\n')\""
 
 # Floobits
 # ~~~~~~~~
