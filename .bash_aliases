@@ -87,6 +87,6 @@ alias ssh-betadb='ssh-multi betadb1 betadb2 betadb3'
 # himem servers
 alias ssh-himem='ssh-multi himem1 himem2 himem3 himem4 himem5'
 # Cassandra cluster
-alias ssh-cass='ssh-multi ue1a-cass1a ue1a-cass1b ue1a-cass1c'
+alias ssh-cass='ssh-multi ue1a-cass1a.cogtree.com ue1a-cass1b.cogtree.com'
 # Elasticsearch cluster
 alias ssh-es='ssh-multi ue1a-es1a ue1a-es1b ue1a-es1c'

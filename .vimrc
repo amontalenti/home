@@ -44,7 +44,7 @@ autocmd FileType mail set tw=72
 imap <Del> <BS>
 map <Del> <BS>
 
-" wildmenu, for console menuing 
+" wildmenu, for console menuing
 set wildmenu
 set wildmode=longest,full
 source $VIMRUNTIME/menu.vim
@@ -67,10 +67,6 @@ map ,- :s/^/-- /<CR>:nohlsearch<CR>
 
 " clear comments
 map ,c :s/^\/\/ \\|^-- \\|^> \\|^[#"%!;] //<CR>:nohlsearch<CR>
-
-" enable spell-checking with F7
-map <F7> <Esc>:setlocal spell spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added_words.utf-8.add<CR>
-" map <F7> <Esc>:setlocal nospell<CR>
 
 " convenience abbreviations
 abbr pyimport #!/usr/bin/env python
@@ -137,7 +133,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " disable the toolbar
 set guioptions-=T
 
-" use w!! to write a file as sudo 
+" use w!! to write a file as sudo
 " even if you forget to sudo
 cmap w!! w !sudo tee % >/dev/null
 
@@ -168,6 +164,16 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :Tagbar<CR>
 map <F4> :GundoToggle<CR>
 
+" enable line number toggling
+set nonumber
+nnoremap <F6> :set nonumber!<CR>
+
+" enable spell-checking and line wrapping for e.g. Markdown
+set nospell
+nnoremap <F7> :set wrap nolist linebreak!<CR>
+nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
+
+
 " leader keys
 let mapleader = ","
 let maplocalleader = "\\"
@@ -177,13 +183,9 @@ autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
- 
+
 " Use the special symbols for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
-
-" enable line number toggling
-set nonumber
-nnoremap <F6> :set nonumber!<CR>
 
 " make VimClojure work a little more nicely
 let g:vimclojure#HighlightBuiltins = 1
