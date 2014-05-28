@@ -43,3 +43,8 @@ function sshtunnel() {
     local SERVER=$3
     ssh -nNT -L $LOCALPORT:localhost:$REMOTEPORT $SERVER;
 }
+
+function dash() {
+    local APIKEY=$1
+    x-www-browser http://dash.to/$APIKEY;
+}
