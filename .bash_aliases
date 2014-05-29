@@ -84,11 +84,9 @@ alias ssh-zk1='ssh-multi ue1a-zk1 ue1a-zk2 ue1a-zk3'
 alias ssh-zk2='ssh-multi ue1a-zk4 ue1a-zk5 ue1a-zk6'
 # API zk cluster
 alias ssh-api-zk='ssh-multi ue1a-api-zk1 ue1a-api-zk2 ue1a-api-zk3'
-# betadb
-alias ssh-betadb='ssh-multi betadb1 betadb2 betadb3'
 # himem servers
 alias ssh-himem='ssh-multi himem1 himem2 himem3 himem4 himem5'
 # Cassandra cluster
-alias ssh-cass='ssh-multi ue1a-cass1a.cogtree.com ue1a-cass1b.cogtree.com'
+alias ssh-cass='ssh-multi ue1a-cass1a ue1a-cass1b ue1a-cass1c'
 # Elasticsearch cluster
 alias ssh-es='ssh-multi ue1a-es1a ue1a-es1b ue1a-es1c'
