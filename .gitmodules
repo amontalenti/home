@@ -25,6 +25,7 @@
 [submodule ".vim/bundle/paredit"]
 	path = .vim/bundle/paredit
 	url = git@github.com:vim-scripts/paredit.vim
+    ignore = untracked
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = git@github.com:groenewege/vim-less.git
@@ -34,6 +35,7 @@
 [submodule ".vim/bundle/vim-clojure-static"]
 	path = .vim/bundle/vim-clojure-static
 	url = git@github.com:guns/vim-clojure-static.git
+    ignore = untracked
 [submodule ".vim/bundle/rainbow_parentheses"]
 	path = .vim/bundle/rainbow_parentheses
 	url = git@github.com:kien/rainbow_parentheses.vim.git
