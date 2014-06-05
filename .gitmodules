@@ -1,33 +1,33 @@
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
+	url = git@github.com:tpope/vim-fugitive.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
-	url = https://github.com/vim-scripts/The-NERD-tree.git
+	url = git@github.com:vim-scripts/The-NERD-tree.git
 [submodule ".vim/bundle/gundo"]
 	path = .vim/bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
+	url = git@github.com:sjl/gundo.vim.git
 [submodule ".vim/bundle/surround"]
 	path = .vim/bundle/surround
-	url = https://github.com/tpope/vim-surround.git
+	url = git@github.com:tpope/vim-surround.git
 [submodule ".vim/bundle/repeat"]
 	path = .vim/bundle/repeat
-	url = https://github.com/tpope/vim-repeat.git
+	url = git@github.com:tpope/vim-repeat.git
 [submodule ".autoenv"]
 	path = .autoenv
 	url = git://github.com/nvie/autoenv.git
 [submodule ".vim/bundle/vim-flake8"]
 	path = .vim/bundle/vim-flake8
-	url = https://github.com/nvie/vim-flake8
+	url = git@github.com:nvie/vim-flake8
 [submodule ".vim/bundle/rope-vim"]
 	path = .vim/bundle/rope-vim
-	url = https://github.com/sontek/rope-vim.git
+	url = git@github.com:sontek/rope-vim.git
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
+	url = git@github.com:kien/ctrlp.vim.git
 [submodule ".vim/bundle/paredit"]
 	path = .vim/bundle/paredit
-	url = https://github.com/vim-scripts/paredit.vim
+	url = git@github.com:vim-scripts/paredit.vim
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = git@github.com:groenewege/vim-less.git
