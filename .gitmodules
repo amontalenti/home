@@ -16,6 +16,7 @@
 [submodule ".autoenv"]
 	path = .autoenv
 	url = git://github.com/nvie/autoenv.git
+    ignore = untracked
 [submodule ".vim/bundle/vim-flake8"]
 	path = .vim/bundle/vim-flake8
 	url = git@github.com:nvie/vim-flake8.git
