@@ -13,9 +13,6 @@
 [submodule ".vim/bundle/repeat"]
 	path = .vim/bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule ".vim/bundle/taglist"]
-	path = .vim/bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule ".autoenv"]
 	path = .autoenv
 	url = git://github.com/nvie/autoenv.git
