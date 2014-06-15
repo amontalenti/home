@@ -1,6 +1,9 @@
 #!/usr/bin/env python2
 """Print out zsh prompts.
 
+Based on: https://gist.github.com/seanh/5233082
+
+Customized for Andrew's shell.
 """
 import os
 import os.path
