@@ -94,18 +94,6 @@ def color(s, foreground=None, background=None, bold=False, underline=False,
     return s
 
 
-def horizontal_rule(char='-'):
-    '''Return a long string of the given characters.
-
-    The string will be as long as the width of the user's terminal in
-    characters, and will have a newline at the end.
-
-    '''
-    width = os.popen('stty size', 'r').read().split()[1]
-    width = int(width)
-    return char * width + _zero_width('\n')
-
-
 def shorten_path(path, max_length=20):
     '''Return the given path, shortened if it's too long.
 
@@ -198,8 +186,7 @@ def left_prompt():
     '''Return my zsh left prompt.
 
     '''
-    return "{hr}» {cwd} ".format(
-            hr=color(horizontal_rule(' '), background='black'),
+    return "» {cwd} ".format(
             cwd=color(shorten_path(current_working_dir()), foreground='cyan')
             )
 
