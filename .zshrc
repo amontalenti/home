@@ -31,9 +31,13 @@ path=(
 )
 
 export EDITOR='vim'
+export TERM='xterm-256color'
+[ -n "$TMUX" ] && export TERM='screen-256color'
 
 # remember recent working directories. See zshcontrib(1).
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 
 zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+
+source $HOME/.bash_aliases

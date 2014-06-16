@@ -1,5 +1,5 @@
 # shortened file listings
-alias ls='ls --color=auto --hide=*.pyc'
+alias ls="ls --color=auto --hide='*.pyc'"
 alias ll='ls -l'
 alias la='ls -a'
 # python shells
