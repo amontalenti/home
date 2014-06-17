@@ -16,6 +16,7 @@ plugins=(git github
 source $ZSH/oh-my-zsh.sh
 
 path=(
+    /opt/miniconda/bin/
     /opt/storm/bin/
     /opt/vagrant/bin/
     /home/pixelmonkey/.rbenv/shims

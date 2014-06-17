@@ -71,5 +71,8 @@ pathprepend "/opt/vagrant/bin/"
 # add Apache Storm support
 pathprepend "/opt/storm/bin/"
 
+# add miniconda
+pathprepend "/opt/miniconda/bin"
+
 # make Java scripts work
 export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
