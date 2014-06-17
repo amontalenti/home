@@ -72,7 +72,7 @@ pathprepend "/opt/vagrant/bin/"
 pathprepend "/opt/storm/bin/"
 
 # add miniconda
-pathprepend "/opt/miniconda/bin"
+# pathprepend "/opt/miniconda/bin"
 
 # make Java scripts work
 export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
