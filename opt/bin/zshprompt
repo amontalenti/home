@@ -150,6 +150,10 @@ def current_working_dir():
     return cwd
 
 
+def _is_root():
+    return 'SUDO_UID' in os.environ.keys() or os.getuid() == 0
+
+
 def virtualenv():
     path = os.environ.get('VIRTUAL_ENV', '')
     if path:
@@ -186,8 +190,14 @@ def left_prompt():
     '''Return my zsh left prompt.
 
     '''
-    return "» {cwd} ".format(
-            cwd=color(shorten_path(current_working_dir()), foreground='cyan')
+    if _is_root():
+        root_status = '(^)'
+    else:
+        root_status = ''
+
+    return "» {cwd} {root}".format(
+            cwd=color(shorten_path(current_working_dir()), foreground='cyan'),
+            root=color(root_status, foreground='red')
             )
 
 
