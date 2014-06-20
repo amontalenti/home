@@ -75,7 +75,7 @@ alias ssh-crawl='ssh-multi ue1a-crawl1 ue1a-crawl2 ue1a-crawl3'
 # first storm cluster
 alias ssh-storm1='ssh-multi ue1a-storm1 ue1a-storm2 ue1a-storm3'
 # second storm cluster
-alias ssh-storm2='ssh-multi ue1a-storm4'
+alias ssh-storm2='ssh-multi ue1a-storm4 ue1a-storm5'
 # Kafka cluster
 alias ssh-kafka='ssh-multi ue1a-kafka1 ue1a-kafka2 ue1a-kafka3'
 # first zk cluster

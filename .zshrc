@@ -43,3 +43,4 @@ add-zsh-hook chpwd chpwd_recent_dirs
 zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 source $HOME/.bash_aliases
+source $HOME/.bash_functions

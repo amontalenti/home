@@ -41,10 +41,17 @@ function sshtunnel() {
     local LOCALPORT=$1
     local REMOTEPORT=$2
     local SERVER=$3
-    ssh -nNT -L $LOCALPORT:localhost:$REMOTEPORT $SERVER;
+    ssh -nNT -L "${LOCALPORT}:localhost:${REMOTEPORT}" $SERVER;
+}
+
+function sshforce() {
+    local SERVER=$1
+    ssh-keygen -f ~/.ssh/known_hosts -R ${SERVER}
+    ssh ${SERVER};
 }
 
 function dash() {
     local APIKEY=$1
     x-www-browser http://dash.to/$APIKEY;
 }
+
