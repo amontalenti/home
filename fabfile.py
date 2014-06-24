@@ -9,6 +9,10 @@ CONFIG_PATH = path.join(DOT_HOME, "config")
 
 env = Environment(loader=FileSystemLoader(TEMPLATE_PATH))
 
+#
+# /etc/hosts management
+#
+
 def _render_etc_hosts(block=True):
     template = env.get_template("etc_hosts.jinja2")
     if block:
@@ -63,45 +67,32 @@ def mode_play():
     """Turn back on annoying sites."""
     _alter_hosts(block=False)
 
-_web_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
+_dash_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
                     for i in range(1, 4+1)]
+
+#
+# server monitoring shortcuts
+#
 
 @task
 @parallel
-@hosts(_web_app_servers)
-def web_tail_nginx(grep_pattern=None):
-    """Quick `tail -f` on web app server logs."""
+@hosts(_dash_app_servers)
+def dash_tail_nginx(grep_pattern=None):
+    """Quick `tail -f` on dash web app server logs."""
     cmd = "tail -n100 -F /var/log/nginx/*.log"
     if grep_pattern:
         cmd += " | grep " + grep_pattern
     sudo(cmd)
 
-_beta_db_servers = ["betadb{num}.cogtree.com".format(num=i)
-                    for i in range(1, 3+1)]
+_storm_servers = ["ue1a-storm{num}.cogtree.com".format(num=i)
+                    for i in range(4, 5+1)]
 
 @task
-@hosts(_beta_db_servers)
-def betadb_check_top(grep_pattern=None):
-    """Quick top monitoring on betadb servers."""
+@hosts(_storm_servers)
+def storm_check_top(grep_pattern=None):
+    """Quick top monitoring on Storm worker servers."""
     cmd = "top -b | head -n 12"
     run(cmd)
-
-_ptng = ["ptrack-nextgen{num}.cogtree.com".format(num=i)
-         for i in range(1, 4+1)]
-
-@task
-@parallel
-@hosts(_ptng)
-def visits_tuplelogger():
-    """Check how many tuplelogger logs there are on Storm servers."""
-    sudo("ls -l /var/log/cogtree/storm/visits/tuplelogger* | wc -l")
-
-@task
-@parallel
-@hosts(_ptng)
-def visits_log_usage():
-    """Check server log usage on Storm servers."""
-    sudo("du -hs /var/log/cogtree")
 
 _mongo_servers = ["ue1a-parsely-mongo1{letter}.cogtree.com".format(letter=i)
                     for i in "abc"]
