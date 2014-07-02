@@ -100,4 +100,5 @@ _mongo_servers = ["ue1a-parsely-mongo1{letter}.cogtree.com".format(letter=i)
 @parallel
 @hosts(_mongo_servers)
 def mongo_uptime():
+    """uptime on all MongoDB servers."""
     sudo("uptime")

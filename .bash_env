@@ -61,18 +61,14 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 # add hop support
 source ~/opt/share/hop/hop.bash
 
-# add rbenv support
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # add vagrant support
 pathprepend "/opt/vagrant/bin/"
 
 # add Apache Storm support
 pathprepend "/opt/storm/bin/"
 
-# add miniconda
-# pathprepend "/opt/miniconda/bin"
-
 # make Java scripts work
 export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

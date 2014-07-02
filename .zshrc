@@ -32,6 +32,9 @@ path=(
     /bin
 )
 
+# add rbenv support
+eval "$(rbenv init -)"
+
 export EDITOR='vim'
 export TERM='xterm-256color'
 [ -n "$TMUX" ] && export TERM='screen-256color'
@@ -44,3 +47,6 @@ zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~
 
 source $HOME/.bash_aliases
 source $HOME/.bash_functions
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

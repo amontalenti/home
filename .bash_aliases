@@ -67,7 +67,7 @@ alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1a ue1a-parsely-mongo1b ue1
 # crawl Mongo servers
 alias ssh-crawl-mongo='ssh-multi ue1a-crawl-mongo1a ue1a-crawl-mongo1b ue1a-crawl-mongo1c'
 # api servers
-alias ssh-api='ssh-multi ue1a-api1 ue1a-api2 ue1a-api3'
+alias ssh-api='ssh-multi ue1a-api1 ue1a-api2 ue1a-api3 ue1a-api4 ue1a-api5 ue1a-api6'
 # Solr servers
 alias ssh-solr='ssh-multi ue1a-solr1 ue1a-solr2 ue1a-solr3'
 # crawl servers
