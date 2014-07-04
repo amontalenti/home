@@ -56,7 +56,7 @@ Here's the guide:
 
 The right prompt auto-hides when you are writing a long command, and the path compresses
 uses a shortening approach (thus ``~/r/p/streamparse``). You can also see the exit status
-of "1" in red of the `false` command.
+of ``1`` in red of the ``false`` command.
 
 Editor
 ------
