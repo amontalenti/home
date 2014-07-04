@@ -4,19 +4,44 @@ Andrew's home directory
 Shell
 -----
 
-I use bash out of habit. My bashrc links out to some other files.
+I use zsh. For years, I used bash out of habit. I still keep my .bashrc and
+associated bash files around, for the rare case where I'm forced to use bash.
 
-+-----------------+----------------------------------------+
-| file            |  description                           |
-+=================+========================================+
-| .bashrc         |  pulls everything together             |
-+-----------------+----------------------------------------+
-| .bash_aliases   |  handy shortcuts                       |
-+-----------------+----------------------------------------+
-| .bash_env       |  sets up my environment the way I like |
-+-----------------+----------------------------------------+
-| .bash_functions |  when an alias doesn't cut it          |
-+-----------------+----------------------------------------+
+My bash environment is covered in these files:
+
++-------------------+---------------------------------------+
+| file              | description                           |
++===================+=======================================+
+| ~/.bashrc         | pulls everything together             |
++-------------------+---------------------------------------+
+| ~/.bash_aliases   | handy shortcuts                       |
++-------------------+---------------------------------------+
+| ~/.bash_env       | sets up my environment the way I like |
++-------------------+---------------------------------------+
+| ~/.bash_functions | when an alias doesn't cut it          |
++-------------------+---------------------------------------+
+
+With zsh, I took a different approach. I have a simple `.zshrc` that implements
+the equivalent of `.bash_env`, and then my prompt is implemented via an
+oh-my-zsh theme that outsources most of its work to a Python script called
+`zshprompt`.
+
++----------------------------------+----------------------------------------------+
+| file                             | description                                  |
++==================================+==============================================+
+| ~/.zshrc                         | pulls everything together                    |
++----------------------------------+----------------------------------------------+
+| ~/.oh-my-zsh/themes/am.zsh-theme | theme that provides my left and right prompt |
++----------------------------------+----------------------------------------------+
+| ~/opt/bin/zshprompt              | Python script to generate prompt             |
++----------------------------------+----------------------------------------------+
+| ~/.bash_functions                | I use these across zsh and bash              |
++----------------------------------+----------------------------------------------+
+| ~/.bash_aliases                  | I use these across zsh and bash              |
++----------------------------------+----------------------------------------------+
+
+The `zshprompt` script supports shortened paths, git branches, Python
+virtualenvs, and last process exit code.
 
 Editor
 ------
@@ -27,7 +52,7 @@ of files, including:
 * Python
 * JavaScript
 * CSS and LESS
-* Clojure code
+* Clojure
 * JSON and XML
 * reStructuredText
 * Markdown
@@ -50,11 +75,14 @@ Some nice IDE-like plugins for me include:
 * Taglist_, for old-style code outlines / navigations
 * tagbar_, for improved code outlines / navigations
 * vim-less_, for editing LESS CSS files
+* vim-jinja_, for enhanced Jinja syntax highlighting
 * vim-flake8_, for Python syntax checking
 * vim-virtualenv_, for Python virtualenv support
 * vim-fireplace_, for Clojure interaction with nREPL
 * vim-clojure-static_, for Clojure basic editing support
+* rainbow_parentheses_, for Clojure paren highlighting
 * vim-markdown_, improved Markdown syntax handling
+* whitespace_, to kill trailing whitespace in files
 
 .. _NERDTree: https://github.com/scrooloose/nerdtree
 .. _numbers: https://github.com/myusuf3/numbers.vim.git
@@ -65,11 +93,14 @@ Some nice IDE-like plugins for me include:
 .. _Taglist: https://github.com/vim-scripts/taglist.vim
 .. _tagbar: http://majutsushi.github.io/tagbar/
 .. _vim-less: https://github.com/groenewege/vim-less
+.. _vim-jinja: https://github.com/mitsuhiko/vim-jinja
 .. _vim-flake8: https://github.com/nvie/vim-flake8
 .. _vim-virtualenv: https://github.com/jmcantrell/vim-virtualenv.git
 .. _vim-fireplace: https://github.com/tpope/vim-fireplace
 .. _vim-clojure-static: https://github.com/guns/vim-clojure-static
+.. _rainbow_parentheses: https://github.com/kien/rainbow_parentheses.vim
 .. _vim-markdown: https://github.com/tpope/vim-markdown
+.. _whitespace: https://github.com/bronson/vim-trailing-whitespace
 
 I then have a couple of plugins that just expand the vim vocabulary a
 little.  These include:

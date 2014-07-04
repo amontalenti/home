@@ -44,9 +44,6 @@
 [submodule ".vim/bundle/vim-jinja"]
 	path = .vim/bundle/vim-jinja
 	url = git@github.com:mitsuhiko/vim-jinja.git
-[submodule ".vim/bundle/vim-redl"]
-	path = .vim/bundle/vim-redl
-	url = git@github.com:dgrnbrg/vim-redl.git
 [submodule ".vim/bundle/vim-fireplace"]
 	path = .vim/bundle/vim-fireplace
 	url = git@github.com:tpope/vim-fireplace.git
