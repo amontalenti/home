@@ -41,7 +41,12 @@ oh-my-zsh theme that outsources most of its work to a Python script called
 +----------------------------------+----------------------------------------------+
 
 The ``zshprompt`` script supports shortened paths, git branches, Python
-virtualenvs, and last process exit code.
+virtualenvs, and last process exit code. Here is what it looks like:
+
+.. image:: https://dl.dropboxusercontent.com/u/108390/zsh_prompt.png
+    :target: http://ohmyz.sh/
+    :align: center
+    :alt: zshprompt
 
 Editor
 ------
