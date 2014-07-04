@@ -2,9 +2,10 @@
 #
 function hop
 {
-    HOP_OUTPUT="$(hop-script $*)"
+    HOP_OUTPUT="`hop-script $*`"
+    HOP_STATUS=$?
     array_of_lines=("${(@f)${HOP_OUTPUT}}")
-    case $? in
+    case $HOP_STATUS in
     255 )
         cd $array_of_lines[2]
         ;;
