@@ -167,14 +167,14 @@ def virtualenv():
 def git_branch():
     # Warning: subprocess.check_output() is new in Python 2.7.
     try:
-        output = subprocess.check_output('git status'.split(),
+        output = subprocess.check_output('git symbolic-ref HEAD'.split(),
                 stderr=subprocess.PIPE)
     except subprocess.CalledProcessError:
         # Non-zero return code, assume the current working dir is not in a git
         # repo.
         return ''
     first_line = output.split('\n')[0]
-    branch_name = first_line.split(' ')[-1]
+    branch_name = first_line.split('/', 2)[-1]
     branch = "{}{}{}".format(
         color("[", foreground="gray"),
         color(branch_name, foreground="blue"),
