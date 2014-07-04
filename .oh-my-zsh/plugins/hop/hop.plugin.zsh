@@ -6,11 +6,9 @@ function hop
     array_of_lines=("${(@f)${HOP_OUTPUT}}")
     case $? in
     255 )
-        read THE_NAME THE_PATH <<<$PATH_OR_OUTPUT
         cd $array_of_lines[2]
         ;;
     254 )
-        read THE_NAME THE_SERVER <<<$PATH_OR_OUTPUT
         ssh $array_of_lines[2]
         ;;
     *)
