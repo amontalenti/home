@@ -187,6 +187,9 @@ nmap <leader>l :set list!<CR>
 " Use the special symbols for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+nmap ;l :call ListTrans_toggle_format()<CR>
+vmap ;l :call ListTrans_toggle_format('visual')<CR>
+
 " make VimClojure work a little more nicely
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
@@ -194,8 +197,6 @@ let g:vimclojure#ParenRainbow = 1
 " make Ctrl-P must faster for git projects
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
-
-au BufRead,BufNewFile *.j2 set filetype=htmljinja
 
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
