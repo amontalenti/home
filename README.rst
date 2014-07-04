@@ -21,10 +21,10 @@ My bash environment is covered in these files:
 | ~/.bash_functions | when an alias doesn't cut it          |
 +-------------------+---------------------------------------+
 
-With zsh, I took a different approach. I have a simple `.zshrc` that implements
-the equivalent of `.bash_env`, and then my prompt is implemented via an
+With zsh, I took a different approach. I have a simple ``.zshrc`` that implements
+the equivalent of ``.bash_env``, and then my prompt is implemented via an
 oh-my-zsh theme that outsources most of its work to a Python script called
-`zshprompt`.
+``zshprompt``.
 
 +----------------------------------+----------------------------------------------+
 | file                             | description                                  |
@@ -40,7 +40,7 @@ oh-my-zsh theme that outsources most of its work to a Python script called
 | ~/.bash_aliases                  | I use these across zsh and bash              |
 +----------------------------------+----------------------------------------------+
 
-The `zshprompt` script supports shortened paths, git branches, Python
+The ``zshprompt`` script supports shortened paths, git branches, Python
 virtualenvs, and last process exit code.
 
 Editor
