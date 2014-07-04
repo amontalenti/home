@@ -190,6 +190,14 @@ set listchars=tab:▸\ ,eol:¬
 nmap ;l :call ListTrans_toggle_format()<CR>
 vmap ;l :call ListTrans_toggle_format('visual')<CR>
 
+" Visual blocks can now be dragged around
+vmap <expr> h DVB_Drag('left')
+vmap <expr> l DVB_Drag('right')
+vmap <expr> j DVB_Drag('down')
+vmap <expr> k DVB_Drag('up')
+vmap <expr> D DVB_Duplicate()
+let g:DVB_TrimWS = 1
+
 " make VimClojure work a little more nicely
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
