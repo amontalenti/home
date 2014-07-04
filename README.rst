@@ -1,5 +1,5 @@
-Andrew's home directory
-=======================
+My dotfiles and $HOME
+=====================
 
 Shell
 -----
