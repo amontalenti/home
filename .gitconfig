@@ -27,7 +27,8 @@
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
     whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     up = pull --rebase
-
+[pager]
+    df = cat
 [fetch]
     recurseSubmodules = true
 [push]

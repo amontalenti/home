@@ -1,0 +1,2 @@
+#!/bin/bash
+quicktile -d 2>/dev/null &
