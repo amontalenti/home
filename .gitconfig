@@ -27,6 +27,7 @@
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
     whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     up = pull --rebase
+    build = checkout-index -a --prefix=_gitbuild/
 [pager]
     df = cat
 [fetch]

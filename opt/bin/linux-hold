@@ -1,0 +1,3 @@
+#!/bin/bash
+dpkg --get-selections | egrep '^linux-' | sed -e's/	install/	hold/' | sudo dpkg --set-selections
+echo "holding back linux kernel upgrades with apt"
