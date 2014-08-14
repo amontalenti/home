@@ -12,6 +12,7 @@ alias ...="cd ../.."
 alias d='dirs -v'
 # privileged edit
 alias svim='sudo vim'
+alias simplenote='vim -c "Simplenote -l"'
 # grab a sudo shell
 alias ss='sudo -s'
 # see truly every process running
