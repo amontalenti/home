@@ -208,3 +208,7 @@ let g:ctrlp_use_caching = 0
 
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
+
+if filereadable(expand("~/.simplenoterc"))
+    source ~/.simplenoterc
+endif
