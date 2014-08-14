@@ -47,3 +47,6 @@
 [submodule ".vim/bundle/vim-fireplace"]
 	path = .vim/bundle/vim-fireplace
 	url = git@github.com:tpope/vim-fireplace.git
+[submodule ".vim/bundle/simplenote.vim"]
+	path = .vim/bundle/simplenote.vim
+	url = git@github.com:mrtazz/simplenote.vim.git
