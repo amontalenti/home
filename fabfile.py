@@ -67,12 +67,12 @@ def mode_play():
     """Turn back on annoying sites."""
     _alter_hosts(block=False)
 
-_dash_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
-                    for i in range(1, 4+1)]
-
 #
 # server monitoring shortcuts
 #
+
+_dash_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
+                    for i in range(1, 4+1)]
 
 @task
 @parallel
@@ -85,7 +85,7 @@ def dash_tail_nginx(grep_pattern=None):
     sudo(cmd)
 
 _storm_servers = ["ue1a-storm{num}.cogtree.com".format(num=i)
-                    for i in range(4, 5+1)]
+                    for i in range(4, 6+1)]
 
 @task
 @hosts(_storm_servers)
