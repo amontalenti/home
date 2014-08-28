@@ -90,4 +90,10 @@ alias ssh-himem='ssh-multi himem1 himem2 himem3 himem4 himem5'
 # Cassandra cluster
 alias ssh-cass='ssh-multi ue1a-cass1a ue1a-cass1b ue1a-cass1c'
 # Elasticsearch cluster
-alias ssh-es='ssh-multi ue1a-es1a ue1a-es1b ue1a-es1c'
+alias ssh-es1='ssh-multi ue1a-es1a ue1a-es1b ue1a-es1c'
+# Elasticsearch master nodes
+alias ssh-es3m='ssh-multi ue1a-es3-m1{a,b,c}'
+# Elasitcsearch query nodes
+alias ssh-es3q='ssh-multi ue1a-es3-d1{c,d,e}'
+# Elasticsearch indexing nodes only
+alias ssh-es3i='ssh-multi ue1a-es3-d1{a,b}'
