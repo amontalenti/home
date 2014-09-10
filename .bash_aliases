@@ -38,7 +38,7 @@ alias findpid='pgrep -fln'
 # connect to Postgres REPL
 alias v-psql='psql -h vagrant.cogtree.com -U parsely'
 # connect to Cassandra REPL
-alias v-cql='cqlsh vagrant.cogtree.com 9160'
+alias v-cql='TZ=UTC cqlsh vagrant.cogtree.com 9160'
 # connect to Mongo REPL
 alias v-mongo='mongo vagrant.cogtree.com'
 # connect to Redis REPL
@@ -90,7 +90,7 @@ alias ssh-himem='ssh-multi himem{1,2,3,4,5}'
 # Cassandra cluster
 alias ssh-cass='ssh-multi ue1a-cass1{a,b,c,d,e}'
 # Elasticsearch prototype cluster
-alias ssh-es1='ssh-multi ue1a-es1{a,b,c,d}'
+alias ssh-es1='ssh-multi ue1a-es1{a,b,c,d,e}'
 # Elasticsearch new cluster: master nodes
 alias ssh-es3m='ssh-multi ue1a-es3-m1{a,b,c}'
 # Elasitcsearch new cluster: query nodes
