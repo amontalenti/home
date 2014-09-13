@@ -23,8 +23,6 @@ alias rmpyc="find . -name '*.pyc' -delete"
 alias grep="grep --color=auto --exclude-dir='.svn' --exclude-dir='.git'"
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-# safety
-alias rm='rm -I'
 # typical IPython Notebook options
 alias notebook='ipython notebook --pylab=inline --port=9999'
 # quick-and-easy screencasting tool
