@@ -76,7 +76,7 @@ alias ssh-crawl='ssh-multi ue1a-crawl{1,2,3}'
 # first storm cluster
 alias ssh-storm1='ssh-multi ue1a-storm{1,2,3}'
 # second storm cluster
-alias ssh-storm2='ssh-multi ue1a-storm{4,5}'
+alias ssh-storm2='ssh-multi ue1a-storm{4,5,6}'
 # Kafka cluster
 alias ssh-kafka='ssh-multi ue1a-kafka{1,2,3}'
 # first zk cluster
@@ -93,7 +93,7 @@ alias ssh-cass='ssh-multi ue1a-cass1{a,b,c,d,e}'
 alias ssh-es1='ssh-multi ue1a-es1{a,b,c,d,e}'
 # Elasticsearch new cluster: master nodes
 alias ssh-es3m='ssh-multi ue1a-es3-m1{a,b,c}'
-# Elasitcsearch new cluster: query nodes
+# Elasticsearch new cluster: query nodes
 alias ssh-es3q='ssh-multi ue1a-es3-d1{c,d,e}'
 # Elasticsearch new cluster: indexing nodes only
 alias ssh-es3i='ssh-multi ue1a-es3-d1{a,b}'
