@@ -36,6 +36,10 @@ path=(
 # add rbenv support
 eval "$(rbenv init -)"
 
+# add travis CLI support
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+# vim and tmux
 export EDITOR='vim'
 export TERM='xterm-256color'
 [ -n "$TMUX" ] && export TERM='screen-256color'
@@ -44,10 +48,17 @@ export TERM='xterm-256color'
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 
+# allow `ssh` to autocomplete hosts
 zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
+# ignore '.pyc' files during completion
+zstyle ':completion:*:(all-|)files' ignored-patterns "(*.pyc|*~)"
+
+# but not for `rm` or `find`
+zstyle ':completion:*:rm:*:(all-|)files' ignored-patterns
+zstyle ':completion:*:find:*:(all-|)files' ignored-patterns
+
+# bash compatibility
 source $HOME/.bash_aliases
 source $HOME/.bash_functions
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
