@@ -19,8 +19,8 @@ source $ZSH/oh-my-zsh.sh
 #add: /opt/miniconda/bin/ for miniconda
 #
 path=(
-    /opt/storm/bin/
-    /opt/vagrant/bin/
+    /opt/storm/bin
+    /opt/vagrant/bin
     /home/pixelmonkey/.rbenv/shims
     /home/pixelmonkey/.rbenv/bin
     /home/pixelmonkey/opt/bin
@@ -61,4 +61,3 @@ zstyle ':completion:*:find:*:(all-|)files' ignored-patterns
 # bash compatibility
 source $HOME/.bash_aliases
 source $HOME/.bash_functions
-
