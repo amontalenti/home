@@ -44,6 +44,12 @@ alias v-redis-cli='redis-cli -h vagrant.cogtree.com'
 # connect to Elasticsearch REPL (Python)
 alias v-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('vagrant.cogtree.com'); print('\nElasticSearch: use es\n')\""
 
+# Clojure
+# -------
+alias clj-server='lein trampoline repl :headless'
+alias clj-repl='grench repl'
+alias clj-lein='grench lein'
+
 # Floobits
 # ~~~~~~~~
 
