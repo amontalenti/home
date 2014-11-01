@@ -1,5 +1,3 @@
 #!/bin/bash
-sudo stop network-manager
 easytether connect &
 sleep 2
-sudo dhclient easytether0

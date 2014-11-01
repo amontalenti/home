@@ -7,14 +7,16 @@ DOT_HOME = path.join(getenv("HOME"), ".home")
 TEMPLATE_PATH = path.join(DOT_HOME, "templates")
 CONFIG_PATH = path.join(DOT_HOME, "config")
 
-env = Environment(loader=FileSystemLoader(TEMPLATE_PATH))
+jinja_env = Environment(loader=FileSystemLoader(TEMPLATE_PATH))
+
+env.use_ssh_config = True
 
 #
 # /etc/hosts management
 #
 
 def _render_etc_hosts(block=True):
-    template = env.get_template("etc_hosts.jinja2")
+    template = jinja_env.get_template("etc_hosts.jinja2")
     if block:
         sitelist = open(path.join(CONFIG_PATH, "blocksites.txt"))
         sitelist = [site.strip() for site in sitelist]
@@ -102,3 +104,14 @@ _mongo_servers = ["ue1a-parsely-mongo1{letter}.cogtree.com".format(letter=i)
 def mongo_uptime():
     """uptime on all MongoDB servers."""
     sudo("uptime")
+
+_memex_servers = (["storm@r102u{}.xdata.data-tactics-corp.com".format(i)
+                      for i in range(25, 33+1)] +
+                  ["storm@r103u{}.xdata.data-tactics-corp.com".format(i)
+                      for i in range(20, 31+1)])
+
+@task
+@parallel
+@hosts(_memex_servers)
+def memex_do(cmd):
+    run(cmd)

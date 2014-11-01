@@ -36,7 +36,7 @@ alias findpid='pgrep -fln'
 # connect to Postgres REPL
 alias v-psql='psql -h vagrant.cogtree.com -U parsely'
 # connect to Cassandra REPL
-alias v-cql='TZ=UTC cqlsh vagrant.cogtree.com 9160'
+alias v-cql='cqlsh vagrant.cogtree.com 9160'
 # connect to Mongo REPL
 alias v-mongo='mongo vagrant.cogtree.com'
 # connect to Redis REPL

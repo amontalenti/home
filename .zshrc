@@ -58,6 +58,8 @@ zstyle ':completion:*:(all-|)files' ignored-patterns "(*.pyc|*~)"
 zstyle ':completion:*:rm:*:(all-|)files' ignored-patterns
 zstyle ':completion:*:find:*:(all-|)files' ignored-patterns
 
+setopt BRACE_CCL
+
 # bash compatibility
 source $HOME/.bash_aliases
 source $HOME/.bash_functions
