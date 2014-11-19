@@ -71,7 +71,7 @@ pathprepend "/opt/storm/bin/"
 pathprepend ~/.local/bin
 
 # make Java scripts work
-export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
