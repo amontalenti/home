@@ -29,6 +29,8 @@ alias notebook='ipython notebook --pylab=inline --port=9999'
 alias screencast="avconv -v warning -f x11grab -s 1366x768 -r 30 -i :0.0 -s 1366x768 -vcodec libx264 -threads 0 screencast.mp4"
 # finds the pid(s) for any process
 alias findpid='pgrep -fln'
+alias ipyspark='IPYTHON=1 pyspark'
+alias ipysparknotebook='IPYTHON_OPTS="notebook --pylab inline" pyspark'
 
 # vagrant-specific
 # ~~~~~~~~~~~~~~~~
