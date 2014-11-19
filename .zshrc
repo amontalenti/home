@@ -19,6 +19,7 @@ source $ZSH/oh-my-zsh.sh
 #add: /opt/miniconda/bin/ for miniconda
 #
 path=(
+    /opt/spark/bin
     /opt/storm/bin
     /opt/vagrant/bin
     /home/pixelmonkey/.rbenv/shims
@@ -32,6 +33,10 @@ path=(
     /sbin
     /bin
 )
+
+# Java should point to Oracle JVM
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
+export JRE_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 
 # add rbenv support
 eval "$(rbenv init -)"
