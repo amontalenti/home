@@ -36,7 +36,6 @@ path=(
 
 # Java should point to Oracle JVM
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
-export JRE_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 
 # add rbenv support
 eval "$(rbenv init -)"
