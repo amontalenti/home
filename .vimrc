@@ -172,7 +172,7 @@ nnoremap <F6> :set nonumber!<CR>
 set nospell
 nnoremap <F7> :set wrap nolist linebreak!<CR>
 nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
-
+nnoremap <F9> :Goyo<CR>
 
 " leader keys
 let mapleader = ","
@@ -181,6 +181,8 @@ let maplocalleader = "\\"
 " check Python for style
 autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
