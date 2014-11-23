@@ -159,20 +159,26 @@ let g:jedi#auto_initialization = 0
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
 
-" vim IDE
+" toggle file/folder tree
 map <F2> :NERDTreeToggle<CR>
+" toggle in-file navigation bar
 map <F3> :Tagbar<CR>
+" toggle undo history visualization
 map <F4> :GundoToggle<CR>
 
-" enable line number toggling
+" toggle line numbers
 set nonumber
 nnoremap <F6> :set nonumber!<CR>
 
-" enable spell-checking and line wrapping for e.g. Markdown
 set nospell
+" toggle line wrapping
 nnoremap <F7> :set wrap nolist linebreak!<CR>
+" toggle spell checking
 nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
+" toggle distraction free mode
 nnoremap <F9> :Goyo<CR>
+
+" hit F7, F8, F9 for 'prose writing' mode
 
 " leader keys
 let mapleader = ","
@@ -208,8 +214,13 @@ let g:vimclojure#ParenRainbow = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
 
+" backup files
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
+
+" persistent undo
+set undofile
+set undodir=~/.vim/undodir/
 
 if filereadable(expand("~/.simplenoterc"))
     source ~/.simplenoterc
