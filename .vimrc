@@ -191,6 +191,9 @@ autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
 nmap <leader>l :set list!<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
+" Shortcut to change directory to current file
+nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
 
 " Use the special symbols for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
