@@ -228,3 +228,8 @@ set undodir=~/.vim/undodir/
 if filereadable(expand("~/.simplenoterc"))
     source ~/.simplenoterc
 endif
+
+" markdown live preview
+let g:livedown_open = 1
+let g:livedown_port = 9337
+nmap <leader>md :call LivedownPreview()<CR>
