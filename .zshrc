@@ -12,6 +12,7 @@ plugins=(git github
          fabric
          lein
          npm
+         history-substring-search
          sudo)
 
 source $ZSH/oh-my-zsh.sh
