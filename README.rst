@@ -86,6 +86,7 @@ Some nice IDE-like plugins for me include:
 * ctrlp_, for quick file opening
 * fugitive_, for git integration
 * Gundo_, for undo history
+* Goyo_, for distraction-free writing
 * rope-vim_, for Python refactoring support
 * Taglist_, for old-style code outlines / navigations
 * tagbar_, for improved code outlines / navigations
@@ -95,8 +96,10 @@ Some nice IDE-like plugins for me include:
 * vim-virtualenv_, for Python virtualenv support
 * vim-fireplace_, for Clojure interaction with nREPL
 * vim-clojure-static_, for Clojure basic editing support
+* vim-sexp-ext_, for Clojure text motions over S-expressions
 * rainbow_parentheses_, for Clojure paren highlighting
 * vim-markdown_, improved Markdown syntax handling
+* vim-livedown_, for live preview of Markdown files
 * whitespace_, to kill trailing whitespace in files
 
 .. _NERDTree: https://github.com/scrooloose/nerdtree
@@ -104,6 +107,7 @@ Some nice IDE-like plugins for me include:
 .. _ctrlp: https://github.com/kien/ctrlp.vim.git
 .. _fugitive: http://github.com/tpope/vim-fugitive.git
 .. _Gundo: https://github.com/sjl/gundo.vim
+.. _Goyo: https://github.com/junegunn/goyo.vim
 .. _rope-vim: https://github.com/sontek/rope-vim.git
 .. _Taglist: https://github.com/vim-scripts/taglist.vim
 .. _tagbar: http://majutsushi.github.io/tagbar/
@@ -113,8 +117,10 @@ Some nice IDE-like plugins for me include:
 .. _vim-virtualenv: https://github.com/jmcantrell/vim-virtualenv.git
 .. _vim-fireplace: https://github.com/tpope/vim-fireplace
 .. _vim-clojure-static: https://github.com/guns/vim-clojure-static
+.. _vim-sexp-ext: https://github.com/tpope/vim-sexp-mappings-for-regular-people
 .. _rainbow_parentheses: https://github.com/kien/rainbow_parentheses.vim
 .. _vim-markdown: https://github.com/tpope/vim-markdown
+.. _vim-livedown: https://github.com/shime/vim-livedown
 .. _whitespace: https://github.com/bronson/vim-trailing-whitespace
 
 I then have a couple of plugins that just expand the vim vocabulary a
