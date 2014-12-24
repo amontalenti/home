@@ -55,3 +55,10 @@ function dash() {
     x-www-browser http://dash.to/$APIKEY;
 }
 
+vman() {
+  vim -c "SuperMan $*"
+
+  if [ "$?" != "0" ]; then
+    echo "No manual entry for $*"
+  fi
+}

@@ -62,3 +62,6 @@
 [submodule ".vim/bundle/vim-livedown"]
 	path = .vim/bundle/vim-livedown
 	url = git://github.com/shime/vim-livedown
+[submodule ".vim/bundle/vim-superman"]
+	path = .vim/bundle/vim-superman
+	url = git@github.com:Z1MM32M4N/vim-superman.git
