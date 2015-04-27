@@ -75,7 +75,7 @@ alias clj-lein='grench lein'
 # ~~~~~~~~
 
 # share terminal via floobits
-alias shareterm='flootty --owner="Parse.ly" --workspace=interviews --create AM'
+alias shareterm='flootty --create --url="https://floobits.com/Parse.ly/hack"'
 # share directory via floobits
 alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/interviews/" ~/src/interviews'
 
@@ -85,7 +85,7 @@ alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/in
 # config servers
 alias ssh-config='ssh-multi ue1a-config{1,2} ue1b-config{1,2} ue1e-config{1,2} uw2a-config{1,2} uw2c-config1'
 # pixel servers
-alias ssh-pixel='ssh-multi ue1{a,b,e}-pixel1, uw2{a,b}-pixel1'
+alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b}-pixel1}'
 # dash app servers
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5,6}'
 # ptrack mongo
