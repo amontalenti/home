@@ -39,13 +39,10 @@ alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
 # ~~~~~~
 #
 # python shells
-alias bpy='bpython-curtsies'
 alias ipy='ipython'
-# typical IPython Notebook options
-alias notebook='ipython notebook --pylab=inline'
 # spark + python integration
 alias ipyspark='IPYTHON=1 pyspark'
-alias ipysparknotebook='IPYTHON_OPTS="notebook --pylab inline" pyspark'
+alias ipysparknotebook='IPYTHON_OPTS="notebook" pyspark'
 
 # vagrant-specific
 # ~~~~~~~~~~~~~~~~
