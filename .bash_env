@@ -55,8 +55,8 @@ export VIMCLOJURE_SERVER_JAR="$HOME/opt/share/vimclojure/server-2.3.3.jar"
 
 # add virtualenv support
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper_lazy.sh
 
 # add hop support
 source ~/opt/share/hop/hop.bash
