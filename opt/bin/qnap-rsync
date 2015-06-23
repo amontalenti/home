@@ -1,1 +1,0 @@
-sudo rsync -av --progress --partial --exclude-from=/etc/excludes / rsync://192.168.1.201/Public/backup/t400
