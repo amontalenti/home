@@ -155,11 +155,39 @@ def _is_root():
 
 
 def virtualenv():
-    path = os.environ.get('VIRTUAL_ENV', '')
-    if path:
+    """Formats the current pyenv or virtualenv.
+
+    Basic idea:
+
+        - if VIRTUAL_ENV or PYENV_VERSION env vars are set,
+          we want to report that at the shell
+
+        - we want to report that both are set if they both
+          are, since Python can look beyond a venv's site-packages
+
+        - if they are same, we can shorten display
+    """
+    venv = os.environ.get('VIRTUAL_ENV', None)
+    if venv:
+        venv = os.path.basename(venv)
+    pyenv = os.environ.get('PYENV_VERSION', None)
+    if pyenv:
+        pyenv = pyenv
+    if pyenv:
+        current_env = 'p» ' + pyenv
+    if venv:
+        current_env = 'v» ' + venv
+    if pyenv and venv:
+        if pyenv == venv:
+            current_env = pyenv
+        else:
+            current_env = "%s | %s" % (venv, pyenv)
+    if not pyenv and not venv:
+        current_env = None
+    if current_env:
         path = "{}{}{}".format(
             color("(", foreground="gray"),
-            color(os.path.basename(path), foreground="green"),
+            color(current_env, foreground="green"),
             color(")", foreground="gray"))
     return path
 
