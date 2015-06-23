@@ -4,8 +4,9 @@ ZSH_THEME="ampy"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git github
-         python virtualenv virtualenvwrapper
+plugins=(git
+         github
+         python
          hop
          tmux
          vagrant
@@ -15,17 +16,14 @@ plugins=(git github
          history-substring-search
          sudo)
 
-source $ZSH/oh-my-zsh.sh
-
-#add: /opt/miniconda/bin/ for miniconda
-#
 path=(
     /opt/spark/bin
     /opt/storm/bin
     /opt/vagrant/bin
-    /home/pixelmonkey/.rbenv/shims
-    /home/pixelmonkey/.rbenv/bin
-    /home/pixelmonkey/opt/bin
+    /home/am/.rbenv/shims
+    /home/am/.rbenv/bin
+    /home/am/.pyenv/bin
+    /home/am/opt/bin
     /usr/lib/lightdm/lightdm
     /usr/local/sbin
     /usr/local/bin
@@ -35,6 +33,8 @@ path=(
     /bin
 )
 
+source $ZSH/oh-my-zsh.sh
+
 # Java should point to Oracle JVM
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 
@@ -43,6 +43,11 @@ export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
 
 # add rbenv support
 eval "$(rbenv init -)"
+
+# add pyenv support
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # add travis CLI support
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

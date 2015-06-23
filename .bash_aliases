@@ -43,7 +43,9 @@ alias ipy='ipython'
 # spark + python integration
 alias ipyspark='IPYTHON=1 pyspark'
 alias ipysparknotebook='IPYTHON_OPTS="notebook" pyspark'
-alias ve="pyenv virtualenvwrapper"
+alias pe="pyenv shell"
+alias py2="pyenv activate py2"
+alias py3="pyenv activate py3"
 
 # vagrant-specific
 # ~~~~~~~~~~~~~~~~
