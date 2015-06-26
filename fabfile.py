@@ -29,7 +29,7 @@ def _render_etc_hosts(block=True):
 
 def _overwrite_hosts_file(contents):
     indexfile = path.join(DOT_HOME, "static", "index.html")
-    local("sudo cp {0} /usr/share/nginx/www/".format(indexfile))
+    local("sudo cp {0} /usr/share/nginx/html/".format(indexfile))
     scratch_dir = path.join(DOT_HOME, "scratch")
     local("mkdir -p {0}".format(scratch_dir))
     filename = path.join(scratch_dir, "hosts")

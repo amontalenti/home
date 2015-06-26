@@ -1,7 +1,7 @@
 # bashrc is used for non-interactive shells
 #
 # this means bashrc should include things like aliases and functions
-# whereas bash_profile should include customizations to the interactive 
+# whereas bash_profile should include customizations to the interactive
 # shell, including exported variables.
 
 # If not running interactively, don't do anything
@@ -21,4 +21,3 @@
 [ -f ~/.bash_completion ] && . ~/.bash_completion
 
 [ -f /etc/bash_completion ] && . /etc/bash_completion
-
