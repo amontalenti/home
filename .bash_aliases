@@ -34,6 +34,8 @@ alias kismet='kismet -n'
 alias screencast="avconv -v warning -f x11grab -s 1360x768 -r 30 -i :0.0 -s 1366x768 -vcodec libx264 -threads 0 screencast.mp4"
 # make a quick 30-second gif screencast
 alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
+# quick gcal agenda
+alias gcal='gcalcli agenda --calendar="AM - Parse.ly" --calendar="AM - Personal" --calendar="Shared - Team"'
 
 # python
 # ~~~~~~
