@@ -4,6 +4,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# rbenv setup
+export RBENV_DIR="$HOME/.rbenv"
+eval "$(rbenv init -)"
+
 # nvm setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
