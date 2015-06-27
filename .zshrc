@@ -20,9 +20,9 @@ path=(
     /opt/spark/bin
     /opt/storm/bin
     /opt/vagrant/bin
-    /home/am/.rbenv/shims
     /home/am/.rbenv/bin
     /home/am/.pyenv/bin
+    /home/am/.nvm/bin
     /home/am/opt/bin
     /usr/lib/lightdm/lightdm
     /usr/local/sbin
@@ -48,6 +48,10 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# add nvm support
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
 # add travis CLI support
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
