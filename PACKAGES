@@ -1,0 +1,73 @@
+# shell
+vim
+vim-gnome
+tmux
+zsh
+git
+
+# ubuntu / unity fixes
+compiz-config-settings-manager
+unity-tweak-tool
+
+# python install necessities
+make
+build-essential
+libssl-dev
+zlib1g-dev
+libbz2-dev
+libreadline-dev
+libsqlite3-dev
+libsnappy-dev
+libpq-dev
+wget
+curl
+llvm
+
+# goodies
+youtube-dl
+vlc
+glipper
+shutter
+audacity
+pitivi
+nautilus-open-terminal
+cpufreq-indicator
+indicator-multiload
+compiz-plugins-extra
+xsel
+xclip
+workrave
+workrave-unity
+ubuntu-restricted-extras
+libavcodec-extra
+libreoffice-style-sifr
+y-ppa-manager
+psensors
+indicator-sensors
+grub-customizer
+
+
+# python
+pyenv (via https://github.com/yyuu/pyenv-installer)
+
+# ruby
+rbenv (via https://github.com/sstephenson/rbenv)
+ruby-build (via https://github.com/sstephenson/ruby-build)
+
+# node.js
+nvm (via https://github.com/creationix/nvm)
+
+# java
+openjdk-7-jdk
+
+# clojure
+lein (via http://leiningen.org/)
+
+# infrastructure
+docker (via https://docs.docker.com/installation/ubuntulinux/)
+Fabric (via pip)
+jinja2 (via pip)
+linux-tools-common
+linux-tools-generic
+linux-tools-3.16.0-41-generic
+psensor
