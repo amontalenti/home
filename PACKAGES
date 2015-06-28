@@ -23,7 +23,7 @@ wget
 curl
 llvm
 
-# goodies
+# desktop goodies
 youtube-dl
 vlc
 glipper
@@ -45,7 +45,6 @@ y-ppa-manager
 psensors
 indicator-sensors
 grub-customizer
-
 
 # python
 pyenv (via https://github.com/yyuu/pyenv-installer)
@@ -70,4 +69,3 @@ jinja2 (via pip)
 linux-tools-common
 linux-tools-generic
 linux-tools-3.16.0-41-generic
-psensor
