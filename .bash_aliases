@@ -49,18 +49,21 @@ alias pe="pyenv shell"
 alias py2="pyenv activate py2"
 alias py3="pyenv activate py3"
 
-# vagrant-specific
-# ~~~~~~~~~~~~~~~~
+# vagrant and docker aliases
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # connect to Postgres REPL
 alias v-psql='psql -h vagrant.cogtree.com -U parsely'
 alias d-psql='psql -h localhost -U parsely'
 # connect to Cassandra REPL
 alias v-cql='cqlsh vagrant.cogtree.com 9160'
+alias d-cql='cqlsh localhost 9160'
 # connect to Mongo REPL
 alias v-mongo='mongo vagrant.cogtree.com'
+alias d-mongo='mongo localhost'
 # connect to Redis REPL
-alias v-redis-cli='redis-cli -h vagrant.cogtree.com'
+alias v-redis-cli='redis-cli -h vagrant.cogtree.com -p 6479'
+alias p-redis-cli='redis-cli -h localhost -p 6479'
 # connect to Elasticsearch REPL (Python)
 alias v-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('vagrant.cogtree.com'); print('\nElasticSearch: use es\n')\""
 
