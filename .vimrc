@@ -163,6 +163,9 @@ let g:jedi#auto_initialization = 0
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
 
+" turn off jshint red errors
+let g:JSHintHighlightErrorLine = 0
+
 " toggle file/folder tree
 map <F2> :NERDTreeToggle<CR>
 " toggle in-file navigation bar
