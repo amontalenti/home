@@ -65,6 +65,7 @@ lein (via http://leiningen.org/)
 
 # infrastructure
 docker (via https://docs.docker.com/installation/ubuntulinux/)
+docker-compose (via https://docs.docker.com/compose/install/)
 Fabric (via pip)
 jinja2 (via pip)
 linux-tools-common
