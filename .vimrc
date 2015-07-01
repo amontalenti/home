@@ -145,6 +145,8 @@ abbr cur !nautilus %:p:h
 let g:virtualenv_stl_format='[Venv(%n)]'
 au FileType python setlocal statusline=%<%f\ %h%m%r%{VirtualEnvStatusline()}%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 let g:virtualenv_auto_activate=1
+" make virtualenv plugin work with pyenv directory
+let g:virtualenv_directory = '~/.pyenv/versions'
 
 " ignore line length error
 let g:flake8_ignore='E501'
