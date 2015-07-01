@@ -65,3 +65,6 @@
 [submodule ".vim/bundle/vim-superman"]
 	path = .vim/bundle/vim-superman
 	url = git@github.com:Z1MM32M4N/vim-superman.git
+[submodule ".vim/bundle/Dockerfile"]
+	path = .vim/bundle/Dockerfile
+	url = git@github.com:ekalinin/Dockerfile.vim.git

@@ -2,7 +2,7 @@
 #
 function hop
 {
-    HOP_OUTPUT="`hop-script $*`"
+    HOP_OUTPUT="`hop-python-script $*`"
     HOP_STATUS=$?
     array_of_lines=("${(@f)${HOP_OUTPUT}}")
     case $HOP_STATUS in

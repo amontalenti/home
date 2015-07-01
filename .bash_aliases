@@ -54,6 +54,7 @@ alias py3="pyenv activate py3"
 
 # connect to Postgres REPL
 alias v-psql='psql -h vagrant.cogtree.com -U parsely'
+alias d-psql='psql -h localhost -U parsely'
 # connect to Cassandra REPL
 alias v-cql='cqlsh vagrant.cogtree.com 9160'
 # connect to Mongo REPL
@@ -84,6 +85,7 @@ alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/in
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 # config servers
 alias ssh-config='ssh-multi ue1a-config{1,2} ue1b-config{1,2} ue1e-config{1,2} uw2a-config{1,2} uw2c-config1'
 # pixel servers
@@ -100,12 +102,6 @@ alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6}'
 alias ssh-solr='ssh-multi ue1a-solr{1,2,3}'
 # crawl servers
 alias ssh-crawl='ssh-multi ue1a-crawl{1,2,3}'
-# storm cluster (1)
-alias ssh-storm1='ssh-multi ue1a-storm{1,2,3}'
-# storm cluster (2)
-alias ssh-storm2='ssh-multi ue1a-storm{4,5,6}'
-# kafka cluster
-alias ssh-kafka='ssh-multi ue1a-kafka{1,2,3}'
 # zk cluster (1)
 alias ssh-zk1='ssh-multi ue1a-zk{1,2,3}'
 # zk cluster (2)
@@ -116,3 +112,5 @@ alias ssh-api-zk='ssh-multi ue1a-api-zk{1,2,3}'
 alias ssh-cass1='ssh-multi ue1a-cass1{a,b,c,d,e}'
 # Elasticsearch cluster
 alias ssh-es1='ssh-multi ue1a-es1{a,b,c,d,e}'
+# Storm cluster
+alias ssh-storm4='ssh-multi ue1a-storm4{a,b,c,d,e,f,g,h,i,j}.cogtree.com'

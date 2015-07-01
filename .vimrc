@@ -152,6 +152,8 @@ let g:flake8_ignore='E501'
 " open gundo on right (no conflict with NERDTree)
 let g:gundo_right=1
 
+let NERDTreeIgnore = ['\.pyc$']
+
 " disable jedi auto init
 let g:jedi#auto_initialization = 0
 

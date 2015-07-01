@@ -72,6 +72,7 @@ of files, including:
 * reStructuredText
 * Markdown
 * bash
+* Dockerfile
 * configuration files
 
 My vim configuration is a bit customized, as I use vim as a kind of UNIX
