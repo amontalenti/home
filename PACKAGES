@@ -46,6 +46,8 @@ y-ppa-manager
 psensors
 indicator-sensors
 grub-customizer
+# added this to kernel /proc/cmdline: processor.ignore_ppc=1
+# fixes cpufreq bios issue on Thinkpad x220
 
 # python
 pyenv (via https://github.com/yyuu/pyenv-installer)
