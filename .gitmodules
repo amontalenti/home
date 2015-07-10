@@ -74,3 +74,6 @@
 [submodule ".vim/bundle/jshint.vim"]
 	path = .vim/bundle/jshint.vim
 	url = git@github.com:wookiehangover/jshint.vim.git
+[submodule ".vim/bundle/tla.vim"]
+	path = .vim/bundle/tla.vim
+	url = git@github.com:vim-scripts/tla.vim.git

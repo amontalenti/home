@@ -37,10 +37,12 @@ function gitgrep () {
     git log --pretty=oneline -S"$1"
 }
 
-function sshtunnel() {
-    local LOCALPORT=$1
-    local REMOTEPORT=$2
-    local SERVER=$3
+function mktun() {
+    # Usage: mktun host local_port remote_port
+    local SERVER=$1
+    local LOCALPORT=$2
+    local REMOTEPORT=$3
+    grep -qF $1 $HOME/.ssh/known_hosts || ssh-keyscan $SERVER >> $HOME/.ssh/known_hosts
     ssh -nNT -L "${LOCALPORT}:localhost:${REMOTEPORT}" $SERVER;
 }
 
