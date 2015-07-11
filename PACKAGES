@@ -12,6 +12,8 @@ unity-tweak-tool
 # python install necessities
 make
 build-essential
+python2.7-dev
+python3.4-dev
 libssl-dev
 zlib1g-dev
 libbz2-dev
@@ -24,6 +26,11 @@ libpng12-dev
 gfortran
 libopenblas-dev
 liblapack-dev
+libqt4-dev
+libphonon-dev
+libxml2-dev
+libxslt1-dev
+qtmobility-dev
 wget
 curl
 llvm
