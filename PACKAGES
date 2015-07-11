@@ -19,6 +19,11 @@ libreadline-dev
 libsqlite3-dev
 libsnappy-dev
 libpq-dev
+libfreetype6-dev
+libpng12-dev
+gfortran
+libopenblas-dev
+liblapack-dev
 wget
 curl
 llvm
