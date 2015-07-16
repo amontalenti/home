@@ -57,6 +57,8 @@ libreoffice-style-sifr
 y-ppa-manager
 psensors
 indicator-sensors
+indicator-virtual-box
+caffeine
 grub-customizer
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
 # fixes cpufreq bios issue on Thinkpad x220
