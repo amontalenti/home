@@ -101,6 +101,8 @@ Some nice IDE-like plugins for me include:
 * rainbow_parentheses_, for Clojure paren highlighting
 * vim-markdown_, improved Markdown syntax handling
 * vim-livedown_, for live preview of Markdown files
+* js-lib-syntax_, adds some support for JS frameworks
+* yajs_, yet another Javascript syntax
 * whitespace_, to kill trailing whitespace in files
 
 .. _NERDTree: https://github.com/scrooloose/nerdtree
@@ -122,6 +124,8 @@ Some nice IDE-like plugins for me include:
 .. _rainbow_parentheses: https://github.com/kien/rainbow_parentheses.vim
 .. _vim-markdown: https://github.com/tpope/vim-markdown
 .. _vim-livedown: https://github.com/shime/vim-livedown
+.. _js-lib-syntax: https://github.com/othree/javascript-libraries-syntax.vim
+.. _yajs: https://github.com/vim-scripts/YAJS--Yet-Another-JavaScript-Syntax_
 .. _whitespace: https://github.com/bronson/vim-trailing-whitespace
 
 I then have a couple of plugins that just expand the vim vocabulary a
