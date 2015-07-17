@@ -90,7 +90,7 @@ alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/in
 
 
 # config servers
-alias ssh-config='ssh-multi ue1a-config{1,2} ue1b-config{1,2} ue1e-config{1,2} uw2a-config{1,2} uw2c-config1'
+alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogtree.com'
 # pixel servers
 alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b}-pixel1}'
 # dash app servers
