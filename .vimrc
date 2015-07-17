@@ -163,8 +163,9 @@ let g:jedi#auto_initialization = 0
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
 
-" turn off jshint red errors
+" turn off jshint slowness
 let g:JSHintHighlightErrorLine = 0
+let JSHintUpdateWriteOnly=1
 
 " toggle file/folder tree
 map <F2> :NERDTreeToggle<CR>
@@ -172,6 +173,9 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :Tagbar<CR>
 " toggle undo history visualization
 map <F4> :GundoToggle<CR>
+" quick save
+inoremap <F5> <c-o>:w<cr>
+nnoremap <F5> :w<cr>
 
 " toggle line numbers
 set nonumber
@@ -242,3 +246,11 @@ endif
 let g:livedown_open = 0
 let g:livedown_port = 9337
 nmap <leader>md :call LivedownPreview()<CR>
+
+" help tmux work better with arrow keys
+map <Esc>[B <Down>
+
+" help tmux figure out terminal mode
+if match($TERM, "screen") != -1
+      set term=screen-256color
+endif
