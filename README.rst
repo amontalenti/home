@@ -73,6 +73,7 @@ of files, including:
 * Markdown
 * bash
 * Dockerfile
+* Thrift files
 * configuration files
 
 My vim configuration is a bit customized, as I use vim as a kind of UNIX
