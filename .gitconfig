@@ -36,3 +36,5 @@
 	default = tracking
 [color]
 	ui = true
+[receive]
+    denyNonFastForwards = true
