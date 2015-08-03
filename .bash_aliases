@@ -55,6 +55,7 @@ alias py3="pyenv activate py3"
 # connect to Postgres REPL
 alias v-psql='psql -h vagrant.cogtree.com -U parsely'
 alias d-psql='psql -h localhost -U parsely'
+alias d-pgcli='pgcli -h localhost -U parsely'
 # connect to Cassandra REPL
 alias v-cql='cqlsh vagrant.cogtree.com 9160'
 alias d-cql='cqlsh localhost 9160'
@@ -94,13 +95,13 @@ alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogt
 # pixel servers
 alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b}-pixel1}'
 # dash app servers
-alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5,6}'
+alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
 # ptrack mongo
-alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1{a,b,c,d}'
+alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1{a,b,c,d}.cogtree.com'
 # crawl mongo
 alias ssh-crawl-mongo='ssh-multi ue1a-crawl-mongo1{a,b,c}'
 # api servers
-alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6}'
+alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
 # solr servers
 alias ssh-solr='ssh-multi ue1a-solr{1,2,3}'
 # crawl servers
@@ -115,5 +116,7 @@ alias ssh-api-zk='ssh-multi ue1a-api-zk{1,2,3}'
 alias ssh-cass1='ssh-multi ue1a-cass1{a,b,c,d,e}'
 # Elasticsearch cluster
 alias ssh-es1='ssh-multi ue1a-es1{a,b,c,d,e}'
+# Elasticsearch Marvel cluster
+alias ssh-es2='ssh-multi ue1a-es2{a,b}.cogtree.com'
 # Storm cluster
 alias ssh-storm4='ssh-multi ue1a-storm4{a,b,c,d,e,f,g,h,i,j}.cogtree.com'
