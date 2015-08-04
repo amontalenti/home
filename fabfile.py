@@ -137,6 +137,7 @@ def build_pythons():
     local("""
     PYTHON_CONFIGURE_OPTS="--enable-ipv6\
                            --enable-loadable-sqlite-extensions\
+                           --enable-shared\
                            --with-dbmliborder=bdb:gdbm\
                            --with-computed-gotos\
                            --with-system-expat\
