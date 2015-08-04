@@ -130,19 +130,19 @@ def build_pythons():
                            --with-system-expat\
                            --with-system-ffi\
                            --with-fpectl" \
-    pyenv install -f 2.7.9
+    pyenv install -f 2.7.10
     """.strip())
 
+    # removed --without-ensurepip
     local("""
     PYTHON_CONFIGURE_OPTS="--enable-ipv6\
                            --enable-loadable-sqlite-extensions\
                            --with-dbmliborder=bdb:gdbm\
                            --with-computed-gotos\
-                           --without-ensurepip\
                            --with-system-expat\
                            --with-system-libmpdec\
                            --with-system-ffi\
                            --with-fpectl\
                            --with-pydebug" \
-    pyenv install -f 3.4.2
+    pyenv install -f 3.4.3
     """.strip())
