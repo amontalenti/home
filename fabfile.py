@@ -118,3 +118,31 @@ _memex_servers = (["storm@r102u{}.xdata.data-tactics-corp.com".format(i)
 @hosts(_memex_servers)
 def memex_do(cmd):
     run(cmd)
+
+
+@task
+def build_pythons():
+    # options stolen from Ubuntu 14.04 build logs
+    local("""
+    PYTHON_CONFIGURE_OPTS="--enable-ipv6\
+                           --enable-unicode=ucs4\
+                           --with-dbmliborder=bdb:gdbm\
+                           --with-system-expat\
+                           --with-system-ffi\
+                           --with-fpectl" \
+    pyenv install -f 2.7.9
+    """.strip())
+
+    local("""
+    PYTHON_CONFIGURE_OPTS="--enable-ipv6\
+                           --enable-loadable-sqlite-extensions\
+                           --with-dbmliborder=bdb:gdbm\
+                           --with-computed-gotos\
+                           --without-ensurepip\
+                           --with-system-expat\
+                           --with-system-libmpdec\
+                           --with-system-ffi\
+                           --with-fpectl\
+                           --with-pydebug" \
+    pyenv install -f 3.4.2
+    """.strip())
