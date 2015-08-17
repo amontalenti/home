@@ -60,7 +60,6 @@ y-ppa-manager
 psensors
 indicator-sensors
 indicator-virtual-box
-indicator-sound-switcher (via yktooo/ppa)
 caffeine
 grub-customizer
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
