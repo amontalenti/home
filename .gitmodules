@@ -86,3 +86,6 @@
 [submodule ".vim/bundle/zeavim.vim"]
 	path = .vim/bundle/zeavim.vim
 	url = git@github.com:KabbAmine/zeavim.vim.git
+[submodule ".vim/bundle/vim-ps1"]
+	path = .vim/bundle/vim-ps1
+	url = git@github.com:PProvost/vim-ps1.git

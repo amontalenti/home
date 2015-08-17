@@ -22,6 +22,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 # finds the pid(s) for any process
 alias findpid='pgrep -fln'
+# upgrade
+alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 
 # apps
 # ~~~~
@@ -93,30 +95,12 @@ alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/in
 # config servers
 alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogtree.com'
 # pixel servers
-alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b}-pixel1}'
+alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b}-pixel1}.cogtree.com'
 # dash app servers
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
 # ptrack mongo
 alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1{a,b,c,d}.cogtree.com'
-# crawl mongo
-alias ssh-crawl-mongo='ssh-multi ue1a-crawl-mongo1{a,b,c}'
 # api servers
 alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
-# solr servers
-alias ssh-solr='ssh-multi ue1a-solr{1,2,3}'
-# crawl servers
-alias ssh-crawl='ssh-multi ue1a-crawl{1,2,3}'
-# zk cluster (1)
-alias ssh-zk1='ssh-multi ue1a-zk{1,2,3}'
-# zk cluster (2)
-alias ssh-zk2='ssh-multi ue1a-zk{4,5,6}'
-# zk cluster (api)
-alias ssh-api-zk='ssh-multi ue1a-api-zk{1,2,3}'
-# Cassandra cluster
-alias ssh-cass1='ssh-multi ue1a-cass1{a,b,c,d,e}'
-# Elasticsearch cluster
-alias ssh-es1='ssh-multi ue1a-es1{a,b,c,d,e}'
-# Elasticsearch Marvel cluster
-alias ssh-es2='ssh-multi ue1a-es2{a,b}.cogtree.com'
 # Storm cluster
 alias ssh-storm4='ssh-multi ue1a-storm4{a,b,c,d,e,f,g,h,i,j}.cogtree.com'
