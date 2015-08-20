@@ -89,3 +89,8 @@ jinja2 (via pip)
 linux-tools-common
 linux-tools-generic
 linux-tools-3.16.0-41-generic
+
+# console tools
+tig
+mitmproxy
+kismet
