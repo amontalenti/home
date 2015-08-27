@@ -3,6 +3,7 @@ alias ls="ls --color=auto --hide='*.pyc'"
 alias ll='ls -l'
 alias la='ls -a'
 alias lt='ls -t | head'
+alias lslog="ls . | egrep '\.log$'"
 # some handy cd shortcuts
 alias ..="cd .."
 alias ...="cd ../.."
