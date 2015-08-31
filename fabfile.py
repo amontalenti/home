@@ -143,7 +143,6 @@ def build_pythons():
                            --with-system-expat\
                            --with-system-libmpdec\
                            --with-system-ffi\
-                           --with-fpectl\
-                           --with-pydebug" \
+                           --with-fpectl"\
     pyenv install -f 3.4.3
     """.strip())
