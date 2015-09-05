@@ -108,20 +108,10 @@ def mongo_uptime():
     """uptime on all MongoDB servers."""
     sudo("uptime")
 
-_memex_servers = (["storm@r102u{}.xdata.data-tactics-corp.com".format(i)
-                      for i in range(25, 33+1)] +
-                  ["storm@r103u{}.xdata.data-tactics-corp.com".format(i)
-                      for i in range(20, 31+1)])
-
-@task
-@parallel
-@hosts(_memex_servers)
-def memex_do(cmd):
-    run(cmd)
-
 
 @task
 def build_pythons():
+    """Build Python from scratch using pyenv."""
     # options stolen from Ubuntu 14.04 build logs
     local("""
     PYTHON_CONFIGURE_OPTS="--enable-ipv6\
