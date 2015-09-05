@@ -86,7 +86,7 @@ def dash_tail_nginx(grep_pattern=None):
         cmd += " | grep " + grep_pattern
     sudo(cmd)
 
-_storm_servers = ["ue1a-storm4{chr}.cogtree.com".format(chr=chr)
+_storm_servers = ["ue1a-storm1{chr}.cogtree.com".format(chr=chr)
                     for chr in "abcdefghij"]
 
 @task
@@ -94,10 +94,7 @@ _storm_servers = ["ue1a-storm4{chr}.cogtree.com".format(chr=chr)
 def storm_check_top(grep_pattern=None):
     """Quick top monitoring on Storm worker servers."""
     cmd = "top -b | head -n 12"
-    cmd = "top -b -n 1 -c | grep '{}' | cut -c 42-46 | wc -l"
-    for topo_env in "sales", "devbox", "prod":
-        print topo_env
-        run(cmd.format(topo_env))
+    run(cmd)
 
 _mongo_servers = ["ue1a-parsely-mongo1{letter}.cogtree.com".format(letter=i)
                     for i in "abc"]
