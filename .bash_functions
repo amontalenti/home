@@ -64,3 +64,9 @@ vman() {
     echo "No manual entry for $*"
   fi
 }
+
+function tunnels() {
+    ssh -ND 8159 hack.cogtree.com &
+}
+
+[[ -s "$HOME/.workingon" ]] && source "$HOME/.workingon"
