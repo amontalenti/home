@@ -14,6 +14,7 @@ plugins=(git
          lein
          npm
          history-substring-search
+         per-directory-history
          sudo)
 
 path=(
