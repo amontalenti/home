@@ -51,6 +51,8 @@ alias ipysparknotebook='IPYTHON_OPTS="notebook" pyspark'
 alias pe="pyenv shell"
 alias py2="pyenv activate py2"
 alias py3="pyenv activate py3"
+# force installation of fresh package with pip
+alias pipinstall="pip install --no-cache-dir -I"
 
 # vagrant and docker aliases
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~
