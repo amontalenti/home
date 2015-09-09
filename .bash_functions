@@ -29,6 +29,12 @@ function pycd () {
     pushd `python -c "import os.path, $1; print os.path.dirname($1.__file__)"`;
 }
 
+function watchdir () {
+    # installed via pip install watchdog; monitors a directory and runs command
+    # upon any Python file changes
+    watchmedo shell-command --drop --command=$1 --recursive --pattern="*.py";
+}
+
 function ccd () {
     autoenv_cd $COGROOT/$1;
 }
