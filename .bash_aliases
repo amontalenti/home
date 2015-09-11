@@ -108,6 +108,6 @@ alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1{a,b,c,d}.cogtree.com'
 # api servers
 alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
 # Storm cluster
-alias ssh-storm4='ssh-multi ue1a-storm4{a,b,c,d,e,f,g,h,i,j}.cogtree.com'
+alias ssh-storm1='ssh-multi ue1a-storm1{a-j}.cogtree.com'
 # Cassandra cluster
 alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
