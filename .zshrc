@@ -40,7 +40,9 @@ source $ZSH/oh-my-zsh.sh
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 
 # use drip to make lein runs faster
-export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
+#export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
+# ^^^ this isn't fool-proof, so disabling for now
+# since it actually broke streamparse runs
 
 # add rbenv support
 eval "$(rbenv init -)"
