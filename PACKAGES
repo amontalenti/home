@@ -62,6 +62,7 @@ indicator-sensors
 indicator-virtual-box
 caffeine
 wireshark
+meld
 grub-customizer
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
 # fixes cpufreq bios issue on Thinkpad x220
@@ -101,3 +102,4 @@ kismet
 pandoc
 silversearcher-ag
 mercurial
+stress
