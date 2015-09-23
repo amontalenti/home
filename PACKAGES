@@ -61,6 +61,7 @@ psensors
 indicator-sensors
 indicator-virtual-box
 caffeine
+wireshark
 grub-customizer
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
 # fixes cpufreq bios issue on Thinkpad x220
@@ -74,6 +75,9 @@ ruby-build (via https://github.com/sstephenson/ruby-build)
 
 # node.js
 nvm (via https://github.com/creationix/nvm)
+
+# go
+gvm (via https://github.com/moovweb/gvm)
 
 # java
 openjdk-7-jdk
@@ -96,3 +100,4 @@ mitmproxy
 kismet
 pandoc
 silversearcher-ag
+mercurial

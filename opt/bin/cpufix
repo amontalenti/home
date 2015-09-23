@@ -1,0 +1,8 @@
+#/bin/bash
+
+# Tell Intel pstate CPU frequency driver it can run fast
+echo "Set no_turbo"
+echo 0 | sudo tee -a /sys/devices/system/cpu/intel_pstate/no_turbo
+echo "Set max_perf_pct"
+echo 100 | sudo tee -a /sys/devices/system/cpu/intel_pstate/max_perf_pct
+echo "Done."

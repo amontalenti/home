@@ -1,8 +1,12 @@
 #!/bin/sh
+stress --cpu 4 --timeout 5 &
 while true; do
+    pct=`cat /sys/devices/system/cpu/intel_pstate/max_perf_pct`
+    turbo=`cat /sys/devices/system/cpu/intel_pstate/no_turbo`
+    echo -n "max=${pct}, turbo=${turbo} => "
     for i in `seq 0 3`; do
         echo -n "cpu${i}: `cat /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_cur_freq` ";
     done
-        echo;
-        sleep 0.5;
-    done
+    echo;
+    sleep 0.5;
+done
