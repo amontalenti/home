@@ -25,6 +25,8 @@ alias egrep='egrep --color=auto'
 alias findpid='pgrep -fln'
 # upgrade
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
+# kill a known host entry
+alias sshrm='ssh-keygen -R'
 
 # apps
 # ~~~~
@@ -94,7 +96,6 @@ alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/in
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 # config servers
 alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogtree.com'
 # pixel servers
@@ -111,3 +112,5 @@ alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
 alias ssh-storm1='ssh-multi ue1a-storm1{a-j}.cogtree.com'
 # Cassandra cluster
 alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
+# ssh ES
+alias ssh-es='ssh-multi {ue1a-es-prod1-w1{a,d,g},ue1b-es-prod1-w1{b,e,h},ue1e-es-prod1-w1{c,f,i}}.cogtree.com'
