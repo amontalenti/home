@@ -25,6 +25,7 @@ path=(
     /home/am/.pyenv/bin
     /home/am/.nvm/bin
     /home/am/opt/bin
+    /home/am/gopath/bin
     /usr/lib/lightdm/lightdm
     /usr/local/sbin
     /usr/local/bin
@@ -43,6 +44,9 @@ export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 #export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
 # ^^^ this isn't fool-proof, so disabling for now
 # since it actually broke streamparse runs
+
+# go setup
+export GOPATH="$HOME/gopath"
 
 # add rbenv support
 eval "$(rbenv init -)"

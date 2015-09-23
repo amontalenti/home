@@ -1,8 +1,6 @@
-# pyenv setup with virtualenv support
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+# go setup
+export GOPATH="$HOME/gopath"
+pathprepend ~/gopath/bin
 
 # rbenv setup
 export RBENV_DIR="$HOME/.rbenv"
@@ -11,6 +9,12 @@ eval "$(rbenv init -)"
 # nvm setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+
+# pyenv setup with virtualenv support
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Files you make look like rw-rw-r
 umask 002
@@ -45,7 +49,6 @@ shopt -s globstar
 if [ -d ~/opt/bin ] ; then
     pathprepend ~/opt/bin
 fi
-
 
 # you will pry vim from my dead hands
 export EDITOR="vim"
