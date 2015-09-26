@@ -1,5 +1,5 @@
 # shortened file listings
-alias ls="ls --color=auto --hide='*.pyc'"
+alias ls="ls --color=auto --hide='*.pyc' --hide='__pycache__' --hide='*egg-info'"
 alias ll='ls -l'
 alias la='ls -a'
 alias lt='ls -t | head'
