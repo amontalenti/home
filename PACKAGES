@@ -103,3 +103,8 @@ pandoc
 silversearcher-ag
 mercurial
 stress
+nethogs
+nload
+httpry
+httpry-daemon
+httpry-tools
