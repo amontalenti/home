@@ -89,6 +89,6 @@
 [submodule ".vim/bundle/vim-ps1"]
 	path = .vim/bundle/vim-ps1
 	url = git@github.com:PProvost/vim-ps1.git
-[submodule "/home/am/.vim/bundle/vim-go"]
+[submodule ".vim/bundle/vim-go"]
 	path = /home/am/.vim/bundle/vim-go
 	url = git@github.com:fatih/vim-go.git
