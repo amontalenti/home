@@ -75,4 +75,6 @@ function tunnels() {
     ssh -ND 8159 hack.cogtree.com &
 }
 
-[[ -s "$HOME/.workingon" ]] && source "$HOME/.workingon"
+function httpdiff() {
+    diff -u <(curl -sS -D - -L $1) <(curl -sS -D - -L $2) | colordiff
+}
