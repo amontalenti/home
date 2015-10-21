@@ -107,8 +107,8 @@ def mongo_uptime():
 
 
 @task
-def build_pythons():
-    """Build Python from scratch using pyenv."""
+def build_python2():
+    """Build python2 from scratch using pyenv."""
     # options stolen from Ubuntu 14.04 build logs
     local("""
     PYTHON_CONFIGURE_OPTS="--enable-ipv6\
@@ -120,6 +120,9 @@ def build_pythons():
     pyenv install -f 2.7.10
     """.strip())
 
+@task
+def build_python3():
+    """Build python3 from scratch using pyenv."""
     # removed --without-ensurepip
     local("""
     PYTHON_CONFIGURE_OPTS="--enable-ipv6\
@@ -131,5 +134,5 @@ def build_pythons():
                            --with-system-libmpdec\
                            --with-system-ffi\
                            --with-fpectl"\
-    pyenv install -f 3.4.3
+    pyenv install -f 3.5.0
     """.strip())
