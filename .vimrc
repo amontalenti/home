@@ -243,9 +243,9 @@ if filereadable(expand("~/.simplenoterc"))
 endif
 
 " markdown live preview
-let g:livedown_open = 0
+let g:livedown_open = 1
 let g:livedown_port = 9337
-nmap <leader>md :call LivedownPreview()<CR>
+nmap <leader>md :LivedownPreview<CR>
 
 " help tmux work better with arrow keys
 map <Esc>[B <Down>
