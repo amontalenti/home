@@ -55,6 +55,8 @@ alias py2="pyenv activate py2"
 alias py3="pyenv activate py3"
 # force installation of fresh package with pip
 alias pipinstall="pip install --no-cache-dir -I"
+# clean up a badly set up pip dependency folder by uninstalling everything
+alias pipcleanall="pip freeze | grep -v '^-e ' | xargs pip uninstall -y"
 
 # vagrant and docker aliases
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~
