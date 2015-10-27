@@ -1,0 +1,16 @@
+cqlsh
+awscli
+boto3
+msgpack-python
+tabulate
+wharfee
+watchdog
+requests
+pythonpy
+futures
+python-dateutil
+Fabric
+jinja2
+elasticsearch
+redis
+jupyter
