@@ -53,6 +53,7 @@ alias ipysparknotebook='IPYTHON_OPTS="notebook" pyspark'
 alias pe="pyenv shell"
 alias py2="pyenv activate py2"
 alias py3="pyenv activate py3"
+alias pipthis="pip install -r requirements.txt"
 # force installation of fresh package with pip
 alias pipinstall="pip install --no-cache-dir -I"
 # clean up a badly set up pip dependency folder by uninstalling everything
@@ -117,3 +118,8 @@ alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
 # ssh ES
 alias ssh-es-warm='ssh-multi {ue1a-es-prod1-w1{a,d,g},ue1b-es-prod1-w1{b,e,h},ue1e-es-prod1-w1{c,f,i}}.cogtree.com'
 alias ssh-es-master='ssh-multi {ue1a-es-prod1-m1a,ue1b-es-prod1-m1b,ue1e-es-prod1-m1c}.cogtree.com'
+
+# ist kafka
+alias ssh-ist-kafka='ssh-multi k0{1,2,3}.istresearch.com'
+# ist zookeeper
+alias ssh-ist-zookeeper='ssh-multi z0{1,2,3}.istresearch.com'
