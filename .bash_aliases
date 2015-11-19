@@ -74,9 +74,10 @@ alias v-mongo='mongo vagrant.cogtree.com'
 alias d-mongo='mongo localhost'
 # connect to Redis REPL
 alias v-redis-cli='redis-cli -h vagrant.cogtree.com -p 6479'
-alias p-redis-cli='redis-cli -h localhost -p 6479'
+alias d-redis-cli='redis-cli -h localhost -p 6479'
 # connect to Elasticsearch REPL (Python)
 alias v-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('vagrant.cogtree.com'); print('\nElasticSearch: use es\n')\""
+alias d-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('localhost'); print('\nElasticSearch: use es\n')\""
 
 # Clojure
 # ~~~~~~~
