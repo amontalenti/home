@@ -11,6 +11,7 @@ plugins=(git
          tmux
          vagrant
          fabric
+         docker
          lein
          npm
          history-substring-search
