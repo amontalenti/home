@@ -89,6 +89,12 @@ openjdk-7-jdk
 # clojure
 lein (via http://leiningen.org/)
 
+# sbt (Scala Build Tool)
+sbt (via http://www.scala-sbt.org/download.html)
+
+# gradle (Groovy-based Build Tool)
+gradle (via ppa:cwchien/gradle)
+
 # infrastructure
 docker (via https://docs.docker.com/installation/ubuntulinux/)
 docker-compose (via https://docs.docker.com/compose/install/)
@@ -110,3 +116,4 @@ httpry
 httpry-daemon
 httpry-tools
 colordiff
+gdebi
