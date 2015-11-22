@@ -14,3 +14,7 @@ jinja2
 elasticsearch
 redis
 jupyter
+glances
+docker-py
+py-cpuinfo
+boom
