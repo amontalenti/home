@@ -41,12 +41,15 @@ alias screencast="avconv -v warning -f x11grab -s 1360x768 -r 30 -i :0.0 -s 1366
 alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
 # quick gcal agenda
 alias gcal='gcalcli agenda --calendar="AM - Parse.ly" --calendar="AM - Personal" --calendar="Shared - Team"'
+# turn HTML in clipboard to clipboard.md file
+alias clipmd='xclip -o -selection clipboard -t text/html | pandoc -r html --no-wrap -o ~/clipboard.md'
 
 # python
 # ~~~~~~
 #
 # python shells
 alias ipy='ipython'
+alias nb='jupyter notebook'
 # spark + python integration
 alias ipyspark='IPYTHON=1 pyspark'
 alias ipysparknotebook='IPYTHON_OPTS="notebook" pyspark'
