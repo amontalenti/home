@@ -1,0 +1,7 @@
+SERVICES=`cat <<EOF
+crashplan
+saned
+EOF`
+for service in $SERVICES; do
+    sudo service $service stop;
+done
