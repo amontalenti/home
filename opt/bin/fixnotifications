@@ -1,0 +1,3 @@
+killall notify-osd \
+    && sleep 1 \
+    && notify-send "fixnotifications" "Notifications fixed"
