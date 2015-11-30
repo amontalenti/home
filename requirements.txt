@@ -1,5 +1,6 @@
 gcalcli
 awscli
+saws
 boto3
 wharfee
 watchdog
