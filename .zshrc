@@ -1,5 +1,8 @@
 export ZSH=$HOME/.oh-my-zsh
 
+# for tmux
+export DISABLE_AUTO_TITLE=true
+
 ZSH_THEME="ampy"
 
 HIST_STAMPS="yyyy-mm-dd"
