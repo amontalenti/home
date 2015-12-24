@@ -496,7 +496,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   endif
 
   HiLink pythonStatement        Statement
-  HiLink pythonImport           Include
+  HiLink pythonImport           Statement
   HiLink pythonFunction         Function
   HiLink pythonConditional      Conditional
   HiLink pythonRepeat           Repeat
