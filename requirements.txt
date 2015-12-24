@@ -8,8 +8,9 @@ requests
 boom
 pythonpy
 jupyter
-msgpack-python
+tmuxp
 tabulate
+msgpack-python
 futures
 python-dateutil
 Fabric
