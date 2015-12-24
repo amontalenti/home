@@ -71,6 +71,7 @@ export NVM_DIR="$HOME/.nvm"
 export EDITOR='vim'
 export TERM='xterm-256color'
 [ -n "$TMUX" ] && export TERM='screen-256color'
+source ~/.tmuxp/.tmuxp.zsh
 
 # remember recent working directories. See zshcontrib(1).
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
