@@ -176,7 +176,7 @@ if s:Python2Syntax()
   syn keyword pythonImport      as
   syn match   pythonFunction    "[a-zA-Z_][a-zA-Z0-9_]*" display contained
 else
-  syn keyword pythonStatement   as nonlocal None
+  syn keyword pythonStatement   as nonlocal
   syn match   pythonStatement   "\<yield\s\+from\>" display
   syn keyword pythonBoolean     True False
   syn match   pythonFunction    "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
