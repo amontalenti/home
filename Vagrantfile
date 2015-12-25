@@ -15,5 +15,7 @@ Vagrant.configure("2") do |config|
         v.memory = 1536
         # 2 vCPUs
         v.cpus = 2
+        # make virtualbox name match vagrant box name
+        v.name = config.vm.box
     end
 end
