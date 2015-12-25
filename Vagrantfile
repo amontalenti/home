@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-    config.vm.box = "ubuntu1404"
-    config.vm.box_url = "https://s3.amazonaws.com/parsely-vagrant/storm-deploy.box"
+    config.vm.box = "precise64chef11"
+    config.vm.box_url = "https://s3.amazonaws.com/parsely-vagrant/precise64chef11.box"
     config.ssh.forward_agent = true
     config.vm.synced_folder "/home/am/repos", "/home/vagrant/parsely"
 
