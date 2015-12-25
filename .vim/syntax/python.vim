@@ -77,8 +77,6 @@
 "    python_highlight_indent_errors         Highlight indentation errors
 "    python_highlight_space_errors          Highlight trailing spaces
 "    python_highlight_doctests              Highlight doc-tests
-"    python_print_as_function               Highlight 'print' statement as
-"                                           function for Python 2
 "    python_highlight_file_headers_as_comments
 "                                           Highlight shebang and coding
 "                                           headers as comments
@@ -143,7 +141,6 @@ if s:Enabled("g:python_highlight_all")
   call s:EnableByDefault("g:python_highlight_indent_errors")
   call s:EnableByDefault("g:python_highlight_space_errors")
   call s:EnableByDefault("g:python_highlight_doctests")
-  call s:EnableByDefault("g:python_print_as_function")
 endif
 
 "
@@ -151,7 +148,7 @@ endif
 "
 
 syn keyword pythonStatement     break continue del
-syn keyword pythonStatement     exec return
+syn keyword pythonStatement     exec return print
 syn keyword pythonStatement     pass raise
 syn keyword pythonStatement     global assert
 syn keyword pythonStatement     lambda
@@ -170,9 +167,6 @@ syn match pythonStatement   "\<yield\>" display
 syn match pythonImport      "\<from\>" display
 
 if s:Python2Syntax()
-  if !s:Enabled("g:python_print_as_function")
-    syn keyword pythonStatement  print
-  endif
   syn keyword pythonImport      as
   syn match   pythonFunction    "[a-zA-Z_][a-zA-Z0-9_]*" display contained
 else
@@ -414,11 +408,8 @@ if s:Enabled("g:python_highlight_builtin_funcs")
     syn keyword pythonBuiltinFunc   apply basestring buffer callable coerce
     syn keyword pythonBuiltinFunc   execfile file help intern long raw_input
     syn keyword pythonBuiltinFunc   reduce reload unichr unicode xrange
-    if s:Enabled("g:python_print_as_function")
-      syn keyword pythonBuiltinFunc print
-    endif
   else
-    syn keyword pythonBuiltinFunc   ascii exec memoryview print
+    syn keyword pythonBuiltinFunc   ascii exec memoryview
   endif
   syn keyword pythonBuiltinFunc __import__ abs all any
   syn keyword pythonBuiltinFunc bin bool bytearray bytes
