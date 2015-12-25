@@ -11,6 +11,8 @@ Vagrant.configure("2") do |config|
         v.customize ['modifyvm', :id, '--nicpromisc1', 'allow-all']
         # limit CPU usage
         v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
+        # linked clones speeds up operation
+        v.linked_clone = true
         # 1.6gb of RAM
         v.memory = 1536
         # 2 vCPUs
