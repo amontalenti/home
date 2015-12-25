@@ -98,6 +98,8 @@ gradle (via ppa:cwchien/gradle)
 # infrastructure
 docker (via https://docs.docker.com/installation/ubuntulinux/)
 docker-compose (via https://docs.docker.com/compose/install/)
+vagrant (via https://www.vagrantup.com/downloads.html)
+virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
 linux-tools-common
 linux-tools-generic
 linux-tools-3.16.0-41-generic

@@ -178,7 +178,7 @@ if s:Python2Syntax()
 else
   syn keyword pythonStatement   as nonlocal
   syn match   pythonStatement   "\<yield\s\+from\>" display
-  syn keyword pythonBoolean     True False
+  syn keyword pythonBoolean     True False None
   syn match   pythonFunction    "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
   syn keyword pythonStatement   await
   syn match   pythonStatement   "\<async\s\+def\>" nextgroup=pythonFunction skipwhite
@@ -399,8 +399,7 @@ syn match   pythonFloat     "\<\d\+\.\d*\%([eE][+-]\=\d\+\)\=[jJ]\=" display
 
 if s:Enabled("g:python_highlight_builtin_objs")
   if s:Python2Syntax()
-    syn keyword pythonBuiltinObj    None
-    syn keyword pythonBoolean       True False
+    syn keyword pythonBoolean       True False None
   endif
   syn keyword pythonBuiltinObj  Ellipsis NotImplemented
   syn keyword pythonBuiltinObj  __debug__ __doc__ __file__ __name__ __package__
@@ -555,7 +554,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonHexError         Error
   HiLink pythonBinError         Error
 
-  HiLink pythonBoolean          Boolean
+  HiLink pythonBoolean          Number
 
   HiLink pythonBuiltinObj       Structure
   HiLink pythonBuiltinFunc      Function
