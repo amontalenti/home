@@ -27,6 +27,8 @@ alias findpid='pgrep -fln'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 # kill a known host entry
 alias sshrm='ssh-keygen -R'
+# json pretty printer
+alias jsonprint='python -m json.tool'
 
 # apps
 # ~~~~
