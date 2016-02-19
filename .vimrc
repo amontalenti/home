@@ -253,6 +253,9 @@ map <Esc>[B <Down>
 " hotkey to clear searches
 nmap <leader>q :nohlsearch<CR>
 
+" hotkey to edit last file
+nmap <leader>e :e#<CR>
+
 " help tmux figure out terminal mode
 if match($TERM, "screen") != -1
       set term=screen-256color
