@@ -22,3 +22,4 @@ redis
 elasticsearch
 cqlsh
 pymongo
+flake8
