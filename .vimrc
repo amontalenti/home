@@ -250,6 +250,9 @@ nmap <leader>md :LivedownPreview<CR>
 " help tmux work better with arrow keys
 map <Esc>[B <Down>
 
+" hotkey to clear searches
+nmap <leader>q :nohlsearch<CR>
+
 " help tmux figure out terminal mode
 if match($TERM, "screen") != -1
       set term=screen-256color
