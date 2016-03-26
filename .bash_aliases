@@ -25,8 +25,6 @@ alias egrep='egrep --color=auto'
 alias findpid='pgrep -fln'
 # upgrade
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
-# kill a known host entry
-alias sshrm='ssh-keygen -R'
 # json pretty printer
 alias jsonprint='python -m json.tool'
 

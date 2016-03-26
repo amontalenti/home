@@ -52,12 +52,6 @@ function mktun() {
     ssh -nNT -L "${LOCALPORT}:localhost:${REMOTEPORT}" $SERVER;
 }
 
-function sshforce() {
-    local SERVER=$1
-    ssh-keygen -f ~/.ssh/known_hosts -R ${SERVER}
-    ssh ${SERVER};
-}
-
 function dash() {
     local APIKEY=$1
     x-www-browser http://dash.to/$APIKEY;
@@ -78,3 +72,12 @@ function tunnels() {
 function httpdiff() {
     diff -u <(curl -sS -D - -L $1) <(curl -sS -D - -L $2) | colordiff
 }
+
+function ssh-host() {
+    ssh -v "$1" 2>&1 true | grep 'debug1: Connecting to' | sed -e's/debug1: Connecting to //g' | awk '{print $1}'
+}
+
+function ssh-rm() {
+    ssh-keygen -f "$HOME/.ssh/known_hosts" -R $(sshhost $1)
+}
+
