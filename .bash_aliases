@@ -110,6 +110,7 @@ alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogt
 alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b,c}-pixel{1,2}}.cogtree.com'
 alias ssh-pixel-east='ssh-multi ue1{a,b,d,e}-pixel{1,2}.cogtree.com'
 alias ssh-pixel-west='ssh-multi uw2{a,b,c}-pixel{1,2}.cogtree.com'
+alias ssh-kafka1='ssh-multi ue1a-kafka1{a,b,c,d,e}.cogtree.com'
 # dash app server
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
 # ptrack mongo
@@ -117,7 +118,7 @@ alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1{a,b,c,d}.cogtree.com'
 # api servers
 alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
 # Storm cluster
-alias ssh-storm1='ssh-multi ue1a-storm1{a-j}.cogtree.com'
+alias ssh-storm1='ssh-multi ue1a-storm1{a-p}.cogtree.com'
 # Cassandra cluster
 alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
 # ssh ES
