@@ -49,10 +49,11 @@ alias clipmd='(xclip -o -selection clipboard -t text/html | pandoc -r html --no-
 #
 # python shells
 alias ipy='ipython'
-alias nb='jupyter notebook'
+alias nb='ipython notebook'
 # spark + python integration
 alias ipyspark='IPYTHON=1 pyspark'
 alias ipysparknotebook='IPYTHON_OPTS="notebook" pyspark'
+
 alias pe="pyenv shell"
 alias py2="pyenv activate py2"
 alias py3="pyenv activate py3"
