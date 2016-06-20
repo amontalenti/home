@@ -114,8 +114,6 @@ alias ssh-pixel-west='ssh-multi uw2{a,b,c}-pixel{1,2}.cogtree.com'
 alias ssh-kafka1='ssh-multi ue1a-kafka1{a,b,c,d,e}.cogtree.com'
 # dash app server
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
-# ptrack mongo
-alias ssh-parsely-mongo='ssh-multi ue1a-parsely-mongo1{a,b,c,d}.cogtree.com'
 # api servers
 alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
 # Storm cluster
@@ -126,7 +124,4 @@ alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
 alias ssh-es-warm='ssh-multi {ue1a-es-prod1-w1{a,d,g},ue1b-es-prod1-w1{b,e,h},ue1e-es-prod1-w1{c,f,i}}.cogtree.com'
 alias ssh-es-master='ssh-multi {ue1a-es-prod1-m1a,ue1b-es-prod1-m1b,ue1e-es-prod1-m1c}.cogtree.com'
 
-# ist kafka
-alias ssh-ist-kafka='ssh-multi k0{1,2,3}.istresearch.com'
-# ist zookeeper
-alias ssh-ist-zookeeper='ssh-multi z0{1,2,3}.istresearch.com'
+alias ssh-beta-storm='ssh-multi ue1a-storm-beta1{a,b,c,d}.cogtree.com'
