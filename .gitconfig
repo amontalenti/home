@@ -33,8 +33,10 @@
     df = cat
 [fetch]
     recurseSubmodules = true
+[branch]
+    autosetuprebase = always
 [push]
-	default = tracking
+	default = current
 [color]
 	ui = true
 [receive]
