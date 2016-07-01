@@ -87,7 +87,7 @@ def dash_tail_nginx(grep_pattern=None):
     sudo(cmd)
 
 _storm_servers = ["ue1a-storm1{chr}.cogtree.com".format(chr=chr)
-                    for chr in "abcdefghij"]
+                    for chr in "abcdefghijklmnop"]
 
 @task
 @hosts(_storm_servers)
@@ -96,13 +96,11 @@ def storm_check_top(grep_pattern=None):
     cmd = "top -b | head -n 12"
     run(cmd)
 
-_mongo_servers = ["ue1a-parsely-mongo1{letter}.cogtree.com".format(letter=i)
-                    for i in "abc"]
 @task
 @parallel
-@hosts(_mongo_servers)
-def mongo_uptime():
-    """uptime on all MongoDB servers."""
+@hosts(_storm_servers)
+def storm_uptime():
+    """uptime on all Storm servers."""
     sudo("uptime")
 
 

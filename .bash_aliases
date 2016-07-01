@@ -111,7 +111,8 @@ alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogt
 alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b,c}-pixel{1,2}}.cogtree.com'
 alias ssh-pixel-east='ssh-multi ue1{a,b,d,e}-pixel{1,2}.cogtree.com'
 alias ssh-pixel-west='ssh-multi uw2{a,b,c}-pixel{1,2}.cogtree.com'
-alias ssh-kafka1='ssh-multi ue1a-kafka1{a,b,c,d,e}.cogtree.com'
+alias ssh-kafka1='ssh-multi ue1a-kafka1{a-e}.cogtree.com'
+alias ssh-kafka2='ssh-multi ue1a-kafka2{a-j}.cogtree.com'
 # dash app server
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
 # api servers
