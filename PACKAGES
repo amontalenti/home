@@ -121,4 +121,5 @@ colordiff
 gdebi
 apache2-utils
 pv
+ngrep
 goaccess (via https://github.com/allinurl/goaccess#distributions)
