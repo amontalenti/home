@@ -122,6 +122,7 @@ alias ssh-storm1='ssh-multi ue1a-storm1{a-p}.cogtree.com'
 # Cassandra cluster
 alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
 # ssh ES
+alias ssh-es-raw='ssh-multi {ue1a-es-prod1-r1{a,d,g,j,m},ue1b-es-prod1-r1{b,e,h,k,n},ue1e-es-prod1-r1{c,f,i,l,o}}.cogtree.com'
 alias ssh-es-warm='ssh-multi {ue1a-es-prod1-w1{a,d,g},ue1b-es-prod1-w1{b,e,h},ue1e-es-prod1-w1{c,f,i}}.cogtree.com'
 alias ssh-es-master='ssh-multi {ue1a-es-prod1-m1a,ue1b-es-prod1-m1b,ue1e-es-prod1-m1c}.cogtree.com'
 
