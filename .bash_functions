@@ -78,6 +78,6 @@ function ssh-host() {
 }
 
 function ssh-rm() {
-    ssh-keygen -f "$HOME/.ssh/known_hosts" -R $(sshhost $1)
+    ssh-keygen -f "$HOME/.ssh/known_hosts" -R $(ssh-host $1)
 }
 
