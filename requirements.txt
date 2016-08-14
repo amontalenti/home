@@ -1,6 +1,5 @@
 gcalcli
 awscli
-saws
 boto3
 watchdog
 requests
