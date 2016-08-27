@@ -245,6 +245,7 @@ endif
 " markdown live preview
 let g:livedown_open = 1
 let g:livedown_port = 9337
+let g:livedown_browser = "google-chrome"
 nmap <leader>md :LivedownPreview<CR>
 
 " help tmux work better with arrow keys
