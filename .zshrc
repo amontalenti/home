@@ -67,6 +67,9 @@ export NVM_DIR="$HOME/.nvm"
 # add travis CLI support
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
+# cogtree customizations
+[ -f $HOME/.cogtree ] && source $HOME/.cogtree
+
 # vim and tmux
 export EDITOR='vim'
 export TERM='xterm-256color'
