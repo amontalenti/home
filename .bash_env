@@ -87,3 +87,6 @@ export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+# cogtree customizations
+[ -f $HOME/.cogtree ] && source $HOME/.cogtree
