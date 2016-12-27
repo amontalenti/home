@@ -51,8 +51,8 @@ alias clipmd='(xclip -o -selection clipboard -t text/html | pandoc -r html --no-
 alias ipy='ipython'
 alias nb='ipython notebook'
 # spark + python integration
-alias ipyspark='IPYTHON=1 pyspark'
-alias ipysparknotebook='IPYTHON_OPTS="notebook" pyspark'
+alias ipyspark='PYSPARK_DRIVER_PYTHON=ipython pyspark --packages com.amazonaws:aws-java-sdk-pom:1.10.34,org.apache.hadoop:hadoop-aws:2.7.2'
+alias ipysparknotebook='PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS=notebook pyspark --packages com.amazonaws:aws-java-sdk-pom:1.10.34,org.apache.hadoop:hadoop-aws:2.7.2'
 
 alias pe="pyenv shell"
 alias py2="pyenv activate py2"
