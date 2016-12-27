@@ -107,6 +107,7 @@ linux-tools-3.16.0-41-generic
 # console tools
 tig
 mitmproxy
+powertop
 kismet
 pandoc
 silversearcher-ag
