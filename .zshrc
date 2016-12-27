@@ -96,8 +96,5 @@ setopt BRACE_CCL
 source $HOME/.bash_aliases
 source $HOME/.bash_functions
 
-# The next line updates PATH for the Google Cloud SDK.
-source /usr/share/google-cloud-sdk/path.zsh.inc
-
 # The next line enables shell command completion for gcloud.
 source /usr/share/google-cloud-sdk/completion.zsh.inc
