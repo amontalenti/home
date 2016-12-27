@@ -76,14 +76,15 @@ source ~/.pyenv/versions/2.7.10/hop/hop.bash
 # add vagrant support
 pathprepend "/opt/vagrant/bin/"
 
-# add Apache Storm support
+# add Apache Spark & Storm support
+pathprepend "/opt/spark/bin/"
 pathprepend "/opt/storm/bin/"
 
 # make pipsi work
 pathprepend ~/.local/bin
 
 # make Java scripts work
-export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
