@@ -97,7 +97,7 @@ source $HOME/.bash_aliases
 source $HOME/.bash_functions
 
 # The next line updates PATH for the Google Cloud SDK.
-source $HOME/.google-cloud-sdk/path.zsh.inc
+source /usr/share/google-cloud-sdk/path.zsh.inc
 
 # The next line enables shell command completion for gcloud.
-source $HOME/.google-cloud-sdk/completion.zsh.inc
+source /usr/share/google-cloud-sdk/completion.zsh.inc
