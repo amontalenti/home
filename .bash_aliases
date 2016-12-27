@@ -32,7 +32,7 @@ alias jsonprint='python -m json.tool'
 # ~~~~
 #
 # note-taking app in vim
-alias simplenote='vim -c "Simplenote -l"'
+alias simplenote='vim -c "SimplenoteList"'
 # look for wireless noise
 alias kismet='kismet -n'
 # make a long (silent) screencast video tool
