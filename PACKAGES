@@ -84,7 +84,7 @@ nvm (via https://github.com/creationix/nvm)
 gvm (via https://github.com/moovweb/gvm)
 
 # java
-openjdk-7-jdk
+openjdk-8-jdk
 
 # clojure
 lein (via http://leiningen.org/)
