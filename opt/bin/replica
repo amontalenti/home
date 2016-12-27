@@ -2,6 +2,7 @@
 echo "duplicity: / => root..."
 sudo duplicity \
     --no-encryption \
+    --no-compression \
     --exclude=/dev \
     --exclude=/mnt \
     --exclude=/media \
@@ -15,10 +16,12 @@ echo "Done."
 echo "duplicity: /home/pixelmonkey..."
 sudo duplicity \
     --no-encryption \
+    --no-compression \
     /home/pixelmonkey file:///media/am/ext/tx220/pixelmonkey;
 echo "Done."
 echo "duplicity: /home/am..."
 sudo duplicity \
     --no-encryption \
+    --no-compression \
     /home/am file:///media/am/ext/tx220/am;
 echo "Done."
