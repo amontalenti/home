@@ -115,7 +115,7 @@ def build_python2():
                            --with-system-expat\
                            --with-system-ffi\
                            --with-fpectl" \
-    pyenv install -f 2.7.10
+    pyenv install -f 2.7.13
     """.strip())
 
 @task
@@ -132,5 +132,5 @@ def build_python3():
                            --with-system-libmpdec\
                            --with-system-ffi\
                            --with-fpectl"\
-    pyenv install -f 3.5.0
+    pyenv install -f 3.6.0
     """.strip())
