@@ -49,9 +49,6 @@ export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 # ^^^ this isn't fool-proof, so disabling for now
 # since it actually broke streamparse runs
 
-# go setup
-export GOPATH="$HOME/gopath"
-
 # add rbenv support
 eval "$(rbenv init -)"
 
@@ -63,6 +60,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # add nvm support
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+
+# add gvm support
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # add travis CLI support
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
@@ -98,3 +98,4 @@ source $HOME/.bash_functions
 
 # The next line enables shell command completion for gcloud.
 source /usr/share/google-cloud-sdk/completion.zsh.inc
+
