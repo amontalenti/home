@@ -148,9 +148,6 @@ let g:virtualenv_auto_activate=1
 " make virtualenv plugin work with pyenv directory
 let g:virtualenv_directory = '~/.pyenv/versions'
 
-" ignore line length error
-let g:flake8_ignore='E501'
-
 " open gundo on right (no conflict with NERDTree)
 let g:gundo_right=1
 
