@@ -57,8 +57,8 @@ alias ipysparknotebook='PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS
 alias pe="pyenv shell"
 alias py2="pyenv activate py2"
 alias py3="pyenv activate py3"
-alias tmuxp="$(pyenv whence --path tmuxp | grep '2.7.13')"
-alias vcspull="$(pyenv whence --path vcspull | grep '2.7.13')"
+alias tmuxp="$(pyenv whence --path tmuxp | grep '2.7')"
+alias vcspull="$(pyenv whence --path vcspull | grep '2.7')"
 alias pipthis="pip install -r requirements.txt"
 # force installation of fresh package with pip
 alias pipinstall="pip install --no-cache-dir -I"
