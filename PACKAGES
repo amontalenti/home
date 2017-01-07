@@ -13,7 +13,7 @@ unity-tweak-tool
 make
 build-essential
 python2.7-dev
-python3.4-dev
+python3.5-dev
 libssl-dev
 zlib1g-dev
 libbz2-dev
@@ -34,6 +34,9 @@ qtmobility-dev
 wget
 curl
 llvm
+gcc
+python-dev
+python-setuptools
 
 # desktop goodies
 youtube-dl

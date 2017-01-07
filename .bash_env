@@ -69,9 +69,6 @@ export PYTHONSTARTUP=~/.pythonstartup.py
 # add vim-clojure support
 export VIMCLOJURE_SERVER_JAR="$HOME/opt/share/vimclojure/server-2.3.3.jar"
 
-# add hop support
-source ~/.pyenv/versions/2.7.10/hop/hop.bash
-
 # add vagrant support
 pathprepend "/opt/vagrant/bin/"
 
