@@ -99,3 +99,9 @@ source $HOME/.bash_functions
 # The next line enables shell command completion for gcloud.
 source /usr/share/google-cloud-sdk/completion.zsh.inc
 
+# much bigger shell history
+HISTSIZE=100000
+SAVEHIST=100000
+HISTFILE=$HOME/.zsh_history
+# this option works better with tmux
+setopt nosharehistory
