@@ -9,13 +9,9 @@ sudo duplicity \
     --exclude=/home \
     --exclude=/lost+found \
     --exclude=/proc \
+    --exclude=/run \
     / \
     file:///media/am/ext/tx220-xenial/root;
-echo "Done."
-echo "duplicity: /home/crashplan..."
-sudo duplicity \
-    --no-encryption \
-    /home/crashplan file:///media/am/ext/tx220-xenial/crashplan;
 echo "Done."
 echo "duplicity: /home/essentials..."
 sudo duplicity \
