@@ -22,4 +22,3 @@ cqlsh
 pymongo
 flake8
 unpushed
-vcspull
