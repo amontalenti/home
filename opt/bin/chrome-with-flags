@@ -8,9 +8,7 @@
 export CHROME_WRAPPER="`readlink -f "$0"`"
 
 HERE="`dirname "$CHROME_WRAPPER"`"
-FLAGS="--enable-native-gpu-memory-buffers"
-# also enable GPU blacklist via about:flags
-# and enable GPU rasterization
+FLAGS="--disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers --disable-gpu-compositing --ignore-gpu-blacklist"
 
 # We include some xdg utilities next to the binary, and we want to prefer them
 # over the system versions when we know the system versions are very old. We
@@ -55,5 +53,5 @@ if [[ -n "$CHROME_USER_DATA_DIR" ]]; then
   exec -a "$0" "$HERE/chrome" \
     --user-data-dir="$CHROME_USER_DATA_DIR" "$@"
 else
-  exec -a "$0" "$HERE/chrome" "$FLAGS" "$@"
+  exec -a "$0" "$HERE/chrome" $FLAGS "$@"
 fi
