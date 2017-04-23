@@ -106,6 +106,9 @@ virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
 linux-tools-common
 linux-tools-generic
 linux-tools-3.16.0-41-generic
+openvpn
+easy-rsa
+network-manager-openvpn
 
 # console tools
 tig
