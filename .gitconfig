@@ -20,7 +20,6 @@
     lg3 = log --pretty="format:\"%h %ad | %s%d [%an]\"" --graph --date=short
     lg = !"git lg1"
     ll = log -p
-    purge = clean -dxf
     rb = rebase
     fix = rebase -i HEAD^^
     rbc = rebase --continue
