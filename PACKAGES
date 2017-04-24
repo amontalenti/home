@@ -67,6 +67,7 @@ caffeine
 wireshark
 meld
 grub-customizer
+gnome-sound-recorder
 texlive-latex-extra
 texlive-fonts-recommended
 atom (via ppa:webupd8team/atom)
