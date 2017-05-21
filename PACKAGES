@@ -110,6 +110,9 @@ linux-tools-3.16.0-41-generic
 openvpn
 easy-rsa
 network-manager-openvpn
+network-manager-openvpn-gnome
+network-manager-pptp
+network-manager-vpnc
 
 # console tools
 tig
