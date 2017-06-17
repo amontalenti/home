@@ -141,3 +141,5 @@ awscli-aliases (via https://github.com/awslabs/awscli-aliases)
 
 # gnome shell extensions
 dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
+topicons (via https://extensions.gnome.org/extension/1031/topicons/)
+sount-output-device-chooser (via https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
