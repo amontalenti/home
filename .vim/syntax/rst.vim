@@ -16,12 +16,12 @@ syn match rstEmDash /[\u2014]/
 syn match rstUnicode /[\u2013\u2018\u2019\u201C\u201D]/ " – ‘ ’ “ ”
 syn match rstHeader /^[-=~]*$/
 
-exec 'hi def rstBold    term=bold cterm=bold gui=bold guifg=' . s:SynFgColor('PreProc')
-exec 'hi def rstHeader term=bold cterm=bold gui=bold guifg=' . s:SynFgColor('PreProc')
-exec 'hi def rstItalic  term=italic cterm=italic gui=italic guifg=' . s:SynFgColor('Statement')
-exec 'hi def rstNbsp    gui=underline guibg=' . s:SynBgColor('ErrorMsg')
-exec 'hi def rstEmDash  gui=bold guifg=' . s:SynFgColor('Title') . ' guibg='. s:SynBgColor('Folded')
-exec 'hi def rstUnicode guifg=' . s:SynFgColor('Number')
+" exec 'hi def rstBold    term=bold cterm=bold gui=bold guifg=' . s:SynFgColor('PreProc')
+" exec 'hi def rstHeader term=bold cterm=bold gui=bold guifg=' . s:SynFgColor('PreProc')
+" exec 'hi def rstItalic  term=italic cterm=italic gui=italic guifg=' . s:SynFgColor('Statement')
+" exec 'hi def rstNbsp    gui=underline guibg=' . s:SynBgColor('ErrorMsg')
+" exec 'hi def rstEmDash  gui=bold guifg=' . s:SynFgColor('Title') . ' guibg='. s:SynBgColor('Folded')
+" exec 'hi def rstUnicode guifg=' . s:SynFgColor('Number')
 
 hi link rstEmphasis       rstItalic
 hi link rstStrongEmphasis rstBold
