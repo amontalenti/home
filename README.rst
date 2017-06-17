@@ -1,6 +1,18 @@
 My dotfiles and $HOME
 =====================
 
+Cloning
+-------
+
+In your `$HOME`, do this::
+
+    git init .
+    git remote add -t \* -f origin git@github.com:amontalenti/home.git
+    git checkout master
+
+You may hit conflicts with your existing .bashrc or .profile. Just move those
+to another directory and let it run. 
+
 Shell
 -----
 
