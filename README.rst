@@ -11,7 +11,7 @@ In your `$HOME`, do this::
     git checkout master
 
 You may hit conflicts with your existing .bashrc or .profile. Just move those
-to another directory and let it run. 
+to another directory and let it run.
 
 Shell
 -----
