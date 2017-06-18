@@ -22,7 +22,6 @@ libsqlite3-dev
 libsnappy-dev
 libpq-dev
 libfreetype6-dev
-libpng12-dev
 gfortran
 libopenblas-dev
 liblapack-dev
@@ -30,7 +29,6 @@ libqt4-dev
 libphonon-dev
 libxml2-dev
 libxslt1-dev
-qtmobility-dev
 wget
 curl
 llvm

@@ -14,9 +14,9 @@
 
 [ -f ~/.bash_functions ] && . ~/.bash_functions
 
-[ -f ~/.bash_aliases ] && . ~/.bash_aliases
-
 [ -f ~/.bash_env ] && . ~/.bash_env
+
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
 [ -f ~/.bash_completion ] && . ~/.bash_completion
 
