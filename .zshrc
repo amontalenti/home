@@ -96,12 +96,15 @@ setopt BRACE_CCL
 source $HOME/.bash_aliases
 source $HOME/.bash_functions
 
-# The next line enables shell command completion for gcloud.
-source /usr/share/google-cloud-sdk/completion.zsh.inc
-
 # much bigger shell history
 HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=$HOME/.zsh_history
 # this option works better with tmux
 setopt nosharehistory
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
+#
+# # The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi

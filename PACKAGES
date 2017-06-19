@@ -1,13 +1,9 @@
 # shell
 vim
-vim-gnome
+vim-gtk3
 tmux
 zsh
 git
-
-# ubuntu / unity fixes
-compiz-config-settings-manager
-unity-tweak-tool
 
 # python install necessities
 make
