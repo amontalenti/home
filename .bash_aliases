@@ -4,9 +4,6 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lt='ls -t | head'
 alias lslog="ls . | egrep '\.log$'"
-# some handy cd shortcuts
-alias ..="cd .."
-alias ...="cd ../.."
 # current stack state
 alias d='dirs -v'
 # privileged edit
@@ -68,9 +65,11 @@ alias pipcleanall="pip freeze | grep -v '^-e ' | xargs pip uninstall -y"
 # vagrant and docker aliases
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# connect to Postgres REPL
+# connect to Postgres shell
 alias v-psql='psql -h vagrant.cogtree.com -U parsely'
 alias d-psql='psql -h localhost -U parsely'
+# connect to Postgres REPL
+alias v-pgcli='pgcli -h vagrant.cogtree.com -U parsely'
 alias d-pgcli='pgcli -h localhost -U parsely'
 # connect to Cassandra REPL
 alias v-cql='cqlsh vagrant.cogtree.com 9160'
@@ -79,8 +78,8 @@ alias d-cql='cqlsh localhost 9160'
 alias v-mongo='mongo vagrant.cogtree.com'
 alias d-mongo='mongo localhost'
 # connect to Redis REPL
-alias v-redis-cli='redis-cli -h vagrant.cogtree.com -p 6479'
-alias d-redis-cli='redis-cli -h localhost -p 6479'
+alias v-redis-cli='redis-cli -h vagrant.cogtree.com -p 6379'
+alias d-redis-cli='redis-cli -h localhost -p 6379'
 # connect to Elasticsearch REPL (Python)
 alias v-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('vagrant.cogtree.com'); print('\nElasticSearch: use es\n')\""
 alias d-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('localhost'); print('\nElasticSearch: use es\n')\""
@@ -94,14 +93,6 @@ alias clj-server='lein trampoline repl :headless'
 alias clj-repl='grench repl'
 # quick run lein
 alias clj-lein='grench lein'
-
-# Floobits
-# ~~~~~~~~
-
-# share terminal via floobits
-alias shareterm='flootty --create --url="https://floobits.com/Parse.ly/hack"'
-# share directory via floobits
-alias sharedir='floomatic --read-only --join "https://floobits.com/r/Parse.ly/interviews/" ~/src/interviews'
 
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
