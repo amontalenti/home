@@ -9,7 +9,6 @@ git
 make
 build-essential
 python2.7-dev
-python3.5-dev
 libssl-dev
 zlib1g-dev
 libbz2-dev
@@ -29,46 +28,13 @@ wget
 curl
 llvm
 gcc
-python-dev
-python-setuptools
 
-# desktop goodies
-youtube-dl
-vlc
-glipper
-shutter
-audacity
-pitivi
-pinta
-byzanz-record
-gimp
-nautilus-open-terminal
-cpufreq-indicator
-indicator-multiload
-compiz-plugins-extra
-xsel
-xclip
-workrave
-workrave-unity
-ubuntu-restricted-extras
-libavcodec-extra
-libreoffice-style-sifr
-y-ppa-manager
-psensors
-indicator-sensors
-indicator-virtual-box
-caffeine
-wireshark
-meld
-grub-customizer
-gnome-sound-recorder
-texlive-latex-extra
-texlive-fonts-recommended
+# dev tools
 atom (via ppa:webupd8team/atom)
-# added this to kernel /proc/cmdline: processor.ignore_ppc=1
-# fixes cpufreq bios issue on Thinkpad x220
 
 # python
+python-dev
+python-setuptools
 pyenv (via https://github.com/yyuu/pyenv-installer)
 
 # ruby
@@ -93,14 +59,43 @@ sbt (via http://www.scala-sbt.org/download.html)
 # gradle (Groovy-based Build Tool)
 gradle (via ppa:cwchien/gradle)
 
-# infrastructure
-docker (via https://docs.docker.com/installation/ubuntulinux/)
+# virtualization infrastructure
+docker (via https://docs.docker.com/engine/installation/linux/ubuntu/)
 docker-compose (via https://docs.docker.com/compose/install/)
-vagrant (via https://www.vagrantup.com/downloads.html)
 virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
-linux-tools-common
-linux-tools-generic
-linux-tools-3.16.0-41-generic
+vagrant (via https://www.vagrantup.com/downloads.html)
+
+# desktop goodies
+youtube-dl
+vlc
+glipper
+shutter
+audacity
+pitivi
+pinta
+byzanz-record
+gimp
+cpufreq-indicator
+xsel
+xclip
+workrave
+workrave-unity
+libreoffice-style-sifr
+y-ppa-manager
+psensors
+indicator-sensors
+indicator-virtual-box
+caffeine
+wireshark
+meld
+grub-customizer
+gnome-sound-recorder
+texlive-latex-extra
+texlive-fonts-recommended
+# added this to kernel /proc/cmdline: processor.ignore_ppc=1
+# fixes cpufreq bios issue on Thinkpad x220
+
+# vpn
 openvpn
 easy-rsa
 network-manager-openvpn
