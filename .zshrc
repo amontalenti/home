@@ -42,7 +42,7 @@ path=(
 source $ZSH/oh-my-zsh.sh
 
 # Java should point to Oracle JVM
-export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 
 # use drip to make lein runs faster
 #export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
