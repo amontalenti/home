@@ -1,6 +1,10 @@
 SERVICES=`cat <<EOF
 crashplan
 saned
+docker
+vmware-workstation-server
+bluetooth
+glances
 EOF`
 for service in $SERVICES; do
     sudo service $service stop;
