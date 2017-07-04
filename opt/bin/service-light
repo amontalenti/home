@@ -5,6 +5,7 @@ docker
 vmware-workstation-server
 bluetooth
 glances
+teamviewerd
 EOF`
 for service in $SERVICES; do
     sudo service $service stop;
