@@ -28,6 +28,8 @@
     whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     up = pull --rebase
     build = checkout-index -a --prefix=_gitbuild/
+    set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+
 [pager]
     df = cat
 [fetch]
