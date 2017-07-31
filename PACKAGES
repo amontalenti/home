@@ -66,6 +66,7 @@ virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
 vagrant (via https://www.vagrantup.com/downloads.html)
 
 # desktop goodies
+xsel
 youtube-dl
 vlc
 glipper
