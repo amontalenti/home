@@ -3,6 +3,7 @@ vim
 vim-gtk3
 tmux
 zsh
+sqlite3
 git
 
 # python install necessities
