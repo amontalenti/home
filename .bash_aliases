@@ -12,7 +12,7 @@ alias svim='sudo vim'
 alias ss='sudo -s'
 # see truly every process running
 alias ptree="pstree -Gcpnulah"
-# better repetetive top-like stats
+# better repetitive top-like stats
 alias dtop="dstat -ta"
 # simple Python cache cleaner
 alias rmpyc="find . -name '*.pyc' -delete"
