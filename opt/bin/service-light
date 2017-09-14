@@ -3,7 +3,6 @@ crashplan
 saned
 docker
 vmware-workstation-server
-bluetooth
 glances
 teamviewerd
 EOF`
