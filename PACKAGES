@@ -104,6 +104,7 @@ network-manager-pptp
 network-manager-vpnc
 
 # console tools
+dstat
 tig
 mitmproxy
 powertop
