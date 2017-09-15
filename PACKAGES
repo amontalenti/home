@@ -67,6 +67,7 @@ virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
 vagrant (via https://www.vagrantup.com/downloads.html)
 
 # desktop goodies
+peek (via https://github.com/phw/peek#ubuntu)
 xsel
 youtube-dl
 vlc
