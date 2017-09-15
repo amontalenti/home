@@ -87,11 +87,13 @@ indicator-sensors
 indicator-virtual-box
 caffeine
 wireshark
-meld
 grub-customizer
 gnome-sound-recorder
 texlive-latex-extra
 texlive-fonts-recommended
+meld
+gpick
+fonts-hack-ttf
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
 # fixes cpufreq bios issue on Thinkpad x220
 
