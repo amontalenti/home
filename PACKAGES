@@ -131,6 +131,8 @@ asciinema (via ppa:zanchey/asciinema)
 exuberant-ctags
 gksu
 awscli-aliases (via https://github.com/awslabs/awscli-aliases)
+libav-tools
+
 
 # gnome shell extensions
 dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
