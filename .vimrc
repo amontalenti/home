@@ -262,3 +262,7 @@ nmap <leader>e :e#<CR>
 if match($TERM, "screen") != -1
       set term=screen-256color
 endif
+
+if has('python3')
+    let g:gundo_prefer_python3 = 1
+endif
