@@ -115,7 +115,7 @@ def build_python2():
                            --with-system-expat\
                            --with-system-ffi\
                            --with-fpectl" \
-    pyenv install -f 2.7.13
+    pyenv install -f 2.7.14
     """.strip())
 
 @task
