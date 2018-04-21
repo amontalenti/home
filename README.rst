@@ -236,20 +236,3 @@ Version Control
 I used to use Mercurial, now I primarily use git. I don't customize
 these too heavily, but my ``.hgrc`` and ``.gitconfig`` are included
 here anyway.
-
-Vagrant
--------
-
-I've decided to encapsulate all of my local development databases
-and network software into a local virtual machine, using VirtualBox
-and `vagrant`_. The ``Vagrantfile`` describes how this local
-development box works. I only manage a single box and to manage
-software within that box, I use `docker`_.
-
-I still run most of my client software locally -- e.g. I'll still install
-MongoDB clients, redis-cli, and Python libraries for interacting with these
-databases directly on my host machine. I use port fowarding to access
-these services.
-
-.. _vagrant: http://www.vagrantup.com/
-.. _docker: https://www.docker.io/
