@@ -26,6 +26,8 @@ alias findpid='pgrep -fln'
 alias upgrade='sudo apt update && sudo apt upgrade'
 # json pretty printer
 alias jsonprint='python -m json.tool'
+# backup helper
+alias backup='restic -r $B2_LAPTOP backup --verbose'
 
 # apps
 # ~~~~
