@@ -16,6 +16,8 @@ alias ptree="pstree -Gcpnulah"
 alias dtop="dstat -ta"
 # simple Python cache cleaner
 alias rmpyc="find . -name '*.pyc' -delete"
+# equivalent to OS X "open"
+alias open="xdg-open"
 # add some convenience options to grep
 alias grep="grep --color=auto --exclude-dir='.svn' --exclude-dir='.git'"
 alias fgrep='fgrep --color=auto'
