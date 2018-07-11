@@ -116,8 +116,10 @@ pandoc
 silversearcher-ag
 mercurial
 stress
+htop
 nethogs
 nload
+iftop
 httpry
 httpry-daemon
 httpry-tools
@@ -132,6 +134,7 @@ exuberant-ctags
 gksu
 awscli-aliases (via https://github.com/awslabs/awscli-aliases)
 libav-tools
+run-one
 
 
 # gnome shell extensions
