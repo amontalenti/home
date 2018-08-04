@@ -135,7 +135,7 @@ gksu
 awscli-aliases (via https://github.com/awslabs/awscli-aliases)
 libav-tools
 run-one
-
+colordiff
 
 # gnome shell extensions
 dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
