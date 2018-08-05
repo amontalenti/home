@@ -45,7 +45,7 @@ alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
 # quick gcal agenda
 alias gcal='gcalcli agenda --calendar="AM - Parse.ly" --calendar="AM - Personal" --calendar="Shared - Team"'
 # turn HTML in clipboard to clipboard.md file
-alias clipmd='(xclip -o -selection clipboard -t text/html | pandoc -r html --no-wrap -o /tmp/clipboard.md) && cat /tmp/clipboard.md && echo /tmp/clipboard.md'
+alias clipmd='(xclip -o -selection clipboard -t text/html | pandoc -r html --wrap=none -o /tmp/clipboard.md) && cat /tmp/clipboard.md && echo Stored in: /tmp/clipboard.md'
 
 # python
 # ~~~~~~
