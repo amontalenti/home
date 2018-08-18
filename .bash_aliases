@@ -119,6 +119,7 @@ alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
 # Storm cluster
 alias ssh-storm2a='ssh-multi ue1a-storm2{a-i}.cogtree.com'
 alias ssh-storm2b='ssh-multi ue1a-storm2{j-p}.cogtree.com'
+alias ssh-storm-beta='ssh-multi ue1a-storm-beta2{a-e}.cogtree.com'
 # Cassandra cluster
 alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
 # ssh ES

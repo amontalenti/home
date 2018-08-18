@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Print out zsh prompts.
 
@@ -189,7 +189,9 @@ def virtualenv():
             color("(", foreground="gray"),
             color(current_env, foreground="green"),
             color(")", foreground="gray"))
-    return path
+        return path
+    else:
+        return None
 
 
 def git_branch():
@@ -201,8 +203,8 @@ def git_branch():
         # Non-zero return code, assume the current working dir is not in a git
         # repo.
         return ''
-    first_line = output.split('\n')[0]
-    branch_name = first_line.split('/', 2)[-1]
+    first_line = output.split(b'\n')[0]
+    branch_name = (first_line.split(b'/', 2)[-1]).decode("utf-8")
     branch = "{}{}{}".format(
         color("[", foreground="gray"),
         color(branch_name, foreground="blue"),
@@ -263,10 +265,10 @@ def main():
                  'supported)')
     args = parser.parse_args()
     if args.side == 'left':
-        print left_prompt()
+        print(left_prompt())
     else:
         assert args.side == 'right'
-        print right_prompt(args.last_exit_status)
+        print(right_prompt(args.last_exit_status))
 
 
 if __name__ == '__main__':
