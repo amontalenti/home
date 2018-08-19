@@ -134,8 +134,10 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
-" disable the toolbar
+" disable the Icon toolbar
 set guioptions-=T
+" disable the 'File >' menu
+set guioptions-=m
 
 " use w!! to write a file as sudo
 " even if you forget to sudo

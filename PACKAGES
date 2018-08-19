@@ -10,6 +10,9 @@ git
 make
 build-essential
 python2.7-dev
+python3-dev
+python-dev
+python-setuptools
 libssl-dev
 zlib1g-dev
 libbz2-dev
@@ -31,11 +34,9 @@ llvm
 gcc
 
 # dev tools
-atom (via ppa:webupd8team/atom)
+atom (via snap)
 
 # python
-python-dev
-python-setuptools
 pyenv (via https://github.com/yyuu/pyenv-installer)
 
 # ruby
@@ -49,7 +50,7 @@ nvm (via https://github.com/creationix/nvm)
 gvm (via https://github.com/moovweb/gvm)
 
 # java
-openjdk-8-jdk
+openjdk-11-jdk
 
 # clojure
 lein (via http://leiningen.org/)
@@ -67,7 +68,6 @@ virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
 vagrant (via https://www.vagrantup.com/downloads.html)
 
 # desktop goodies
-peek (via https://github.com/phw/peek#ubuntu)
 xsel
 youtube-dl
 vlc
@@ -76,13 +76,12 @@ shutter
 audacity
 pitivi
 pinta
-byzanz-record
+byzanz
 gimp
 cpufreq-indicator
 xsel
 xclip
 libreoffice-style-sifr
-y-ppa-manager
 psensors
 indicator-sensors
 indicator-virtual-box
@@ -95,6 +94,10 @@ texlive-fonts-recommended
 meld
 gpick
 fonts-hack-ttf
+
+# other desktop goodies
+peek (via https://github.com/phw/peek#ubuntu)
+y-ppa-manager
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
 # fixes cpufreq bios issue on Thinkpad x220
 
@@ -128,14 +131,15 @@ gdebi
 apache2-utils
 pv
 ngrep
-goaccess (via https://github.com/allinurl/goaccess#distributions)
-asciinema (via ppa:zanchey/asciinema)
 exuberant-ctags
-gksu
-awscli-aliases (via https://github.com/awslabs/awscli-aliases)
-libav-tools
+ffmpeg
 run-one
 colordiff
+
+# other console tools
+awscli-aliases (via https://github.com/awslabs/awscli-aliases)
+goaccess (via https://github.com/allinurl/goaccess#distributions)
+asciinema (via ppa:zanchey/asciinema)
 
 # gnome shell extensions
 dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
