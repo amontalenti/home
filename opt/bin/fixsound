@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo alsa force-reload && pulseaudio -k
+sudo killall pulseaudio

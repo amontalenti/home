@@ -166,10 +166,6 @@ let g:jedi#auto_initialization = 0
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
 
-" turn off jshint slowness
-let g:JSHintHighlightErrorLine = 0
-let JSHintUpdateWriteOnly=1
-
 " toggle file/folder tree
 map <F2> :NERDTreeToggle<CR>
 " toggle in-file navigation bar
@@ -268,3 +264,5 @@ endif
 if has('python3')
     let g:gundo_prefer_python3 = 1
 endif
+
+let g:syntastic_javascript_checkers = ['eslint']
