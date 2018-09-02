@@ -109,9 +109,7 @@ alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogt
 alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b,c}-pixel{1,2}}.cogtree.com'
 alias ssh-pixel-east='ssh-multi ue1{a,b,d,e}-pixel{1,2}.cogtree.com'
 alias ssh-pixel-west='ssh-multi uw2{a,b,c}-pixel{1,2}.cogtree.com'
-alias ssh-kafka1='ssh-multi ue1a-kafka1{a-e}.cogtree.com'
-alias ssh-kafka2='ssh-multi ue1a-kafka2{a-j}.cogtree.com'
-alias ssh-kafka3='ssh-multi ue1a-kafka3{a-j}.cogtree.com'
+alias ssh-kafka5='ssh-multi ue1a-kafka5{a-j}.cogtree.com'
 # dash app server
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
 # api servers
@@ -130,7 +128,7 @@ alias ssh-es-hot='ssh-multi {ue1a-es-prod1-h1{a,d,g,j},ue1b-es-prod1-h1{b,e,h,k}
 alias ssh-es-master='ssh-multi {ue1a-es-prod1-m1a,ue1b-es-prod1-m1b,ue1e-es-prod1-m1c}.cogtree.com'
 
 alias ssh-beta-storm='ssh-multi ue1a-storm-beta1{a,b,c,d}.cogtree.com'
-alias ssh-es-crawl='ssh-multi {ue1a-es-crawl2{a,d,g,j,m,p,s,v},ue1b-es-crawl2{b,e,h,k,n,q,t,w},ue1e-es-crawl2{c,f,i,l,o,r,u,x}}.cogtree.com'
+alias ssh-es-crawl='ssh-multi {ue1a-es-crawl4{a,d,g,j,m},ue1b-es-crawl4{b,e,h,k,n},ue1e-es-crawl4{c,f,i,l,o}}.cogtree.com'
 
 # hack machine in gcloud
 alias ssh-hack='gcloud compute --project "steady-cat-128117" ssh --zone "us-east1-c" "hack"'

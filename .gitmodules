@@ -98,3 +98,6 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = git@github.com:vim-syntastic/syntastic.git
+[submodule ".vim/bundle/vim-racket"]
+	path = .vim/bundle/vim-racket
+	url = git@github.com:wlangstroth/vim-racket.git

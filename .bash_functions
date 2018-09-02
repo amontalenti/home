@@ -81,3 +81,6 @@ function ssh-rm() {
     ssh-keygen -f "$HOME/.ssh/known_hosts" -R $(ssh-host $1)
 }
 
+function mdclean() {
+    pandoc -t markdown -f gfm --atx-headers --wrap=none -s $1
+}
