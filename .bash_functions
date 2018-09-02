@@ -82,5 +82,5 @@ function ssh-rm() {
 }
 
 function mdclean() {
-    pandoc -t markdown -f gfm --atx-headers --wrap=none -s $1
+    pandoc -f markdown -t commonmark --atx-headers --wrap=none -s $1
 }
