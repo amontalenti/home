@@ -140,6 +140,7 @@ colordiff
 awscli-aliases (via https://github.com/awslabs/awscli-aliases)
 goaccess (via https://github.com/allinurl/goaccess#distributions)
 asciinema (via ppa:zanchey/asciinema)
+ripgrep (via https://github.com/BurntSushi/ripgrep/releases)
 
 # gnome shell extensions
 dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
