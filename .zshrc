@@ -19,6 +19,7 @@ plugins=(git
          npm
          history-substring-search
          per-directory-history
+         zsh-better-npm-completion
          sudo)
 
 path=(
