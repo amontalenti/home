@@ -101,3 +101,6 @@
 [submodule ".vim/bundle/vim-racket"]
 	path = .vim/bundle/vim-racket
 	url = git@github.com:wlangstroth/vim-racket.git
+[submodule ".vim/bundle/vim-eslint-compiler"]
+	path = .vim/bundle/vim-eslint-compiler
+	url = git@github.com:salomvary/vim-eslint-compiler.git
