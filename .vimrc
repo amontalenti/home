@@ -172,10 +172,8 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :Tagbar<CR>
 " toggle undo history visualization
 map <F4> :GundoToggle<CR>
-" quick save
-inoremap <F5> <c-o>:w<cr>
-nnoremap <F5> :w<cr>
-
+" toggle undo history visualization
+map <F5> :SyntasticToggleMode<CR>
 " toggle line numbers
 set nonumber
 nnoremap <F6> :set nonumber!<CR>
@@ -187,6 +185,10 @@ nnoremap <F7> :set wrap nolist linebreak!<CR>
 nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
 " toggle distraction free mode
 nnoremap <F9> :Goyo<CR>
+" quick save
+inoremap <F12> <c-o>:w<cr>
+nnoremap <F12> :w<cr>
+
 
 " hit F7, F8, F9 for 'prose writing' mode
 
@@ -266,3 +268,4 @@ if has('python3')
 endif
 
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = {"mode": "passive"}
