@@ -91,6 +91,7 @@ grub-customizer
 gnome-sound-recorder
 texlive-latex-extra
 texlive-fonts-recommended
+texlive-xetex
 meld
 gpick
 fonts-hack-ttf

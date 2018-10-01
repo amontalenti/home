@@ -84,3 +84,7 @@ function ssh-rm() {
 function mdclean() {
     pandoc -f markdown -t commonmark --atx-headers --wrap=none -s $1
 }
+
+function md2pdf() {
+    pandoc $1 --pdf-engine=xelatex -o $2
+}
