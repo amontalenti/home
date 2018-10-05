@@ -25,25 +25,15 @@ pathappend () {
         export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
 }
 
-function pycd () {
+pycd () {
     pushd `python -c "import os.path, $1; print(os.path.dirname($1.__file__))"`;
 }
 
-function watchdir () {
-    # installed via pip install watchdog; monitors a directory and runs command
-    # upon any Python file changes
-    watchmedo shell-command --drop --command=$1 --recursive --pattern="*.py";
-}
-
-function ccd () {
-    autoenv_cd $COGROOT/$1;
-}
-
-function gitgrep () {
+gitgrep () {
     git log --pretty=oneline -S"$1"
 }
 
-function mktun() {
+mktun () {
     # Usage: mktun host local_port remote_port
     local SERVER=$1
     local LOCALPORT=$2
@@ -52,12 +42,12 @@ function mktun() {
     ssh -nNT -L "${LOCALPORT}:localhost:${REMOTEPORT}" $SERVER;
 }
 
-function dash() {
+dash () {
     local APIKEY=$1
-    x-www-browser http://dash.to/$APIKEY;
+    x-www-browser https://beta.parsely.com/$APIKEY;
 }
 
-vman() {
+vman () {
   vim -c "SuperMan $*"
 
   if [ "$?" != "0" ]; then
@@ -65,26 +55,22 @@ vman() {
   fi
 }
 
-function tunnels() {
-    ssh -ND 8159 hack.cogtree.com &
-}
-
-function httpdiff() {
+httpdiff () {
     diff -u <(curl -sS -D - -L $1) <(curl -sS -D - -L $2) | colordiff
 }
 
-function ssh-host() {
+ssh-host () {
     ssh -v "$1" 2>&1 true | grep 'debug1: Connecting to' | sed -e's/debug1: Connecting to //g' | awk '{print $1}'
 }
 
-function ssh-rm() {
+ssh-rm () {
     ssh-keygen -f "$HOME/.ssh/known_hosts" -R $(ssh-host $1)
 }
 
-function mdclean() {
+mdclean () {
     pandoc -f markdown -t commonmark --atx-headers --wrap=none -s $1
 }
 
-function md2pdf() {
+md2pdf () {
     pandoc $1 --pdf-engine=xelatex -o $2
 }
