@@ -127,6 +127,7 @@ Some nice IDE-like plugins for me include:
 * yajs_, yet another Javascript syntax
 * zeavim_, integrate Zeal documentation lookup
 
+.. _syntastic: https://github.com/vim-syntastic/syntastic
 .. _dockerfile: https://github.com/ekalinin/Dockerfile.vim
 .. _vim-yaml: https://github.com/avakhov/vim-yaml
 .. _repeat: https://github.com/tpope/vim-repeat
