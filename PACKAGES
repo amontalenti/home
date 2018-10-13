@@ -98,6 +98,7 @@ texlive-xetex
 meld
 gpick
 fonts-hack-ttf
+zeal
 
 # other desktop goodies
 peek (via https://github.com/phw/peek#ubuntu)
