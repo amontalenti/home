@@ -79,14 +79,13 @@ of files, including:
 * Python
 * JavaScript
 * CSS and LESS
-* Clojure
 * JSON and XML
 * reStructuredText
 * Markdown
 * bash
 * Dockerfile
-* Thrift files
 * configuration files
+* Clojure, Scheme, Go (for fun)
 
 My vim configuration is a bit customized, as I use vim as a kind of UNIX
 IDE. However, I don't go crazy remapping things; in general, I'm pretty
@@ -95,29 +94,45 @@ these customizations are just to make editing typical files for me nicer.
 
 Some nice IDE-like plugins for me include:
 
-* NERDTree_, for file navigation
-* numbers_, for better line number support
 * ctrlp_, for quick file opening
+* Dockerfile_, for docker support
 * fugitive_, for git integration
-* Gundo_, for undo history
-* Goyo_, for distraction-free writing
-* rope-vim_, for Python refactoring support
-* Taglist_, for old-style code outlines / navigations
+* goyo.vim_, for distraction-free writing
+* gundo_, for undo history
+* nerdtree_, for file navigation
+* parinfer-rust_, for speedy indent/dedent of Lisp code
+* rainbow_parentheses_, for matching parens, especially in Lisp
+* repeat_, just makes the ``.`` command more flexible and scriptable
+* simplenote.vim_, integrates with Simplenote notes service
+* surround_, adds a noun to vim for "surroundings", useful for quoting and parens
+* syntastic_, for syntax checking, mainly Python and JavaScript
 * tagbar_, for improved code outlines / navigations
-* vim-less_, for editing LESS CSS files
-* vim-jinja_, for enhanced Jinja syntax highlighting
-* vim-flake8_, for Python syntax checking
-* vim-virtualenv_, for Python virtualenv support
-* vim-fireplace_, for Clojure interaction with nREPL
 * vim-clojure-static_, for Clojure basic editing support
-* vim-sexp-ext_, for Clojure text motions over S-expressions
-* rainbow_parentheses_, for Clojure paren highlighting
-* vim-markdown_, improved Markdown syntax handling
+* vim-elixir_, for Elixir basic editing support
+* vim-eslint-compiler_, for ESLint :make and quickfix support
+* vim-fireplace_, for Clojure interaction with nREPL
+* vim-flake8_, for Python syntax checking
+* vim-go_, for Go basic editing
+* vim-jinja_, for enhanced Jinja syntax highlighting
+* vim-less_, for editing LESS CSS files
 * vim-livedown_, for live preview of Markdown files
-* js-lib-syntax_, adds some support for JS frameworks
-* yajs_, yet another Javascript syntax
+* vim-markdown_, improved Markdown syntax handling
+* vim-racket_, for Racket and Scheme basic editing
+* vim-sexp_, for Clojure S-expr support
+* vim-sexp-ext_, for Clojure text motions over S-expressions
+* vim-superman_: read man pages within vim
+* vim-virtualenv_, for Python virtualenv support
+* vim-yaml_, basic YAML file support
 * whitespace_, to kill trailing whitespace in files
+* yajs_, yet another Javascript syntax
+* zeavim.vim_, integrate Zeal documentation lookup
 
+.. _vim-yaml: https://github.com/avakhov/vim-yaml
+.. _repeat: https://github.com/tpope/vim-repeat
+.. _surround: https://github.com/tpope/vim-surround
+.. _rainbow_parentheses: https://github.com/kien/rainbow_parentheses.vim
+.. _simplenote.vim: https://github.com/mrtazz/simplenote.vim
+.. _parinfer-rust: https://github.com/eraserhd/parinfer-rust
 .. _NERDTree: https://github.com/scrooloose/nerdtree
 .. _numbers: https://github.com/myusuf3/numbers.vim.git
 .. _ctrlp: https://github.com/kien/ctrlp.vim.git
@@ -125,7 +140,6 @@ Some nice IDE-like plugins for me include:
 .. _Gundo: https://github.com/sjl/gundo.vim
 .. _Goyo: https://github.com/junegunn/goyo.vim
 .. _rope-vim: https://github.com/sontek/rope-vim.git
-.. _Taglist: https://github.com/vim-scripts/taglist.vim
 .. _tagbar: http://majutsushi.github.io/tagbar/
 .. _vim-less: https://github.com/groenewege/vim-less
 .. _vim-jinja: https://github.com/mitsuhiko/vim-jinja
@@ -133,22 +147,15 @@ Some nice IDE-like plugins for me include:
 .. _vim-virtualenv: https://github.com/jmcantrell/vim-virtualenv.git
 .. _vim-fireplace: https://github.com/tpope/vim-fireplace
 .. _vim-clojure-static: https://github.com/guns/vim-clojure-static
+.. _vim-go: https://github.com/fatih/vim-go
+.. _vim-racket: https://github.com/wlangstroth/vim-racket
+.. _vim-sexp: https://github.com/guns/vim-sexp
 .. _vim-sexp-ext: https://github.com/tpope/vim-sexp-mappings-for-regular-people
-.. _rainbow_parentheses: https://github.com/kien/rainbow_parentheses.vim
+.. _vim-superman: https://github.com/jez/vim-superman
 .. _vim-markdown: https://github.com/tpope/vim-markdown
 .. _vim-livedown: https://github.com/shime/vim-livedown
-.. _js-lib-syntax: https://github.com/othree/javascript-libraries-syntax.vim
 .. _yajs: https://github.com/othree/yajs.vim
 .. _whitespace: https://github.com/bronson/vim-trailing-whitespace
-
-I then have a couple of plugins that just expand the vim vocabulary a
-little.  These include:
-
-* repeat_, just makes the ``.`` command more flexible and scriptable
-* surround_, adds a noun to vim for "surroundings", useful for quoting and parens
-
-.. _repeat: https://github.com/tpope/vim-repeat
-.. _surround: https://github.com/tpope/vim-surround
 
 These are referenced via git's submodule facility, because this seemed
 like the cleanest thing. Therefore, after cloning this repo, make sure
@@ -177,7 +184,7 @@ In tmux and screen, I use a matrix-like green-on-black color scheme. I
 do this so I can intimidate `Parse.ly`_ interns and make them think that
 learning UNIX will rewire their brain.
 
-.. _Parse.ly: http://parse.ly/team.html
+.. _Parse.ly: https://www.parse.ly/about/#team
 
 Unfortunately, there is some trickery with UNIX color schemes for terminals.
 
