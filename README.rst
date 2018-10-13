@@ -85,7 +85,7 @@ of files, including:
 * bash
 * Dockerfile
 * configuration files
-* Clojure, Scheme, Go (for fun)
+* Clojure, Scheme, Go, Elixir (for fun)
 
 My vim configuration is a bit customized, as I use vim as a kind of UNIX
 IDE. However, I don't go crazy remapping things; in general, I'm pretty
@@ -95,7 +95,7 @@ these customizations are just to make editing typical files for me nicer.
 Some nice IDE-like plugins for me include:
 
 * ctrlp_, for quick file opening
-* Dockerfile_, for docker support
+* dockerfile_, for docker support
 * fugitive_, for git integration
 * goyo_, for distraction-free writing
 * gundo_, for undo history
@@ -127,6 +127,7 @@ Some nice IDE-like plugins for me include:
 * yajs_, yet another Javascript syntax
 * zeavim_, integrate Zeal documentation lookup
 
+.. _dockerfile: https://github.com/ekalinin/Dockerfile.vim
 .. _vim-yaml: https://github.com/avakhov/vim-yaml
 .. _repeat: https://github.com/tpope/vim-repeat
 .. _surround: https://github.com/tpope/vim-surround
@@ -141,6 +142,8 @@ Some nice IDE-like plugins for me include:
 .. _goyo: https://github.com/junegunn/goyo.vim
 .. _rope-vim: https://github.com/sontek/rope-vim.git
 .. _tagbar: http://majutsushi.github.io/tagbar/
+.. _vim-elixir: https://github.com/elixir-editors/vim-elixir
+.. _vim-eslint-compiler: https://github.com/salomvary/vim-eslint-compiler
 .. _vim-less: https://github.com/groenewege/vim-less
 .. _vim-jinja: https://github.com/mitsuhiko/vim-jinja
 .. _vim-flake8: https://github.com/nvie/vim-flake8
