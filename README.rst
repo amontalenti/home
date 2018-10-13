@@ -97,13 +97,13 @@ Some nice IDE-like plugins for me include:
 * ctrlp_, for quick file opening
 * Dockerfile_, for docker support
 * fugitive_, for git integration
-* goyo.vim_, for distraction-free writing
+* goyo_, for distraction-free writing
 * gundo_, for undo history
 * nerdtree_, for file navigation
 * parinfer-rust_, for speedy indent/dedent of Lisp code
 * rainbow_parentheses_, for matching parens, especially in Lisp
 * repeat_, just makes the ``.`` command more flexible and scriptable
-* simplenote.vim_, integrates with Simplenote notes service
+* simplenote_, integrates with Simplenote notes service
 * surround_, adds a noun to vim for "surroundings", useful for quoting and parens
 * syntastic_, for syntax checking, mainly Python and JavaScript
 * tagbar_, for improved code outlines / navigations
@@ -125,20 +125,20 @@ Some nice IDE-like plugins for me include:
 * vim-yaml_, basic YAML file support
 * whitespace_, to kill trailing whitespace in files
 * yajs_, yet another Javascript syntax
-* zeavim.vim_, integrate Zeal documentation lookup
+* zeavim_, integrate Zeal documentation lookup
 
 .. _vim-yaml: https://github.com/avakhov/vim-yaml
 .. _repeat: https://github.com/tpope/vim-repeat
 .. _surround: https://github.com/tpope/vim-surround
 .. _rainbow_parentheses: https://github.com/kien/rainbow_parentheses.vim
-.. _simplenote.vim: https://github.com/mrtazz/simplenote.vim
+.. _simplenote: https://github.com/mrtazz/simplenote.vim
 .. _parinfer-rust: https://github.com/eraserhd/parinfer-rust
 .. _NERDTree: https://github.com/scrooloose/nerdtree
 .. _numbers: https://github.com/myusuf3/numbers.vim.git
 .. _ctrlp: https://github.com/kien/ctrlp.vim.git
 .. _fugitive: http://github.com/tpope/vim-fugitive.git
 .. _Gundo: https://github.com/sjl/gundo.vim
-.. _Goyo: https://github.com/junegunn/goyo.vim
+.. _goyo: https://github.com/junegunn/goyo.vim
 .. _rope-vim: https://github.com/sontek/rope-vim.git
 .. _tagbar: http://majutsushi.github.io/tagbar/
 .. _vim-less: https://github.com/groenewege/vim-less
@@ -156,6 +156,7 @@ Some nice IDE-like plugins for me include:
 .. _vim-livedown: https://github.com/shime/vim-livedown
 .. _yajs: https://github.com/othree/yajs.vim
 .. _whitespace: https://github.com/bronson/vim-trailing-whitespace
+.. _zeavim: https://github.com/KabbAmine/zeavim.vim
 
 These are referenced via git's submodule facility, because this seemed
 like the cleanest thing. Therefore, after cloning this repo, make sure
