@@ -58,6 +58,9 @@ lein (via http://leiningen.org/)
 # sbt (Scala Build Tool)
 sbt (via http://www.scala-sbt.org/download.html)
 
+# rust
+rustup (via https://www.rust-lang.org/en-US/install.html)
+
 # gradle (Groovy-based Build Tool)
 gradle (via ppa:cwchien/gradle)
 

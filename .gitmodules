@@ -104,3 +104,6 @@
 [submodule ".vim/bundle/vim-eslint-compiler"]
 	path = .vim/bundle/vim-eslint-compiler
 	url = git@github.com:salomvary/vim-eslint-compiler.git
+[submodule ".vim/bundle/parinfer-rust"]
+	path = .vim/bundle/parinfer-rust
+	url = git@github.com:eraserhd/parinfer-rust.git

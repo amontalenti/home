@@ -31,6 +31,7 @@ path=(
     /home/am/.nvm/bin
     /home/am/opt/bin
     /home/am/gopath/bin
+    /home/am/.cargo/bin
     /usr/lib/lightdm/lightdm
     /usr/local/sbin
     /usr/local/bin

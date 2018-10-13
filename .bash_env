@@ -13,6 +13,9 @@ export NVM_DIR="$HOME/.nvm"
 # add gvm support
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
+# add rust support
+[[ -s "$HOME/.cargo/bin/cargo" ]] && pathprepend ~/.cargo/bin
+
 # pyenv setup with virtualenv support
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
