@@ -1,2 +1,0 @@
-#!/bin/bash
-pidof rhythmbox >/dev/null && rhythmbox-client --print-playing
