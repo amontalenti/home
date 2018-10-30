@@ -157,3 +157,41 @@ sount-output-device-chooser (via https://extensions.gnome.org/extension/906/soun
 caffeine (via https://extensions.gnome.org/extension/517/caffeine/)
 impatience (via https://extensions.gnome.org/extension/277/impatience/)
 dim-on-battery-power (via https://extensions.gnome.org/extension/947/dim-on-battery-power/)
+
+# vim plugins
+ctrlp
+Dockerfile
+fugitive
+goyo.vim
+gundo
+nerdtree
+parinfer-rust
+rainbow_parentheses
+repeat
+simplenote.vim
+surround
+syntastic
+tagbar
+thrift.vim # TODO: reconsider
+tla.vim    # TODO: reconsider
+vim-clojure-static
+vim-elixir
+vim-eslint-compiler
+vim-fireplace
+vim-flake8
+vim-go
+vim-jinja
+vim-less
+vim-livedown
+vim-markdown
+vim-ps1 # TODO: get rid of this
+vim-racket
+vim-sexp
+vim-sexp-ext
+vim-superman
+vim-virtualenv
+vim-yaml
+whitespace
+yajs-libs.vim
+yajs.vim
+zeavim.vim
