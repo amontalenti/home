@@ -3,6 +3,8 @@ alias ls="ls --color=auto --hide='*.pyc' --hide='__pycache__' --hide='*egg-info'
 alias ll='ls -l'
 alias la='ls -a'
 alias lt='ls -t | head'
+# cleaner disk free
+alias df='df -xsquashfs -xtmpfs'
 alias lslog="ls . | egrep '\.log$'"
 # current stack state
 alias d='dirs -v'
