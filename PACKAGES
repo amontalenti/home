@@ -48,6 +48,7 @@ nvm (via https://github.com/creationix/nvm)
 
 # go
 gvm (via https://github.com/moovweb/gvm)
+bison
 
 # java
 openjdk-11-jdk
