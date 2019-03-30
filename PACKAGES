@@ -51,6 +51,7 @@ gvm (via https://github.com/moovweb/gvm)
 bison
 
 # java
+sdkman
 openjdk-11-jdk
 
 # clojure

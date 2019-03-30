@@ -43,9 +43,6 @@ path=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Java should point to Oracle JVM
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
-
 # use drip to make lein runs faster
 #export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
 # ^^^ this isn't fool-proof, so disabling for now
@@ -115,3 +112,11 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-c
 __git_files () {
     _wanted files expl 'local files' _files
 }
+
+# sdkman - java
+export SDKMAN_DIR="/home/am/.sdkman"
+[[ -s "/home/am/.sdkman/bin/sdkman-init.sh" ]] && source "/home/am/.sdkman/bin/sdkman-init.sh"
+
+# make Java scripts work
+export JAVA_HOME="/home/am/.sdkman/candidates/java/11.0.2-open/"
+export JAVA9_HOME="/home/am/.sdkman/candidates/java/9.0.4-open"

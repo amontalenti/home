@@ -88,9 +88,6 @@ pathprepend "/opt/storm/bin/"
 # make pipsi work
 pathprepend ~/.local/bin
 
-# make Java scripts work
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
-
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
@@ -102,3 +99,11 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
 
 # The next line enables shell command completion for gcloud.
 [ -f '/opt/google-cloud-sdk/completion.bash.inc' ] && source '/opt/google-cloud-sdk/completion.bash.inc'
+
+# sdkman - java
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# make Java scripts work
+export JAVA_HOME="$HOME/.sdkman/candidates/java/11.0.2-open/"
+export JAVA9_HOME="$HOME/.sdkman/candidates/java/9.0.4-open"
