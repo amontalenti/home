@@ -43,6 +43,12 @@ path=(
 
 source $ZSH/oh-my-zsh.sh
 
+# enable emacs-style line editing
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
 # use drip to make lein runs faster
 #export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
 # ^^^ this isn't fool-proof, so disabling for now

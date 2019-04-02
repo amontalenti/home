@@ -144,6 +144,8 @@ run-one
 colordiff
 gawk
 sysstat
+sshfs
+terminator
 
 # other console tools
 awscli-aliases (via https://github.com/awslabs/awscli-aliases)
