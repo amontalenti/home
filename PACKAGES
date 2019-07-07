@@ -153,6 +153,7 @@ goaccess (via https://github.com/allinurl/goaccess#distributions)
 asciinema (via ppa:zanchey/asciinema)
 ripgrep (via https://github.com/BurntSushi/ripgrep/releases)
 ttyplot (from https://github.com/tenox7/ttyplot)
+hub (via ppa:cpick/hub)
 
 # gnome shell extensions
 dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
