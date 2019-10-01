@@ -132,5 +132,5 @@ def build_python3():
                            --with-system-libmpdec\
                            --with-system-ffi\
                            --with-fpectl"\
-    pyenv install -f 3.6.0
+    pyenv install -f 3.6.9
     """.strip())
