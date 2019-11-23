@@ -155,6 +155,7 @@ ripgrep (via https://github.com/BurntSushi/ripgrep/releases)
 ttyplot (from https://github.com/tenox7/ttyplot)
 hub (via ppa:cpick/hub)
 lazygit (via ppa:lazygit-team/release)
+neovim (via ppa:neovim-ppa/stable)
 
 # gnome shell extensions
 dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)

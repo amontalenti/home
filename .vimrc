@@ -166,6 +166,8 @@ let g:jedi#auto_initialization = 0
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
 
+" remap F1 to pick a font
+map <F1> :set guifont=*<CR>
 " toggle file/folder tree
 map <F2> :NERDTreeToggle<CR>
 " toggle in-file navigation bar
@@ -185,12 +187,19 @@ nnoremap <F7> :set wrap nolist linebreak!<CR>
 nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
 " toggle distraction free mode
 nnoremap <F9> :Goyo<CR>
+" hit F7, F8, F9 for 'prose writing' mode
+"
 " quick save
 inoremap <F12> <c-o>:w<cr>
 nnoremap <F12> :w<cr>
 
+" system clipboard
+inoremap <C-v> <ESC>"+pa
+vnoremap <C-c> "+y
+vnoremap <C-d> "+d
 
-" hit F7, F8, F9 for 'prose writing' mode
+" Ctrl+Bksp for delete word
+imap <C-BS> <C-W>
 
 " leader keys
 let mapleader = ","
