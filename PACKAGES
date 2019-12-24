@@ -33,8 +33,10 @@ curl
 llvm
 gcc
 
-# dev tools
-atom (via snap)
+# IDEs
+atom
+vscode
+intellij
 
 # python
 pyenv (via https://github.com/yyuu/pyenv-installer)
@@ -116,35 +118,37 @@ network-manager-openvpn-gnome
 network-manager-pptp
 network-manager-vpnc
 
-# console tools
-dstat
-tig
-mitmproxy
+# console sysadmin tools
+linux-tools-common
 powertop
-kismet
-pandoc
-silversearcher-ag
-mercurial
 stress
 htop
 nethogs
 nload
 iftop
+sshfs
+dstat
+gawk
 httpry
 httpry-daemon
 httpry-tools
-colordiff
-gdebi
-apache2-utils
+mitmproxy
+kismet
+sysstat
 pv
 ngrep
+apache2-utils
+run-one
+
+# console developer goodies
+tig
+pandoc
+silversearcher-ag
+mercurial
+colordiff
+gdebi
 exuberant-ctags
 ffmpeg
-run-one
-colordiff
-gawk
-sysstat
-sshfs
 terminator
 
 # other console tools
@@ -164,6 +168,17 @@ sount-output-device-chooser (via https://extensions.gnome.org/extension/906/soun
 caffeine (via https://extensions.gnome.org/extension/517/caffeine/)
 impatience (via https://extensions.gnome.org/extension/277/impatience/)
 dim-on-battery-power (via https://extensions.gnome.org/extension/947/dim-on-battery-power/)
+cpufreq (via https://extensions.gnome.org/extension/1082/cpufreq/)
+system-monitor (via https://extensions.gnome.org/extension/120/system-monitor/)
+suspend-button (via https://extensions.gnome.org/extension/826/suspend-button/)
+screenshot-tool (via https://extensions.gnome.org/extension/1112/screenshot-tool/)
+appkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
+gtile (via https://extensions.gnome.org/extension/28/gtile/)
+refresh-wifi (via https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
+workspace-switch-wrap (via https://extensions.gnome.org/extension/1116/workspace-switch-wraparound/)
+window-navigator (via https://extensions.gnome.org/extension/10/windownavigator/)
+places (via https://extensions.gnome.org/extension/8/places-status-indicator/)
+alternate-tab (via https://extensions.gnome.org/extension/15/alternatetab/)
 
 # vim plugins
 ctrlp
