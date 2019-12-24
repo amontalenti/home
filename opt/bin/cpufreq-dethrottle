@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# cpu frequency de-throttling on sleep/resume workaround
+# should live in /lib/systemd/system-sleep on Ubuntu
+
+case $1 in
+  post)
+    x86_energy_perf_policy --turbo-enable 1
+    cpupower frequency-set --max=3.4Ghz
+    ;;
+esac
