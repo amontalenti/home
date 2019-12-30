@@ -5,7 +5,9 @@
 
 case $1 in
   post)
-    x86_energy_perf_policy --turbo-enable 1
-    cpupower frequency-set --max=3.4Ghz
+    echo "BEFORE:"
+    pstate-frequency --get
+    echo "AFTER:"
+    pstate-frequency --set -t on -n 0 -m 34000000 -g powersave
     ;;
 esac

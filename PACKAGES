@@ -120,6 +120,7 @@ network-manager-vpnc
 
 # console sysadmin tools
 linux-tools-common
+thermald
 powertop
 stress
 htop
@@ -139,6 +140,9 @@ pv
 ngrep
 apache2-utils
 run-one
+
+# control intel-pstate driver in kernel
+pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
 
 # console developer goodies
 tig
