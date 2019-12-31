@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Stolen from Drew DeVault's dotfiles
+#   https://git.sr.ht/~sircmpwn/dotfiles/tree/master/bin/xdg-open
+# as described in:
+#   https://drewdevault.com//2019/12/30/dotfiles.html
+
+# Then modified. Blocks mailto: links for xdg-open and sends a desktop
+# notification instead. Otherwise, dispatches to the "real" xdg-open.
+
+case "${1%%:*}" in
+	mailto)
+		exec notify-send "Blocked email link:" "$1"
+		;;
+	*)
+		exec /usr/bin/xdg-open "$@"
+		;;
+esac

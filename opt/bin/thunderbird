@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Stop thunderbird from opening
+
+case "${1%%:*}" in
+	*)
+		exec notify-send "Blocked Thunderbird open:" "$1"
+		;;
+esac
