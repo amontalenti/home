@@ -76,8 +76,8 @@ vagrant (via https://www.vagrantup.com/downloads.html)
 
 # desktop goodies
 xsel
-youtube-dl
 vlc
+magic-wormhole
 glipper
 shutter
 audacity
@@ -106,6 +106,7 @@ zeal
 
 # other desktop goodies
 peek (via https://github.com/phw/peek#ubuntu)
+youtube-dl (via https://yt-dl.org/update)
 y-ppa-manager
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
 # fixes cpufreq bios issue on Thinkpad x220
