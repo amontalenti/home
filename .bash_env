@@ -107,3 +107,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # make Java scripts work
 export JAVA_HOME="$HOME/.sdkman/candidates/java/11.0.2-open/"
 export JAVA9_HOME="$HOME/.sdkman/candidates/java/9.0.4-open"
+
+# broot
+source /home/am/.config/broot/launcher/bash/br
