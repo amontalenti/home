@@ -154,6 +154,37 @@ def _is_root():
     return 'SUDO_UID' in os.environ.keys() or os.getuid() == 0
 
 
+def cmd_run(cmd):
+    output = subprocess.run(cmd.split(), stdout=subprocess.PIPE).stdout.decode('utf-8')
+    return output.strip()
+
+
+def nodeenv():
+    """Formats the current Node and npm environment.
+
+    Basic idea:
+
+        - execute `node --version` and `npm --version`
+
+        - if we get a valid version string, include
+          major version of node (e.g. v10, v12) and
+          major version of npm (e.g. 6) in string
+    """
+    node_version = cmd_run("node --version")
+    if node_version and "." in node_version:
+        node_version = node_version.split(".")[0]
+    npm_version = cmd_run("npm --version")
+    if npm_version and "." in npm_version:
+        npm_version = npm_version.split(".")[0]
+    #node_env = 'n» ' + node_version + ", " + npm_version
+    node_env = node_version + ", " + npm_version
+    colored_env = "{}{}{}".format(
+            color("(", foreground="gray"),
+            color(node_env, foreground="yellow"),
+            color(")", foreground="gray"))
+    return colored_env
+
+
 def virtualenv():
     """Formats the current pyenv or virtualenv.
 
@@ -242,6 +273,7 @@ def right_prompt(last_exit_status):
 
     parts = [
         color(last_exit_status, foreground='red'),
+        nodeenv(),
         virtualenv(),
         git_branch()
         ]
