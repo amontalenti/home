@@ -164,20 +164,15 @@ def nodeenv():
 
     Basic idea:
 
-        - execute `node --version` and `npm --version`
+        - execute `node --version`
 
         - if we get a valid version string, include
-          major version of node (e.g. v10, v12) and
-          major version of npm (e.g. 6) in string
+          major version of node (e.g. v10, v12)
     """
     node_version = cmd_run("node --version")
     if node_version and "." in node_version:
         node_version = node_version.split(".")[0]
-    npm_version = cmd_run("npm --version")
-    if npm_version and "." in npm_version:
-        npm_version = npm_version.split(".")[0]
-    #node_env = 'n» ' + node_version + ", " + npm_version
-    node_env = node_version + ", " + npm_version
+    node_env = node_version
     colored_env = "{}{}{}".format(
             color("(", foreground="gray"),
             color(node_env, foreground="yellow"),
