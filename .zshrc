@@ -17,6 +17,8 @@ plugins=(git
          docker
          lein
          npm
+         nvm
+         nvm-auto-cd
          history-substring-search
          per-directory-history
          zsh-better-npm-completion
@@ -63,8 +65,10 @@ eval "$(pyenv virtualenv-init -)"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # add nvm support
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+# TODO: should remove, since it's replaced by nvm and nvm-auto-cd plugins
+#
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
 # add gvm support
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
