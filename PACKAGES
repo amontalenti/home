@@ -125,7 +125,6 @@ network-manager-vpnc
 # console sysadmin tools
 linux-tools-common
 thermald
-powertop
 stress
 htop
 nethogs
@@ -145,8 +144,13 @@ ngrep
 apache2-utils
 run-one
 
-# control intel-pstate driver in kernel
+
+
+# intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
+cpupower
+i7z
+powertop
 
 # console developer goodies
 tig
