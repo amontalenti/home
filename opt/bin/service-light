@@ -1,11 +1,33 @@
+#!/bin/bash
+
+# lighten up the services running on the machine
+# for extending battery life
+
 SERVICES=`cat <<EOF
-crashplan
 saned
-docker
 vmware-workstation-server
-glances
 teamviewerd
 EOF`
+echo "Stopping services:"
+echo "$SERVICES"
 for service in $SERVICES; do
     sudo service $service stop;
+done
+
+echo
+
+echo "Stopping Dropbox"
+dropbox stop
+
+echo
+
+echo "Some kill suggestions:"
+KILLS=`cat <<EOF
+chrome
+slack
+Enpass
+flameshot
+EOF`
+for process in $KILLS; do
+    echo "pkill $process"
 done
