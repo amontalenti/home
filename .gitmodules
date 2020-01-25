@@ -107,3 +107,6 @@
 [submodule ".vim/bundle/parinfer-rust"]
 	path = .vim/bundle/parinfer-rust
 	url = git@github.com:eraserhd/parinfer-rust.git
+[submodule ".vim/bundle/vim-fontsize"]
+	path = .vim/bundle/vim-fontsize
+	url = git@github.com:drmikehenry/vim-fontsize.git
