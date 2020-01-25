@@ -1,42 +1,3 @@
-" hit F1 to pick a font
-map <F1> :set guifont=*<CR>
-" hit F2 for file/folder tree
-map <F2> :NERDTreeToggle<CR>
-" hit F3 for tag bar
-map <F3> :Tagbar<CR>
-" hit F4 for undo history
-map <F4> :GundoToggle<CR>
-" hit F5 for syntax highlighting
-map <F5> :SyntasticToggleMode<CR>
-set nonumber
-" hit F6 for line numbers
-nnoremap <F6> :set nonumber!<CR>
-set nospell
-" ** hit F7, F8, F9 for 'prose writing' mode **
-" hit F7 for line wrapping
-nnoremap <F7> :set wrap nolist linebreak!<CR>
-" hit F8 for spell checking
-nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
-" hit F9 for distraction-free writing mode
-nnoremap <F9> :Goyo<CR>
-" hit F12 for quick save
-inoremap <F12> <c-o>:w<cr>
-nnoremap <F12> :w<cr>
-
-" leader keys
-let mapleader = ","
-let maplocalleader = "\\"
-
-" hit ,,0 to jump to a big font in gVim
-" hit ,,= to set a font with +/- in gVim
-let g:fontsize#defaultSize = 26
-
-" :w!! to write a file as sudo
-cmap w!! w !sudo tee % >/dev/null
-
-" :cur will open current dir in Nautilus (on Desktop linux)
-abbr cur !nautilus %:p:h
-
 " load pathogen for other plugin management
 call pathogen#infect()
 
@@ -278,3 +239,48 @@ endif
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = {"mode": "passive"}
+
+" F1 - F12 Hotkeys
+" ----------------
+
+" hit F1 to pick a font
+map <F1> :set guifont=*<CR>
+" hit F2 for file/folder tree
+map <F2> :NERDTreeToggle<CR>
+" hit F3 for tag bar
+map <F3> :Tagbar<CR>
+" hit F4 for undo history
+map <F4> :GundoToggle<CR>
+" hit F5 for syntax highlighting
+map <F5> :SyntasticToggleMode<CR>
+set nonumber
+" hit F6 for line numbers
+nnoremap <F6> :set nonumber!<CR>
+set nospell
+" ** hit F7, F8, F9 for 'prose writing' mode **
+" hit F7 for line wrapping
+nnoremap <F7> :set wrap nolist linebreak!<CR>
+" hit F8 for spell checking
+nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
+" hit F9 for distraction-free writing mode
+nnoremap <F9> :Goyo<CR>
+" hit F12 for quick save
+inoremap <F12> <c-o>:w<cr>
+nnoremap <F12> :w<cr>
+
+" Other Hotkeys and Shortcuts
+" ---------------------------
+
+" leader keys
+let mapleader = ","
+let maplocalleader = "\\"
+
+" hit ,,0 to jump to a big font in gVim
+" hit ,,= to set a font with +/- in gVim
+let g:fontsize#defaultSize = 26
+
+" :w!! to write a file as sudo
+cmap w!! w !sudo tee % >/dev/null
+
+" :cur will open current dir in Nautilus (on Desktop linux)
+abbr cur !nautilus %:p:h
