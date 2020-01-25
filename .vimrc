@@ -1,3 +1,42 @@
+" hit F1 to pick a font
+map <F1> :set guifont=*<CR>
+" hit F2 for file/folder tree
+map <F2> :NERDTreeToggle<CR>
+" hit F3 for tag bar
+map <F3> :Tagbar<CR>
+" hit F4 for undo history
+map <F4> :GundoToggle<CR>
+" hit F5 for syntax highlighting
+map <F5> :SyntasticToggleMode<CR>
+set nonumber
+" hit F6 for line numbers
+nnoremap <F6> :set nonumber!<CR>
+set nospell
+" ** hit F7, F8, F9 for 'prose writing' mode **
+" hit F7 for line wrapping
+nnoremap <F7> :set wrap nolist linebreak!<CR>
+" hit F8 for spell checking
+nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
+" hit F9 for distraction-free writing mode
+nnoremap <F9> :Goyo<CR>
+" hit F12 for quick save
+inoremap <F12> <c-o>:w<cr>
+nnoremap <F12> :w<cr>
+
+" leader keys
+let mapleader = ","
+let maplocalleader = "\\"
+
+" hit ,,0 to jump to a big font in gVim
+" hit ,,= to set a font with +/- in gVim
+let g:fontsize#defaultSize = 26
+
+" :w!! to write a file as sudo
+cmap w!! w !sudo tee % >/dev/null
+
+" :cur will open current dir in Nautilus (on Desktop linux)
+abbr cur !nautilus %:p:h
+
 " load pathogen for other plugin management
 call pathogen#infect()
 
@@ -69,8 +108,8 @@ map ,- :s/^/-- /<CR>:nohlsearch<CR>
 map ,c :s/^\/\/ \\|^-- \\|^> \\|^[#"%!;] //<CR>:nohlsearch<CR>
 
 " convenience abbreviations
-abbr pyimport #!/usr/bin/env python
-abbr pymain def main():<CR>print "Hello World!"<CR><BS><CR>if __name__ == "__main__":<CR>main()<CR><BS>
+abbr pyimport #!/usr/bin/env python3
+abbr pymain def main():<CR>print("Hello World!")<CR><BS><CR>if __name__ == "__main__":<CR>main()<CR><BS>
 abbr sysout System.out.println
 
 " get better up/down support
@@ -139,13 +178,6 @@ set guioptions-=T
 " disable the 'File >' menu
 set guioptions-=m
 
-" use w!! to write a file as sudo
-" even if you forget to sudo
-cmap w!! w !sudo tee % >/dev/null
-
-" on Linux, opens nautilus to current directory
-abbr cur !nautilus %:p:h
-
 " Add the virtualenv's site-packages to vim path
 " show current virtualenv
 let g:virtualenv_stl_format='[Venv(%n)]'
@@ -166,33 +198,6 @@ let g:jedi#auto_initialization = 0
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
 
-" remap F1 to pick a font
-map <F1> :set guifont=*<CR>
-" toggle file/folder tree
-map <F2> :NERDTreeToggle<CR>
-" toggle in-file navigation bar
-map <F3> :Tagbar<CR>
-" toggle undo history visualization
-map <F4> :GundoToggle<CR>
-" toggle undo history visualization
-map <F5> :SyntasticToggleMode<CR>
-" toggle line numbers
-set nonumber
-nnoremap <F6> :set nonumber!<CR>
-
-set nospell
-" toggle line wrapping
-nnoremap <F7> :set wrap nolist linebreak!<CR>
-" toggle spell checking
-nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
-" toggle distraction free mode
-nnoremap <F9> :Goyo<CR>
-" hit F7, F8, F9 for 'prose writing' mode
-"
-" quick save
-inoremap <F12> <c-o>:w<cr>
-nnoremap <F12> :w<cr>
-
 " system clipboard
 inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
@@ -200,10 +205,6 @@ vnoremap <C-d> "+d
 
 " Ctrl+Bksp for delete word
 imap <C-BS> <C-W>
-
-" leader keys
-let mapleader = ","
-let maplocalleader = "\\"
 
 " check Python for style
 autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
@@ -214,7 +215,6 @@ nmap <leader>l :set list!<CR>
 nmap <leader>l :set list!<CR>
 " Shortcut to change directory to current file
 nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
-
 
 " Use the special symbols for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
@@ -257,10 +257,6 @@ let g:livedown_open = 1
 let g:livedown_port = 9337
 let g:livedown_browser = "google-chrome"
 nmap <leader>md :LivedownPreview<CR>
-
-" set fontsize plugin default 'large font' size
-" access this with <Leader><Leader>0 (,,0)
-let g:fontsize#defaultSize = 26
 
 " help tmux work better with arrow keys
 map <Esc>[B <Down>
