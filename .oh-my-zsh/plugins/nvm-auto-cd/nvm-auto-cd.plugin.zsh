@@ -34,7 +34,7 @@ load-nvmrc() {
       echo "Couldn't activate <${nvmrc_found}> via nvm-auto-cd; use 'nvm install' and 'nvm alias' to resolve"
     elif [ "$nvmrc_node_version" != "$node_version" ]; then
       # found .nvmrc and it doesn't match the current version, so we need to activate it
-      echo "Found <${nvmrc_found}> via nvm-auto-cd, activating now"
+      # echo "Found <${nvmrc_found}> via nvm-auto-cd, activating now"
       nvm use
       export NVM_DEFAULT=0
       export NVM_PROJECT=$(dirname $nvmrc_path)
