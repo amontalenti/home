@@ -110,6 +110,7 @@ Some nice IDE-like plugins for me include:
 * vim-clojure-static_, for Clojure basic editing support
 * vim-elixir_, for Elixir basic editing support
 * vim-eslint-compiler_, for ESLint :make and quickfix support
+* vim-fontsize_, for adjusting font size quickly in gVim
 * vim-fireplace_, for Clojure interaction with nREPL
 * vim-flake8_, for Python syntax checking
 * vim-go_, for Go basic editing
@@ -149,6 +150,7 @@ Some nice IDE-like plugins for me include:
 .. _vim-jinja: https://github.com/mitsuhiko/vim-jinja
 .. _vim-flake8: https://github.com/nvie/vim-flake8
 .. _vim-virtualenv: https://github.com/jmcantrell/vim-virtualenv.git
+.. _vim-fontsize: https://github.com/drmikehenry/vim-fontsize
 .. _vim-fireplace: https://github.com/tpope/vim-fireplace
 .. _vim-clojure-static: https://github.com/guns/vim-clojure-static
 .. _vim-go: https://github.com/fatih/vim-go
