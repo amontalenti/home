@@ -74,3 +74,7 @@ mdclean () {
 md2pdf () {
     pandoc $1 --pdf-engine=xelatex -o $2
 }
+
+pport () {
+    lsof -i "TCP:$1" | grep LISTEN | awk '{print $2}'
+}
