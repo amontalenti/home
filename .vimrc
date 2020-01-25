@@ -1,3 +1,82 @@
+" F1 - F12 Hotkeys
+" ----------------
+
+" hit F1 to pick a font
+map <F1> :set guifont=*<CR>
+" hit F2 for file/folder tree
+map <F2> :NERDTreeToggle<CR>
+" hit F3 for tag bar
+map <F3> :Tagbar<CR>
+" hit F4 for undo history
+map <F4> :GundoToggle<CR>
+" hit F5 for syntax highlighting
+map <F5> :SyntasticToggleMode<CR>
+set nonumber
+" hit F6 for line numbers
+nnoremap <F6> :set nonumber!<CR>
+set nospell
+" ** hit F7, F8, F9 for 'prose writing' mode **
+" hit F7 for line wrapping
+nnoremap <F7> :set wrap nolist linebreak!<CR>
+" hit F8 for spell checking
+nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
+" hit F9 for distraction-free writing mode
+nnoremap <F9> :Goyo<CR>
+" hit F11 for Python style check
+autocmd FileType python map <buffer> <F11> :call Flake8()<CR>
+" hit F12 for quick save
+inoremap <F12> <c-o>:w<cr>
+nnoremap <F12> :w<cr>
+
+" Other Hotkeys and Shortcuts
+" ---------------------------
+
+" leader keys
+let mapleader = ","
+let maplocalleader = "\\"
+
+" ,,0 to jump to a big font in gVim
+" ,,= to set a font with +/- in gVim
+let g:fontsize#defaultSize = 26
+
+" :w!! to write a file as sudo
+cmap w!! w !sudo tee % >/dev/null
+
+" :cur will open current dir in Nautilus (on Desktop linux)
+abbr cur !nautilus %:p:h
+
+" ,l to toggle list mode
+nmap <leader>l :set list!<CR>
+
+" ,lt for comma-separated list to bullet point transform
+nmap <leader>lt :call ListTrans_toggle_format()<CR>
+vmap <leader>lt :call ListTrans_toggle_format('visual')<CR>
+
+" ,cd to change director to current file
+nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
+" ,md to preview Markdown in browser
+nmap <leader>md :LivedownPreview<CR>
+
+" ,q to clear searches and highlights
+nmap <leader>q :nohlsearch<CR>
+
+" ,c to clear comments
+map <leader>c :s/^\/\/ \\|^-- \\|^> \\|^[#"%!;] //<CR>:nohlsearch<CR>
+
+" multiline commenting tools
+map <leader># :s/^/# /<CR>:nohlsearch<CR>
+map <leader>/ :s/^/\/\/ /<CR>:nohlsearch<CR>
+map <leader>> :s/^/> /<CR>:nohlsearch<CR>
+map <leader>" :s/^/\" /<CR>:nohlsearch<CR>
+map <leader>% :s/^/% /<CR>:nohlsearch<CR>
+map <leader>! :s/^/! /<CR>:nohlsearch<CR>
+map <leader>; :s/^/; /<CR>:nohlsearch<CR>
+map <leader>- :s/^/-- /<CR>:nohlsearch<CR>
+
+" Configure vim plugins
+" ---------------------
+
 " load pathogen for other plugin management
 call pathogen#infect()
 
@@ -54,19 +133,6 @@ set wcm=<C-Z>
 " some color overrides
 hi PmenuSel ctermfg=0 ctermbg=3
 hi perlComment ctermfg=0 ctermbg=1
-
-" multiline commenting tools
-map ,# :s/^/# /<CR>:nohlsearch<CR>
-map ,/ :s/^/\/\/ /<CR>:nohlsearch<CR>
-map ,> :s/^/> /<CR>:nohlsearch<CR>
-map ," :s/^/\" /<CR>:nohlsearch<CR>
-map ,% :s/^/% /<CR>:nohlsearch<CR>
-map ,! :s/^/! /<CR>:nohlsearch<CR>
-map ,; :s/^/; /<CR>:nohlsearch<CR>
-map ,- :s/^/-- /<CR>:nohlsearch<CR>
-
-" clear comments
-map ,c :s/^\/\/ \\|^-- \\|^> \\|^[#"%!;] //<CR>:nohlsearch<CR>
 
 " convenience abbreviations
 abbr pyimport #!/usr/bin/env python3
@@ -167,21 +233,8 @@ vnoremap <C-d> "+d
 " Ctrl+Bksp for delete word
 imap <C-BS> <C-W>
 
-" check Python for style
-autocmd FileType python map <buffer> <F12> :call Flake8()<CR>
-
-" Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
-" Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
-" Shortcut to change directory to current file
-nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
-
 " Use the special symbols for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
-
-nmap ;l :call ListTrans_toggle_format()<CR>
-vmap ;l :call ListTrans_toggle_format('visual')<CR>
 
 " Visual blocks can now be dragged around
 vmap <expr> h DVB_Drag('left')
@@ -217,16 +270,9 @@ endif
 let g:livedown_open = 1
 let g:livedown_port = 9337
 let g:livedown_browser = "google-chrome"
-nmap <leader>md :LivedownPreview<CR>
 
 " help tmux work better with arrow keys
 map <Esc>[B <Down>
-
-" hotkey to clear searches
-nmap <leader>q :nohlsearch<CR>
-
-" hotkey to edit last file
-nmap <leader>e :e#<CR>
 
 " help tmux figure out terminal mode
 if match($TERM, "screen") != -1
@@ -240,47 +286,3 @@ endif
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = {"mode": "passive"}
 
-" F1 - F12 Hotkeys
-" ----------------
-
-" hit F1 to pick a font
-map <F1> :set guifont=*<CR>
-" hit F2 for file/folder tree
-map <F2> :NERDTreeToggle<CR>
-" hit F3 for tag bar
-map <F3> :Tagbar<CR>
-" hit F4 for undo history
-map <F4> :GundoToggle<CR>
-" hit F5 for syntax highlighting
-map <F5> :SyntasticToggleMode<CR>
-set nonumber
-" hit F6 for line numbers
-nnoremap <F6> :set nonumber!<CR>
-set nospell
-" ** hit F7, F8, F9 for 'prose writing' mode **
-" hit F7 for line wrapping
-nnoremap <F7> :set wrap nolist linebreak!<CR>
-" hit F8 for spell checking
-nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
-" hit F9 for distraction-free writing mode
-nnoremap <F9> :Goyo<CR>
-" hit F12 for quick save
-inoremap <F12> <c-o>:w<cr>
-nnoremap <F12> :w<cr>
-
-" Other Hotkeys and Shortcuts
-" ---------------------------
-
-" leader keys
-let mapleader = ","
-let maplocalleader = "\\"
-
-" hit ,,0 to jump to a big font in gVim
-" hit ,,= to set a font with +/- in gVim
-let g:fontsize#defaultSize = 26
-
-" :w!! to write a file as sudo
-cmap w!! w !sudo tee % >/dev/null
-
-" :cur will open current dir in Nautilus (on Desktop linux)
-abbr cur !nautilus %:p:h
