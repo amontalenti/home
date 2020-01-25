@@ -260,7 +260,7 @@ nmap <leader>md :LivedownPreview<CR>
 
 " set fontsize plugin default 'large font' size
 " access this with <Leader><Leader>0 (,,0)
-let g:fontsize#defaultSize = 35
+let g:fontsize#defaultSize = 26
 
 " help tmux work better with arrow keys
 map <Esc>[B <Down>
