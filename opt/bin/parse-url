@@ -10,7 +10,9 @@ def parse_url(url):
         parsed = parse.urlsplit(url)
         query = parsed.query
         query_dict = dict(parse.parse_qsl(query))
-        output_dict = {"original_url": url, "parsed_url": parsed._asdict(), "query": query_dict}
+        output_dict = {"original_url": url,
+                       "parsed_url": parsed._asdict(),
+                       "query": query_dict}
         print(json.dumps(output_dict, sort_keys=True, indent=4))
     except:
         print(json.dumps({"error": "couldn't parse url", "url": url}))
