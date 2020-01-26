@@ -10,6 +10,7 @@
 
 case "${1%%:*}" in
 	mailto)
+        parse-url "$1"
 		exec notify-send "Blocked email link:" "$1"
 		;;
 	*)
