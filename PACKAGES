@@ -28,6 +28,7 @@ libqt4-dev
 libphonon-dev
 libxml2-dev
 libxslt1-dev
+rlwrap
 wget
 curl
 llvm
@@ -58,6 +59,7 @@ openjdk-11-jdk
 
 # clojure
 lein (via http://leiningen.org/)
+clj (via https://clojure.org/guides/getting_started)
 
 # sbt (Scala Build Tool)
 sbt (via http://www.scala-sbt.org/download.html)
