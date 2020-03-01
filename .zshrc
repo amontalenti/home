@@ -1,8 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
 
-# for tmux
-export DISABLE_AUTO_TITLE=true
-
 ZSH_THEME="ampy"
 
 HIST_STAMPS="yyyy-mm-dd"
@@ -31,6 +28,7 @@ path=(
     /home/am/.rbenv/bin
     /home/am/.pyenv/bin
     /home/am/.nvm/bin
+    /snap/bin
     /home/am/opt/bin
     /home/am/gopath/bin
     /home/am/.cargo/bin
@@ -42,6 +40,9 @@ path=(
     /sbin
     /bin
 )
+
+# for tmux
+export DISABLE_AUTO_TITLE=true
 
 source $ZSH/oh-my-zsh.sh
 

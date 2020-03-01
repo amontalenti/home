@@ -9,5 +9,6 @@ case $1 in
     pstate-frequency --get
     echo "AFTER:"
     pstate-frequency --set -t on -n 0 -m 34000000 -g powersave
+    /etc/init.d/tlp restart
     ;;
 esac
