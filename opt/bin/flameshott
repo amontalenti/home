@@ -1,0 +1,2 @@
+pkill flameshot || true;
+exec flameshot;
