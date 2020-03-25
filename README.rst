@@ -55,7 +55,7 @@ I have two prompt themes available:
 +-----------------------------------+----------------------------------------------+
 | ~/.../custom/themes/powerlevel10k | cloned submodule for powerlevel10k           |
 +-----------------------------------+----------------------------------------------+
-| ~/p10k.zsh                        | zsh script for the powerlevel10k config      |
+| ~/.p10k.zsh                       | zsh script for the powerlevel10k config      |
 +-----------------------------------+----------------------------------------------+
 | ~/.oh-my-zsh/themes/am.zsh-theme  | alt theme that provides zshprompt calls      |
 +-----------------------------------+----------------------------------------------+
