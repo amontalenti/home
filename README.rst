@@ -53,13 +53,11 @@ I have two prompt themes available:
 +===================================+==============================================+
 | ~/.zshrc                          | pulls everything together                    |
 +-----------------------------------+----------------------------------------------+
-| ~/.oh-my-zsh/themes/am.zsh-theme  | theme that provides zshprompt calls          |
-+-----------------------------------+----------------------------------------------+
 | ~/.../custom/themes/powerlevel10k | cloned submodule for powerlevel10k           |
 +-----------------------------------+----------------------------------------------+
-| ~/opt/bin/zshprompt               | Python script to generate prompt             |
-+-----------------------------------+----------------------------------------------+
 | ~/p10k.zsh                        | zsh script for the powerlevel10k config      |
++-----------------------------------+----------------------------------------------+
+| ~/.oh-my-zsh/themes/am.zsh-theme  | alt theme that provides zshprompt calls      |
 +-----------------------------------+----------------------------------------------+
 | ~/opt/bin/zshprompt               | Python script to generate prompt             |
 +-----------------------------------+----------------------------------------------+
