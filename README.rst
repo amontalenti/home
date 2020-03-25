@@ -34,23 +34,39 @@ My bash environment is covered in these files:
 +-------------------+---------------------------------------+
 
 With zsh, I took a different approach. I have a simple ``.zshrc`` that implements
-the equivalent of ``.bash_env``, and then my prompt is implemented via an
-oh-my-zsh theme that outsources most of its work to a Python script called
-``zshprompt``.
+the equivalent of ``.bash_env``.
 
-+----------------------------------+----------------------------------------------+
-| file                             | description                                  |
-+==================================+==============================================+
-| ~/.zshrc                         | pulls everything together                    |
-+----------------------------------+----------------------------------------------+
-| ~/.oh-my-zsh/themes/am.zsh-theme | theme that provides my left and right prompt |
-+----------------------------------+----------------------------------------------+
-| ~/opt/bin/zshprompt              | Python script to generate prompt             |
-+----------------------------------+----------------------------------------------+
-| ~/.bash_functions                | I use these across zsh and bash              |
-+----------------------------------+----------------------------------------------+
-| ~/.bash_aliases                  | I use these across zsh and bash              |
-+----------------------------------+----------------------------------------------+
+I have two prompt themes available:
+
+
+- ``powerlevel10k/powerlevel10k`` is the amazing powerlevel10k_ theme that leverages
+  a pure zsh implementation of the fastest and most configurable prompt one could
+  imagine.
+- ``ampy``, short for "Andrew Montalenti Python Prompt"; the prompt is implemented
+  via an oh-my-zsh theme that outsources most of its work to a Python script
+  called ``zshprompt``, which lives in ``~/opt/bin/``
+
+.. _powerlevel10k: https://github.com/romkatv/powerlevel10k
+
++-----------------------------------+----------------------------------------------+
+| file                              | description                                  |
++===================================+==============================================+
+| ~/.zshrc                          | pulls everything together                    |
++-----------------------------------+----------------------------------------------+
+| ~/.oh-my-zsh/themes/am.zsh-theme  | theme that provides zshprompt calls          |
++-----------------------------------+----------------------------------------------+
+| ~/.../custom/themes/powerlevel10k | cloned submodule for powerlevel10k           |
++-----------------------------------+----------------------------------------------+
+| ~/opt/bin/zshprompt               | Python script to generate prompt             |
++-----------------------------------+----------------------------------------------+
+| ~/p10k.zsh                        | zsh script for the powerlevel10k config      |
++-----------------------------------+----------------------------------------------+
+| ~/opt/bin/zshprompt               | Python script to generate prompt             |
++-----------------------------------+----------------------------------------------+
+| ~/.bash_functions                 | I use these across zsh and bash              |
++-----------------------------------+----------------------------------------------+
+| ~/.bash_aliases                   | I use these across zsh and bash              |
++-----------------------------------+----------------------------------------------+
 
 The ``zshprompt`` script supports shortened paths, git branches, Python
 virtualenvs, and last process exit code. Here is what it looks like:
