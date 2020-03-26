@@ -35,7 +35,7 @@ load-nvmrc() {
     elif [ "$nvmrc_node_version" != "$node_version" ]; then
       # found .nvmrc and it doesn't match the current version, so we need to activate it
       # echo "Found <${nvmrc_found}> via nvm-auto-cd, activating now"
-      nvm use
+      nvm use --silent
       export NVM_DEFAULT=0
       export NVM_PROJECT=$(dirname $nvmrc_path)
     else
@@ -44,8 +44,8 @@ load-nvmrc() {
     fi
   else
     # no .nvmrc in current path, e.g. $HOME
-    echo "Reverting to <default> Node version via nvm-auto-cd"
-    nvm use default
+    #echo "Reverting to <default> Node version via nvm-auto-cd"
+    nvm use default --silent
     export NVM_DEFAULT=1
     export NVM_PROJECT=/foo/bar/baz
   fi
