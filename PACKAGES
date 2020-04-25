@@ -13,6 +13,9 @@ python2.7-dev
 python3-dev
 python-dev
 python-setuptools
+python-tk
+python3-tk
+tk-dev
 libssl-dev
 zlib1g-dev
 libbz2-dev
@@ -110,6 +113,7 @@ peek (via https://github.com/phw/peek#ubuntu)
 youtube-dl (via https://yt-dl.org/update)
 teamviewer (via https://www.teamviewer.com/en-us/download/linux/)
 anydesk (via http://deb.anydesk.com/howto.html)
+discord (via https://discordapp.com/download)
 
 y-ppa-manager
 # added this to kernel /proc/cmdline: processor.ignore_ppc=1
@@ -145,6 +149,7 @@ ngrep
 apache2-utils
 run-one
 tree
+ddrescue
 
 # intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
