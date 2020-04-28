@@ -1,8 +1,4 @@
-! disable annoying thinkpad t400 back/forward keys
-keycode 166=
-keycode 167=
-! disable Menu key
-keycode 135=
-! swap caps lock and escape; makes using vim more pleasurable
-!remove Lock = Caps_Lock
-!keysym Caps_Lock = Escape
+!Remap Caps_Lock to Shift
+!Can also add this command to Startup Applications instead:
+!xmodmap -e "keycode 66 = Shift_L"
+keycode 66 = Shift_L
