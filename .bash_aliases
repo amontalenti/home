@@ -32,6 +32,7 @@ alias upgrade='sudo apt update && sudo apt upgrade'
 alias jsonprint='python -m json.tool'
 # backup helper
 alias backup='echo "restic -r $B2_LAPTOP backup --verbose" && sudo -u restic -i'
+alias irestic='sudo -u restic -i'
 
 # apps
 # ~~~~
