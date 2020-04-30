@@ -20,5 +20,6 @@ if [ $(xprintidle) -gt $SIXTY_MINUTES_IN_MILLIS ]; then
     pkill zulip;
     pkill zoom;
     pkill spotify;
+    pkill skype;
     pkill Enpass;
 fi
