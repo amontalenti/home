@@ -14,7 +14,17 @@
 
 SIXTY_MINUTES_IN_MILLIS=3600000
 
-if [ $(xprintidle) -gt $SIXTY_MINUTES_IN_MILLIS ]; then
+XPRINTIDLE=$(xprintidle)
+
+if [ "$1" = 'force' ]; then
+    XPRINTIDLE=$((SIXTY_MINUTES_IN_MILLIS + 1));
+fi
+
+if [ "$1" = 'debug' ]; then
+    echo $XPRINTIDLE;
+fi
+
+if [ $XPRINTIDLE -gt $SIXTY_MINUTES_IN_MILLIS ]; then
     pkill slack;
     pkill Discord;
     pkill zulip;
