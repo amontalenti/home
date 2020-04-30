@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Run on a cronjob every 5 minutes to kill background apps.
+#
+# Example crontab entry:
+#
+# # every 5 minutes, check & kill idle processes idling >60 minutes
+# # m h dom mon dow       command
+# */5 * *   *   *         /home/am/opt/bin/kill-idle
+#
+# Just clears out Slack, Zulip, Discord, Zoom, Enpass etc.
+#
+# Really akin to the "Quitter" app in OS X.
+
+SIXTY_MINUTES_IN_MILLIS=3600000
+
+if [ $(xprintidle) -gt $SIXTY_MINUTES_IN_MILLIS ]; then
+    pkill slack;
+    pkill Discord;
+    pkill zulip;
+    pkill zoom;
+    pkill Enpass;
+fi
