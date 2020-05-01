@@ -12,9 +12,13 @@
 #
 # Really akin to the "Quitter" app in OS X.
 
+function dtnow() {
+    echo "$(date +%FT%TZ)";
+}
+
 SIXTY_MINUTES_IN_MILLIS=3600000
 
-XPRINTIDLE=$(xprintidle)
+XPRINTIDLE=$(DISPLAY=:0 xprintidle)
 
 if [ "$1" = 'force' ]; then
     XPRINTIDLE=$((SIXTY_MINUTES_IN_MILLIS + 1));
@@ -24,7 +28,11 @@ if [ "$1" = 'debug' ]; then
     echo $XPRINTIDLE;
 fi
 
-if [ $XPRINTIDLE -gt $SIXTY_MINUTES_IN_MILLIS ]; then
+if [ "$1" = 'cron' ]; then
+    echo "[$(dtnow)] Running $0";
+fi
+
+if [ "$XPRINTIDLE" -gt $SIXTY_MINUTES_IN_MILLIS ]; then
     pkill slack;
     pkill Discord;
     pkill zulip;
@@ -32,4 +40,16 @@ if [ $XPRINTIDLE -gt $SIXTY_MINUTES_IN_MILLIS ]; then
     pkill spotify;
     pkill skype;
     pkill Enpass;
+    if [ "$1" = 'cron' ]; then
+        echo "[$(dtnow)] Executed pkill via $0 due to idle time of $XPRINTIDLE";
+    fi
+else
+    if [ "$1" = 'cron' ]; then
+        echo "[$(dtnow)] No-op via $0 due to idle time of $XPRINTIDLE";
+    fi
 fi
+
+if [ "$1" = 'cron' ]; then
+    echo "[$(dtnow)] Completed $0";
+fi
+
