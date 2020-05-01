@@ -8,7 +8,7 @@
 # # m h dom mon dow       command
 # */5 * *   *   *         /home/am/opt/bin/kill-idle
 #
-# Just clears out Slack, Zulip, Discord, Zoom, Enpass etc.
+# Just clears out Slack, Zulip, Discord, Spotify, Enpass etc.
 #
 # Really akin to the "Quitter" app in OS X.
 
@@ -34,7 +34,6 @@ if [ "$XPRINTIDLE" -gt $SIXTY_MINUTES_IN_MILLIS ]; then
     pkill slack;
     pkill Discord;
     pkill zulip;
-    pkill zoom;
     pkill spotify;
     pkill skype;
     pkill Enpass;
