@@ -16,16 +16,14 @@ function dtnow() {
     echo "$(date +%FT%TZ)";
 }
 
+ARG0=$(basename $0);
+
 SIXTY_MINUTES_IN_MILLIS=3600000
 
 XPRINTIDLE=$(DISPLAY=:0 xprintidle)
 
 if [ "$1" = 'force' ]; then
     XPRINTIDLE=$((SIXTY_MINUTES_IN_MILLIS + 1));
-fi
-
-if [ "$1" = 'debug' ]; then
-    echo $XPRINTIDLE;
 fi
 
 if [ "$1" = 'cron' ]; then
@@ -40,16 +38,11 @@ if [ "$XPRINTIDLE" -gt $SIXTY_MINUTES_IN_MILLIS ]; then
     pkill spotify;
     pkill skype;
     pkill Enpass;
-    if [ "$1" = 'cron' ]; then
-        echo "[$(dtnow)] Executed pkill via $0 due to idle time of $XPRINTIDLE";
-    fi
+    echo "[$(dtnow)] Executed pkill via $ARG0 due to idle time of $XPRINTIDLE";
 else
-    if [ "$1" = 'cron' ]; then
-        echo "[$(dtnow)] No-op via $0 due to idle time of $XPRINTIDLE";
-    fi
+    echo "[$(dtnow)] No-op via $ARG0 due to idle time of $XPRINTIDLE";
 fi
 
 if [ "$1" = 'cron' ]; then
-    echo "[$(dtnow)] Completed $0";
+    echo "[$(dtnow)] Completed $ARG0";
 fi
-
