@@ -1,4 +1,5 @@
-# should live in /etc/default/tlp
+# should live in /etc/tlp.conf
+#
 #
 # ------------------------------------------------------------------------------
 # tlp - Parameters for power saving
