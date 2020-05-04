@@ -5,6 +5,7 @@ alias la='ls -a'
 alias lt='ls -t | head'
 # cleaner disk free
 alias df='df -xsquashfs -xtmpfs'
+alias lsmount="mount | grep '^/' | grep -v 'snapd/'"
 alias lslog="ls . | egrep '\.log$'"
 # current stack state
 alias d='dirs -v'
