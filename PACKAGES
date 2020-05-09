@@ -187,7 +187,7 @@ lazygit (via ppa:lazygit-team/release)
 broot (via https://dystroy.org/broot/)
 neovim (via ppa:neovim-ppa/stable)
 
-# gnome shell extensions
+# output of `gnome-extensions list`
 dim-on-battery@nailfarmer.nailfarmer.com
 workspace-switch-wraparound@theychx.org
 cpufreq@konkor
