@@ -188,22 +188,18 @@ broot (via https://dystroy.org/broot/)
 neovim (via ppa:neovim-ppa/stable)
 
 # gnome shell extensions
-dash-hotkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
-topicons (via https://extensions.gnome.org/extension/1031/topicons/)
-sount-output-device-chooser (via https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
-impatience (via https://extensions.gnome.org/extension/277/impatience/)
-dim-on-battery-power (via https://extensions.gnome.org/extension/947/dim-on-battery-power/)
-cpufreq (via https://extensions.gnome.org/extension/1082/cpufreq/)
-system-monitor (via https://extensions.gnome.org/extension/120/system-monitor/)
-suspend-button (via https://extensions.gnome.org/extension/826/suspend-button/)
-screenshot-tool (via https://extensions.gnome.org/extension/1112/screenshot-tool/)
-appkeys (via https://extensions.gnome.org/extension/413/dash-hotkeys/)
-gtile (via https://extensions.gnome.org/extension/28/gtile/)
-refresh-wifi (via https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
-workspace-switch-wrap (via https://extensions.gnome.org/extension/1116/workspace-switch-wraparound/)
-window-navigator (via https://extensions.gnome.org/extension/10/windownavigator/)
-places (via https://extensions.gnome.org/extension/8/places-status-indicator/)
-alternate-tab (via https://extensions.gnome.org/extension/15/alternatetab/)
+dim-on-battery@nailfarmer.nailfarmer.com
+workspace-switch-wraparound@theychx.org
+cpufreq@konkor
+panel-osd@berend.de.schouwer.gmail.com
+system-monitor@paradoxxx.zero.gmail.com
+user-theme@gnome-shell-extensions.gcampax.github.com
+TopIcons@phocean.net
+gTile@vibou
+sound-output-device-chooser@kgshank.net
+ubuntu-appindicators@ubuntu.com
+ubuntu-dock@ubuntu.com
+desktop-icons@csoriano
 
 # vim plugins
 ctrlp
