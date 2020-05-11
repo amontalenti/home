@@ -38,7 +38,7 @@ llvm
 gcc
 
 # IDEs
-atom
+atom # TODO: consider removing
 vscode
 intellij
 
@@ -58,7 +58,7 @@ bison
 
 # java
 sdkman
-openjdk-11-jdk
+openjdk-11-jdk # TODO: newer JVM?
 
 # clojure
 lein (via http://leiningen.org/)
@@ -107,19 +107,22 @@ fonts-hack-ttf
 zeal
 gimp
 flameshot
-ulauncher (via https://ulauncher.io/)
-ulauncher-emoji (via https://ext.ulauncher.io/-/github-ulauncher-ulauncher-emoji)
+
+# remove:
+iio-sensor-proxy
+
+# consider:
+python3-is-python
 
 # other desktop goodies
+ulauncher (via https://ulauncher.io/)
+ulauncher-emoji (via https://ext.ulauncher.io/-/github-ulauncher-ulauncher-emoji)
 peek (via https://github.com/phw/peek#ubuntu)
 youtube-dl (via https://yt-dl.org/update)
 teamviewer (via https://www.teamviewer.com/en-us/download/linux/)
 anydesk (via http://deb.anydesk.com/howto.html)
 discord (via https://discordapp.com/download)
-
-y-ppa-manager
-# added this to kernel /proc/cmdline: processor.ignore_ppc=1
-# fixes cpufreq bios issue on Thinkpad x220
+y-ppa-manager (via ppa:webupd8team/y-ppa-manager)
 
 # vpn
 openvpn
