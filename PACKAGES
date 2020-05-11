@@ -158,6 +158,7 @@ ddrescue
 xprintidle
 rsync
 rclone
+tldr
 
 # intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
