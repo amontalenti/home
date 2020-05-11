@@ -158,7 +158,6 @@ ddrescue
 xprintidle
 rsync
 rclone
-tldr
 
 # intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
@@ -190,6 +189,7 @@ hub (via ppa:cpick/hub)
 lazygit (via ppa:lazygit-team/release)
 broot (via https://dystroy.org/broot/)
 neovim (via ppa:neovim-ppa/stable)
+tldr (via https://github.com/isacikgoz/tldr)
 
 # output of `gnome-extensions list`
 dim-on-battery@nailfarmer.nailfarmer.com
