@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from fabric.api import *
 from fabric.colors import *
 from jinja2 import Template, FileSystemLoader, Environment
@@ -24,7 +25,7 @@ def _render_etc_hosts(block=True):
     else:
         sitelist = ["# no blocked sites; time to play!"]
     contents = template.render(sitelist=sitelist)
-    print blue("rendered template")
+    print("rendered template")
     return contents
 
 def _overwrite_hosts_file(contents):
@@ -37,27 +38,27 @@ def _overwrite_hosts_file(contents):
     system_filename = path.join(scratch_dir, "system_hosts")
     scratch_hosts = open(filename, "w")
     if path.exists(system_filename):
-        print blue("found system hosts; appending")
+        print("found system hosts; appending")
         system_hosts = open(system_filename, "r")
         scratch_hosts.write(system_hosts.read())
         system_hosts.close()
-    print blue("appending dynamic hosts")
+    print("appending dynamic hosts")
     scratch_hosts.write(contents)
     if path.exists(extra_filename):
-        print blue("found extra hosts; appending")
+        print("found extra hosts; appending")
         extra_hosts = open(extra_filename, "r")
         scratch_hosts.write(extra_hosts.read())
         extra_hosts.close()
     scratch_hosts.close()
     local("sudo cp {0} /etc/hosts".format(filename))
-    print blue("overwrote hosts file")
+    print("overwrote hosts file")
 
 def _alter_hosts(block=True):
     _overwrite_hosts_file(_render_etc_hosts(block=block))
     if block:
-        print red("blocking sites for work mode!")
+        print("blocking sites for work mode!")
     else:
-        print green("unblocking sites for play mode!")
+        print("unblocking sites for play mode!")
 
 @task
 def mode_work():
@@ -107,7 +108,8 @@ def storm_uptime():
 @task
 def build_python2():
     """Build python2 from scratch using pyenv."""
-    # options stolen from Ubuntu 14.04 build logs
+    # options stolen from Ubuntu build logs; hopefully we
+    # won't need these Python 2 builds for much longer!
     local("""
     PYTHON_CONFIGURE_OPTS="--enable-ipv6\
                            --enable-unicode=ucs4\
@@ -115,22 +117,40 @@ def build_python2():
                            --with-system-expat\
                            --with-system-ffi\
                            --with-fpectl" \
-    pyenv install -f 2.7.14
+    pyenv install -f 2.7.18
     """.strip())
 
 @task
 def build_python3():
     """Build python3 from scratch using pyenv."""
-    # removed --without-ensurepip
+    # From the below arguments, I manually removed --without-ensurepip
+    # because pyenv likes that better. See the docstring below for how
+    # to fetch a fresh list, if you're concerned about matching Ubuntu
+    # defaults or whatever.
+    """
+    To get a fresh list of build args from the system Python, you can use the
+    following incantation:
+
+        >>> import sysconfig
+        >>> import pprint
+        >>> config_args = sysconfig.get_config_vars()["CONFIG_ARGS"].split()
+        >>> pprint.pprint([item.replace("'", "") for item in config_args
+        ...     if not item.startswith("'--prefix") and item.startswith("'--")]
+        ['--enable-shared',
+         '--enable-ipv6',
+         ...
+        ]
+    """
     local("""
-    PYTHON_CONFIGURE_OPTS="--enable-ipv6\
+    PYTHON_CONFIGURE_OPTS="--enable-shared\
+                           --enable-ipv6\
                            --enable-loadable-sqlite-extensions\
-                           --enable-shared\
                            --with-dbmliborder=bdb:gdbm\
                            --with-computed-gotos\
                            --with-system-expat\
                            --with-system-libmpdec\
+                           --with-dtrace\
                            --with-system-ffi\
                            --with-fpectl"\
-    pyenv install -f 3.6.9
+    pyenv install -f 3.8.2
     """.strip())
