@@ -1,3 +1,4 @@
+pathprepend ~/.local/bin
 pathprepend ~/.nvm/bin
 pathprepend ~/.rbenv/bin
 pathprepend ~/.pyenv/bin

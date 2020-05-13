@@ -33,6 +33,7 @@ path=(
     /opt/spark/bin
     /opt/storm/bin
     /opt/vagrant/bin
+    /home/am/.local/bin
     /home/am/.rbenv/bin
     /home/am/.pyenv/bin
     /home/am/.nvm/bin
@@ -40,7 +41,6 @@ path=(
     /home/am/opt/bin
     /home/am/gopath/bin
     /home/am/.cargo/bin
-    /usr/lib/lightdm/lightdm
     /usr/local/sbin
     /usr/local/bin
     /usr/sbin
