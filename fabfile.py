@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
+
+# requires fab-classic, NOT fabric, fabric2, or fabric3
 from fabric.api import *
 from fabric.colors import *
+
+# use:
+#   pipx inject fab-classic jinja2
 from jinja2 import Template, FileSystemLoader, Environment
+
 from os import path, getenv
 
 DOT_HOME = path.join(getenv("HOME"), ".home")
