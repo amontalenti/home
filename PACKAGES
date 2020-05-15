@@ -18,6 +18,7 @@ python3-venv
 python-is-python3
 python3-tk
 systemtap-sdt-dev
+liblzma-dev
 pipx
 tk-dev
 libssl-dev
