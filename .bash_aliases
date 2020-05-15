@@ -110,32 +110,14 @@ alias clj-lein='grench lein'
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# config servers
-alias ssh-config='ssh-multi ue1{a,b,e}-config1.cogtree.com uw2{a,b}-config1.cogtree.com'
 # pixel servers
 alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b,c}-pixel{1,2}}.cogtree.com'
 alias ssh-pixel-east='ssh-multi ue1{a,b,d,e}-pixel{1,2}.cogtree.com'
 alias ssh-pixel-west='ssh-multi uw2{a,b,c}-pixel{1,2}.cogtree.com'
-alias ssh-kafka5='ssh-multi ue1a-kafka5{a-j}.cogtree.com'
 # dash app server
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
 # api servers
 alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
-# Storm cluster
-alias ssh-storm2a='ssh-multi ue1a-storm2{a-i}.cogtree.com'
-alias ssh-storm2b='ssh-multi ue1a-storm2{j-p}.cogtree.com'
-alias ssh-storm-beta='ssh-multi ue1a-storm-beta2{a-e}.cogtree.com'
-# Cassandra cluster
-alias ssh-cass='ssh-multi ue1a-cass-prod1{p,m,o,q,l,n,r}.cogtree.com'
-# ssh ES
-alias ssh-es-raw='ssh-multi {ue1a-es-prod1-r1{a,d,g,j,m},ue1b-es-prod1-r1{b,e,h,k,n},ue1e-es-prod1-r1{c,f,i,l,o}}.cogtree.com'
-alias ssh-es-cold='ssh-multi {ue1a-es-prod1-c1{a,d,g,j,m},ue1b-es-prod1-c1{b,e,h,k,n},ue1e-es-prod1-c1{c,f,i,l}}.cogtree.com'
-alias ssh-es-warm='ssh-multi {ue1a-es-prod1-w1{a,d,g},ue1b-es-prod1-w1{b,e,h},ue1e-es-prod1-w1{c,f,i}}.cogtree.com'
-alias ssh-es-hot='ssh-multi {ue1a-es-prod1-h1{a,d,g,j},ue1b-es-prod1-h1{b,e,h,k},ue1e-es-prod1-h1{c,f,i,l}}.cogtree.com'
-alias ssh-es-master='ssh-multi {ue1a-es-prod1-m1a,ue1b-es-prod1-m1b,ue1e-es-prod1-m1c}.cogtree.com'
-
-alias ssh-beta-storm='ssh-multi ue1a-storm-beta1{a,b,c,d}.cogtree.com'
-alias ssh-es-crawl='ssh-multi {ue1a-es-crawl4{a,d,g,j,m},ue1b-es-crawl4{b,e,h,k,n},ue1e-es-crawl4{c,f,i,l,o}}.cogtree.com'
 
 # hack machine in gcloud
 alias ssh-hack='gcloud compute --project "steady-cat-128117" ssh --zone "us-east1-c" "hack"'
