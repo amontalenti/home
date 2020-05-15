@@ -99,12 +99,17 @@ pyenvthis () {
     #
     # Will set up a pyenv "py3" atop Python interpreter 3.8.2, and will also
     # create ~/py3/.python-version, update pip inside the pyenv, and activate.
-    echo "Using Python $1";
     local curdir=$(basename $(pwd))
+    echo "Using Python [${1}] as basis for pyenv [${curdir}]";
     pyenv shell $1 && \
+        echo "=> virtualenv:" &&\
         pyenv virtualenv $curdir && \
         pyenv local $curdir && \
         pyenv shell --unset && \
+        echo "=> pip upgrade:" &&\
         pip install -U pip && \
-        echo "Done.";
+        echo "=> python check:" &&\
+        python -V && \
+        python -c "import sys; print(sys.path[-1])" && \
+        echo "=> Done.";
 }
