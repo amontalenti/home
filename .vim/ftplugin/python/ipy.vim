@@ -17,6 +17,9 @@
 "
 " written by Paul Ivanov (http://pirsquared.org)
 "
+" TODO: This script needs to be updated for Python 3 and newer versions of
+" Jupyter/IPython. Right now, it's a no-op since vim is compiled with
+" +python3, and not +python.
 if !has('python')
     " exit if python is not available.
     finish
