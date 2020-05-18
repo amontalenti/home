@@ -192,14 +192,31 @@ if &t_Co >= 256 || has("gui_running")
     set t_ut=
 endif
 
-" enable omnicompletion for different languages
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+" enable omnicompletion for Python
+"
+" TODO: this python3complete.vim autoload script hasn't been
+" modified since 2009, and it actually has a bug where imports
+" of this style:
+"
+"   from concurrent.futures import (Future, ThreadPoolExecutor, ...)
+"
+" ... are simply not supported. Might be worth fixing and sending
+" upstream. Also, oddly the script is split into two separate
+" completion functions, pythoncomplete#Complete (python2) and
+" python3complete#Complete (python3), even though there is only
+" one vim FileType (python).
+autocmd FileType python set omnifunc=python3complete#Complete
+
+" enable omnicompletion for other languages beyond Python
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
+
+" TODO: apparently there is a default 'syntax completer' that one
+" can set up as a fallback to the above lang-specific ones.
 
 " disable the Icon toolbar
 set guioptions-=T
