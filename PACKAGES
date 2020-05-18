@@ -250,3 +250,4 @@ zeavim.vim
 fab-classic
 poetry
 visidata
+flake8
