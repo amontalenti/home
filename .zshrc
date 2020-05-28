@@ -73,6 +73,9 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# ansible doesn't respect ssh/config
+export ANSIBLE_REMOTE_USER=pixelmonkey
+
 # add nvm support
 # TODO: should remove, since it's replaced by nvm and nvm-auto-cd plugins
 #
