@@ -73,6 +73,9 @@ export PAGER="less -r"
 export COGROOT=/home/pixelmonkey/repos
 export PROJECT_HOME=$COGROOT
 
+# ansible doesn't respect ssh/config
+export ANSIBLE_REMOTE_USER=pixelmonkey
+
 # add tab completion to Python
 export PYTHONSTARTUP=~/.pythonstartup.py
 
