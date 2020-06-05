@@ -15,7 +15,6 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(git
          github
          python
-         hop
          tmux
          vagrant
          fabric
