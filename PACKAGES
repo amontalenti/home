@@ -1,6 +1,5 @@
 # shell
 vim
-vim-gtk3
 tmux
 zsh
 sqlite3
@@ -9,7 +8,6 @@ git
 # python install necessities
 make
 build-essential
-python-dev
 python-setuptools
 python2.7-dev
 python-tk
@@ -28,12 +26,9 @@ libreadline-dev
 libsqlite3-dev
 libsnappy-dev
 libpq-dev
-libfreetype6-dev
 gfortran
 libopenblas-dev
 liblapack-dev
-libqt4-dev
-libphonon-dev
 libxml2-dev
 libxslt1-dev
 rlwrap
@@ -42,8 +37,47 @@ curl
 llvm
 gcc
 
+# extra console sysadmin tools
+linux-tools-common
+stress
+htop
+nethogs
+nload
+iftop
+sshfs
+dstat
+gawk
+httpry
+httpry-daemon
+httpry-tools
+mitmproxy
+kismet
+sysstat
+pv
+ngrep
+apache2-utils
+run-one
+tree
+ddrescue
+xprintidle
+rsync
+rclone
+magic-wormhole
+byzanz
+
+# extra console developer goodies
+tig
+pandoc
+silversearcher-ag
+mercurial
+colordiff
+exuberant-ctags
+ffmpeg
+
+# -- end of basic apt packages --
+
 # IDEs
-atom # TODO: consider removing
+vim-gtk3
 vscode
 intellij
 
@@ -85,14 +119,14 @@ virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
 vagrant (via https://www.vagrantup.com/downloads.html)
 
 # desktop goodies
+terminator
+gdebi
 xsel
 vlc
-magic-wormhole
 glipper
 audacity
 pitivi
 pinta
-byzanz
 cpufreq-indicator
 xsel
 xclip
@@ -113,9 +147,8 @@ zeal
 gimp
 flameshot
 
-# remove:
+# remove on laptop running Linux directly:
 iio-sensor-proxy
-
 
 # other desktop goodies
 ulauncher (via https://ulauncher.io/)
@@ -135,52 +168,18 @@ network-manager-openvpn-gnome
 network-manager-pptp
 network-manager-vpnc
 
-# console sysadmin tools
-linux-tools-common
-thermald
-stress
-htop
-nethogs
-nload
-iftop
-sshfs
-dstat
-gawk
-httpry
-httpry-daemon
-httpry-tools
-mitmproxy
-kismet
-sysstat
-pv
-ngrep
-apache2-utils
-run-one
-tree
-ddrescue
-xprintidle
-rsync
-rclone
-
 # intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
 tlp (via ppa:linrunner/tlp)
+
+# extra console laptop tools
+thermald
 
 # intel cpu monitoring
 cpupower
 i7z
 powertop
 
-# console developer goodies
-tig
-pandoc
-silversearcher-ag
-mercurial
-colordiff
-gdebi
-exuberant-ctags
-ffmpeg
-terminator
 
 # other console tools
 awscli-aliases (via https://github.com/awslabs/awscli-aliases)
