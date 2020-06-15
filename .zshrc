@@ -7,7 +7,7 @@ fi
 
 export ZSH=$HOME/.oh-my-zsh
 
-# revert to "ampy" if powerlevel10k is giving issues
+# revert to "ampy" here if powerlevel10k is giving issues
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 HIST_STAMPS="yyyy-mm-dd"
@@ -33,7 +33,6 @@ path=(
     /opt/storm/bin
     /opt/vagrant/bin
     /home/am/.local/bin
-    /home/am/.rbenv/bin
     /home/am/.pyenv/bin
     /home/am/.nvm/bin
     /snap/bin
@@ -48,6 +47,8 @@ path=(
     /bin
 )
 
+# TODO: ^^^ should /opt/{storm,spark,vagrant} still be there?
+
 # for tmux
 export DISABLE_AUTO_TITLE=true
 
@@ -59,33 +60,35 @@ zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 
-# use drip to make lein runs faster
-#export LEIN_JAVA_CMD="$HOME/opt/bin/drip"
-# ^^^ this isn't fool-proof, so disabling for now
-# since it actually broke streamparse runs
-
-# add rbenv support
-eval "$(rbenv init -)"
-
 # add pyenv support
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+# intentionally disabled:
+# export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-# ansible doesn't respect ssh/config
+# ansible can't respect ~/.ssh/config when using raw IPs
 export ANSIBLE_REMOTE_USER=pixelmonkey
 
-# add nvm support
-# TODO: should remove, since it's replaced by nvm and nvm-auto-cd plugins
-#
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+# add nvm (NodeJS Version Manager) support
+# intentionally disabled:
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+# TODO: ^^^ should remove, since replaced by nvm, nvm-auto-cd plugins
 
-# add gvm support
+# add gvm (Go Version Manager) support
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+# sdkman - java installer and version manager
+export SDKMAN_DIR="/home/am/.sdkman"
+[[ -s "/home/am/.sdkman/bin/sdkman-init.sh" ]] && source "/home/am/.sdkman/bin/sdkman-init.sh"
+
+# this makes stubborn Java scripts work
+export JAVA_HOME="/home/am/.sdkman/candidates/java/11.0.2-open/"
+export JAVA9_HOME="/home/am/.sdkman/candidates/java/9.0.4-open"
 
 # add travis CLI support
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+# TODO: ^^^ unnecessary, remove
 
 # cogtree customizations
 [ -f $HOME/.cogtree ] && source $HOME/.cogtree
@@ -123,24 +126,13 @@ HISTFILE=$HOME/.zsh_history
 # this option works better with tmux
 setopt nosharehistory
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
-#
-# # The next line enables shell command completion for gcloud.
-if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/share/google-cloud-sdk/completion.zsh.inc' ]; then source '/usr/share/google-cloud-sdk/completion.zsh.inc'; fi
 
 # speed up git completion
 __git_files () {
     _wanted files expl 'local files' _files
 }
-
-# sdkman - java
-export SDKMAN_DIR="/home/am/.sdkman"
-[[ -s "/home/am/.sdkman/bin/sdkman-init.sh" ]] && source "/home/am/.sdkman/bin/sdkman-init.sh"
-
-# make Java scripts work
-export JAVA_HOME="/home/am/.sdkman/candidates/java/11.0.2-open/"
-export JAVA9_HOME="/home/am/.sdkman/candidates/java/9.0.4-open"
 
 # broot
 source /home/am/.config/broot/launcher/bash/br

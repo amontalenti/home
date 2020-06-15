@@ -182,6 +182,7 @@ powertop
 
 
 # other console tools
+google-cloud-sdk (via https://cloud.google.com/sdk/docs/downloads-apt-get)
 awscli-aliases (via https://github.com/awslabs/awscli-aliases)
 goaccess (via https://github.com/allinurl/goaccess#distributions)
 asciinema (via ppa:zanchey/asciinema)
