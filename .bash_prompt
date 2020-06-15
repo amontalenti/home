@@ -17,10 +17,12 @@ SHORT='\h'
 # UC: username color
 # LC: location/cwd color
 # HD: hostname display (\h vs \H)
+# PP: Prompt color
 # Defaults:
 UC=$GREEN
-LC=$GRAY
+LC=$CYAN
 HD=$FULL
+PC=$WHITE
 
 # Prompt function because PROMPT_COMMAND is awesome
 function set_prompt() {
@@ -50,7 +52,7 @@ function set_prompt() {
     fi
 
     # Dollar/pound sign
-    end="${LC}\$${NIL} "
+    end="${PC}\$${NIL} "
 
     # Virtual Env
     if [[ $VIRTUAL_ENV != "" ]]
