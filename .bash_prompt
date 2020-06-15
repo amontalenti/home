@@ -17,7 +17,7 @@ SHORT='\h'
 # UC: username color
 # LC: location/cwd color
 # HD: hostname display (\h vs \H)
-# PP: Prompt color
+# PC: Prompt color
 # Defaults:
 UC=$GREEN
 LC=$CYAN
