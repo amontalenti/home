@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Find all files on filesystem modified in last NUM_DAYS days.
+#
+# Will also exclude a number of directories that are noisy because
+# they are cache state for common daily operations, or system directories
+# that always show a recent mtime.
+# 
+NUM_DAYS=1
+sudo \
+    find / -mtime -${NUM_DAYS} \
+    ! -path '/home/am/.cache/*' \
+    ! -path '/home/am/.config/*' \
+    ! -path '/home/am/.directory_history/*' \
+    ! -path '/home/am/.local/share/Enpass/*' \
+    ! -path '/home/am/vmware/*' \
+    ! -path '/dev/*' \
+    ! -path '/proc/*' \
+    ! -path '/run/*' \
+    ! -path '/sys/*' \
+    ! -path '/tmp/*' \
+    ! -path '/var/tmp/*' \
+    ! -path '/var/cache/*' \
+    -print;
