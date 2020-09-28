@@ -27,7 +27,7 @@ chrome
 slack
 Enpass
 flameshot
-albert
+ulauncher
 EOF`
 for process in $KILLS; do
     echo "pkill $process"
