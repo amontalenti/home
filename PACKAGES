@@ -44,6 +44,7 @@ htop
 nethogs
 nload
 iftop
+glances
 sshfs
 dstat
 gawk
@@ -64,6 +65,14 @@ rsync
 rclone
 magic-wormhole
 byzanz
+grub-customizer
+xidle
+xprintidle
+
+# if intel GPU, for intel_gpu_top
+intel-gpu-tools
+# if nvidia GPU, for nvtop
+nvtop
 
 # extra console developer goodies
 tig
@@ -174,6 +183,8 @@ tlp (via ppa:linrunner/tlp)
 
 # extra console laptop tools
 thermald
+# lenovo cpu throttling fixes
+throttled (via https://github.com/erpalma/throttled)
 
 # intel cpu monitoring
 cpupower
@@ -203,9 +214,11 @@ user-theme@gnome-shell-extensions.gcampax.github.com
 TopIcons@phocean.net
 gTile@vibou
 sound-output-device-chooser@kgshank.net
+SettingsCenter@lauinger-clan.de
 ubuntu-appindicators@ubuntu.com
 ubuntu-dock@ubuntu.com
 desktop-icons@csoriano
+services-systemd@abteil.org
 
 # vim plugins
 ctrlp
