@@ -68,6 +68,7 @@ byzanz
 grub-customizer
 xidle
 xprintidle
+pdftk
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
