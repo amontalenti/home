@@ -190,6 +190,7 @@ throttled (via https://github.com/erpalma/throttled)
 cpupower
 i7z
 powertop
+s-tui
 
 # other console tools
 google-cloud-sdk (via https://cloud.google.com/sdk/docs/downloads-apt-get)
