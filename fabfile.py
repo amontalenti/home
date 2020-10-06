@@ -158,5 +158,5 @@ def build_python3():
                            --with-dtrace\
                            --with-system-ffi\
                            --with-fpectl"\
-    pyenv install -f 3.8.5
+    pyenv install -f 3.9.0
     """.strip())
