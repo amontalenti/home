@@ -110,3 +110,6 @@
 [submodule ".vim/bundle/vim-fontsize"]
 	path = .vim/bundle/vim-fontsize
 	url = git@github.com:drmikehenry/vim-fontsize.git
+[submodule ".vim/bundle/requirements.txt.vim"]
+	path = .vim/bundle/requirements.txt.vim
+	url = git@github.com:raimon49/requirements.txt.vim.git
