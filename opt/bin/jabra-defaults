@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "Setting default sink (speaker)..."
+if pactl list short sinks | egrep 'output.*Jabra'; then
+    pactl set-default-sink 'alsa_output.usb-0b0e_Jabra_SPEAK_410_USB_50C971FEE8C3x010900-00.iec958-stereo';
+else
+    echo 'Jabra not found as sink';
+fi
+echo "Done."
+
+echo "Setting default source (mic)..."
+
+if pactl list short sources | egrep 'input.*Jabra'; then
+    pactl set-default-source 'alsa_input.usb-0b0e_Jabra_SPEAK_410_USB_50C971FEE8C3x010900-00.mono-fallback';
+else
+    echo 'Jabra not found as source';
+fi
+echo "Done."
