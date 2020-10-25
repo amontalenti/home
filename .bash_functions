@@ -100,6 +100,10 @@ pyenvthis () {
     # Will set up a pyenv "py3" atop Python interpreter 3.8.2, and will also
     # create ~/py3/.python-version, update pip inside the pyenv, and activate.
     local curdir=$(basename $(pwd))
+    if [[ "${1}" = "" ]]; then
+        echo "No Python version specified; try e.g. pyenvthis 3.8.2";
+        return;
+    fi
     echo "Using Python [${1}] as basis for pyenv [${curdir}]";
     pyenv shell $1 && \
         echo "=> virtualenv:" &&\
