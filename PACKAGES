@@ -70,6 +70,7 @@ xidle
 xprintidle
 pdftk
 tidy
+pngquant
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
@@ -170,6 +171,7 @@ teamviewer (via https://www.teamviewer.com/en-us/download/linux/)
 anydesk (via http://deb.anydesk.com/howto.html)
 discord (via https://discordapp.com/download)
 y-ppa-manager (via ppa:webupd8team/y-ppa-manager)
+ltunify (via https://github.com/Lekensteyn/ltunify)
 
 # vpn
 openvpn
