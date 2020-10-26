@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "This script doesn't work as intended yet. To be fixed.";
+exit 1;
+
 echo "Setting default sink (speaker)..."
 if pactl list short sinks | egrep 'output.*Jabra'; then
     pactl set-default-sink 'alsa_output.usb-0b0e_Jabra_SPEAK_410_USB_50C971FEE8C3x010900-00.iec958-stereo';
