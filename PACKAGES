@@ -187,6 +187,10 @@ tlp (via ppa:linrunner/tlp)
 
 # extra console laptop tools
 thermald
+# lenovo battery module
+acpi-call-dkms
+# lenovo hdd monitoring
+smartmontools
 # lenovo cpu throttling fixes
 throttled (via https://github.com/erpalma/throttled)
 
