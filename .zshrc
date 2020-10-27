@@ -22,7 +22,6 @@ plugins=(git
          lein
          npm
          nvm
-         safe-paste
          nvm-auto-cd
          history-substring-search
          per-directory-history
