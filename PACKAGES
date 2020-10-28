@@ -71,6 +71,7 @@ xprintidle
 pdftk
 tidy
 pngquant
+sysfsutils
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
