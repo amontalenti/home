@@ -72,6 +72,7 @@ pdftk
 tidy
 pngquant
 sysfsutils
+piper
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
