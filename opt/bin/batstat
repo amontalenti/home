@@ -1,0 +1,2 @@
+#!/bin/bash
+watch "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | egrep 'percentage|time to empty|state'"
