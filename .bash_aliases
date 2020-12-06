@@ -67,7 +67,6 @@ alias py2="pyenv activate py2"
 alias py3="pyenv activate py3"
 alias pyenv-pythons="pyenv versions | awk '{print \$1}' | grep -v '/' | grep '^\(2\|3\).*'"
 alias pyenv-envs="pyenv versions | awk '{print \$1}' | grep -v '/'"
-alias tmuxp="$(pyenv whence --path tmuxp | grep '2.7')"
 alias pipthis="pip install -r requirements.txt"
 # force installation of fresh package with pip
 alias pipinstall="pip install --no-cache-dir -I"
