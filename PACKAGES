@@ -195,6 +195,8 @@ acpi-call-dkms
 smartmontools
 # lenovo cpu throttling fixes
 throttled (via https://github.com/erpalma/throttled)
+# lenovo dock control
+uhubctl (via https://github.com/mvp/uhubctl)
 
 # intel cpu monitoring
 cpupower
