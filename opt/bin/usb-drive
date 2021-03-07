@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fgrep -f <(hwinfo --disk --short) <(hwinfo --usb --short)
