@@ -160,6 +160,7 @@ fonts-hack-ttf
 zeal
 gimp
 flameshot
+alacarte
 
 # remove on laptop running Linux directly:
 iio-sensor-proxy
