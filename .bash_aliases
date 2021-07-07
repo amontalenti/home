@@ -117,6 +117,8 @@ alias ssh-pixel-west='ssh-multi uw2{a,b,c}-pixel{1,2}.cogtree.com'
 alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
 # api servers
 alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
+# ba servers
+alias ssh-ba='ssh-multi ue1{a,b,e}-ba-prod1{a,b,c,d,e,f,g,h}.cogtree.com'
 
 # hack machine in gcloud
 alias ssh-hack='gcloud compute --project "steady-cat-128117" ssh --zone "us-east1-c" "hack"'
