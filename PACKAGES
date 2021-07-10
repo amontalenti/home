@@ -273,7 +273,11 @@ yajs.vim
 zeavim.vim
 
 # pipx install
+awscli
+aws-google-auth
+bpytop
+flake8
 fab-classic
 poetry
+tmuxp
 visidata
-flake8
