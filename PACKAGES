@@ -237,6 +237,8 @@ desktop-icons@csoriano
 services-systemd@abteil.org
 
 # vim plugins
+# ---
+# To REMOVE a vim submodule, use: https://stackoverflow.com/a/7646931
 ctrlp
 Dockerfile
 fugitive
