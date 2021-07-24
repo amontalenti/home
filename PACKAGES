@@ -111,7 +111,9 @@ bison
 
 # java
 sdkman
-openjdk-11-jdk # TODO: newer JVM?
+openjdk-11-jdk
+# openjdk-11-jdk is LTS until Sept 2023
+# openjdk-17-jdk is next LTS, release coming Sept 2021
 
 # clojure
 lein (via http://leiningen.org/)
@@ -248,8 +250,8 @@ simplenote.vim
 surround
 syntastic
 tagbar
-thrift.vim # TODO: reconsider
-tla.vim    # TODO: reconsider
+thrift.vim
+tla.vim
 vim-clojure-static
 vim-elixir
 vim-eslint-compiler
@@ -260,7 +262,6 @@ vim-jinja
 vim-less
 vim-livedown
 vim-markdown
-vim-ps1 # TODO: get rid of this
 vim-racket
 vim-sexp
 vim-sexp-ext
