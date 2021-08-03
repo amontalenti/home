@@ -35,6 +35,8 @@ alias jsonprint='python -m json.tool'
 alias irestic='sudo -u restic -i'
 # gksu was removed from 20.04
 alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
+# dmesg of last boot, via journalctl
+alias dmesg-last='journalctl -o short-precise -k -b -1'
 
 # apps
 # ~~~~
