@@ -20,7 +20,7 @@ ARG0=$(basename $0);
 
 SIXTY_MINUTES_IN_MILLIS=3600000
 
-XPRINTIDLE=$(DISPLAY=:0 xprintidle)
+XPRINTIDLE=$(xprintidle)
 
 if [ "$1" = 'force' ]; then
     XPRINTIDLE=$((SIXTY_MINUTES_IN_MILLIS + 1));
