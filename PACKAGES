@@ -88,6 +88,11 @@ colordiff
 exuberant-ctags
 ffmpeg
 
+# homelab
+et (via https://eternalterminal.dev/)
+mosh (via https://mosh.org/)
+zerotier (via https://zerotier.com/)
+
 # -- end of basic apt packages --
 
 # IDEs
