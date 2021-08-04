@@ -13,13 +13,21 @@ In your ``$HOME``, do this::
 You may hit conflicts with your existing .bashrc or .profile. Just move those
 to another directory and let it run.
 
+Once you clone the repo, you'll need to restart your shell. If you're logged in
+to a fresh Linux box (e.g. Ubuntu or similar) via ssh, the simplest way to do 
+this is to log off and log back on.
+
 Shell
 -----
 
-I use zsh. For years, I used bash out of habit. I still keep my .bashrc and
-associated bash files around, for the rare case where I'm forced to use bash.
+On a freshly bootstrapped Ubuntu machine, I can typically clone this git repo
+and get going pretty quickly with bash. But, in my day-to-day development,
+I use zsh. For years, I used bash only, and mostly out of habit. Nowadays,
+I keep my bash environment around to give me the option to use bash for
+shell script debugging.
 
-My bash environment is covered in these files:
+I find it convenient to keep my "basic" bashrc configuration around, and then
+"layer" my zsh configuration over them. The bash config is summarized here:
 
 +-------------------+---------------------------------------+
 | file              | description                           |
@@ -33,23 +41,67 @@ My bash environment is covered in these files:
 | ~/.bash_functions | when an alias doesn't cut it          |
 +-------------------+---------------------------------------+
 
-On a freshly bootstrapped Ubuntu machine, I can typically clone this git repo
-and get going pretty quickly with bash. But, if I want to "upgrade" the shell
-experience, I need to install ``zsh`` and ``oh-my-zsh``. Those additional steps
-are typically::
+You might wonder why it's handy to keep bash in a working state, and around.
+Two reasons. First, when you first clone this repo into a fresh Linux box,
+you'll find that bash is the default shell. It's therefore nice to have it
+working. Second, sometimes you are working on customizing your shell itself,
+and you break things. In these scenarios, it's handy to have another "working"
+shell laying  around until you fix things. For me, bash and zsh play this role
+for one another.
 
-    apt install zsh
+To get zsh up-and-running takes a few more steps than bash. We need to:
+
+1. Install pyenv
+2. Install zsh
+3. Install oh-my-zsh
+4. Layer my oh-my-zsh customizations over the fresh install
+5. Install the p10k theme
+6. Install an extra oh-my-zsh plugin
+
+We'll follow these steps in turn.
+
+We use pyenv_ to compile Python and manage Python environments, because some of my
+helper scripts rely on Python and pyenv, and expect it. The one-liner here should be::
+
+    curl https://pyenv.run | bash
+
+.. _pyenv: https://github.com/pyenv/pyenv-installer
+
+To install zsh, I rely on apt. So::
+
+    sudo apt install zsh
+
+Because this git repo contributes a `~/.oh-my-zsh` directory, you need to do a little
+dance to setup oh-my-zsh. You need to temporarily move it aside, then run the installer,
+and then rsync the contents of the original cloned repo back into it. Then you can get
+rid of the backup. Try this::
+
+    mv ~/.oh-my-zsh ~/.oh-bck
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    rsync -Pav ~/.oh-bck/ ~/.oh-my-zsh/
+    rm -Rf .oh-bck
 
-Then, I'll try it out by running ``zsh`` before switching shell.
+You need to install the p10k theme via this recipe::
+
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+Similarly, you need to install zsh-better-npm-completion_ thusly::
+
+    git clone https://github.com/lukechilds/zsh-better-npm-completion ~/.oh-my-zsh/custom/plugins/zsh-better-npm-completion
+
+.. _zsh-better-npm-completion: https://github.com/lukechilds/zsh-better-npm-completion
+
+Then, I'll try it out by running ``zsh`` before switching shell, by simply running ``zsh``.
 
 With ``zsh``, I took a different approach than `bash`, but it's unified my bash
 setup for common aliases and functions. I have a simple ``.zshrc`` that
 implements the equivalent of ``.bash_env``.
 
 In ``bash``, my prompt (``PS1``) is set entirely by the simple bash
-environment, and is very basic. In ``zsh``, things are a bit more "souped up",
-and I have two prompt themes available:
+environment, and is very basic, optimized for prompt render speed.
+
+In ``zsh``, things are a bit more "souped up", and I have two prompt themes
+available:
 
 - ``powerlevel10k/powerlevel10k`` is the amazing p10k_ theme that leverages
   a pure zsh implementation of the fastest and most configurable prompt one could
@@ -58,7 +110,7 @@ and I have two prompt themes available:
   via an oh-my-zsh theme that outsources most of its work to a Python script
   called ``zshprompt``, which lives in ``~/opt/bin/``
 
-.. _p10k: https://github.com/romkatv/powerlevel10k
+Thus, my "full" zsh environment is summarized in this table:
 
 +-----------------------------------+----------------------------------------------+
 | file                              | description                                  |
@@ -78,8 +130,11 @@ and I have two prompt themes available:
 | ~/.bash_aliases                   | I use these across zsh and bash              |
 +-----------------------------------+----------------------------------------------+
 
+.. _p10k: https://github.com/romkatv/powerlevel10k
+
 The ``zshprompt`` script supports shortened paths, git branches, Python
-virtualenvs, and last process exit code. Here is what it looks like:
+virtualenvs, and last process exit code, and only when using the ``am`` zsh theme.
+Here is what it looks like:
 
 .. image:: https://user-images.githubusercontent.com/40263/39084790-49b8eb4a-4548-11e8-8523-7fce14582eab.png
     :target: http://ohmyz.sh/
