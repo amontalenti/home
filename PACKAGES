@@ -74,6 +74,7 @@ pngquant
 sysfsutils
 piper
 neofetch
+bat
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools

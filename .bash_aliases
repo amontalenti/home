@@ -37,6 +37,8 @@ alias irestic='sudo -u restic -i'
 alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 # dmesg of last boot, via journalctl
 alias dmesg-last='journalctl -o short-precise -k -b -1'
+# bat is cat with syntax highlighting, via batcat
+alias bat='batcat'
 
 # apps
 # ~~~~
