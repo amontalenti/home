@@ -73,6 +73,7 @@ tidy
 pngquant
 sysfsutils
 piper
+neofetch
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
@@ -210,7 +211,6 @@ uhubctl (via https://github.com/mvp/uhubctl)
 cpupower
 i7z
 powertop
-s-tui
 
 # other console tools
 google-cloud-sdk (via https://cloud.google.com/sdk/docs/downloads-apt-get)
@@ -284,6 +284,8 @@ zeavim.vim
 awscli
 aws-google-auth
 bpytop
+s-tui
+glances
 flake8
 fab-classic
 poetry
