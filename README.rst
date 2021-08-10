@@ -178,7 +178,7 @@ of files, including:
 * Racket, Scheme, Go, Elixir (for fun)
 
 My vim configuration is a bit customized, as I use vim as a kind of UNIX
-IDE. However, I don't go crazy remapping things; in general, I'm pretty
+IDE. However, I don't go overboard remapping things; in general, I'm pretty
 happy with vim's default mappings and have learned to love them. Most of
 these customizations are just to make editing typical files for me nicer,
 and add file-specific or workflow-specific add-ons.
