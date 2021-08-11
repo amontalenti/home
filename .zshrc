@@ -36,7 +36,6 @@ path=(
     /home/am/.nvm/bin
     /snap/bin
     /home/am/opt/bin
-    /home/am/gopath/bin
     /home/am/.cargo/bin
     /usr/local/sbin
     /usr/local/bin
@@ -73,9 +72,6 @@ export ANSIBLE_REMOTE_USER=pixelmonkey
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 # TODO: ^^^ should remove, since replaced by nvm, nvm-auto-cd plugins
-
-# add gvm (Go Version Manager) support
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # sdkman - java installer and version manager
 export SDKMAN_DIR="/home/am/.sdkman"
