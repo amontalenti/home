@@ -75,6 +75,7 @@ sysfsutils
 piper
 neofetch
 bat
+bison
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
@@ -111,10 +112,6 @@ ruby-build (via https://github.com/sstephenson/ruby-build)
 
 # node.js
 nvm (via https://github.com/creationix/nvm)
-
-# go
-gvm (via https://github.com/moovweb/gvm)
-bison
 
 # java
 sdkman
