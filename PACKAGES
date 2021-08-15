@@ -281,10 +281,11 @@ zeavim.vim
 awscli
 aws-google-auth
 bpytop
-s-tui
-glances
 flake8
 fab-classic
+glances
 poetry
+scalene
+s-tui
 tmuxp
 visidata
