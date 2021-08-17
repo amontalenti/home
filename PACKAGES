@@ -75,6 +75,7 @@ piper
 neofetch
 bat
 bison
+earlyoom
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
