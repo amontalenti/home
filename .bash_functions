@@ -83,7 +83,14 @@ mdclean () {
 
 md2pdf () {
     # Make a PDF from the given .md (Markdown) file
+    # example: md2pdf markdown_text.md markdown_printable.pdf
     pandoc $1 --pdf-engine=xelatex -o $2
+}
+
+pdfuncompress () {
+    # take a compressed pdf as input, and output as uncompressed pdf
+    # example: pdfuncompress compressed.pdf uncompressed.pdf
+    pdftk $1 output $2 uncompress;
 }
 
 pport () {
@@ -117,3 +124,4 @@ pyenvthis () {
         python -c "import sys; print(sys.path[-1])" && \
         echo "=> Done.";
 }
+
