@@ -41,6 +41,7 @@ gcc
 linux-tools-common
 stress
 htop
+atop
 nethogs
 nload
 iftop
