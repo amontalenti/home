@@ -239,6 +239,7 @@ ubuntu-appindicators@ubuntu.com
 ubuntu-dock@ubuntu.com
 desktop-icons@csoriano
 services-systemd@abteil.org
+status-area-horizontal-spacing@mathematical.coffee.gmail.com
 
 # vim plugins
 # ---
