@@ -1,5 +1,11 @@
 # AppKeys v19 frozen extension
 
+---
+
+**Nov 2021 note:** should determine whether to keep this vendorized plugin or not.
+
+---
+
 Versions v20 and above of this extension are incompatible with gnome-shell
 version 3.28, which is the version used in Ubuntu 18.04.
 
