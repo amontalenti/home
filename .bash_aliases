@@ -115,16 +115,17 @@ alias clj-lein='grench lein'
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# storm-dev2
+alias ssh-storm-dev2-workers='ssh-multi storm-dev2-0{1,2,3,4,5,6,7}-ue1a.cogtree.com'
+alias ssh-storm-dev2-nimbus='ssh-multi storm-dev2-nimbus01.cogtree.com'
+
+# storm2
+alias ssh-storm2-workers='ssh-multi storm2-0{1,2,3,4,5,6,7,8,9}-ue1a.cogtree.com storm2-1{1,2,3,4,5}-ue1a.cogtree.com'
+alias ssh-storm2-nimbus='ssh-multi storm2-nimbus-01-ue1a.cogtree.com'
+
 # pixel servers
-alias ssh-pixel='ssh-multi {ue1{a,b,d,e}-pixel{1,2},uw2{a,b,c}-pixel{1,2}}.cogtree.com'
-alias ssh-pixel-east='ssh-multi ue1{a,b,d,e}-pixel{1,2}.cogtree.com'
-alias ssh-pixel-west='ssh-multi uw2{a,b,c}-pixel{1,2}.cogtree.com'
-# dash app server
-alias ssh-dash-web='ssh-multi ue1a-dash-web{1,2,3,4,5}.cogtree.com'
-# api servers
-alias ssh-api='ssh-multi ue1a-api{1,2,3,4,5,6,7}.cogtree.com'
-# ba servers
-alias ssh-ba='ssh-multi ue1{a,b,e}-ba-prod1{a,b,c,d,e,f,g,h}.cogtree.com'
+alias ssh-pixel-east='ssh-multi pixel1-east01-ue1a.cogtree.com pixel1-east02-ue1b.cogtree.com'
+alias ssh-pixel-west='ssh-multi pixel1-west01-uw2a.cogtree.com pixel1-west02-uw2b.cogtree.com'
 
 # hack machine in gcloud
 alias ssh-hack='gcloud compute --project "steady-cat-128117" ssh --zone "us-east1-c" "hack"'
