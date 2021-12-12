@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    logfile=/var/log/Xorg.0.log
+else
+    logfile="$1"
+fi
+
+sed -n 's@.* Loading .*/\(.*\)_drv.so@\1@p' "$logfile" |
+    while read driver; do
+        if ! grep -q "Unloading $driver" "$logfile"; then
+            echo $driver
+            break
+        fi
+    done
