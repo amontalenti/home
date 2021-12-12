@@ -1,15 +1,17 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
-    logfile=/var/log/Xorg.0.log
-else
-    logfile="$1"
-fi
-
-sed -n 's@.* Loading .*/\(.*\)_drv.so@\1@p' "$logfile" |
+# fetches Xorg log from systemd journalctl, then pipes it into sed
+# finally, scans for driver based on "_drv.so" pattern, ensures it
+# wasn't unloaded later on in the log file, and prints that driver
+journalctl --no-hostname -o short-precise -b /usr/bin/Xorg | sed -n 's@.* Loading .*/\(.*\)_drv.so@\1@p' |
     while read driver; do
-        if ! grep -q "Unloading $driver" "$logfile"; then
-            echo $driver
-            break
+        if ! journalctl --no-hostname -o short-precise -b /usr/bin/Xorg | grep -q "Unloading $driver"; then
+            echo "*" $driver
+        else
+            echo " " $driver "(unloaded)"
         fi
     done
+
+echo
+echo "DRI info:"
+journalctl --no-hostname -o short-precise -b /usr/bin/Xorg | egrep -o '\[DRI2.*driver.*' | sort -u
