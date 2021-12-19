@@ -176,7 +176,6 @@ iio-sensor-proxy
 ulauncher (via https://ulauncher.io/)
 ulauncher-emoji (via https://ext.ulauncher.io/-/github-ulauncher-ulauncher-emoji)
 peek (via https://github.com/phw/peek#ubuntu)
-youtube-dl (via https://yt-dl.org/update)
 teamviewer (via https://www.teamviewer.com/en-us/download/linux/)
 anydesk (via http://deb.anydesk.com/howto.html)
 discord (via https://discordapp.com/download)
@@ -281,14 +280,15 @@ yajs.vim
 zeavim.vim
 
 # pipx install
-awscli
-aws-google-auth
-bpytop
-flake8
-fab-classic
-glances
-poetry
-scalene
-s-tui
-tmuxp
-visidata
+awscli          # aws cli
+aws-google-auth # aws cli Google OAuth support
+flake8          # linter and style checker
+fab-classic     # fab cli and Fabric 1.x fork
+glances         # system monitor
+bpytop          # system monitor
+s-tui           # core and temp monitor
+poetry          # package manager
+scalene         # profiler
+tmuxp           # tmux YAML profiles
+visidata        # vd tool
+yt-dlp          # active fork of youtube-dl
