@@ -304,3 +304,15 @@ endif
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = {"mode": "passive"}
 
+" add zig support to tagbar
+" from: https://github.com/preservim/tagbar/wiki#zig
+let g:tagbar_type_zig = {
+    \ 'ctagstype': 'zig',
+    \ 'kinds' : [
+        \'f:functions',
+        \'s:structs',
+        \'e:enums',
+        \'u:unions',
+        \'E:errors'
+    \]
+    \}

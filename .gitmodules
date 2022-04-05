@@ -111,3 +111,6 @@
 [submodule ".vim/bundle/requirements.txt.vim"]
 	path = .vim/bundle/requirements.txt.vim
 	url = git@github.com:raimon49/requirements.txt.vim.git
+[submodule ".vim/bundle/zig.vim"]
+	path = .vim/bundle/zig.vim
+	url = git@github.com:ziglang/zig.vim.git
