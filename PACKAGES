@@ -133,6 +133,9 @@ rustup (via https://www.rust-lang.org/en-US/install.html)
 # gradle (Groovy-based Build Tool)
 gradle (via ppa:cwchien/gradle)
 
+# zig
+zig (via `snap install zig --classic --beta`)
+
 # virtualization infrastructure
 docker (via https://docs.docker.com/engine/installation/linux/ubuntu/)
 docker-compose (via https://docs.docker.com/compose/install/)
