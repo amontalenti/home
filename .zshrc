@@ -25,6 +25,7 @@ plugins=(
          history-substring-search
          per-directory-history
          zsh-better-npm-completion
+         zig
          sudo)
 
 path=(
