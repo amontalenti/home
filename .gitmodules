@@ -114,3 +114,6 @@
 [submodule ".vim/bundle/zig.vim"]
 	path = .vim/bundle/zig.vim
 	url = git@github.com:ziglang/zig.vim.git
+[submodule ".vim/bundle/limelight.vim"]
+	path = .vim/bundle/limelight.vim
+	url = git@github.com:junegunn/limelight.vim.git

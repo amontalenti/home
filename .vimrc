@@ -22,6 +22,9 @@ nnoremap <F7> :set wrap nolist linebreak!<CR>
 nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
 " hit F9 for distraction-free writing mode
 nnoremap <F9> :Goyo<CR>
+" integrate goyo and limelight.vim
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 " hit F10 for Python style check
 autocmd FileType python map <buffer> <F10> :call Flake8()<CR>
 " reserve F11 for full-screen at WM level
