@@ -224,7 +224,7 @@ hub (via ppa:cpick/hub)
 lazygit (via ppa:lazygit-team/release)
 broot (via https://dystroy.org/broot/)
 neovim (via ppa:neovim-ppa/stable)
-tldr (via https://github.com/isacikgoz/tldr)
+tldr (via https://snapcraft.io/glow)
 
 # output of `gnome-extensions list`
 dim-on-battery@nailfarmer.nailfarmer.com
