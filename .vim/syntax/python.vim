@@ -5,7 +5,10 @@
 " URL:                  https://github.com/hdima/python-syntax
 " Last Change:          2015-11-01
 " Filenames:            *.py
-" Version:              3.6.0
+" Version:              3.6.0-am
+"
+" Temporarily patched to include Python's new `match` and `case` keywords by
+" Andrew Montalenti (am).
 "
 " Based on python.vim (from Vim 6.1 distribution)
 " by Neil Schemenauer <nas at python dot ca>
@@ -153,6 +156,7 @@ syn keyword pythonStatement     pass raise
 syn keyword pythonStatement     global assert
 syn keyword pythonStatement     lambda
 syn keyword pythonStatement     with
+syn keyword pythonStatement     match case
 syn keyword pythonStatement     def class nextgroup=pythonFunction skipwhite
 syn keyword pythonRepeat        for while
 syn keyword pythonConditional   if elif else
