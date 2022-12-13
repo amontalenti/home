@@ -42,6 +42,7 @@ alias dmesg-xorg='journalctl --no-hostname -o short-precise -b /usr/bin/Xorg'
 # bat is cat with syntax highlighting, via batcat
 alias bat='batcat'
 alias youtube-dl='yt-dlp'
+alias sloc='tokei'
 
 # apps
 # ~~~~
