@@ -226,7 +226,8 @@ lazygit (via ppa:lazygit-team/release)
 broot (via https://dystroy.org/broot/)
 neovim (via ppa:neovim-ppa/stable)
 glow (via https://snapcraft.io/glow)
-rr (via https://github.com/rr-debugger/rr/releases/)
+rr (via https://github.com/rr-debugger/rr/releases)
+dust (via https://github.com/bootandy/dust/releases)
 
 # output of `gnome-extensions list`
 dim-on-battery@nailfarmer.nailfarmer.com
