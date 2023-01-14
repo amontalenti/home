@@ -78,6 +78,7 @@ bat
 bison
 earlyoom
 valgrind
+md5deep
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
