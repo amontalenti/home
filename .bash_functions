@@ -82,9 +82,16 @@ mdclean () {
 }
 
 md2pdf () {
-    # Make a PDF from the given .md (Markdown) file
+    # Make a PDF from the given .md (Markdown) file; requires
+    # us to set the PDF engine to use which is hard to remember
     # example: md2pdf markdown_text.md markdown_printable.pdf
     pandoc $1 --pdf-engine=xelatex -o $2
+}
+
+md2html () {
+    # Pandoc will detect .html output format from the extension
+    # example: md2html markdown_text.md markdown_html.html
+    pandoc $1 -o $2
 }
 
 pdfuncompress () {
