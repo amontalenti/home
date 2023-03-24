@@ -132,3 +132,14 @@ pyenvthis () {
         echo "=> Done.";
 }
 
+
+yt-audio () {
+    # Downloads the best audio quality stream from YouTube and extracts as mp3.
+    #
+    # For example:
+    #
+    # $ yt-audio 'https://www.youtube.com/watch?v=tVx3lt8ZKHw'
+    #
+    # This will make a tVx3lt8ZKHw.mp3 file after some processing.
+    yt-dlp -f 'ba' -x --audio-format mp3 "$1"  -o '%(id)s.%(ext)s'
+}
