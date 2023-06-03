@@ -25,6 +25,12 @@ pathappend () {
         export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
 }
 
+function upgrade() {
+    # replaces alias upgrade=...
+    screen -dmS upgrade bash -c 'sudo apt-get update; sudo apt-get upgrade; echo "--- DONE WITH UPGRADE ---"; exec bash'
+    screen -r upgrade
+}
+
 pycd () {
     # jump to the filesystem location of a given Python module name
     pushd `python -c "import os.path, $1; print(os.path.dirname($1.__file__))"`;

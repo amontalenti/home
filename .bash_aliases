@@ -27,8 +27,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 # finds the pid(s) for any process
 alias findpid='pgrep -fln'
-# upgrade
-alias upgrade='sudo apt update && sudo apt upgrade'
 # json pretty printer
 alias jsonprint='python -m json.tool'
 # backup helper

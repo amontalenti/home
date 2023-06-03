@@ -75,7 +75,7 @@ terminfo vt100* ms:AL=\E[%p1%dL:DL=\E[%p1%dM:UP=\E[%p1%dA:DO=\E[%p1%dB:LE=\E[%p1
 
 # Spiffy status stuff I found on gentoo-wiki
 hardstatus alwayslastline
-backtick 1 10 10 nowplaying
+#backtick 1 10 10 nowplaying
 hardstatus string '%{= kG}%-Lw%{=r}%50>%n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c %{-} %1`'
 caption splitonly "%{=d G}%F%?%3n %t%?"
 
@@ -89,7 +89,7 @@ bind j focus down
 bind k focus up
 bind t focus top
 
-# trying this based on faq info on 
+# trying this based on faq info on
 # http://www4.informatik.uni-erlangen....screen-faq.hml
 termcapinfo xterm ti@:te@
 
