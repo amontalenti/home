@@ -27,7 +27,7 @@ pathappend () {
 
 function upgrade() {
     # replaces alias upgrade=...
-    screen -dmS upgrade bash -c 'sudo apt-get update; sudo apt-get upgrade; echo "--- DONE WITH UPGRADE ---"; exec bash'
+    screen -dmS upgrade bash -c 'sudo apt update; sudo apt upgrade; echo "--- DONE WITH UPGRADE ---"; exec bash'
     screen -r upgrade
 }
 
