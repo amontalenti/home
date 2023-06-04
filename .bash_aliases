@@ -57,6 +57,9 @@ alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
 alias gcal='gcalcli agenda --calendar="AM - Parse.ly" --calendar="AM - Personal" --calendar="Shared - Team"'
 # turn HTML in clipboard to clipboard.md file
 alias clipmd='(xclip -o -selection clipboard -t text/html | pandoc -r html --wrap=none -o /tmp/clipboard.md) && cat /tmp/clipboard.md && echo Stored in: /tmp/clipboard.md'
+# show wifi password and QR code
+alias wifi-password='nmcli dev wifi show-password'
+alias wifi-qrcode=wifi-password
 
 # python
 # ~~~~~~
