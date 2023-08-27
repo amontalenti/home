@@ -37,6 +37,7 @@ alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 alias dmesg-this='journalctl --no-hostname -o short-precise -k -b 0'
 alias dmesg-last='journalctl --no-hostname -o short-precise -k -b -1'
 alias dmesg-xorg='journalctl --no-hostname -o short-precise -b /usr/bin/Xorg'
+alias battery-status='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 # bat is cat with syntax highlighting, via batcat
 alias bat='batcat'
 alias youtube-dl='yt-dlp'
