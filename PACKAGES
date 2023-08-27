@@ -230,6 +230,7 @@ glow (via https://snapcraft.io/glow)
 rr (via https://github.com/rr-debugger/rr/releases)
 ncdu (via https://dev.yorhel.nl/ncdu)
 dust (via https://github.com/bootandy/dust/releases)
+duf (via https://github.com/muesli/duf/releases)
 
 # output of `gnome-extensions list`
 dim-on-battery@nailfarmer.nailfarmer.com
