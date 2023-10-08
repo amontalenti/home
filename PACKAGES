@@ -79,6 +79,7 @@ bison
 earlyoom
 valgrind
 md5deep
+jo
 
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
@@ -239,7 +240,6 @@ cpufreq@konkor
 panel-osd@berend.de.schouwer.gmail.com
 system-monitor@paradoxxx.zero.gmail.com
 user-theme@gnome-shell-extensions.gcampax.github.com
-TopIcons@phocean.net
 gTile@vibou
 sound-output-device-chooser@kgshank.net
 SettingsCenter@lauinger-clan.de
