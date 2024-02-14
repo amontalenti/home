@@ -3,7 +3,7 @@
 
 [user]
 	name = Andrew Montalenti
-	email = andrew@parsely.com
+	email = git@amontalenti.com
 
 [alias]
     st = status -sb
