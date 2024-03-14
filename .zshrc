@@ -46,8 +46,6 @@ path=(
     /bin
 )
 
-# TODO: ^^^ should /opt/{storm,spark,vagrant} still be there?
-
 # for tmux
 export DISABLE_AUTO_TITLE=true
 
@@ -64,6 +62,11 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # intentionally disabled:
 # export VIRTUAL_ENV_DISABLE_PROMPT=1
+# Python and pip options:
+export PIP_REQUIRE_VIRTUALENV=true
+
+# add rye support
+source "$HOME/.rye/env"
 
 # ansible can't respect ~/.ssh/config when using raw IPs
 export ANSIBLE_REMOTE_USER=pixelmonkey
@@ -75,12 +78,17 @@ export ANSIBLE_REMOTE_USER=pixelmonkey
 # TODO: ^^^ should remove, since replaced by nvm, nvm-auto-cd plugins
 
 # sdkman - java installer and version manager
+# use `sdk list java` and `sdk install java XX.xx.x-xxx` to install new versions
 export SDKMAN_DIR="/home/am/.sdkman"
 [[ -s "/home/am/.sdkman/bin/sdkman-init.sh" ]] && source "/home/am/.sdkman/bin/sdkman-init.sh"
 
 # this makes stubborn Java scripts work
-export JAVA_HOME="/home/am/.sdkman/candidates/java/11.0.2-open/"
+export JAVA21_HOME="/home/am/.sdkman/candidates/java/21.0.2-open"
+export JAVA11_HOME="/home/am/.sdkman/candidates/java/11.0.2-open"
 export JAVA9_HOME="/home/am/.sdkman/candidates/java/9.0.4-open"
+# set java 11 as default (stable)
+# check `sdk current` to make sure it lines up
+export JAVA_HOME="$JAVA11_HOME"
 
 # add travis CLI support
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
@@ -135,3 +143,4 @@ source /home/am/.config/broot/launcher/bash/br
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+. "$HOME/.cargo/env"

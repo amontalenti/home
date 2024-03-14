@@ -2,8 +2,8 @@
     user = amontalenti
 
 [user]
-	name = Andrew Montalenti
-	email = git@amontalenti.com
+    name = Andrew Montalenti
+    email = git@amontalenti.com
 
 [alias]
     st = status -sb
@@ -30,6 +30,7 @@
     up = pull --rebase
     build = checkout-index -a --prefix=_gitbuild/
     set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+    checkout-no-big-blobs = clone --no-checkout --filter=blob:limit=100m
 
 [pager]
     df = cat
@@ -38,13 +39,13 @@
 [branch]
     autosetuprebase = always
 [push]
-	default = current
+    default = current
 [color]
-	ui = true
+    ui = true
 [receive]
     denyNonFastForwards = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
