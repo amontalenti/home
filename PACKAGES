@@ -307,3 +307,9 @@ scalene         # profiler
 tmuxp           # tmux YAML profiles
 visidata        # vd tool
 yt-dlp          # active fork of youtube-dl
+ocrmypdf        # OCR for PDFs and images
+ansible         # infra as code
+llm             # large language models
+gpustat         # GPU stats
+tmuxp           # tmux panel manager
+pipdeptree      # pip dependency tree
