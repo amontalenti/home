@@ -340,6 +340,5 @@ frontend on tmux which allows you to save / re-open tmux "sessions".
 Version Control
 ---------------
 
-I used to use Mercurial, now I primarily use git. I don't customize
-these too heavily, but my ``.hgrc`` and ``.gitconfig`` are included
-here anyway.
+I primarily use ``git``. I don't customize it too heavily, but my ``.gitconfig``
+is included here anyway.
