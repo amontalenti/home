@@ -238,21 +238,22 @@ ncdu (via https://dev.yorhel.nl/ncdu)
 dust (via https://github.com/bootandy/dust/releases)
 duf (via https://github.com/muesli/duf/releases)
 
-# output of `gnome-extensions list`
-dim-on-battery@nailfarmer.nailfarmer.com
-workspace-switch-wraparound@theychx.org
+# output of `gnome-extensions list | sort`
+caffeine@patapon.info
 cpufreq@konkor
+desktop-icons@csoriano
+dim-on-battery@nailfarmer.nailfarmer.com
+location-icon-autohide@darednaxella.name
 panel-osd@berend.de.schouwer.gmail.com
-system-monitor@paradoxxx.zero.gmail.com
-user-theme@gnome-shell-extensions.gcampax.github.com
-gTile@vibou
-sound-output-device-chooser@kgshank.net
+services-systemd@abteil.org
 SettingsCenter@lauinger-clan.de
+sound-output-device-chooser@kgshank.net
+status-area-horizontal-spacing@mathematical.coffee.gmail.com
+system-monitor@paradoxxx.zero.gmail.com
 ubuntu-appindicators@ubuntu.com
 ubuntu-dock@ubuntu.com
-desktop-icons@csoriano
-services-systemd@abteil.org
-status-area-horizontal-spacing@mathematical.coffee.gmail.com
+user-theme@gnome-shell-extensions.gcampax.github.com
+workspace-switch-wraparound@theychx.org
 
 # vim plugins
 # ---
