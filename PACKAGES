@@ -312,4 +312,3 @@ ansible         # infra as code
 llm             # large language models
 gpustat         # GPU stats
 tmuxp           # tmux panel manager
-pipdeptree      # pip dependency tree
