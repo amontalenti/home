@@ -22,7 +22,7 @@ alias rmpyc="find . -name '*.pyc' -delete"
 # equivalent to OS X "open"
 alias open="xdg-open"
 # add some convenience options to grep
-alias grep="grep --color=auto --exclude-dir='.svn' --exclude-dir='.git'"
+alias grep="grep --color=auto --exclude-dir='.git'"
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 # finds the pid(s) for any process
@@ -42,6 +42,9 @@ alias battery-status='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias bat='batcat'
 alias youtube-dl='yt-dlp'
 alias sloc='tokei'
+# check files in current directory missing from amontalenti/home
+alias missing='cp ~/.gitignore ~/.gitignore.bak && echo "#*" > ~/.gitignore && git s; mv ~/.gitignore.bak ~/.gitignore'
+alias gitmissing=missing
 
 # apps
 # ~~~~
