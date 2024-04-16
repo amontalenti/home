@@ -66,7 +66,7 @@ eval "$(pyenv virtualenv-init -)"
 export PIP_REQUIRE_VIRTUALENV=true
 
 # add rye support
-source "$HOME/.rye/env"
+#source "$HOME/.rye/env"
 
 # ansible can't respect ~/.ssh/config when using raw IPs
 export ANSIBLE_REMOTE_USER=pixelmonkey
