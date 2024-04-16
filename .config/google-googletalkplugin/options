@@ -1,6 +1,0 @@
-audio-flags=15
-audio-input=Logitech Webcam C920-C Analog Stereo
-audio-output=
-exps=["-tm"]
-known-audio-flags=63
-video-capture=Logitech Webcam C920-C
