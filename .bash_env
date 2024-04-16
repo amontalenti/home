@@ -9,6 +9,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # add rust support via cargo
 [[ -s "$HOME/.cargo/bin/cargo" ]] && pathprepend ~/.cargo/bin
+source "$HOME/.cargo/env"
 
 # sdkman - java installer and version manager
 export SDKMAN_DIR="$HOME/.sdkman"

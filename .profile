@@ -20,4 +20,3 @@ fi
 if [ -d "$HOME/opt/bin" ] ; then
     PATH="$HOME/opt/bin:$PATH"
 fi
-. "$HOME/.cargo/env"
