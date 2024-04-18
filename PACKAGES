@@ -238,8 +238,7 @@ ncdu (via https://dev.yorhel.nl/ncdu)
 dust (via https://github.com/bootandy/dust/releases)
 duf (via https://github.com/muesli/duf/releases)
 
-# output of `gnome-extensions list | sort`
-# ---
+# Output of `gnome-extensions list | sort`
 cpufreq@konkor
 desktop-icons@csoriano
 location-icon-autohide@darednaxella.name
@@ -292,21 +291,24 @@ yajs-libs.vim
 yajs.vim
 zeavim.vim
 
-# pipx install
+# pipx install each of these
+# ---
+# Output of `pipx list | grep -oP 'package \K\S+'`
+ansible         # infra as code
 awscli          # aws cli
 aws-google-auth # aws cli Google OAuth support
-flake8          # linter and style checker
-fab-classic     # fab cli and Fabric 1.x fork
-glances         # system monitor
 bpytop          # system monitor
-s-tui           # core and temp monitor
+fab-classic     # fab cli and Fabric 1.x fork
+flake8          # linter and style checker
+glances         # system monitor
+gpustat         # GPU stats
+llm             # large language models
+ocrmypdf        # OCR for PDFs and images
 poetry          # package manager
+pxpx            # process monitor
+ruff            # Python linter
 scalene         # profiler
-tmuxp           # tmux YAML profiles
+s-tui           # core and temp monitor
+tmuxp           # tmux profile manager
 visidata        # vd tool
 yt-dlp          # active fork of youtube-dl
-ocrmypdf        # OCR for PDFs and images
-ansible         # infra as code
-llm             # large language models
-gpustat         # GPU stats
-tmuxp           # tmux panel manager
