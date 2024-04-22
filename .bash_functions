@@ -106,6 +106,23 @@ pdfuncompress () {
     pdftk $1 output $2 uncompress;
 }
 
+ocrtext () {
+    # uses ocrmypdf (installed via pipx) to OCR a given PDF or image
+    # creates two output files: ocr_output.txt and ocr_output.pdf
+    # then, gives a cat command for the text file and opens text file
+    # in a desktop program
+    # NOTE: sometimes, ocrmypdf needs other flags, in these cases you
+    # can use bash and run set -x; ocrtext file; set +x to get the
+    # example command to run
+    ocrmypdf \
+        --force-ocr \
+        --sidecar ocr_output.txt \
+        "$1" \
+        ocr_output.pdf \
+        && echo cat ocr_output.txt \
+        && xdg-open ocr_output.txt;
+}
+
 pport () {
     # Print the pid of a process listening on the given TCP port
     lsof -i "TCP:$1" | grep LISTEN | awk '{print $2}'
