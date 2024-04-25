@@ -101,4 +101,7 @@ pathprepend ~/.local/bin
 [ -f $HOME/.cogtree ] && source $HOME/.cogtree
 
 # broot
-source /home/am/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
+
+# nix
+source $HOME/.nix-profile/etc/profile.d/nix.sh
