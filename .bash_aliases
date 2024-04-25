@@ -4,8 +4,12 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lt='ls -t | head'
 # cleaner disk free
-alias df='df -xsquashfs -xtmpfs'
-alias lsmount="mount | grep '^/' | grep -v 'snapd/'"
+alias df.real='df -xsquashfs -xtmpfs'
+# shows cleaner mount points, without snap noise
+alias mnt.grep="mount | grep '^/' | grep -v 'snapd/'"
+# find clean mount points, only real and readable + writable
+alias mnt.find='findmnt --options rw --real'
+# find .log files in current directory
 alias lslog="ls . | egrep '\.log$'"
 # current stack state
 alias d='dirs -v'
@@ -15,7 +19,7 @@ alias svim='sudo vim'
 alias ss='sudo -s'
 # see truly every process running
 alias ptree="pstree -Gcpnulah"
-# better repetitive top-like stats
+# better repetitive top-like stats, good for comparison over time
 alias dtop="dstat -ta"
 # simple Python cache cleaner
 alias rmpyc="find . -name '*.pyc' -delete"
