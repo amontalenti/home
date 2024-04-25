@@ -49,16 +49,12 @@ alias gitmissing=missing
 # apps
 # ~~~~
 #
-# note-taking app in vim
-alias simplenote='vim -c "SimplenoteList"'
 # look for wireless noise
 alias kismet='kismet -n'
 # make a long (silent) screencast video tool
 alias screencast="avconv -v warning -f x11grab -s 1360x768 -r 30 -i :0.0 -s 1366x768 -vcodec libx264 -threads 0 screencast.mp4"
 # make a quick 30-second gif screencast
 alias gifcast='byzanz-record -v -c -d 30 --delay 5 screencast.gif'
-# quick gcal agenda
-alias gcal='gcalcli agenda --calendar="AM - Parse.ly" --calendar="AM - Personal" --calendar="Shared - Team"'
 # turn HTML in clipboard to clipboard.md file
 alias clipmd='(xclip -o -selection clipboard -t text/html | pandoc -r html --wrap=none -o /tmp/clipboard.md) && cat /tmp/clipboard.md && echo Stored in: /tmp/clipboard.md'
 # show wifi password and QR code
@@ -91,22 +87,16 @@ alias pipcleanall="pip freeze | grep -v '^-e ' | xargs pip uninstall -y"
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # connect to Postgres shell
-alias v-psql='psql -h vagrant.cogtree.com -U parsely'
 alias d-psql='psql -h localhost -U parsely'
 # connect to Postgres REPL
-alias v-pgcli='pgcli -h vagrant.cogtree.com -U parsely'
 alias d-pgcli='pgcli -h localhost -U parsely'
 # connect to Cassandra REPL
-alias v-cql='cqlsh vagrant.cogtree.com 9160'
 alias d-cql='cqlsh localhost 9160'
 # connect to Mongo REPL
-alias v-mongo='mongo vagrant.cogtree.com'
 alias d-mongo='mongo localhost'
 # connect to Redis REPL
-alias v-redis-cli='redis-cli -h vagrant.cogtree.com -p 6379'
 alias d-redis-cli='redis-cli -h localhost -p 6379'
 # connect to Elasticsearch REPL (Python)
-alias v-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('vagrant.cogtree.com'); print('\nElasticSearch: use es\n')\""
 alias d-es="ipython -i -c \"from elasticsearch import Elasticsearch as ES; es = ES('localhost'); print('\nElasticSearch: use es\n')\""
 
 # Clojure
@@ -121,10 +111,6 @@ alias clj-lein='grench lein'
 
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# storm-dev2
-alias ssh-storm-dev2-workers='ssh-multi storm-dev2-0{1,2,3,4,5,6,7}-ue1a.cogtree.com'
-alias ssh-storm-dev2-nimbus='ssh-multi storm-dev2-nimbus01.cogtree.com'
 
 # storm2
 alias ssh-storm2-workers='ssh-multi storm2-0{1,2,3,4,5,6,7,8,9}-ue1a.cogtree.com storm2-1{1,2,3,4,5}-ue1a.cogtree.com'
