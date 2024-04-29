@@ -166,3 +166,15 @@ yt-audio () {
     # This will make a tVx3lt8ZKHw.mp3 file after some processing.
     yt-dlp -f 'ba' -x --audio-format mp3 "$1"  -o '%(id)s.%(ext)s'
 }
+
+upgrade-log () {
+    local num_historical_entries=50
+    grep -E " install | upgrade " /var/log/dpkg.log | tail -n $num_historical_entries | awk '{print $1, $2, $3, $4, $5}' | while read date time action package version; do
+        echo -n "$package $action $version $date $time - ";
+        dpkg-query -W -f='${Package} - ${Description}\n' ${package%:*} | tr -d '\n' | cut -d' ' -f1-10 | awk '{print substr($0, 1, 70)}';
+    done
+}
+
+upgrade-log-short () {
+    upgrade-log | cut -f 1 -d' ';
+}
