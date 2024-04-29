@@ -170,11 +170,15 @@ yt-audio () {
 upgrade-log () {
     local num_historical_entries=50
     grep -E " install | upgrade " /var/log/dpkg.log | tail -n $num_historical_entries | awk '{print $1, $2, $3, $4, $5}' | while read date time action package version; do
-        echo -n "$package $action $version $date $time - ";
-        dpkg-query -W -f='${Package} - ${Description}\n' ${package%:*} | tr -d '\n' | cut -d' ' -f1-10 | awk '{print substr($0, 1, 70)}';
+        echo "$package $version $action $date $time";
+    done | column -t;
+}
+
+upgrade-log-descriptions () {
+    local num_historical_entries=50
+    grep -E " install | upgrade " /var/log/dpkg.log | tail -n $num_historical_entries | awk '{print $1, $2, $3, $4, $5}' | while read date time action package version; do
+        echo -n "$package - ";
+        dpkg-query -W -f='${Description}\n' ${package%:*} | tr -d '\n' | cut -d' ' -f1-10 | awk '{print substr($0, 1, 90)}';
     done
 }
 
-upgrade-log-short () {
-    upgrade-log | cut -f 1 -d' ';
-}
