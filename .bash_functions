@@ -176,9 +176,11 @@ upgrade-log () {
 
 upgrade-log-descriptions () {
     local num_historical_entries=50
+    echo "Querying dpkg-query..."
+    echo "---"
     grep -E " install | upgrade " /var/log/dpkg.log | tail -n $num_historical_entries | awk '{print $1, $2, $3, $4, $5}' | while read date time action package version; do
-        echo -n "$package - ";
+        echo -n "$package | ";
         dpkg-query -W -f='${Description}\n' ${package%:*} | tr -d '\n' | cut -d' ' -f1-10 | awk '{print substr($0, 1, 90)}';
-    done
+    done | column -t -s'|';
 }
 
