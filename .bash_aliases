@@ -64,6 +64,7 @@ alias clipmd='(xclip -o -selection clipboard -t text/html | pandoc -r html --wra
 # show wifi password and QR code
 alias wifi-password='nmcli dev wifi show-password'
 alias wifi-qrcode=wifi-password
+alias bfg='java -jar ~/opt/bin/bfg-1.14.0.jar'
 
 # python
 # ~~~~~~
