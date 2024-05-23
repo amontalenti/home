@@ -5,6 +5,8 @@ alias la='ls -a'
 alias lt='ls -t | head'
 # cleaner disk free
 alias df.real='df -xsquashfs -xtmpfs'
+alias duf.clean="duf --hide-mp '/dev*,/run*,/sys*'"
+alias duf.root="duf --only-mp '/'"
 # shows cleaner mount points, without snap noise
 alias mnt.grep="mount | grep '^/' | grep -v 'snapd/'"
 # find clean mount points, only real and readable + writable
