@@ -51,6 +51,11 @@ alias sloc='tokei'
 # check files in current directory missing from amontalenti/home
 alias missing='cp ~/.gitignore ~/.gitignore.bak && echo "#*" > ~/.gitignore && git s; mv ~/.gitignore.bak ~/.gitignore'
 alias gitmissing=missing
+alias ripgrep='rg --no-ignore-parent'
+alias ripgrep.all='rga --no-ignore-parent'
+alias ripgrep.binary='ripgrep.all'
+alias ripgrep.multiline='ripgrep --multiline'
+alias ripgrep.zip='ripgrep --search-zip'
 
 # apps
 # ~~~~
