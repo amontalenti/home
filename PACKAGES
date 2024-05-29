@@ -132,6 +132,7 @@ sbt (via http://www.scala-sbt.org/download.html)
 
 # rust
 rustup (via https://www.rust-lang.org/en-US/install.html)
+# note: update rustc and cargo using `rustup update`
 
 # gradle (Groovy-based Build Tool)
 gradle (via ppa:cwchien/gradle)
@@ -293,24 +294,37 @@ yajs-libs.vim
 yajs.vim
 zeavim.vim
 
+# python dev-time tooling
+# ---
+
+# tokei: install with cargo
+# cargo install --force tokei
+tokei
+
+# uv: install with curl
+# curl -LsSf https://astral.sh/uv/install.sh | sh
+uv
+
 # pipx install each of these
 # ---
 # Output of `pipx list | grep -oP 'package \K\S+'`
-ansible         # infra as code
-awscli          # aws cli
+ansible-core    # infra as code
 aws-google-auth # aws cli Google OAuth support
+awscli          # aws cli
+black           # Python formatter (before ruff)
 bpytop          # system monitor
 fab-classic     # fab cli and Fabric 1.x fork
-flake8          # linter and style checker
+flake8          # linter and style checker (before ruff)
 glances         # system monitor
 gpustat         # GPU stats
 llm             # large language models
 ocrmypdf        # OCR for PDFs and images
 poetry          # package manager
 pxpx            # process monitor
-ruff            # Python linter
+ruff            # Python linter and formatter
 scalene         # profiler
 s-tui           # core and temp monitor
+tiptop          # another system monitor
 tmuxp           # tmux profile manager
 visidata        # vd tool
 yt-dlp          # active fork of youtube-dl
