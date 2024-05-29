@@ -263,10 +263,12 @@ Dockerfile
 fugitive
 goyo.vim
 gundo
+limelight.vim
 nerdtree
 parinfer-rust
 rainbow_parentheses
 repeat
+requirements.txt.vim
 simplenote.vim
 surround
 syntastic
@@ -278,11 +280,13 @@ vim-elixir
 vim-eslint-compiler
 vim-fireplace
 vim-flake8
+vim-fontsize
 vim-go
 vim-jinja
 vim-less
 vim-livedown
 vim-markdown
+vim-parinfer
 vim-racket
 vim-sexp
 vim-sexp-ext
@@ -292,7 +296,9 @@ vim-yaml
 whitespace
 yajs-libs.vim
 yajs.vim
+ydkjs-vim
 zeavim.vim
+zig.vim
 
 # python dev-time tooling
 # ---
