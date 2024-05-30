@@ -8,9 +8,8 @@ This repo isn't meant to be used by other people. It's just for me to use
 while letting others "peer over my shoulder" to see how I have things
 configured.
 
-This is how I get my dotfiles installed in a new `/home/am` $HOME.
-
-I start with cloning this repo::
+This is how I get my dotfiles installed in a new ``/home/am`` directory, 
+aka ``$HOME``. I start with cloning this repo::
 
     git init .
     git remote add -t \* -f origin git@github.com:amontalenti/home.git
