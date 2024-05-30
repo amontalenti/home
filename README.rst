@@ -15,10 +15,10 @@ aka ``$HOME``. I start with cloning this repo::
     git remote add -t \* -f origin git@github.com:amontalenti/home.git
     git checkout master
 
-I may hit conflicts with your existing .bashrc or .profile. Just move those
+I may hit conflicts with the existing .bashrc or .profile. Just move those
 to another directory and let it run.
 
-Once I clone the repo, I'll need to restart your shell. If I'm logged in
+Once I clone the repo, I'll need to restart the shell. If I'm logged in
 to a fresh Linux box (e.g. Ubuntu or similar) via `ssh`, the simplest way to do 
 this is to log off and log back on.
 
