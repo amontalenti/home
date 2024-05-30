@@ -4,17 +4,23 @@ My dotfiles and $HOME
 Cloning
 -------
 
-In your ``$HOME``, do this::
+This repo isn't meant to be used by other people. It's just for me to use
+while letting others "peer over my shoulder" to see how I have things
+configured.
+
+This is how I get my dotfiles installed in a new `/home/am` $HOME.
+
+I start with cloning this repo::
 
     git init .
     git remote add -t \* -f origin git@github.com:amontalenti/home.git
     git checkout master
 
-You may hit conflicts with your existing .bashrc or .profile. Just move those
+I may hit conflicts with your existing .bashrc or .profile. Just move those
 to another directory and let it run.
 
-Once you clone the repo, you'll need to restart your shell. If you're logged in
-to a fresh Linux box (e.g. Ubuntu or similar) via ssh, the simplest way to do 
+Once I clone the repo, I'll need to restart your shell. If I'm logged in
+to a fresh Linux box (e.g. Ubuntu or similar) via `ssh`, the simplest way to do 
 this is to log off and log back on.
 
 Shell
