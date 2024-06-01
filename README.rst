@@ -8,7 +8,7 @@ This repo isn't meant to be used by other people. It's just for me to use
 while letting others "peer over my shoulder" to see how I have things
 configured.
 
-This is how I get my dotfiles installed in a new ``/home/am`` directory, 
+This is how I get my dotfiles installed in a new ``/home/am`` directory,
 aka ``$HOME``. I start with cloning this repo::
 
     git init .
@@ -19,7 +19,7 @@ I may hit conflicts with the existing .bashrc or .profile. Just move those
 to another directory and let it run.
 
 Once I clone the repo, I'll need to restart the shell. If I'm logged in
-to a fresh Linux box (e.g. Ubuntu or similar) via `ssh`, the simplest way to do 
+to a fresh Linux box (e.g. Ubuntu or similar) via `ssh`, the simplest way to do
 this is to log off and log back on.
 
 Shell
