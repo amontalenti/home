@@ -184,3 +184,6 @@ upgrade-log-descriptions () {
     done | column -t -s'|';
 }
 
+fzf.aliases () {
+    egrep '^alias|\(\)\ {' ~/.bash_aliases ~/.bash_functions | awk -F: '{print $2}' | fzf;
+}
