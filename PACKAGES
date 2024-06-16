@@ -104,6 +104,7 @@ mercurial
 colordiff
 exuberant-ctags
 ffmpeg
+fzf
 
 # -- end of basic apt packages --
 

@@ -146,5 +146,8 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
     source $HOME/.nix-profile/etc/profile.d/nix.sh;
 fi
 
+# For SkyPilot shell completion
+[[ ! -f ~/.sky/.sky-complete.zsh ]] || source ~/.sky/.sky-complete.zsh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -25,7 +25,7 @@ pathappend () {
         export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
 }
 
-function upgrade() {
+upgrade() {
     # replaces alias upgrade=...
     screen -dmS upgrade bash -c 'sudo apt update; sudo apt upgrade; echo "--- DONE WITH UPGRADE ---"; exec bash'
     screen -r upgrade
