@@ -187,3 +187,16 @@ upgrade-log-descriptions () {
 fzf.aliases () {
     egrep '^alias|\(\)\ {' ~/.bash_aliases ~/.bash_functions | awk -F: '{print $2}' | fzf;
 }
+
+ssh-methods () {
+    if [[ "${1}" = "" ]]; then
+        echo "No user@host specified; try e.g. root@hostname";
+        return;
+    fi
+    local USER_AT_HOST=$1
+    ssh -v -n \
+        -o Batchmode=yes \
+        -o StrictHostKeyChecking=no \
+        -o UserKnownHostsFile=/dev/null \
+    $USER_AT_HOST 2>&1 | grep 'Authentications that can continue' | awk -F': ' '{print $3}'
+}
