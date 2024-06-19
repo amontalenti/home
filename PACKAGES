@@ -202,6 +202,7 @@ signal (via https://signal.org/download/)
 replit (via https://replit.com/desktop)
 webp-pixbuf-loader (via ppa:helkaluin/webp-pixbuf-loader)
 zeal (via https://github.com/zealdocs/zeal/releases/)
+qimgv (via ppa:easymodo/qimgv)
 
 # vpn
 openvpn
