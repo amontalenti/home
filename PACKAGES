@@ -61,8 +61,6 @@ run-one
 tree
 ddrescue
 xprintidle
-rsync
-rclone
 magic-wormhole
 byzanz
 grub-customizer
@@ -80,6 +78,12 @@ earlyoom
 valgrind
 md5deep
 jo
+
+# backup tools
+rsync
+rclone
+restic
+httm (via https://github.com/kimono-koans/ppa)
 
 # deb-get
 deb-get (via https://github.com/wimpysworld/deb-get)
