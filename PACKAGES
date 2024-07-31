@@ -254,6 +254,7 @@ ncdu (via https://dev.yorhel.nl/ncdu)
 dust (via https://github.com/bootandy/dust/releases)
 duf (via https://github.com/muesli/duf/releases)
 btm (via https://github.com/ClementTsang/bottom)
+fex (via https://github.com/18alantom/fex)
 
 # Output of `gnome-extensions list | sort`
 cpufreq@konkor

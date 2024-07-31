@@ -146,6 +146,10 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
     source $HOME/.nix-profile/etc/profile.d/nix.sh;
 fi
 
+# for fex file explorer (written in Zig)
+[ -f ~/.fex.zsh ] && source ~/.fex.zsh
+bindkey '^f' fex-widget
+
 # For SkyPilot shell completion
 [[ ! -f ~/.sky/.sky-complete.zsh ]] || source ~/.sky/.sky-complete.zsh
 
