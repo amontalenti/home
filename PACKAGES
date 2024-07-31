@@ -142,6 +142,9 @@ openjdk-11-jdk
 lein (via http://leiningen.org/)
 clj (via https://clojure.org/guides/getting_started)
 
+# zig
+zigup (via https://github.com/marler8997/zigup)
+
 # sbt (Scala Build Tool)
 sbt (via http://www.scala-sbt.org/download.html)
 
