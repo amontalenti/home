@@ -27,7 +27,7 @@ pathappend () {
 
 upgrade() {
     # replaces alias upgrade=...
-    screen -dmS upgrade bash -c 'sudo apt update; sudo apt upgrade; echo "--- DONE WITH [apt-get] UPGRADE ---"; echo; sudo deb-get update; sudo deb-get upgrade; echo "--- DONE WITH [deb-get] UPGRADE ---"; echo; exec bash'
+    screen -dmS upgrade bash -c 'sudo apt update; sudo apt upgrade; echo "--- DONE WITH [apt-get] UPGRADE ---"; echo; sudo deb-get update --repos-only; sudo deb-get upgrade; echo "--- DONE WITH [deb-get] UPGRADE ---"; echo; exec bash'
     screen -r upgrade
 }
 
