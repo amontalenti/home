@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# ANSI color codes
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo "USB Storage Device Information:"
+echo "-------------------------------"
+
+# Function to get USB speed
+get_usb_speed() {
+    local device=$1
+    local syspath=$(udevadm info -q path -n "$device")
+    local speed=""
+    
+    # Traverse up the device path to find the speed
+    while [ -n "$syspath" ] && [ -z "$speed" ]; do
+        speed=$(cat /sys$syspath/speed 2>/dev/null)
+        syspath=$(dirname "$syspath")
+    done
+
+    case $speed in
+        "1.5") echo "1.5 Mbps (USB 1.0 Low Speed)" ;;
+        "12") echo "12 Mbps (USB 1.1 Full Speed)" ;;
+        "480") echo "480 Mbps (USB 2.0 High Speed)" ;;
+        "5000") echo "5 Gbps (USB 3.0 SuperSpeed)" ;;
+        "10000") echo "10 Gbps (USB 3.1 SuperSpeed+)" ;;
+        "20000") echo "20 Gbps (USB 3.2 SuperSpeed+)" ;;
+        "") echo "Unknown" ;;
+        *) echo "$speed Mbps" ;;
+    esac
+}
+
+# Find USB storage devices
+for device in /dev/sd?; do
+    if udevadm info -q property -n "$device" | grep -q "ID_BUS=usb"; then
+        echo "Device: $device"
+        
+        # Get device information
+        vendor=$(udevadm info -q property -n "$device" | grep "ID_VENDOR=" | cut -d"=" -f2)
+        model=$(udevadm info -q property -n "$device" | grep "ID_MODEL=" | cut -d"=" -f2)
+        serial=$(udevadm info -q property -n "$device" | grep "ID_SERIAL_SHORT=" | cut -d"=" -f2)
+        echo "  Vendor: $vendor"
+        echo "  Model: $model"
+        echo "  Serial: $serial"
+        
+        # Get USB speed
+        speed=$(get_usb_speed "$device")
+        echo -e "  USB Speed: ${GREEN}$speed${NC}"
+        
+        # List partitions and their mount points
+        lsblk -nlo NAME,FSTYPE,SIZE,MOUNTPOINT "$device" | while read -r name fstype size mountpoint; do
+            if [ "$name" != "$(basename $device)" ]; then
+                echo "  Partition: /dev/$name"
+                echo "    Size: $size"
+                echo "    Filesystem: $fstype"
+                if [ -n "$mountpoint" ]; then
+                    echo -e "    Mount point: ${GREEN}$mountpoint${NC}"
+                else
+                    echo "    Mount point: Not mounted"
+                fi
+            fi
+        done
+        echo
+    fi
+done
