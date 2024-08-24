@@ -33,7 +33,7 @@ path=(
     /opt/storm/bin
     /opt/vagrant/bin
     /home/am/.local/bin
-    /home/am/.pyenv/bin
+    #/home/am/.pyenv/bin
     /home/am/.nvm/bin
     /snap/bin
     /home/am/opt/bin
@@ -58,8 +58,8 @@ bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 
 # add pyenv support
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 # intentionally disabled:
 # export VIRTUAL_ENV_DISABLE_PROMPT=1
 # Python and pip options:
@@ -155,3 +155,6 @@ bindkey '^f' fex-widget
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# cargo environment (for uv)
+[[ ! -f ~/.cargo/env ]] || source ~/.cargo/env
