@@ -109,6 +109,7 @@ colordiff
 exuberant-ctags
 ffmpeg
 fzf
+difftastic (via cargo)
 
 # -- end of basic apt packages --
 
