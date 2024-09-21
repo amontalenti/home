@@ -110,6 +110,8 @@ exuberant-ctags
 ffmpeg
 fzf
 difftastic (via cargo)
+pik (via cargo)
+
 
 # -- end of basic apt packages --
 
@@ -211,6 +213,8 @@ replit (via https://replit.com/desktop)
 webp-pixbuf-loader (via ppa:helkaluin/webp-pixbuf-loader)
 zeal (via https://github.com/zealdocs/zeal/releases/)
 qimgv (via ppa:easymodo/qimgv)
+mpv (via snap)
+celluloid (via snap)
 
 # vpn
 openvpn
@@ -260,6 +264,7 @@ dust (via https://github.com/bootandy/dust/releases)
 duf (via https://github.com/muesli/duf/releases)
 btm (via https://github.com/ClementTsang/bottom)
 fex (via https://github.com/18alantom/fex)
+macchina (via cargo install macchina)
 
 # Output of `gnome-extensions list | sort`
 cpufreq@konkor
