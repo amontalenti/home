@@ -20,3 +20,8 @@ fi
 if [ -d "$HOME/opt/bin" ] ; then
     PATH="$HOME/opt/bin:$PATH"
 fi
+
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCREEN_SCALE_FACTORS=1.25
+
+. "$HOME/.cargo/env"

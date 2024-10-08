@@ -201,14 +201,15 @@ trello-desktop (via snap)
 iio-sensor-proxy
 
 # other desktop goodies
+typora (via apt, see https://typora.io)
 ulauncher (via https://ulauncher.io/)
 ulauncher-emoji (via https://ext.ulauncher.io/-/github-ulauncher-ulauncher-emoji)
 peek (via https://github.com/phw/peek#ubuntu)
 teamviewer (via https://www.teamviewer.com/en-us/download/linux/)
 y-ppa-manager (via ppa:webupd8team/y-ppa-manager)
 ltunify (via https://github.com/Lekensteyn/ltunify)
-whatsdesk (via https://snapcraft.io/whatsdesk)
-telegram (via https://desktop.telegram.org/)
+whatsdesk (via snap, or https://gitlab.com/zerkc/whatsdesk)
+telegram (via snap, or https://desktop.telegram.org/)
 signal (via https://signal.org/download/)
 replit (via https://replit.com/desktop)
 webp-pixbuf-loader (via ppa:helkaluin/webp-pixbuf-loader)
