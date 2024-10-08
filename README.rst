@@ -90,6 +90,10 @@ laptop, desktop, or server I fully control, I should do the multi-user install::
 
 .. _info: https://nixos.org/download/
 
+After you install, you should activate the default nix profile for current user::
+
+    nix-env --switch-profile /nix/var/nix/profiles/default
+
 To install zsh, I rely on apt. So::
 
     sudo apt install zsh
