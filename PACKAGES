@@ -195,7 +195,6 @@ fonts-hack-ttf
 gimp
 alacarte
 pdf-presenter-console
-trello-desktop (via snap)
 
 # remove on laptop running Linux directly:
 iio-sensor-proxy
@@ -211,6 +210,8 @@ ltunify (via https://github.com/Lekensteyn/ltunify)
 whatsdesk (via snap, or https://gitlab.com/zerkc/whatsdesk)
 telegram (via snap, or https://desktop.telegram.org/)
 signal (via https://signal.org/download/)
+slack (via snap)
+trello-desktop (via snap)
 replit (via https://replit.com/desktop)
 webp-pixbuf-loader (via ppa:helkaluin/webp-pixbuf-loader)
 zeal (via https://github.com/zealdocs/zeal/releases/)
