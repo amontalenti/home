@@ -1,11 +1,37 @@
 # shell
 vim
 tmux
-zsh
 sqlite3
 git
 
-# python install necessities
+# python
+pyenv (via https://github.com/yyuu/pyenv-installer)
+
+# appimagelauncher
+# ---
+# Start with these two commands:
+#
+#     sudo add-apt-repository universe
+#     sudo apt install libfuse2t64
+#
+# Then install this one:
+appimagelauncher
+
+# deb-get
+# ---
+deb-get (via https://github.com/wimpysworld/deb-get)
+
+# `rust` and `cargo`
+# ---
+cargo (via https://doc.rust-lang.org/cargo/getting-started/installation.html)
+# run `rustup update` afterwards
+rustup (via https://rustup.rs/)
+
+# zsh
+zsh
+# see amontalenti/home README for more instructions
+
+# python install and dev necessities
 make
 build-essential
 python-setuptools
@@ -85,16 +111,6 @@ rclone
 restic
 httm (via https://github.com/kimono-koans/ppa)
 
-# deb-get
-deb-get (via https://github.com/wimpysworld/deb-get)
-
-# deb-get install packages
-discord
-flameshot
-1password
-anydesk
-appimagelauncher
-
 # if intel GPU, for intel_gpu_top
 intel-gpu-tools
 # if nvidia GPU, for nvtop
@@ -112,8 +128,13 @@ fzf
 difftastic (via cargo)
 pik (via cargo)
 
-
 # -- end of basic apt packages --
+
+# deb-get install packages
+discord
+flameshot
+1password
+anydesk
 
 # homelab
 et (via https://eternalterminal.dev/)
@@ -124,9 +145,6 @@ zerotier (via https://zerotier.com/)
 vim-gtk3
 vscode
 intellij
-
-# python
-pyenv (via https://github.com/yyuu/pyenv-installer)
 
 # ruby
 rbenv (via https://github.com/sstephenson/rbenv)
@@ -151,9 +169,6 @@ zigup (via https://github.com/marler8997/zigup)
 # sbt (Scala Build Tool)
 sbt (via http://www.scala-sbt.org/download.html)
 
-# rust
-rustup (via https://www.rust-lang.org/en-US/install.html)
-# note: update rustc and cargo using `rustup update`
 
 # gradle (Groovy-based Build Tool)
 gradle (via ppa:cwchien/gradle)
@@ -228,20 +243,21 @@ network-manager-openvpn-gnome
 network-manager-pptp
 network-manager-vpnc
 
-# intel pstate management
-pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
-tlp (via ppa:linrunner/tlp)
-
+# lenovo hacks that might be worth removing:
+# ---
 # extra console laptop tools
 thermald
+# lenovo cpu throttling fixes
+throttled (via https://github.com/erpalma/throttled)
 # lenovo battery module
 acpi-call-dkms
 # lenovo hdd monitoring
 smartmontools
-# lenovo cpu throttling fixes
-throttled (via https://github.com/erpalma/throttled)
 # lenovo dock control
 uhubctl (via https://github.com/mvp/uhubctl)
+# intel pstate management
+pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
+tlp (via ppa:linrunner/tlp)
 
 # intel cpu monitoring
 cpupower
@@ -271,6 +287,7 @@ fex (via https://github.com/18alantom/fex)
 macchina (via cargo install macchina)
 
 # Output of `gnome-extensions list | sort`
+# (outdated in 20.04 => 24.04 upgrade)
 cpufreq@konkor
 desktop-icons@csoriano
 location-icon-autohide@darednaxella.name
