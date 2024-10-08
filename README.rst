@@ -83,6 +83,13 @@ To install Rust and cargo, check out this page_ in the cargo book::
 
 .. _page: https://doc.rust-lang.org/cargo/getting-started/installation.html
 
+To install nix, check out this download info_ on the Nix website. If it's a 
+laptop, desktop, or server I fully control, I should do the multi-user install::
+
+    sh <(curl -L https://nixos.org/nix/install) --daemon
+
+.. _info: https://nixos.org/download/
+
 To install zsh, I rely on apt. So::
 
     sudo apt install zsh
