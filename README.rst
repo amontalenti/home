@@ -59,6 +59,7 @@ To get zsh up-and-running takes a few more steps than bash. We need to:
 1. Install pyenv
 2. Install cargo
 3. Install nix
+4. Install uv (experimental)
 
 At this point, my bash shell should be fully functional. Then, to get zsh:
 
@@ -93,6 +94,14 @@ laptop, desktop, or server I fully control, I should do the multi-user install::
 After you install, you should activate the default nix profile for current user::
 
     nix-env --switch-profile /nix/var/nix/profiles/default
+
+Lately, I've been using ``uv`` as an alternative to ``pyenv`` and ``pip``. Install::
+
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+
+Read more about uv_.
+
+.. _uv: https://github.com/astral-sh/uv
 
 To install zsh, I rely on apt. So::
 
