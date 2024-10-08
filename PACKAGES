@@ -3,9 +3,24 @@ vim
 tmux
 sqlite3
 git
+make
 
 # python
+# ---
+python-is-python3
+# uv: install with curl
+uv (via https://github.com/astral-sh/uv#installation)
+# pyenv
 pyenv (via https://github.com/yyuu/pyenv-installer)
+# pipx
+pipx
+# pipx core: install these via `pipx install`
+black
+flake8
+isort
+poetry
+ruff
+tmuxp
 
 # appimagelauncher
 # ---
@@ -31,19 +46,24 @@ rustup (via https://rustup.rs/)
 zsh
 # see amontalenti/home README for more instructions
 
+# extended linux dev tools
+# ---
 # python install and dev necessities
-make
 build-essential
 python-setuptools
 python2.7-dev
 python-tk
 python3-dev
 python3-venv
-python-is-python3
 python3-tk
+rlwrap
+# rest of build environment
+gcc
+wget
+curl
+llvm
 systemtap-sdt-dev
 liblzma-dev
-pipx
 tk-dev
 libssl-dev
 zlib1g-dev
@@ -57,11 +77,6 @@ libopenblas-dev
 liblapack-dev
 libxml2-dev
 libxslt1-dev
-rlwrap
-wget
-curl
-llvm
-gcc
 
 # extra console sysadmin tools
 linux-tools-common
@@ -353,10 +368,6 @@ zig.vim
 # cargo install --force tokei
 tokei
 
-# uv: install with curl
-# curl -LsSf https://astral.sh/uv/install.sh | sh
-uv
-
 # pipx install each of these
 # ---
 # Output of `pipx list | grep -oP 'package \K\S+'`
@@ -367,6 +378,7 @@ black           # Python formatter (before ruff)
 bpytop          # system monitor
 fab-classic     # fab cli and Fabric 1.x fork
 flake8          # linter and style checker (before ruff)
+isort           # simple import sorter
 glances         # system monitor
 gpustat         # GPU stats
 llm             # large language models
