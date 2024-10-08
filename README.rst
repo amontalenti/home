@@ -57,11 +57,16 @@ for one another.
 To get zsh up-and-running takes a few more steps than bash. We need to:
 
 1. Install pyenv
-2. Install zsh
-3. Install oh-my-zsh
-4. Layer my oh-my-zsh customizations over the fresh install
-5. Install the p10k theme
-6. Install an extra oh-my-zsh plugin
+2. Install cargo
+3. Install nix
+
+At this point, my bash shell should be fully functional. Then, to get zsh:
+
+1. Install zsh
+2. Install oh-my-zsh
+3. Layer my oh-my-zsh customizations over the fresh install
+4. Install the p10k theme
+5. Install an extra oh-my-zsh plugin
 
 We'll follow these steps in turn.
 
@@ -71,6 +76,12 @@ helper scripts rely on Python and pyenv, and expect it. The one-liner here shoul
     curl https://pyenv.run | bash
 
 .. _pyenv: https://github.com/pyenv/pyenv-installer
+
+To install Rust and cargo, check out this page_ in the cargo book::
+
+    curl https://sh.rustup.rs -sSf | sh
+
+.. _page: https://doc.rust-lang.org/cargo/getting-started/installation.html
 
 To install zsh, I rely on apt. So::
 
