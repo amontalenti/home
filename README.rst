@@ -54,14 +54,14 @@ and you break things. In these scenarios, it's handy to have another "working"
 shell laying  around until you fix things. For me, bash and zsh play this role
 for one another.
 
-To get zsh up-and-running takes a few more steps than bash. We need to:
+I like to get ``bash`` up-and-running fully before ``zsh``. Do this:
 
 1. Install pyenv
 2. Install cargo
 3. Install nix
 4. Install uv (experimental)
 
-At this point, my bash shell should be fully functional. Then, to get zsh:
+At this point, my ``bash`` should be fully functional. Then, to get ``zsh``:
 
 1. Install zsh
 2. Install oh-my-zsh
@@ -69,7 +69,7 @@ At this point, my bash shell should be fully functional. Then, to get zsh:
 4. Install the p10k theme
 5. Install an extra oh-my-zsh plugin
 
-We'll follow these steps in turn.
+We'll follow ALL these steps in turn.
 
 We use pyenv_ to compile Python and manage Python environments, because some of my
 helper scripts rely on Python and pyenv, and expect it. The one-liner here should be::
