@@ -22,6 +22,8 @@ nnoremap <F7> :set wrap nolist linebreak!<CR>
 nnoremap <F8> :setlocal nospell! spelllang=en_us<CR>:set mousemodel=popup_setpos<CR>:set spellfile=~/.vim/spell/added.utf-8.add<CR>
 " hit F9 for distraction-free writing mode
 nnoremap <F9> :Goyo<CR>
+" hit F10 in gvim GUI mode to hide menu bar and toolbar
+nnoremap <F10> :set guioptions-=m<CR>:set guioptions-=T<CR>
 " integrate goyo and limelight.vim
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
@@ -220,11 +222,6 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 " TODO: apparently there is a default 'syntax completer' that one
 " can set up as a fallback to the above lang-specific ones.
-
-" disable the Icon toolbar
-set guioptions-=T
-" disable the 'File >' menu
-set guioptions-=m
 
 " Add the virtualenv's site-packages to vim path
 " show current virtualenv
