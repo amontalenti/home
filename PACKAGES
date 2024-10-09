@@ -370,7 +370,6 @@ tokei
 # ---
 # Output of `pipx list | grep -oP 'package \K\S+'`
 ansible-core    # infra as code
-aws-google-auth # aws cli Google OAuth support
 awscli          # aws cli
 black           # Python formatter (before ruff)
 bpytop          # system monitor
@@ -390,3 +389,9 @@ tiptop          # another system monitor
 tmuxp           # tmux profile manager
 visidata        # vd tool
 yt-dlp          # active fork of youtube-dl
+
+# for fab-classic:
+#
+# - pipx inject fab-classic jinja2
+#
+# so ~/fabfile.py works
