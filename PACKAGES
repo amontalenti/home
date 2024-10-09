@@ -123,7 +123,7 @@ jo
 # backup tools
 rsync
 rclone
-restic
+restic (single binary via https://github.com/restic/restic/releases)
 httm (via https://github.com/kimono-koans/ppa)
 
 # if intel GPU, for intel_gpu_top
@@ -330,7 +330,6 @@ parinfer-rust
 rainbow_parentheses
 repeat
 requirements.txt.vim
-simplenote.vim
 surround
 syntastic
 tagbar
@@ -357,7 +356,6 @@ vim-yaml
 whitespace
 yajs-libs.vim
 yajs.vim
-ydkjs-vim
 zeavim.vim
 zig.vim
 
