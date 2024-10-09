@@ -39,6 +39,8 @@ alias jsonprint='python -m json.tool'
 alias irestic='sudo -u restic -i'
 # gksu was removed from 20.04
 alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
+# gedit was replaced in 24.04
+alias gedit='gnome-text-editor'
 # dmesg of last boot, via journalctl
 alias dmesg-this='journalctl --no-hostname -o short-precise -k -b 0'
 alias dmesg-last='journalctl --no-hostname -o short-precise -k -b -1'
