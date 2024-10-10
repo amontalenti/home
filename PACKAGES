@@ -5,6 +5,10 @@ sqlite3
 git
 make
 
+# network
+tailscale
+zerotier
+
 # python
 # ---
 python-is-python3
