@@ -151,9 +151,14 @@ pik (via cargo)
 # -- end of basic apt packages --
 
 # deb-get install packages
+appimagelauncher
+deb-get
 discord
 flameshot
-1password
+simplenote
+zoom
+
+# extra deb-get packages
 anydesk
 
 # homelab
