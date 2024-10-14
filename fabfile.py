@@ -157,6 +157,29 @@ def build_python3():
                            --with-system-libmpdec\
                            --with-dtrace\
                            --with-system-ffi\
-                           --with-fpectl"\
-    pyenv install -f 3.11.3
+                           --with-fpectl"
+    false && pyenv install -f 3.11.10
+    PYTHON_CONFIGURE_OPTS="--enable-shared\
+                           --enable-ipv6\
+                           --enable-loadable-sqlite-extensions\
+                           --with-dbmliborder=bdb:gdbm\
+                           --with-computed-gotos\
+                           --with-system-expat\
+                           --with-system-libmpdec\
+                           --with-dtrace\
+                           --with-system-ffi\
+                           --with-fpectl"
+    false && pyenv install -f 3.12.7
+    PYTHON_CONFIGURE_OPTS="--build=x86_64-unknown-linux-gnu\
+                           --host=x86_64-unknown-linux-gnu\
+                           --with-openssl=/tools/deps\
+                           --with-system-expat\
+                           --with-system-libmpdec\
+                           --with-readline=editline\
+                           --enable-shared\
+                           --enable-optimizations\
+                           --with-lto\
+                           --with-build-python=/tools/host/bin/python3.13\
+                           --with-dbmliborder=bdb"
+    false && pyenv install -f 3.13.0
     """.strip())
