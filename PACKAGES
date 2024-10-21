@@ -1,10 +1,12 @@
 # shell
 vim
-screen
 tmux
-sqlite3
-git
+screen
 make
+git
+ssh
+zsh
+sqlite3
 
 # network
 tailscale
@@ -254,6 +256,7 @@ element-desktop (via apt, see https://element.io/download)
 fractal (via snap)
 slack (via snap)
 trello-desktop (via snap)
+pocket-casts (via snap)
 replit (via https://replit.com/desktop)
 webp-pixbuf-loader (via ppa:helkaluin/webp-pixbuf-loader)
 zeal (via https://github.com/zealdocs/zeal/releases/)
