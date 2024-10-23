@@ -222,17 +222,12 @@ pdf-presenter-console
 vlc (via snap)
 pinta (via snap)
 glipper
-audacity
-pitivi
-cpufreq-indicator
 xsel
 xclip
 libreoffice-style-sifr
 psensors
 indicator-sensors
 indicator-virtual-box
-wireshark
-grub-customizer
 gnome-sound-recorder
 texlive-latex-extra
 texlive-fonts-recommended
@@ -240,6 +235,14 @@ texlive-xetex
 fonts-hack-ttf
 gimp
 alacarte
+
+# optional desktop goodies
+celluloid (via snap)
+cpufreq-indicator
+wireshark
+grub-customizer
+pitivi
+audacity
 
 # remove on laptop running Linux directly:
 iio-sensor-proxy
@@ -265,7 +268,6 @@ replit (via https://replit.com/desktop)
 zeal (via https://github.com/zealdocs/zeal/releases/)
 qimgv (via ppa:easymodo/qimgv)
 mpv (via snap)
-celluloid (via snap)
 
 # vpn
 openvpn
