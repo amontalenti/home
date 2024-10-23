@@ -215,11 +215,15 @@ vagrant (via https://www.vagrantup.com/downloads.html)
 terminator
 gdebi
 xsel
-vlc
+gpick
+meld
+pavucontrol
+pdf-presenter-console
+vlc (via snap)
+pinta (via snap)
 glipper
 audacity
 pitivi
-pinta
 cpufreq-indicator
 xsel
 xclip
@@ -233,12 +237,9 @@ gnome-sound-recorder
 texlive-latex-extra
 texlive-fonts-recommended
 texlive-xetex
-meld
-gpick
 fonts-hack-ttf
 gimp
 alacarte
-pdf-presenter-console
 
 # remove on laptop running Linux directly:
 iio-sensor-proxy
