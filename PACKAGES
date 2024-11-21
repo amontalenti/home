@@ -124,6 +124,7 @@ earlyoom
 valgrind
 md5deep
 jo
+parallel
 
 # optional console network debugging tools
 mitmproxy
@@ -264,6 +265,8 @@ element-desktop (via apt, see https://element.io/download)
 fractal (via snap)
 slack (via snap)
 trello-desktop (via snap)
+skype (via snap)
+libreoffice (via snap)
 pocket-casts (via apt, see https://github.com/FelicianoTech/pocket-casts-desktop-app)
 spotify-client (via apt, see https://spotify.com/download/linux/)
 replit (via https://replit.com/desktop)
