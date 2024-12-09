@@ -16,6 +16,10 @@ function dtnow() {
     echo "$(date +%FT%TZ)";
 }
 
+function dokill() {
+    pkill --signal quit "$1";
+}
+
 ARG0=$(basename $0);
 
 SIXTY_MINUTES_IN_MILLIS=3600000
@@ -31,12 +35,14 @@ if [ "$1" = 'cron' ]; then
 fi
 
 if [ "$XPRINTIDLE" -gt $SIXTY_MINUTES_IN_MILLIS ]; then
-    pkill slack;
-    pkill Discord;
-    pkill zulip;
-    pkill spotify;
-    pkill skype;
-    pkill Enpass;
+    dokill element-desktop;
+    dokill slack;
+    dokill Discord;
+    dokill zulip;
+    dokill spotify;
+    dokill skype;
+    dokill Enpass;
+    dokill trello-desktop;
     echo "[$(dtnow)] Executed pkill via $ARG0 due to idle time of $XPRINTIDLE";
 else
     echo "[$(dtnow)] No-op via $ARG0 due to idle time of $XPRINTIDLE";
