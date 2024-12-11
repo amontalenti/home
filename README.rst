@@ -255,6 +255,7 @@ Some nice IDE-like plugins for me include:
 * whitespace_, to kill trailing whitespace in files
 * yajs_, yet another Javascript syntax
 * zeavim_, integrate Zeal documentation lookup
+* zig.vim_, syntax highlighting for the Zig language
 
 .. _syntastic: https://github.com/vim-syntastic/syntastic
 .. _dockerfile: https://github.com/ekalinin/Dockerfile.vim
@@ -291,6 +292,7 @@ Some nice IDE-like plugins for me include:
 .. _yajs: https://github.com/othree/yajs.vim
 .. _whitespace: https://github.com/bronson/vim-trailing-whitespace
 .. _zeavim: https://github.com/KabbAmine/zeavim.vim
+.. _zig.vim: https://github.com/ziglang/zig.vim
 
 These are referenced via git's submodule facility, because this seemed
 like the cleanest thing. Therefore, after cloning this repo, make sure
