@@ -17,7 +17,7 @@ function dtnow() {
 }
 
 function dokill() {
-    pkill --signal quit "$1";
+    pkill --full --signal quit "$1";
 }
 
 ARG0=$(basename $0);
@@ -36,6 +36,9 @@ fi
 
 if [ "$XPRINTIDLE" -gt $SIXTY_MINUTES_IN_MILLIS ]; then
     dokill element-desktop;
+    dokill telegram-desktop;
+    dokill whatsdesk;
+    dokill zoom;
     dokill slack;
     dokill Discord;
     dokill zulip;
