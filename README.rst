@@ -212,7 +212,7 @@ of files, including:
 * bash, zsh
 * Dockerfile
 * configuration files
-* Racket, Scheme, Go, Elixir (for fun)
+* Zig, Racket, Scheme, Go, Elixir (for fun)
 
 My vim configuration is a bit customized, as I use vim as a kind of UNIX
 IDE. However, I don't go overboard remapping things; in general, I'm pretty
