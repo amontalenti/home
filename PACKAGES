@@ -284,8 +284,6 @@ network-manager-vpnc
 
 # lenovo hacks that might be worth removing:
 # ---
-# extra console laptop tools
-thermald
 # lenovo cpu throttling fixes
 throttled (via https://github.com/erpalma/throttled)
 # lenovo battery module
@@ -294,14 +292,16 @@ acpi-call-dkms
 smartmontools
 # lenovo dock control
 uhubctl (via https://github.com/mvp/uhubctl)
+# generic power management configuration
+tlp (via ppa:linrunner/tlp)
+# prevent cpu from overheating
+thermald
+# intel cpu frequency scaling
+cpupower
+# intel power management
+powertop
 # intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
-tlp (via ppa:linrunner/tlp)
-
-# intel cpu monitoring
-cpupower
-i7z
-powertop
 
 # other console tools
 google-cloud-sdk (via https://cloud.google.com/sdk/docs/downloads-apt-get)
@@ -409,7 +409,6 @@ pxpx            # process monitor
 ruff            # Python linter and formatter
 scalene         # profiler
 s-tui           # core and temp monitor
-tiptop          # another system monitor
 tmuxp           # tmux profile manager
 visidata        # vd tool
 yt-dlp          # active fork of youtube-dl
