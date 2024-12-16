@@ -419,3 +419,9 @@ yt-dlp          # active fork of youtube-dl
 # - pipx inject fab-classic jinja2
 #
 # so ~/fabfile.py works
+
+# for faster tldr:
+#
+# https://github.com/isacikgoz/tldr/releases
+#
+# go binary; uses same database but speedier and interactive
