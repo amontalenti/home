@@ -393,6 +393,7 @@ tokei
 # pipx install each of these
 # ---
 # Output of `pipx list | grep -oP 'package \K\S+'`
+tldr            # handy alternative to `man`
 ansible-core    # infra as code
 awscli          # aws cli
 black           # Python formatter (before ruff)
