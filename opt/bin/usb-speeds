@@ -44,7 +44,7 @@ green() {
 
 # Find USB storage devices
 for device in /dev/sd?; do
-    if udevadm info -q property -n "$device" | grep -q "ID_BUS=usb"; then
+    if udevadm info -q property -n "$device" | egrep -q "ID_BUS=(usb|scsi)"; then
         echo "Device: $device"
 
         # Get device information
