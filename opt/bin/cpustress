@@ -1,10 +1,12 @@
 #!/bin/sh
-stress --cpu 4 --timeout 10 &
+stress --cpu $(nproc --all) --timeout 10 &
 while true; do
     max_perf_pct=`cat /sys/devices/system/cpu/intel_pstate/max_perf_pct`
     no_turbo=`cat /sys/devices/system/cpu/intel_pstate/no_turbo`
     echo -n "max_perf_pct=${max_perf_pct}, no_turbo=${no_turbo} => "
-    for i in `seq 0 3`; do
+    NUM_CORES=`nproc --all`
+    MAX_CORE_ID=`expr $NUM_CORES - 1`
+    for i in `seq 0 $MAX_CORE_ID`; do
         echo -n "cpu${i}: `cat /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_cur_freq` ";
     done
     echo;
