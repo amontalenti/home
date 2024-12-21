@@ -329,19 +329,15 @@ fex (via https://github.com/18alantom/fex)
 macchina (via cargo install macchina)
 
 # Output of `gnome-extensions list | sort`
-# (outdated in 20.04 => 24.04 upgrade)
-cpufreq@konkor
-desktop-icons@csoriano
-location-icon-autohide@darednaxella.name
-panel-osd@berend.de.schouwer.gmail.com
-services-systemd@abteil.org
-SettingsCenter@lauinger-clan.de
-sound-output-device-chooser@kgshank.net
-status-area-horizontal-spacing@mathematical.coffee.gmail.com
-system-monitor@paradoxxx.zero.gmail.com
+ding@rastersoft.com
+moveclock@kuvaus.org
+removeclock@sudfish.com
+runcat@kolesnikov.se
+tailscale-status@maxgallup.github.com
+tiling-assistant@ubuntu.com
 ubuntu-appindicators@ubuntu.com
 ubuntu-dock@ubuntu.com
-user-theme@gnome-shell-extensions.gcampax.github.com
+Vitals@CoreCoding.com
 
 # vim plugins
 # ---
