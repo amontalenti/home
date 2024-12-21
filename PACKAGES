@@ -294,14 +294,14 @@ smartmontools
 uhubctl (via https://github.com/mvp/uhubctl)
 # generic power management configuration
 tlp (via ppa:linrunner/tlp)
-# prevent cpu from overheating
-thermald
 # intel cpu frequency scaling
 cpupower
 # intel power management
 powertop
 # intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
+# prevent cpu from overheating (redundant due to firmware on X1 Carbon Gen 11)
+thermald
 
 # other console tools
 google-cloud-sdk (via https://cloud.google.com/sdk/docs/downloads-apt-get)
