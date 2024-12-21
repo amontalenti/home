@@ -200,3 +200,11 @@ ssh-methods () {
         -o UserKnownHostsFile=/dev/null \
     $USER_AT_HOST 2>&1 | grep 'Authentications that can continue' | awk -F': ' '{print $3}'
 }
+
+dpkg-installed() {
+    dpkg-query -W -f='${binary:Package} installed\n' $@;
+}
+
+apt-installed() {
+    dpkg-installed $@;
+}
