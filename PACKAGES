@@ -300,7 +300,10 @@ cpupower
 powertop
 # intel pstate management
 pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
-# prevent cpu from overheating (redundant due to firmware on X1 Carbon Gen 11)
+# thermald prevents an intel cpu from overheating
+# note: on X1 Carbon Gen 11, the CPU ID check isn't working, so use...
+# https://unix.stackexchange.com/a/342488
+# ... to edit thermald.service and add --ignore-cpuid-check to startup
 thermald
 
 # other console tools
