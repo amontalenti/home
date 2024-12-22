@@ -202,7 +202,7 @@ ssh-methods () {
 }
 
 dpkg-installed() {
-    dpkg-query -W -f='${binary:Package} installed\n' $@;
+    dpkg-query -W -f='${binary:Package} ${Status}\n' $@;
 }
 
 apt-installed() {

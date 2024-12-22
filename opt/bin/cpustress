@@ -3,12 +3,18 @@ stress --cpu $(nproc --all) --timeout 10 &
 while true; do
     max_perf_pct=`cat /sys/devices/system/cpu/intel_pstate/max_perf_pct`
     no_turbo=`cat /sys/devices/system/cpu/intel_pstate/no_turbo`
-    echo -n "max_perf_pct=${max_perf_pct}, no_turbo=${no_turbo} => "
-    NUM_CORES=`nproc --all`
-    MAX_CORE_ID=`expr $NUM_CORES - 1`
-    for i in `seq 0 $MAX_CORE_ID`; do
-        echo -n "cpu${i}: `cat /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_cur_freq` ";
+    num_cores=`nproc --all`
+    echo "max_pct=${max_perf_pct}, no_turbo=${no_turbo}, n_cores=${num_cores} => "
+    max_core_id=`expr $num_cores - 1`
+    total_ghz=0
+    for i in `seq 0 $max_core_id`; do
+        freq_khz=$(cat /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_cur_freq)
+        freq_ghz=$(echo "scale=2; $freq_khz / 1000000" | bc)
+        total_ghz=$(echo "$total_ghz + $freq_ghz" | bc)
+        echo -n "${i}: ${freq_ghz}GHz "
     done
     echo;
+    average_ghz=$(echo "scale=2; $total_ghz / $num_cores" | bc)
+    echo "Average: ${average_ghz}GHz";
     sleep 0.5;
 done
