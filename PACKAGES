@@ -153,6 +153,8 @@ ffmpeg
 fzf
 difftastic (via cargo)
 pik (via cargo)
+spacer (via cargo)
+ets (via https://github.com/zmwangx/ets/releases)
 
 # -- end of basic apt packages --
 
