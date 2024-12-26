@@ -81,7 +81,7 @@ def mode_play():
 #
 
 _web_servers = ["web{num}".format(num=i)
-                    for i in range(1, 4+1)]
+                    for i in "123"]
 
 @task
 @parallel
@@ -94,7 +94,7 @@ def web_tail_nginx(grep_pattern=None):
     sudo(cmd)
 
 _worker_servers = ["worker{chr}".format(chr=chr)
-                    for chr in "abcdefghijklmnop"]
+                    for chr in "abc"]
 
 @task
 @hosts(_worker_servers)
