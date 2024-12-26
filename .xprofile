@@ -1,1 +1,5 @@
-setxkbmap -option caps:escape
+#!/bin/sh
+
+# wait 5 seconds for GNOME to load, then unmap Caps Lock
+
+(sleep 5 && setxkbmap -option caps:escape) &
