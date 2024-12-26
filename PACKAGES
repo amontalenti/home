@@ -100,6 +100,7 @@ httpry
 httpry-daemon
 httpry-tools
 sysstat
+hwinfo
 pv
 ngrep
 apache2-utils
@@ -201,7 +202,6 @@ zigup (via https://github.com/marler8997/zigup)
 
 # sbt (Scala Build Tool)
 sbt (via http://www.scala-sbt.org/download.html)
-
 
 # gradle (Groovy-based Build Tool)
 gradle (via ppa:cwchien/gradle)
