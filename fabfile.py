@@ -80,33 +80,33 @@ def mode_play():
 # server monitoring shortcuts
 #
 
-_dash_app_servers = ["ue1a-dash-web{num}.cogtree.com".format(num=i)
+_web_servers = ["web{num}".format(num=i)
                     for i in range(1, 4+1)]
 
 @task
 @parallel
-@hosts(_dash_app_servers)
-def dash_tail_nginx(grep_pattern=None):
-    """Quick `tail -f` on dash web app server logs."""
+@hosts(_web_servers)
+def web_tail_nginx(grep_pattern=None):
+    """Quick `tail -f` on web app server logs."""
     cmd = "tail -n100 -F /var/log/nginx/*.log"
     if grep_pattern:
         cmd += " | grep " + grep_pattern
     sudo(cmd)
 
-_storm_servers = ["ue1a-storm1{chr}.cogtree.com".format(chr=chr)
+_worker_servers = ["worker{chr}".format(chr=chr)
                     for chr in "abcdefghijklmnop"]
 
 @task
-@hosts(_storm_servers)
-def storm_check_top(grep_pattern=None):
-    """Quick top monitoring on Storm worker servers."""
+@hosts(_worker_servers)
+def worker_check_top(grep_pattern=None):
+    """Quick top monitoring on worker servers."""
     cmd = "top -b | head -n 12"
     run(cmd)
 
 @task
 @parallel
-@hosts(_storm_servers)
-def storm_uptime():
+@hosts(_worker_servers)
+def worker_uptime():
     """uptime on all Storm servers."""
     sudo("uptime")
 
