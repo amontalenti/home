@@ -136,7 +136,6 @@ alias clj-lein='grench lein'
 # multiplex'ed tmux ssh sessions
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# storm example
-alias ssh-storm2-workers='ssh-multi storm2-0{1,2,3,4,5,6,7,8,9}-ue1a.cogtree.com storm2-1{1,2,3,4,5}-ue1a.cogtree.com'
-alias ssh-storm2-trio='ssh-multi storm2-0{1,2,3}-ue1a.cogtree.com'
-alias ssh-storm2-nimbus='ssh-multi storm2-nimbus-01-ue1a.cogtree.com'
+# ssh-multi examples
+alias ssh-workers='ssh-multi worker{a,b,c}'
+alias ssh-webs='ssh-multi web{1,2,3}'
