@@ -1,4 +1,0 @@
-!Remap Caps_Lock to Shift
-!Can also add this command to Startup Applications instead:
-!xmodmap -e "keycode 66 = Shift_L"
-keycode 66 = Shift_L
