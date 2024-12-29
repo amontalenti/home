@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=xhci-restart
-Icon=/home/am/opt/share/icons/lenovo-dock.png
-Exec=/home/am/opt/bin/xhci-restart
-Comment=Restart USB and network subsystem
-Terminal=true
-StartupWMClass=xhci-restart

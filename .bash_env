@@ -105,3 +105,10 @@ source $HOME/.config/broot/launcher/bash/br
 
 # nix
 source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+# zvm
+if [[ -s "$HOME/.zvm" ]]; then
+    export ZVM_INSTALL="$HOME/.zvm/self"
+    export PATH="$PATH:$HOME/.zvm/bin"
+    export PATH="$PATH:$ZVM_INSTALL/"
+fi
