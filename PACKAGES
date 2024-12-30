@@ -200,6 +200,9 @@ clj (via https://clojure.org/guides/getting_started)
 # zig
 zigup (via https://github.com/marler8997/zigup)
 
+# zvm (instead of zigup)
+zvm (via https://www.zvm.app/)
+
 # sbt (Scala Build Tool)
 sbt (via http://www.scala-sbt.org/download.html)
 
