@@ -209,14 +209,14 @@ sbt (via http://www.scala-sbt.org/download.html)
 # gradle (Groovy-based Build Tool)
 gradle (via ppa:cwchien/gradle)
 
-# zig
-zig (via `snap install zig --classic --beta`)
-
 # virtualization infrastructure
 docker (via https://docs.docker.com/engine/installation/linux/ubuntu/)
 docker-compose (via https://docs.docker.com/compose/install/)
-virtualbox (via https://www.virtualbox.org/wiki/Linux_Downloads)
-vagrant (via https://www.vagrantup.com/downloads.html)
+virtualbox (optional, via https://www.virtualbox.org/wiki/Linux_Downloads)
+vagrant (optional, via https://www.vagrantup.com/downloads.html)
+
+# ghostty, a terminal emulator written in zig
+ghostty (compile via https://ghostty.org/docs/install/build)
 
 # desktop goodies
 terminator
@@ -226,8 +226,6 @@ gpick
 meld
 pavucontrol
 pdf-presenter-console
-vlc (via snap)
-pinta (via snap)
 glipper
 xsel
 xclip
@@ -245,39 +243,47 @@ alacarte
 
 # optional desktop goodies
 celluloid (via snap)
+vlc (via snap)
+pinta (via snap)
+pitivi (via flatpak)
 cpufreq-indicator
 wireshark
 grub-customizer
-pitivi
 audacity
 
-# remove on laptop running Linux directly:
+# might want to REMOTE this on laptop running Linux:
 iio-sensor-proxy
 
 # other desktop goodies
+kooha (via flatpak, alternative to peek)
 typora (via apt, see https://typora.io)
 ulauncher (via https://ulauncher.io/)
 ulauncher-emoji (via https://ext.ulauncher.io/-/github-ulauncher-ulauncher-emoji)
 peek (via https://github.com/phw/peek#ubuntu)
-kooha (via flathub, alternative to peek)
 teamviewer (via https://www.teamviewer.com/en-us/download/linux/)
 y-ppa-manager (via ppa:webupd8team/y-ppa-manager)
 ltunify (via https://github.com/Lekensteyn/ltunify)
-whatsdesk (via snap, or https://gitlab.com/zerkc/whatsdesk)
-telegram (via snap, or https://desktop.telegram.org/)
-signal (via https://signal.org/download/)
-element-desktop (via apt, see https://element.io/download)
-fractal (via snap)
-slack (via snap)
+
+# proprietary desktop apps
 trello-desktop (via snap)
 skype (via snap)
-libreoffice (via snap)
-pocket-casts (via apt, see https://github.com/FelicianoTech/pocket-casts-desktop-app)
 spotify-client (via apt, see https://spotify.com/download/linux/)
 replit (via https://replit.com/desktop)
+
+# texting, chatting, and group DM apps
+signal (via https://signal.org/download/)
+whatsdesk (via snap, or https://gitlab.com/zerkc/whatsdesk)
+telegram (via snap, or https://desktop.telegram.org/)
+element-desktop (via apt, see https://element.io/download)
+slack (via snap)
+fractal (via snap)
+
+# other desktop apps
+pocket-casts (via apt, see https://github.com/FelicianoTech/pocket-casts-desktop-app)
 zeal (via https://github.com/zealdocs/zeal/releases/)
 qimgv (via ppa:easymodo/qimgv)
 mpv (via snap)
+libreoffice (via snap)
 
 # vpn
 openvpn
