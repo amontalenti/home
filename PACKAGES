@@ -29,16 +29,6 @@ poetry
 ruff
 tmuxp
 
-# appimagelauncher
-# ---
-# Start with these two commands:
-#
-#     sudo add-apt-repository universe
-#     sudo apt install libfuse2t64
-#
-# Then install this one:
-appimagelauncher
-
 # deb-get
 # ---
 deb-get (via https://github.com/wimpysworld/deb-get)
@@ -189,9 +179,9 @@ nvm (via https://github.com/creationix/nvm)
 
 # java
 sdkman
-openjdk-11-jdk
-# openjdk-11-jdk is LTS until Sept 2023
-# openjdk-17-jdk is next LTS, release coming Sept 2021
+openjdk-21-jdk
+# openjdk-21-jdk is EOL on December 31, 2029
+# openjdk-11-jdk was LTS until Sept 2023
 
 # clojure
 lein (via http://leiningen.org/)
