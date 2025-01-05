@@ -21,13 +21,6 @@ uv (via https://github.com/astral-sh/uv#installation)
 pyenv (via https://github.com/yyuu/pyenv-installer)
 # pipx
 pipx
-# pipx core: install these via `pipx install`
-black
-flake8
-isort
-poetry
-ruff
-tmuxp
 
 # deb-get
 # ---
