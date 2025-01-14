@@ -3,7 +3,7 @@ function point_set() {
     xinput set-prop "TPPS/2 Elan TrackPoint" "Device Enabled" $1
 }
 function touch_set() {
-    xinput set-prop "SYNA8004:00 06CB:CD8B Touchpad" "Device Enabled" $1
+    xinput set-prop "ELAN067B:00 04F3:31F8 Touchpad" "Device Enabled" $1
 }
 echo "Enable or disable? [(p)oint/(t)ouch/(b)oth/(o)ff] "
 read input

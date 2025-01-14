@@ -90,12 +90,12 @@ apache2-utils
 run-one
 tree
 ddrescue
+xidle
 xprintidle
+xdotool
 magic-wormhole
 byzanz
 grub-customizer
-xidle
-xprintidle
 pdftk
 tidy
 pngquant
@@ -229,6 +229,7 @@ celluloid (via snap)
 vlc (via snap)
 pinta (via snap)
 pitivi (via flatpak)
+shotwell (via flatpak)
 cpufreq-indicator
 wireshark
 grub-customizer
