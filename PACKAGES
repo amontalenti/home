@@ -162,11 +162,6 @@ zerotier (via https://zerotier.com/)
 # IDEs
 vim-gtk3
 vscode
-intellij
-
-# ruby
-rbenv (via https://github.com/sstephenson/rbenv)
-ruby-build (via https://github.com/sstephenson/ruby-build)
 
 # node.js
 nvm (via https://github.com/creationix/nvm)
@@ -186,12 +181,6 @@ zigup (via https://github.com/marler8997/zigup)
 
 # zvm (instead of zigup)
 zvm (via https://www.zvm.app/)
-
-# sbt (Scala Build Tool)
-sbt (via http://www.scala-sbt.org/download.html)
-
-# gradle (Groovy-based Build Tool)
-gradle (via ppa:cwchien/gradle)
 
 # virtualization infrastructure
 docker (via https://docs.docker.com/engine/installation/linux/ubuntu/)
@@ -327,6 +316,7 @@ fex (via https://github.com/18alantom/fex)
 macchina (via cargo install macchina)
 
 # Output of `gnome-extensions list | sort`
+caffeine@patapon.info
 ding@rastersoft.com
 moveclock@kuvaus.org
 removeclock@sudfish.com
