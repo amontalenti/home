@@ -27,12 +27,13 @@ Shell
 
 On a freshly bootstrapped Ubuntu machine, I can typically clone this git repo
 and get going pretty quickly with bash. But, in my day-to-day development,
-I use zsh. For years, I used bash only, and mostly out of habit. Nowadays,
+I use ``zsh``. For years, I used bash only, and mostly out of habit. Nowadays,
 I keep my bash environment around to give me the option to use bash for
 shell script debugging.
 
-I find it convenient to keep my "basic" bashrc configuration around, and then
-"layer" my zsh configuration over them. The bash config is summarized here:
+I find it convenient to keep my "basic" ``.bashrc`` configuration around, and
+then "layer" my ``zsh`` configuration over them. The ``bash`` config is
+summarized here:
 
 +-------------------+---------------------------------------+
 | file              | description                           |
@@ -56,37 +57,37 @@ for one another.
 
 I like to get ``bash`` up-and-running fully before ``zsh``. Do this:
 
-1. Install pyenv
-2. Install cargo
-3. Install nix
-4. Install uv (experimental)
+1. Install ``pyenv``
+2. Install ``cargo``
+3. Install ``nix-shell``
+4. Install ``uv`` (experimental)
 
 At this point, my ``bash`` should be fully functional. Then, to get ``zsh``:
 
-1. Install zsh
-2. Install oh-my-zsh
-3. Layer my oh-my-zsh customizations over the fresh install
-4. Install the p10k theme
-5. Install an extra oh-my-zsh plugin
+1. Install ``zsh``
+2. Install ``oh-my-zsh``
+3. Layer my ``oh-my-zsh`` customizations over the fresh install
+4. Install the "p10k" theme
+5. Install an extra ``oh-my-zsh`` plugin
 
 We'll follow ALL these steps in turn.
 
 We use pyenv_ to compile Python and manage Python environments, because some of
-my helper scripts rely on Python and pyenv, and expect it. The one-liner here
-should be::
+my helper scripts rely on Python and ``pyenv``, and expect it. The one-liner
+here should be::
 
     curl https://pyenv.run | bash
 
 .. _pyenv: https://github.com/pyenv/pyenv-installer
 
-To install Rust and cargo, check out this page_ in the cargo book::
+To install ``rust`` and ``cargo``, check out this page_ in the cargo book::
 
     curl https://sh.rustup.rs -sSf | sh
 
 .. _page: https://doc.rust-lang.org/cargo/getting-started/installation.html
 
-To install nix, check out this download info_ on the Nix website. If it's a
-laptop, desktop, or server I fully control, I should do the multi-user
+To install ``nix-shell``, check out this download info_ on the Nix website. If
+it's a laptop, desktop, or server I fully control, I should do the multi-user
 install::
 
     sh <(curl -L https://nixos.org/nix/install) --daemon
@@ -107,21 +108,21 @@ Read more about uv_.
 
 .. _uv: https://github.com/astral-sh/uv
 
-To install zsh, I rely on apt. So::
+To install ``zsh``, I rely on apt. So::
 
     sudo apt install zsh
 
-Because this git repo contributes a `~/.oh-my-zsh` directory, you need to do a
-little dance to setup oh-my-zsh. You need to temporarily move it aside, then
-run the installer, and then rsync the contents of the original cloned repo back
-into it. Then you can get rid of the backup. Try this::
+Because this git repo contributes a ``~/.oh-my-zsh`` directory, you need to do
+a little dance to setup ``oh-my-zsh``. You need to temporarily move it aside,
+then run the installer, and then ``rsync`` the contents of the original cloned
+repo back into it. Then you can get rid of the backup. Try this::
 
     mv ~/.oh-my-zsh ~/.oh-bck
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     rsync -Pav ~/.oh-bck/ ~/.oh-my-zsh/
     rm -Rf .oh-bck
 
-You need to install the p10k theme via this recipe::
+You need to install the "p10k" theme via this recipe::
 
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
@@ -151,7 +152,7 @@ available:
   implemented via an oh-my-zsh theme that outsources most of its work to a
   Python script called ``zshprompt``, which lives in ``~/opt/bin/``
 
-Thus, my "full" zsh environment is summarized in this table:
+Thus, my "full" ``zsh`` environment is summarized in this table:
 
 +-----------------------------------+----------------------------------------------+
 | file                              | description                                  |
@@ -192,16 +193,16 @@ The right prompt auto-hides when you are writing a long command, and the path
 compresses uses a shortening approach (thus ``~/r/p/streamparse``). You can
 also see the exit status of ``1`` in red of the ``false`` command.
 
-As for p10k, examples of that prompt are best covered at the p10k_ GitHub page.
-I found that by customizing ``.p10k.zsh``, I could reproduce all the features
-of my ``zshprompt`` script, while also having nice support for things that
-would be way harder to implement on my own. Also, p10k_ is super fast to load
-through some zsh tricks, so as of 2020, it's preferred.
+As for "p10k", examples of that prompt are best covered at the p10k_ GitHub
+page.  I found that by customizing ``.p10k.zsh``, I could reproduce all the
+features of my ``zshprompt`` script, while also having nice support for things
+that would be way harder to implement on my own. Also, p10k_ is super fast to
+load through some ``zsh`` tricks, so as of the 2020s, it's my preferred shell.
 
 Editor
 ------
 
-I use vim for text editing. I tend to use vim for editing all sorts
+I use ``vim`` for text editing. I tend to use ``vim`` for editing all sorts
 of files, including:
 
 * Python
@@ -218,13 +219,15 @@ of files, including:
 * configuration files
 * Zig, Racket, Scheme, Go, Elixir (for fun)
 
-My vim configuration is a bit customized, as I use vim as a kind of Linux
-IDE. However, I don't go overboard remapping things; in general, I'm pretty
-happy with vim's default mappings and have learned to love them. Most of
-these customizations are just to make editing typical files for me nicer,
-and add file-specific or workflow-specific add-ons.
+My ``vim`` configuration is a bit customized, as I use ``vim`` as a kind of
+full-blown and integrated Linux development environment.
 
-Some nice IDE-like plugins for me include:
+However, I don't go overboard remapping keys. In general, I'm pretty happy with
+vim's default mappings and have learned to love them. Most of these
+customizations are just to make editing typical files for me nicer, and add
+file-specific or workflow-specific add-ons.
+
+Some nice "IDE-like" plugins for me include:
 
 * ctrlp_, for quick file opening
 * dockerfile_, for docker support
@@ -235,29 +238,28 @@ Some nice IDE-like plugins for me include:
 * parinfer-rust_, for speedy indent/dedent of Lisp code
 * rainbow_parentheses_, for matching parens, especially in Lisp
 * repeat_, just makes the ``.`` command more flexible and scriptable
-* simplenote_, integrates with Simplenote notes service
 * surround_, adds a noun to vim for "surroundings", for quoting and parens
 * syntastic_, for syntax checking, mainly Python and JavaScript
-* tagbar_, for improved code outlines / navigations
+* tagbar_, for improved code outlines and module navigation
 * vim-clojure-static_, for Clojure basic editing support
 * vim-elixir_, for Elixir basic editing support
-* vim-eslint-compiler_, for ESLint :make and quickfix support
-* vim-fontsize_, for adjusting font size quickly in gVim
-* vim-fireplace_, for Clojure interaction with nREPL
+* vim-eslint-compiler_, for ESLint ``:make`` and quickfix support
+* vim-fontsize_, for adjusting font size quickly in ``gvim``
+* vim-fireplace_, for Clojure interaction with ``nrepl``
 * vim-flake8_, for Python syntax checking
 * vim-go_, for Go basic editing
-* vim-jinja_, for enhanced Jinja syntax highlighting
-* vim-less_, for editing LESS CSS files
-* vim-livedown_, for live preview of Markdown files
+* vim-jinja_, for enhanced ``jinja`` syntax highlighting
+* vim-less_, for editing ``LESS`` CSS files
+* vim-livedown_, for live browser preview of Markdown files
 * vim-markdown_, improved Markdown syntax handling
 * vim-racket_, for Racket and Scheme basic editing
 * vim-sexp_, for Clojure S-expr support
 * vim-sexp-ext_, for Clojure text motions over S-expressions
-* vim-superman_: read man pages within vim
+* vim-superman_: read ``man`` pages within the editor
 * vim-virtualenv_, for Python virtualenv support
 * vim-yaml_, basic YAML file support
 * whitespace_, to kill trailing whitespace in files
-* yajs_, yet another Javascript syntax
+* yajs_, Yet Another JavaScript Syntax highlighter
 * zeavim_, integrate Zeal documentation lookup
 * zig.vim_, syntax highlighting for the Zig language
 
@@ -267,7 +269,6 @@ Some nice IDE-like plugins for me include:
 .. _repeat: https://github.com/tpope/vim-repeat
 .. _surround: https://github.com/tpope/vim-surround
 .. _rainbow_parentheses: https://github.com/kien/rainbow_parentheses.vim
-.. _simplenote: https://github.com/mrtazz/simplenote.vim
 .. _parinfer-rust: https://github.com/eraserhd/parinfer-rust
 .. _NERDTree: https://github.com/scrooloose/nerdtree
 .. _numbers: https://github.com/myusuf3/numbers.vim.git
@@ -365,13 +366,13 @@ Terminal Management
 -------------------
 
 Originally, I used GNU screen for all my terminal management, so my
-``.screenrc`` is included here. However, I have now switched to tmux, since I
-came across a nice book about it and it convinced me.  Funny enough, I was able
-to port over most of my customizations of screen to tmux pretty
+``.screenrc`` is included here. However, I have now switched to ``tmux``, since
+I came across a nice book about it and it convinced me.  Funny enough, I was
+able to port over most of my customizations of screen to ``tmux`` pretty
 straightforwardly. See ``.tmux.conf`` for that.
 
 I also use a clever little tool called tmuxp_, which is a Python frontend on
-tmux which allows you to save / re-open tmux "sessions".
+``tmux`` which allows you to save and re-open ``tmux`` "sessions".
 
 .. _tmuxp: http://tmuxp.readthedocs.org/en/latest/
 
