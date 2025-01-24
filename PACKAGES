@@ -139,6 +139,7 @@ difftastic (via cargo)
 pik (via cargo)
 spacer (via cargo)
 ets (via https://github.com/zmwangx/ets/releases)
+isd (via uv tool install git+https://github.com/isd-project/isd)
 
 # -- end of basic apt packages --
 

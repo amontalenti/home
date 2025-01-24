@@ -71,8 +71,9 @@ At this point, my ``bash`` should be fully functional. Then, to get ``zsh``:
 
 We'll follow ALL these steps in turn.
 
-We use pyenv_ to compile Python and manage Python environments, because some of my
-helper scripts rely on Python and pyenv, and expect it. The one-liner here should be::
+We use pyenv_ to compile Python and manage Python environments, because some of
+my helper scripts rely on Python and pyenv, and expect it. The one-liner here
+should be::
 
     curl https://pyenv.run | bash
 
@@ -92,11 +93,13 @@ install::
 
 .. _info: https://nixos.org/download/
 
-After you install, you should activate the default nix profile for current user::
+After you install, you should activate the default nix profile for current
+user::
 
     nix-env --switch-profile /nix/var/nix/profiles/default
 
-Lately, I've been using ``uv`` as an alternative to ``pyenv`` and ``pip``. Install::
+Lately, I've been using ``uv`` as an alternative to ``pyenv`` and ``pip``.
+Install::
 
     curl -LsSf https://astral.sh/uv/install.sh | sh
 
@@ -108,10 +111,10 @@ To install zsh, I rely on apt. So::
 
     sudo apt install zsh
 
-Because this git repo contributes a `~/.oh-my-zsh` directory, you need to do a little
-dance to setup oh-my-zsh. You need to temporarily move it aside, then run the installer,
-and then rsync the contents of the original cloned repo back into it. Then you can get
-rid of the backup. Try this::
+Because this git repo contributes a `~/.oh-my-zsh` directory, you need to do a
+little dance to setup oh-my-zsh. You need to temporarily move it aside, then
+run the installer, and then rsync the contents of the original cloned repo back
+into it. Then you can get rid of the backup. Try this::
 
     mv ~/.oh-my-zsh ~/.oh-bck
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -128,7 +131,8 @@ Similarly, you need to install zsh-better-npm-completion_ thusly::
 
 .. _zsh-better-npm-completion: https://github.com/lukechilds/zsh-better-npm-completion
 
-Then, I'll try it out by running ``zsh`` before switching shell, by simply running ``zsh``.
+Then, I'll try it out by running ``zsh`` before switching shell, by simply
+running ``zsh``.
 
 With ``zsh``, I took a different approach than `bash`, but it's unified my bash
 setup for common aliases and functions. I have a simple ``.zshrc`` that
@@ -140,12 +144,12 @@ environment, and is very basic, optimized for prompt render speed.
 In ``zsh``, things are a bit more "souped up", and I have two prompt themes
 available:
 
-- ``powerlevel10k/powerlevel10k`` is the amazing p10k_ theme that leverages
-  a pure zsh implementation of the fastest and most configurable prompt one could
+- ``powerlevel10k/powerlevel10k`` is the amazing p10k_ theme that leverages a
+  pure zsh implementation of the fastest and most configurable prompt one could
   imagine.
-- ``ampy``, short for "Andrew Montalenti Python Prompt"; the prompt is implemented
-  via an oh-my-zsh theme that outsources most of its work to a Python script
-  called ``zshprompt``, which lives in ``~/opt/bin/``
+- ``ampy``, short for "Andrew Montalenti Python Prompt"; the prompt is
+  implemented via an oh-my-zsh theme that outsources most of its work to a
+  Python script called ``zshprompt``, which lives in ``~/opt/bin/``
 
 Thus, my "full" zsh environment is summarized in this table:
 
@@ -170,8 +174,8 @@ Thus, my "full" zsh environment is summarized in this table:
 .. _p10k: https://github.com/romkatv/powerlevel10k
 
 The ``zshprompt`` script supports shortened paths, git branches, Python
-virtualenvs, and last process exit code, and only when using the ``am`` zsh theme.
-Here is what it looks like:
+virtualenvs, and last process exit code, and only when using the ``am`` zsh
+theme.  Here is what it looks like:
 
 .. image:: https://user-images.githubusercontent.com/40263/39084790-49b8eb4a-4548-11e8-8523-7fce14582eab.png
     :target: http://ohmyz.sh/
@@ -214,7 +218,7 @@ of files, including:
 * configuration files
 * Zig, Racket, Scheme, Go, Elixir (for fun)
 
-My vim configuration is a bit customized, as I use vim as a kind of UNIX
+My vim configuration is a bit customized, as I use vim as a kind of Linux
 IDE. However, I don't go overboard remapping things; in general, I'm pretty
 happy with vim's default mappings and have learned to love them. Most of
 these customizations are just to make editing typical files for me nicer,
@@ -232,7 +236,7 @@ Some nice IDE-like plugins for me include:
 * rainbow_parentheses_, for matching parens, especially in Lisp
 * repeat_, just makes the ``.`` command more flexible and scriptable
 * simplenote_, integrates with Simplenote notes service
-* surround_, adds a noun to vim for "surroundings", useful for quoting and parens
+* surround_, adds a noun to vim for "surroundings", for quoting and parens
 * syntastic_, for syntax checking, mainly Python and JavaScript
 * tagbar_, for improved code outlines / navigations
 * vim-clojure-static_, for Clojure basic editing support
@@ -306,28 +310,23 @@ Then you will have all of the above.
 Terminal and Editor Colors
 --------------------------
 
-In vim, I use the Mustang_ color scheme. Yes, I know about Solarized_,
-and yes, I recognize that it is this new hotness with all of its fancy
-marketing pages, but honestly that color scheme will make me blind or
-make me want to murder my computer.
+In ``vim``, I use the Mustang_ color scheme. I have for a long time now and I
+think it'll be hard to ever pry the color scheme away from me.
 
 .. _Mustang: http://hcalves.deviantart.com/art/Mustang-Vim-Colorscheme-98974484
-.. _Solarized: http://ethanschoonover.com/solarized
 
 Mustang uses nice muted colors while still having enough contrast for
-scanning big chunks of code. I think it's very zen hacker like.
+scanning big chunks of code. I think it feels very zen hacker.
 
-In tmux and screen, I use a matrix-like green-on-black color scheme. I
-do this so I can impress `Parse.ly`_ engineers and encourage people to
-learn the joys of UNIX.
+In ``tmux`` and ``screen``, I use a "The Matrix"-like green-on-black color
+scheme, just so that I know whenever I'm inside a terminal multiplexer.
 
-.. _Parse.ly: https://www.parse.ly/about/
-
-Unfortunately, there is some trickery with UNIX color schemes for terminals.
+Unfortunately, there is some trickery involved with color schemes for (virtual)
+terminals.
 
 The first thing you have to learn about is that most terminals do not
 automatically place themselves in `256 color mode`_ -- of course, they
-should, but this is UNIX. The software is Free and your time is worthless.
+should, but this is Linux: the software is Free and your time is worthless!
 
 .. _256 color mode: http://www.enigmacurry.com/2009/01/20/256-colors-on-the-linux-terminal/
 
@@ -349,35 +348,35 @@ colors being generated by vim and other programs, and translates them to actual
 pixel colors on your screen. (It's just yet another level of indirection.) I
 find that most of the default palettes are way too bright and loud.
 
-With gnome-terminal (Linux) and other platform-specific terminals across OS X
-and Windows, you'll want to pick the Tango_ palettes, which are a tad muted and
-relatively standard across platforms.
+With ``gnome-terminal`` (Linux) and other platform-specific terminals across
+macOS and Windows, I tend to pick the Tango_ palettes, which are a tad muted
+and relatively standard across platforms.
 
 .. _Tango: http://en.wikipedia.org/wiki/Tango_Desktop_Project#Palette
 
 Scripts
 -------
 
-I put some scripts in ``~/opt/bin`` that just make my life easier. Most
-of these are bash scripts, some are little Python scripts as well. Some
-of these are just meant to work around some UNIX annoyances.
+I put some scripts in ``~/opt/bin`` that just make my life easier. Most of
+these are bash scripts, some are little Python scripts as well. Some of these
+are just meant to work around some Linux annoyances.
 
 Terminal Management
 -------------------
 
 Originally, I used GNU screen for all my terminal management, so my
-``.screenrc`` is included here. However, I have now switched to
-tmux, since I came across a nice book about it and it convinced me.
-Funny enough, I was able to port over most of my customizations of
-screen to tmux pretty straightforwardly. See ``.tmux.conf`` for that.
+``.screenrc`` is included here. However, I have now switched to tmux, since I
+came across a nice book about it and it convinced me.  Funny enough, I was able
+to port over most of my customizations of screen to tmux pretty
+straightforwardly. See ``.tmux.conf`` for that.
 
-I also use a clever little tool called tmuxp_, which is a Python
-frontend on tmux which allows you to save / re-open tmux "sessions".
+I also use a clever little tool called tmuxp_, which is a Python frontend on
+tmux which allows you to save / re-open tmux "sessions".
 
 .. _tmuxp: http://tmuxp.readthedocs.org/en/latest/
 
 Version Control
 ---------------
 
-I primarily use ``git``. I don't customize it too heavily, but my ``.gitconfig``
-is included here anyway.
+I primarily use ``git``. I don't customize it too heavily, but my
+``.gitconfig`` is included here anyway.
