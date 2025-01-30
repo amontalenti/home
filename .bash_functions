@@ -52,12 +52,6 @@ mktun () {
     ssh -nNT -L "${LOCALPORT}:localhost:${REMOTEPORT}" $SERVER;
 }
 
-dash () {
-    # open default browser to given dash location in beta
-    local APIKEY=$1
-    x-www-browser https://beta.parsely.com/$APIKEY;
-}
-
 vman () {
     # open a given man page in vim, to use vim as a pager
     vim -c "SuperMan $*"
