@@ -225,6 +225,10 @@ wireshark
 grub-customizer
 audacity
 
+# ebooks
+foliate (via flathub)
+calibre (via https://calibre-ebook.com/download_linux)
+
 # might want to REMOTE this on laptop running Linux:
 iio-sensor-proxy
 
