@@ -135,6 +135,13 @@ Similarly, you need to install zsh-better-npm-completion_ thusly::
 Then, I'll try it out by running ``zsh`` before switching shell, by simply
 running ``zsh``.
 
+If powerlevel10k didn't activate when running `zsh`, it's probably because
+installing ``zsh`` blew away .zshrc from the ``git`` checkout. Fix it thusly::
+
+    git checkout .zshrc
+
+Then restart ``zsh``.
+
 With ``zsh``, I took a different approach than `bash`, but it's unified my bash
 setup for common aliases and functions. I have a simple ``.zshrc`` that
 implements the equivalent of ``.bash_env``.
