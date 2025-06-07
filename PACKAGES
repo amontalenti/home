@@ -384,12 +384,10 @@ tokei
 # pipx install each of these
 # ---
 # Output of `pipx list | grep -oP 'package \K\S+'`
-tldr            # handy alternative to `man`
 ansible-core    # infra as code
 awscli          # aws cli
 black           # Python formatter (before ruff)
 bpytop          # system monitor
-fab-classic     # fab cli and Fabric 1.x fork
 flake8          # linter and style checker (before ruff)
 isort           # simple import sorter
 glances         # system monitor
@@ -404,15 +402,27 @@ s-tui           # core and temp monitor
 tmuxp           # tmux profile manager
 visidata        # vd tool
 yt-dlp          # active fork of youtube-dl
+fab-classic     # fab cli and Fabric 1.x fork
+tldr            # handy alternative to `man`
+
+# for yt-dlp:
+#
+#     pipx install 'yt-dlp[default,curl-cffi]'
+#
+# This enables "impersonation", as described at:
+#
+# https://github.com/yt-dlp/yt-dlp#impersonation
+#
+# This helps with Vimeo and other sites.
 
 # for fab-classic:
 #
-# - pipx inject fab-classic jinja2
+#     pipx inject fab-classic jinja2
 #
-# so ~/fabfile.py works
+# so my ~/fabfile.py works.
 
 # for faster tldr:
 #
-# https://github.com/isacikgoz/tldr/releases
+#     https://github.com/isacikgoz/tldr/releases
 #
-# go binary; uses same database but speedier and interactive
+# It's a go binary; uses same database but speedier, interactive.
