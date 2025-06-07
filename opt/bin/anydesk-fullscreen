@@ -2,6 +2,10 @@
 
 # Start Xephyr on display :1 with 1920x1080 resolution
 Xephyr :1 -screen 1920x1080 &
+
+# When running 4K, can use this instead to run it higher res:
+#Xephyr :1 -screen 2560x1440 &
+
 XEPHYR_PID=$!
 
 # Wait a moment for Xephyr to initialize
