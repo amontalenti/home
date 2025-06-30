@@ -26,7 +26,8 @@ plugins=(
          per-directory-history
          zsh-better-npm-completion
          zig
-         sudo)
+         sudo
+         direnv)
 
 path=(
     /opt/spark/bin

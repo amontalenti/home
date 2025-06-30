@@ -112,3 +112,6 @@ if [[ -s "$HOME/.zvm" ]]; then
     export PATH="$PATH:$HOME/.zvm/bin"
     export PATH="$PATH:$ZVM_INSTALL/"
 fi
+
+# direnv
+eval "$(direnv hook bash)"
