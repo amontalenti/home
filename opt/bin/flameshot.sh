@@ -15,7 +15,10 @@ elif [ "$XDG_SESSION_TYPE" = "x11" ]; then
 
     if [ "$DPI" = "192" ]; then
         echo "[DEBUG] HiDPI (DPI=192), running with QT_SCALE_FACTOR=0.5"
-        sh -c -- "QT_SCALE_FACTOR=0.5 flameshot gui"
+        # this is only needed for flameshot 13.x;
+        # in flameshot 12.x, it handles it properly
+        #sh -c -- "QT_SCALE_FACTOR=0.5 flameshot gui"
+        sh -c -- "flameshot gui"
     else
         echo "[DEBUG] DPI=$DPI, running normally"
         sh -c -- "flameshot gui"
