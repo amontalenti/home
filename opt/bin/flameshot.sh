@@ -15,10 +15,10 @@ elif [ "$XDG_SESSION_TYPE" = "x11" ]; then
 
     if [ "$DPI" = "192" ]; then
         echo "[DEBUG] HiDPI (DPI=192), running with QT_SCALE_FACTOR=0.5"
-        QT_SCALE_FACTOR=0.5 flameshot gui
+        sh -c -- "QT_SCALE_FACTOR=0.5 flameshot gui"
     else
         echo "[DEBUG] DPI=$DPI, running normally"
-        flameshot gui
+        sh -c -- "flameshot gui"
     fi
 
 else

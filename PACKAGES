@@ -148,7 +148,6 @@ isd (via uv tool install git+https://github.com/isd-project/isd)
 appimagelauncher
 deb-get
 discord
-flameshot
 simplenote
 zoom
 
@@ -193,6 +192,7 @@ vagrant (optional, via https://www.vagrantup.com/downloads.html)
 ghostty (compile via https://ghostty.org/docs/install/build)
 
 # desktop goodies
+flameshot
 terminator
 gdebi
 xsel
