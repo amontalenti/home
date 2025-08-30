@@ -162,6 +162,7 @@ zerotier (via https://zerotier.com/)
 # IDEs
 vim-gtk3
 vscode
+cursor (via https://github.com/cursor-ide/getcursor)
 
 # node.js
 nvm (via https://github.com/creationix/nvm)
