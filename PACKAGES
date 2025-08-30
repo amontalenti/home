@@ -163,6 +163,7 @@ zerotier (via https://zerotier.com/)
 vim-gtk3
 vscode
 cursor (via https://github.com/cursor-ide/getcursor)
+claude (via https://claude.ai/code)
 
 # node.js
 nvm (via https://github.com/creationix/nvm)
