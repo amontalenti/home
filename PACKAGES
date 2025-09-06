@@ -71,6 +71,7 @@ libxslt1-dev
 
 # extra console sysadmin tools
 linux-tools-common
+linux-tools-generic
 stress
 htop
 atop

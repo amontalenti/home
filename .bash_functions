@@ -202,3 +202,18 @@ dpkg-installed() {
 apt-installed() {
     dpkg-installed $@;
 }
+
+monitor-processes() {
+    # Use bpftrace to trace or monitor any process opening
+    # by doing a system call trace on sys_enter_execve.
+    #
+    # After running this, do desktop actions to see what
+    # processes open in the background.
+    sudo bpftrace -e 'tracepoint:syscalls:sys_enter_execve { printf("%-8u %s %s\n", nsecs/1000000000, comm, str(args->argv[0])); }'
+}
+
+blame-services() {
+    # Use systemd-analyze to find the systemd services spending
+    # the most time on the desktop
+    systemd-analyze blame --user | head -n 20
+}
