@@ -113,3 +113,6 @@
 [submodule ".vim/bundle/limelight.vim"]
 	path = .vim/bundle/limelight.vim
 	url = git@github.com:junegunn/limelight.vim.git
+[submodule ".vim/bundle/vim-ruff"]
+	path = .vim/bundle/vim-ruff
+	url = git@github.com:shaoran/vim-ruff.git

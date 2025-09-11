@@ -260,6 +260,7 @@ Some nice "IDE-like" plugins for me include:
 * vim-livedown_, for live browser preview of Markdown files
 * vim-markdown_, improved Markdown syntax handling
 * vim-racket_, for Racket and Scheme basic editing
+* vim-ruff_, for running Python ruff formatter
 * vim-sexp_, for Clojure S-expr support
 * vim-sexp-ext_, for Clojure text motions over S-expressions
 * vim-superman_: read ``man`` pages within the editor
@@ -296,6 +297,7 @@ Some nice "IDE-like" plugins for me include:
 .. _vim-clojure-static: https://github.com/guns/vim-clojure-static
 .. _vim-go: https://github.com/fatih/vim-go
 .. _vim-racket: https://github.com/wlangstroth/vim-racket
+.. _vim-ruff: https://github.com/shaoran/vim-ruff
 .. _vim-sexp: https://github.com/guns/vim-sexp
 .. _vim-sexp-ext: https://github.com/tpope/vim-sexp-mappings-for-regular-people
 .. _vim-superman: https://github.com/jez/vim-superman
