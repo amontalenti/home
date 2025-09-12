@@ -129,6 +129,7 @@ intel-gpu-tools
 nvtop
 
 # extra console developer goodies
+tmux-xpanes (via https://github.com/greymd/tmux-xpanes/releases)
 tig
 pandoc
 silversearcher-ag
