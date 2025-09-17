@@ -1,8 +1,14 @@
 " F1 - F12 Hotkeys
 " ----------------
 
-" hit F1 to pick a font
-map <F1> :set guifont=*<CR>
+" hit F12 to pick a font in gVim!
+map <F12> :set guifont=*<CR>
+
+" ,,0 to jump to a big font in gVim
+" ,,=--- or ,,=+++ to set a font with +/- in gVim
+let g:fontsize#defaultSize = 26
+
+" reserve F1 since so many WMs steal it
 " hit F2 for file/folder tree
 map <F2> :NERDTreeToggle<CR>
 " hit F3 for tag bar
@@ -30,9 +36,6 @@ autocmd! User GoyoLeave Limelight!
 " hit F10 for Python style check
 autocmd FileType python map <buffer> <F10> :call Flake8()<CR>
 " reserve F11 for full-screen at WM level
-" hit F12 for quick save
-inoremap <F12> <c-o>:w<cr>
-nnoremap <F12> :w<cr>
 
 " Other Hotkeys and Shortcuts
 " ---------------------------
@@ -40,10 +43,6 @@ nnoremap <F12> :w<cr>
 " leader keys
 let mapleader = ","
 let maplocalleader = "\\"
-
-" ,,0 to jump to a big font in gVim
-" ,,= to set a font with +/- in gVim
-let g:fontsize#defaultSize = 26
 
 " :w!! to write a file as sudo
 cmap w!! w !sudo tee % >/dev/null
