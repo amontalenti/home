@@ -1,12 +1,11 @@
 " F1 - F12 Hotkeys
 " ----------------
 
-
 " hit F12 to pick a font in gVim!
 map <F12> :set guifont=*<CR>
 
-" ,,0 to jump to a big font in gVim
-" ,,=--- or ,,=+++ to set a font with +/- in gVim
+" hit ,,0 to jump to a big font in gVim
+" use ,,=+++ or ,,=--- to grow/shrink font with +/- in gVim
 let g:fontsize#defaultSize = 26
 
 " Just make F1 alias for Esc
@@ -40,6 +39,7 @@ autocmd! User GoyoLeave Limelight!
 " hit F10 for Python style check
 autocmd FileType python map <buffer> <F10> :call Flake8()<CR>
 " reserve F11 for full-screen at WM level
+" F12 set above (at top) for gVim font selection
 
 " Other Hotkeys and Shortcuts
 " ---------------------------
