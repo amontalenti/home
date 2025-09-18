@@ -1,6 +1,7 @@
 " F1 - F12 Hotkeys
 " ----------------
 
+
 " hit F12 to pick a font in gVim!
 map <F12> :set guifont=*<CR>
 
@@ -8,7 +9,10 @@ map <F12> :set guifont=*<CR>
 " ,,=--- or ,,=+++ to set a font with +/- in gVim
 let g:fontsize#defaultSize = 26
 
-" reserve F1 since so many WMs steal it
+" Just make F1 alias for Esc
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " hit F2 for file/folder tree
 map <F2> :NERDTreeToggle<CR>
 " hit F3 for tag bar
