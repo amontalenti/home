@@ -136,7 +136,6 @@ pandoc
 silversearcher-ag
 mercurial
 colordiff
-exuberant-ctags
 ffmpeg
 fzf
 difftastic (via cargo)
@@ -145,7 +144,10 @@ spacer (via cargo)
 ets (via https://github.com/zmwangx/ets/releases)
 isd (via uv tool install git+https://github.com/isd-project/isd)
 
-# -- end of basic apt packages --
+# instead of exuberant-ctags
+universal-ctags (via source, https://github.com/universal-ctags/ctags/releases)
+
+# -- end of basic packages --
 
 # deb-get install packages
 appimagelauncher

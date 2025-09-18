@@ -319,3 +319,23 @@ let g:tagbar_type_zig = {
         \'E:errors'
     \]
     \}
+
+" add elixir support to tagbar
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'Elixir',
+        \ 'kinds' : [
+            \ 'm:modules',
+            \ 'f:functions',
+            \ 'a:macros',
+            \ 'c:callbacks',
+            \ 'e:exceptions',
+            \ 'i:implementations',
+            \ 'o:operators',
+            \ 'p:protocols',
+            \ 'r:records',
+            \ 't:tests'
+    \ ],
+\ 'sro' : '.',
+\ 'kind2scope' : { 'm' : 'module', 'f' : 'function' },
+\ 'scope2kind' : { 'module' : 'm', 'function' : 'f' }
+\ }
