@@ -107,24 +107,9 @@ def worker_check_top(grep_pattern=None):
 @parallel
 @hosts(_worker_servers)
 def worker_uptime():
-    """uptime on all Storm servers."""
+    """uptime on all worker servers."""
     sudo("uptime")
 
-
-@task
-def build_python2():
-    """Build python2 from scratch using pyenv."""
-    # options stolen from Ubuntu build logs; hopefully we
-    # won't need these Python 2 builds for much longer!
-    local("""
-    PYTHON_CONFIGURE_OPTS="--enable-ipv6\
-                           --enable-unicode=ucs4\
-                           --with-dbmliborder=bdb:gdbm\
-                           --with-system-expat\
-                           --with-system-ffi\
-                           --with-fpectl" \
-    pyenv install -f 2.7.18
-    """.strip())
 
 @task
 def build_python3():
