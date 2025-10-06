@@ -20,6 +20,8 @@ python-is-python3
 uv (via https://github.com/astral-sh/uv#installation)
 # pyenv
 pyenv (via https://github.com/yyuu/pyenv-installer)
+# mise
+mise (via https://mise.jdx.dev/installing-mise.html)
 # pipx
 pipx
 

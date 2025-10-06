@@ -20,8 +20,8 @@ plugins=(
          docker
          lein
          npm
-         nvm
-         nvm-auto-cd
+         #nvm
+         #nvm-auto-cd
          history-substring-search
          per-directory-history
          zsh-better-npm-completion
@@ -35,7 +35,7 @@ path=(
     /opt/vagrant/bin
     /home/am/.local/bin
     #/home/am/.pyenv/bin
-    /home/am/.nvm/bin
+    #/home/am/.nvm/bin
     /snap/bin
     /home/am/opt/bin
     /home/am/.cargo/bin
@@ -159,3 +159,6 @@ bindkey '^f' fex-widget
 
 # cargo environment (for uv)
 [[ ! -f ~/.cargo/env ]] || source ~/.cargo/env
+
+# mise
+eval "$(~/.local/bin/mise activate zsh)"

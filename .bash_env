@@ -1,11 +1,11 @@
 pathprepend ~/.local/bin
-pathprepend ~/.nvm/bin
 pathprepend ~/.pyenv/bin
 
 # add nvm (NodeJS Version Manager) support
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+#pathprepend ~/.nvm/bin
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+#[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
 # add rust support via cargo
 [[ -s "$HOME/.cargo/bin/cargo" ]] && pathprepend ~/.cargo/bin
@@ -87,10 +87,6 @@ export VIMCLOJURE_SERVER_JAR="$HOME/opt/share/vimclojure/server-2.3.3.jar"
 # add vagrant support
 pathprepend "/opt/vagrant/bin/"
 
-# add Apache Spark & Storm support
-pathprepend "/opt/spark/bin/"
-pathprepend "/opt/storm/bin/"
-
 # make pipsi work
 pathprepend ~/.local/bin
 
@@ -115,3 +111,6 @@ fi
 
 # direnv
 eval "$(direnv hook bash)"
+
+# mise
+eval "$(~/.local/bin/mise activate bash)"
