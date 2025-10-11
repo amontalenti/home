@@ -391,7 +391,7 @@ Window Management and Monitors
 I use GNOME Desktop with ``gnome-shell`` and ``Wayland``. I keep the
 keybindings simple, leaning on both the built-in ``gnome-shell`` workspace
 manager and the `Ubuntu Tiling Assistant`_. These are my key binding
-customizations in `dconf` dump format::
+customizations in ``dconf`` dump format::
 
     [org/gnome/desktop/wm/keybindings]
     begin-move=@as []
@@ -417,7 +417,7 @@ built-in to my Lenovo X1C. Occasionally I run two 1080p landscape monitors via
 my laptop built-in plus a portable ASUS ZenScreen MB16AC.
 
 My most ergonomic setup is at my office desk, with 2x 4K monitors, namely two
-Dell U2723QE's. When at my office desk, I run 1 in landscape mode and 1 in
+`Dell U2723QE`_'s. When at my office desk, I run 1 in landscape mode and 1 in
 portrait mode. I dock the landscape monitor via a `Caldigit TS4`_ and the
 portrait monitor via a direct HDMI connection.
 
@@ -431,6 +431,7 @@ shortcuts, since I never bother with those tiling modes when operating in
 landscape monitors.
 
 .. _Ubuntu Tiling Assistant: https://gist.github.com/amontalenti/9d508c40a72ef469c1d870cc1ec17071
+.. _Dell U2723QE: https://www.delltechnologies.com/asset/en-gb/products/electronics-and-accessories/technical-support/dell-ultrasharp-27-and-32-usbc-hub-monitors-u2723qe-u3223qe-datasheet.pdf
 .. _Caldigit TS4: https://www.caldigit.com/thunderbolt-station-4/
 
 Version Control
