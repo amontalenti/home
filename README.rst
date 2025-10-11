@@ -385,6 +385,54 @@ I also use a clever little tool called tmuxp_, which is a Python frontend on
 
 .. _tmuxp: http://tmuxp.readthedocs.org/en/latest/
 
+Window Management and Monitors
+------------------------------
+
+I use GNOME Desktop with ``gnome-shell`` and ``Wayland``. I keep the
+keybindings simple, leaning on both the built-in ``gnome-shell`` workspace
+manager and the `Ubuntu Tiling Assistant`_. These are my key binding
+customizations in `dconf` dump format::
+
+    [org/gnome/desktop/wm/keybindings]
+    begin-move=@as []
+    begin-resize=@as []
+    cycle-group=['<Control>grave']
+    cycle-group-backward=['<Shift><Control>grave']
+    maximize=@as []
+    minimize=['<Super>Down', '<Super>z']
+    move-to-workspace-left=['<Shift><Control><Alt>Left']
+    move-to-workspace-right=['<Shift><Control><Alt>Right']
+    switch-to-workspace-left=['<Control><Alt>Left']
+    switch-to-workspace-right=['<Control><Alt>Right']
+    toggle-maximized=['<Super>Up', '<Super>x']
+
+    [org/gnome/shell/extensions/tiling-assistant]
+    tile-bottom-half=['<Super>Page_Down']
+    tile-left-half=['<Super>Left']
+    tile-right-half=['<Super>Right']
+    tile-top-half=['<Super>Page_Up']
+
+Typically, I am at a single 1080p landscape monitor, namely the 14" one
+built-in to my Lenovo X1C. Occasionally I run two 1080p landscape monitors via
+my laptop built-in plus a portable ASUS ZenScreen MB16AC.
+
+My most ergonomic setup is at my office desk, with 2x 4K monitors, namely two
+Dell U2723QE's. When at my office desk, I run 1 in landscape mode and 1 in
+portrait mode. I dock the landscape monitor via a `Caldigit TS4`_ and the
+portrait monitor via a direct HDMI connection.
+
+Even when I'm running 4K monitors, I use 2X scaling so they behave like 1080p
+monitors from a windowing real estate standpoint, just with better PPI and
+ergonomics. I enjoy the extra portrait monitor for reading technical ebooks in
+PDF or E-PUB format, or for running an extra-tall terminal window where I don't
+have to backscroll much to glance at the history. It's because of the portrait
+monitor that I customize the ``tile-top-half`` and ``tile-bottom-half``
+shortcuts, since I never bother with those tiling modes when operating in
+landscape monitors.
+
+.. _Ubuntu Tiling Assistant: https://gist.github.com/amontalenti/9d508c40a72ef469c1d870cc1ec17071
+.. _Caldigit TS4: https://www.caldigit.com/thunderbolt-station-4/
+
 Version Control
 ---------------
 
