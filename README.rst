@@ -59,8 +59,9 @@ I like to get ``bash`` up-and-running fully before ``zsh``. Do this:
 
 1. Install ``pyenv``
 2. Install ``cargo``
-3. Install ``nix-shell``
+3. Install ``nix-shell`` (experimental)
 4. Install ``uv`` (experimental)
+5. Install ``mise`` (experimental)
 
 At this point, my ``bash`` should be fully functional. Then, to get ``zsh``:
 
@@ -108,7 +109,20 @@ Read more about uv_.
 
 .. _uv: https://github.com/astral-sh/uv
 
-To install ``zsh``, I rely on apt. So::
+I've also been using ``mise`` as an alternative to ``nvm`` for managing my Node
+installations. My plan is to start with ``mise`` replacing ``nvm``, since
+``nvm`` is my least favorite language runtime version manager. And then I'll
+see if I can get ``mise`` to replace other lesser-used runtimes for me, too,
+such as for Go, Rust, Zig, Java, Ruby, etc. To install ``mise``::
+
+    curl https://mise.run | sh
+
+Then check out the `mise Quick Start Guide`_.
+
+.. _mise Quick Start Guide: https://mise.jdx.dev/getting-started.html
+
+Using ``zsh`` has become second nature to me, and has become as sturdy a tool
+in my toolbox as ``vim``. To install ``zsh``, I rely on apt. So::
 
     sudo apt install zsh
 
