@@ -331,6 +331,19 @@ you also clone the submodules as such::
 
 Then you will have all of the above.
 
+Version Control
+---------------
+
+I primarily use ``git``. I don't customize it too heavily, but my
+``.gitconfig`` is included here anyway.
+
+Scripts
+-------
+
+I put some scripts in ``~/opt/bin`` that just make my life easier. Most of
+these are bash scripts, some are little Python scripts as well. Some of these
+are just meant to work around some Linux annoyances.
+
 Terminal and Editor Colors
 --------------------------
 
@@ -378,15 +391,8 @@ and relatively standard across platforms.
 
 .. _Tango: http://en.wikipedia.org/wiki/Tango_Desktop_Project#Palette
 
-Scripts
--------
-
-I put some scripts in ``~/opt/bin`` that just make my life easier. Most of
-these are bash scripts, some are little Python scripts as well. Some of these
-are just meant to work around some Linux annoyances.
-
-Terminal Management
--------------------
+Terminal Multiplexer
+--------------------
 
 Originally, I used GNU screen for all my terminal management, so my
 ``.screenrc`` is included here. However, I have now switched to ``tmux``, since
@@ -447,9 +453,3 @@ landscape monitors.
 .. _Ubuntu Tiling Assistant: https://gist.github.com/amontalenti/9d508c40a72ef469c1d870cc1ec17071
 .. _Dell U2723QE: https://www.delltechnologies.com/asset/en-gb/products/electronics-and-accessories/technical-support/dell-ultrasharp-27-and-32-usbc-hub-monitors-u2723qe-u3223qe-datasheet.pdf
 .. _Caldigit TS4: https://www.caldigit.com/thunderbolt-station-4/
-
-Version Control
----------------
-
-I primarily use ``git``. I don't customize it too heavily, but my
-``.gitconfig`` is included here anyway.
