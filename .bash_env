@@ -114,3 +114,8 @@ eval "$(direnv hook bash)"
 
 # mise
 eval "$(~/.local/bin/mise activate bash)"
+
+# atuin
+. "$HOME/.atuin/bin/env"
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

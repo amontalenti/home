@@ -26,3 +26,5 @@ fi
 # fix Enpass scaling issues
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_SCREEN_SCALE_FACTORS=1
+
+. "$HOME/.atuin/bin/env"

@@ -13,6 +13,9 @@ direnv
 tailscale
 zerotier
 
+# atuin
+atuin (via https://docs.atuin.sh/#quickstart)
+
 # python
 # ---
 python-is-python3

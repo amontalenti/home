@@ -30,8 +30,8 @@ plugins=(
          direnv)
 
 path=(
-    /opt/spark/bin
-    /opt/storm/bin
+    #/opt/spark/bin
+    #/opt/storm/bin
     /opt/vagrant/bin
     /home/am/.local/bin
     #/home/am/.pyenv/bin
@@ -162,3 +162,7 @@ bindkey '^f' fex-widget
 
 # mise
 eval "$(~/.local/bin/mise activate zsh)"
+
+# atuin
+source "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
