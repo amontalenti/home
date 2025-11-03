@@ -1,2 +1,4 @@
 [tools]
+lazydocker = "latest"
+lazygit = "latest"
 node = "22"

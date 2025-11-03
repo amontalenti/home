@@ -136,6 +136,7 @@ nvtop
 
 # extra console developer goodies
 tmux-xpanes (via https://github.com/greymd/tmux-xpanes/releases)
+lazygit (via mise)
 tig
 pandoc
 silversearcher-ag
@@ -176,7 +177,7 @@ cursor (via https://github.com/cursor-ide/getcursor)
 claude (via https://claude.ai/code)
 
 # node.js
-nvm (via https://github.com/creationix/nvm)
+node (via mise)
 
 # java
 sdkman
@@ -197,6 +198,7 @@ zvm (via https://www.zvm.app/)
 # virtualization infrastructure
 docker (via https://docs.docker.com/engine/installation/linux/ubuntu/)
 docker-compose (via https://docs.docker.com/compose/install/)
+lazydocker (via mise)
 virtualbox (optional, via https://www.virtualbox.org/wiki/Linux_Downloads)
 vagrant (optional, via https://www.vagrantup.com/downloads.html)
 
