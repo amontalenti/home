@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Start Xephyr on display :1 with 1920x1080 resolution
-Xephyr :1 -screen 1920x1080 &
+#Xephyr :2 -screen 1920x1080 &
 
 # When running 4K, can use this instead to run it higher res:
-#Xephyr :1 -screen 2560x1440 &
+Xephyr :2 -screen 2560x1440 &
 
 XEPHYR_PID=$!
 
@@ -12,13 +12,13 @@ XEPHYR_PID=$!
 sleep 1
 
 # Launch openbox on the Xephyr display
-DISPLAY=:1 openbox &
+DISPLAY=:2 openbox &
 
 # Wait another moment for openbox to start
 sleep 1
 
 # Launch AnyDesk on the Xephyr display
-DISPLAY=:1 anydesk &
+DISPLAY=:2 anydesk &
 
 # Wait for user to terminate Xephyr
 wait $XEPHYR_PID
