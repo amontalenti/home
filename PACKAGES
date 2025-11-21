@@ -117,6 +117,7 @@ valgrind
 md5deep
 jo
 parallel
+inotify-tools
 
 # optional console network debugging tools
 mitmproxy
