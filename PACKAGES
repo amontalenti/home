@@ -286,18 +286,22 @@ network-manager-openvpn-gnome
 network-manager-pptp
 network-manager-vpnc
 
-# lenovo hacks that might be worth reviewing:
+# hardware interfacing tools worth a review:
 # ---
-# lenovo battery module
-acpi-call-dkms
-# lenovo hdd monitoring
+# USB hub control
+uhubctl
+# hdd monitoring
 smartmontools
-# lenovo dock control
-uhubctl (via https://github.com/mvp/uhubctl)
+# battery module
+acpi-call-dkms
 # intel cpu frequency scaling
 cpupower
 # intel power management
 powertop
+# generic power management configuration -- only useful on older laptops
+tlp (via ppa:linrunner/tlp)
+# intel pstate management -- only needed on older laptops
+pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
 
 # thermald prevents an intel cpu from overheating
 # note: on X1 Carbon Gen 11, the CPU ID check isn't working, so use...
@@ -307,10 +311,6 @@ thermald
 
 # lenovo cpu throttling fixes -- only needed on X1C Gen 8, not X1C Gen 11
 throttled (via https://github.com/erpalma/throttled)
-# generic power management configuration -- only useful on older laptops
-tlp (via ppa:linrunner/tlp)
-# intel pstate management -- only needed on older laptops
-pstate-frequency (via https://github.com/pyamsoft/pstate-frequency.git)
 
 # other console tools
 google-cloud-sdk (via https://cloud.google.com/sdk/docs/downloads-apt-get)
