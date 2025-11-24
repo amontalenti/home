@@ -13,6 +13,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(
+         which-origin
          github
          python
          tmux

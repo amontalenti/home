@@ -1,0 +1,128 @@
+#!/bin/bash
+#
+# which-origin - identify the installation source of a command
+#
+# Locates a command in $PATH and determines whether it was installed via
+# apt/dpkg, snap, flatpak, pipx, cargo, AppImage, or manually. Shows the
+# command path, package name, and version when available.
+
+set -euo pipefail
+
+which_origin() {
+  if [ -z "${1:-}" ]; then
+    echo "usage: which-origin <command>" >&2
+    exit 1
+  fi
+
+  local cmd="$1"
+  local path real pkg_line pkg
+
+  path="$(command -v -- "$cmd" 2>/dev/null || true)"
+  if [ -z "$path" ]; then
+    echo "command not found in \$PATH: $cmd" >&2
+    exit 1
+  fi
+
+  real="$(readlink -f -- "$path" 2>/dev/null || printf '%s\n' "$path")"
+
+  echo "command : $cmd"
+  echo "path    : $path"
+  [ "$real" != "$path" ] && echo "realpath: $real"
+
+  # --- 1. Realpath-based heuristics -----------------------------------------
+
+  # pipx
+  if [[ "$real" == "$HOME"/.local/pipx/venvs/*/bin/* ]]; then
+    echo "source  : pipx"
+    local venv_pkg
+    venv_pkg="$(sed -E "s|^$HOME/.local/pipx/venvs/([^/]+)/.*|\1|" <<< "$real")"
+    echo "package : $venv_pkg"
+    exit 0
+  fi
+
+  # cargo
+  if [[ "$real" == "$HOME"/.cargo/bin/* ]]; then
+    echo "source  : cargo"
+    cargo install --list 2>/dev/null | grep -E "^$cmd v" || true
+    exit 0
+  fi
+
+  # AppImage
+  if [[ "$real" == *.AppImage ]]; then
+    echo "source  : AppImage"
+    exit 0
+  fi
+
+  # /opt manual installs (like calibre)
+  if [[ "$real" == /opt/* ]]; then
+    # Check whether dpkg *claims* the realpath
+    if pkg_line="$(dpkg-query -S -- "$real" 2>/dev/null | head -n1)"; then
+      pkg="${pkg_line%%:*}"
+      if [ -n "$pkg" ]; then
+        echo "source  : ambiguous"
+        echo "note    : binary executed from /opt, but dpkg claims package '$pkg'"
+        echo "package : $pkg"
+      else
+        echo "source  : manual (/opt tree)"
+      fi
+    else
+      echo "source  : manual (/opt tree)"
+    fi
+    exit 0
+  fi
+
+  # --- 2. dpkg proper -------------------------------------------------------
+
+  # First check dpkg for the *real* path
+  if pkg_line="$(dpkg-query -S -- "$real" 2>/dev/null | head -n1)"; then
+    pkg="${pkg_line%%:*}"
+    if [ -n "$pkg" ]; then
+      echo "source  : deb (apt/dpkg)"
+      echo "package : $pkg"
+      dpkg-query -W -f='version : ${Version}\n' "$pkg" 2>/dev/null || true
+      exit 0
+    fi
+  fi
+
+  # Check dpkg for the original PATH entry (symlink case)
+  if pkg_line="$(dpkg-query -S -- "$path" 2>/dev/null | head -n1)"; then
+    pkg="${pkg_line%%:*}"
+    if [ -n "$pkg" ]; then
+      echo "source  : deb (apt/dpkg) (via PATH entry)"
+      echo "package : $pkg"
+      dpkg-query -W -f='version : ${Version}\n' "$pkg" 2>/dev/null || true
+
+      # Warn if binary has been replaced
+      if [[ "$real" == /opt/* || "$real" == "$HOME"/* ]]; then
+        echo "note    : dpkg owns '$path', but the executed binary is '$real'"
+      fi
+      exit 0
+    fi
+  fi
+
+  # --- 3. Snap / Flatpak ----------------------------------------------------
+
+  if [[ "$path" == /snap/bin/* || "$real" == /snap/* || "$real" == /var/lib/snapd/* ]]; then
+    echo "source  : snap"
+    snap list "$cmd" 2>/dev/null | awk 'NR<=2 {print "  " $0}'
+    exit 0
+  fi
+
+  if [[ "$real" == *"/flatpak/"* ]]; then
+    echo "source  : flatpak (heuristic)"
+    flatpak list 2>/dev/null | grep -i "$cmd" || true
+    exit 0
+  fi
+
+  # --- 4. Fallback ----------------------------------------------------------
+
+  if [[ "$real" == /usr/local/* ]]; then
+    echo "source  : manual (/usr/local)"
+  else
+    echo "source  : unknown (not tracked by dpkg/snap/flatpak/pipx/cargo)"
+  fi
+
+  exit 0
+}
+
+which_origin "$1"

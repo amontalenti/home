@@ -1,3 +1,4 @@
 source ~/opt/etc/fabric-completion.bash
 source ~/opt/etc/tmux-completion.bash
+source ~/opt/etc/which-origin-completion.bash
 source ~/.px-complete.bash
