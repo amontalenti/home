@@ -145,6 +145,7 @@ mercurial
 colordiff
 ffmpeg
 fzf
+bzf
 difftastic (via cargo)
 pik (via cargo)
 spacer (via cargo)
