@@ -118,6 +118,7 @@ md5deep
 jo
 parallel
 inotify-tools
+exfatprogs
 
 # optional console network debugging tools
 mitmproxy
