@@ -152,6 +152,7 @@ pik (via cargo)
 spacer (via cargo)
 ets (via https://github.com/zmwangx/ets/releases)
 isd (via uv tool install git+https://github.com/isd-project/isd)
+tailspin/tspin (via cargo install tailspin)
 
 # instead of exuberant-ctags
 universal-ctags (via source, https://github.com/universal-ctags/ctags/releases)
