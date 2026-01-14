@@ -254,6 +254,7 @@ iio-sensor-proxy
 # other desktop goodies
 kooha (via flatpak, alternative to peek)
 typora (via apt, see https://typora.io)
+ferrite (via gdebi, see https://github.com/OlaProeis/Ferrite/releases/)
 ulauncher (via https://ulauncher.io/)
 ulauncher-emoji (via https://ext.ulauncher.io/-/github-ulauncher-ulauncher-emoji)
 peek (via https://github.com/phw/peek#ubuntu)
