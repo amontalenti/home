@@ -271,7 +271,7 @@ Some nice "IDE-like" plugins for me include:
 * vim-go_, for Go basic editing
 * vim-jinja_, for enhanced ``jinja`` syntax highlighting
 * vim-less_, for editing ``LESS`` CSS files
-* vim-livedown_, for live browser preview of Markdown files
+* markdown-preview.nvim_, for live browser preview of Markdown files
 * vim-markdown_, improved Markdown syntax handling
 * vim-racket_, for Racket and Scheme basic editing
 * vim-ruff_, for running Python ruff formatter
@@ -316,7 +316,7 @@ Some nice "IDE-like" plugins for me include:
 .. _vim-sexp-ext: https://github.com/tpope/vim-sexp-mappings-for-regular-people
 .. _vim-superman: https://github.com/jez/vim-superman
 .. _vim-markdown: https://github.com/tpope/vim-markdown
-.. _vim-livedown: https://github.com/shime/vim-livedown
+.. _markdown-preview.nvim: https://github.com/iamcco/markdown-preview.nvim
 .. _yajs: https://github.com/othree/yajs.vim
 .. _whitespace: https://github.com/bronson/vim-trailing-whitespace
 .. _zeavim: https://github.com/KabbAmine/zeavim.vim

@@ -116,3 +116,6 @@
 [submodule ".vim/bundle/vim-ruff"]
 	path = .vim/bundle/vim-ruff
 	url = git@github.com:shaoran/vim-ruff.git
+[submodule ".vim/bundle/markdown-preview.nvim"]
+	path = .vim/bundle/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim

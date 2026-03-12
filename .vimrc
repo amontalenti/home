@@ -65,7 +65,7 @@ vmap <leader>lt :call ListTrans_toggle_format('visual')<CR>
 nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 " ,md to preview Markdown in browser
-nmap <leader>md :LivedownPreview<CR>
+nmap <leader>md <Plug>MarkdownPreviewToggle
 
 " ,q to clear searches and highlights
 nmap <leader>q :nohlsearch<CR>
@@ -288,9 +288,8 @@ if filereadable(expand("~/.simplenoterc"))
 endif
 
 " markdown live preview
-let g:livedown_open = 1
-let g:livedown_port = 9337
-let g:livedown_browser = "google-chrome"
+let g:mkdp_browser = "google-chrome"
+let g:mkdp_auto_close = 0
 
 " help tmux work better with arrow keys
 map <Esc>[B <Down>
