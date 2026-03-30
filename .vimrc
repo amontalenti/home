@@ -36,8 +36,6 @@ nnoremap <F10> :set guioptions-=m<CR>:set guioptions-=T<CR>
 " integrate goyo and limelight.vim
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-" hit F10 for Python style check
-autocmd FileType python map <buffer> <F10> :call Flake8()<CR>
 " reserve F11 for full-screen at WM level
 " F12 set above (at top) for gVim font selection
 
