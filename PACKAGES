@@ -155,6 +155,8 @@ ets (via https://github.com/zmwangx/ets/releases)
 isd (via uv tool install git+https://github.com/isd-project/isd)
 tailspin/tspin (via cargo install tailspin)
 psc (via https://github.com/loresuso/psc)
+btop (via snap)
+witr (via https://github.com/pranshuparmar/witr/releases)
 
 # instead of exuberant-ctags
 universal-ctags (via source, https://github.com/universal-ctags/ctags/releases)
@@ -167,6 +169,7 @@ deb-get
 discord
 simplenote
 zoom
+handy
 
 # extra deb-get packages
 anydesk
@@ -425,7 +428,7 @@ tmuxp           # tmux profile manager
 visidata        # vd tool
 yt-dlp          # active fork of youtube-dl
 fab-classic     # fab cli and Fabric 1.x fork
-tldr            # handy alternative to `man`
+tldr            # nicer alternative to `man`
 
 # for yt-dlp:
 #
