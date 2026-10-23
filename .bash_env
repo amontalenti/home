@@ -119,3 +119,6 @@ eval "$(~/.local/bin/mise activate bash)"
 . "$HOME/.atuin/bin/env"
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
+
+# ripgrep config (hidden files, skip .git; see ~/.ripgreprc)
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"

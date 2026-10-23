@@ -1,0 +1,6 @@
+# Search hidden files and directories (e.g. docs/.vitepress/)
+--hidden
+# ...but never descend into .git
+--glob=!.git
+# Don't read ignore files from parent directories
+--no-ignore-parent

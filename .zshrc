@@ -167,3 +167,9 @@ eval "$(~/.local/bin/mise activate zsh)"
 # atuin
 source "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
+
+# Turso
+export PATH="$PATH:/home/am/.turso"
+
+# ripgrep config (hidden files, skip .git; see ~/.ripgreprc)
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
