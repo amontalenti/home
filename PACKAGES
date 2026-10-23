@@ -183,7 +183,11 @@ zerotier (via https://zerotier.com/)
 vim-gtk3
 vscode
 cursor (via https://github.com/cursor-ide/getcursor)
+
+# AI/LLM tools
 claude (via https://claude.ai/code)
+claude-desktop (via https://code.claude.com/docs/en/desktop-linux)
+chatgpt (via https://learn.chatgpt.com/docs/linux/linux-app)
 
 # node.js
 node (via mise)
