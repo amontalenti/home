@@ -14,7 +14,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(
          which-origin
-         github
+         gh
          python
          tmux
          fabric
